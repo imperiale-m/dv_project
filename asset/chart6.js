@@ -19,12 +19,16 @@ d3.csv('data/preprocessedData.csv').then((data) => {
     .append('g')
     .attr('transform', `translate(${margin.l},${margin.t})`);
 
-  const filtData = data.filter((d) => d.Location === 'Italy');
+  const filtData = data.filter(
+    (d) => d['Life expectancy at birth, female (years)'] !== '..'
+          && d['Life expectancy at birth, male (years)'] !== '..'
+          && d.Period === '2015',
+  );
 
   /// Add X axis --> it is a date format
   const xAxis = d3
     .scaleBand()
-    .domain(d3.map(filtData, (d) => d.Period))
+    .domain(d3.map(filtData, (d) => d.Location))
     .range([0, width]);
   svg
     .append('g')
@@ -38,7 +42,7 @@ d3.csv('data/preprocessedData.csv').then((data) => {
   // Add Y axis
   const yAxis = d3
     .scaleLinear()
-    .domain([d3.min(filtData, (d) => d['Life expectancy at birth, male (years)']) - 5, d3.max(filtData, (d) => d['Life expectancy at birth, female (years)'])])
+    .domain([d3.min(filtData, (d) => d['Life expectancy at birth, male (years)'] - 5), d3.max(filtData, (d) => d['Life expectancy at birth, female (years)'])])
     .range([height, 0]);
   svg.append('g').call(d3.axisLeft(yAxis));
 
@@ -46,8 +50,8 @@ d3.csv('data/preprocessedData.csv').then((data) => {
   svg.selectAll('myline')
     .data(filtData)
     .join('line')
-    .attr('x1', (d) => xAxis(d.Period))
-    .attr('x2', (d) => xAxis(d.Period))
+    .attr('x1', (d) => xAxis(d.Location))
+    .attr('x2', (d) => xAxis(d.Location))
     .attr('y1', (d) => yAxis(d['Life expectancy at birth, male (years)']))
     .attr('y2', (d) => yAxis(d['Life expectancy at birth, female (years)']))
     .attr('stroke', 'grey')
@@ -57,7 +61,7 @@ d3.csv('data/preprocessedData.csv').then((data) => {
   svg.selectAll('mycircle')
     .data(filtData)
     .join('circle')
-    .attr('cx', (d) => xAxis(d.Period))
+    .attr('cx', (d) => xAxis(d.Location))
     .attr('cy', (d) => yAxis(d['Life expectancy at birth, male (years)']))
     .attr('r', '6')
     .style('fill', '#031bb7');
@@ -66,7 +70,7 @@ d3.csv('data/preprocessedData.csv').then((data) => {
   svg.selectAll('mycircle')
     .data(filtData)
     .join('circle')
-    .attr('cx', (d) => xAxis(d.Period))
+    .attr('cx', (d) => xAxis(d.Location))
     .attr('cy', (d) => yAxis(d['Life expectancy at birth, female (years)']))
     .attr('r', '6')
     .style('fill', '#730160');
@@ -74,9 +78,9 @@ d3.csv('data/preprocessedData.csv').then((data) => {
   // x-axis name
   svg
     .append('text')
-    .attr('transform', `translate(${width / 2}, ${height + margin.b / 2})`)
+    .attr('transform', `translate(${width / 2}, ${height + margin.b - 20})`)
     .attr('class', 'axis-name')
-    .text('Year');
+    .text('Country');
 
   // y-axis name
   svg
