@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <title>Data Visualization Homework</title>
-    <meta
-      content="Data Visualization project"
-      name="description" />
+    <meta content="Data Visualization project" name="description" />
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link href="output.css" rel="stylesheet" />
@@ -16,15 +14,22 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto+Slab"
       rel="stylesheet" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script defer src='./asset/chart5.js'></script>
+    <script defer src="./asset/chart5.js"></script>
+    <script defer src="./asset/chart2.js"></script>
+    <script defer src="./asset/chart3.js"></script>
+    <script defer src="./asset/chart4.js"></script>
+    <script src="https://unpkg.com/eurostat-map"></script>
   </head>
   <body>
     <div class="grid grid-cols-3 gap-4 px-6 py-8 sm:px-12">
-      <div class="col-span-3 row-span-1 bg-sky-300 text-center">Data visualization Project</div>
-      <div class="col-span-1 row-span-2 bg-red-300" id="chart1">1</div>
-      <div class="col-span-1 bg-green-300" id="chart2">2</div>
-      <div class="col-span-1 bg-yellow-300" id="chart3">3</div>
-      <div class="col-span-1 bg-gray-300" id="chart4">4</div>
+      <div class="col-span-3 row-span-1 bg-sky-300 text-center"> Data visualization Project</div>
+      <div class="col-span-1 row-span-2 bg-red-300" id="chart1">1 </div>
+      <div class="card col-span-1" id="chart2"></div>
+      <div class="card col-span-1" id="chart3">
+        <!-- Initialize a select button -->
+        <select id="selectButtonScatter"></select>
+      </div>
+      <div class="card col-span-1" id="chart4"></div>
       <div class="col-span-1 bg-blue-300" id="chart5">5</div>
       <div class="col-span-2 bg-purple-300" id="chart6">6</div>
       <div class="col-span-1 row-span-2 bg-teal-300" id="chart7">7</div>
