@@ -16,20 +16,20 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       .text((d) => d) // text showed in the menu
       .attr('value', (d) => d); // corresponding value returned by the button
 
-    function drawChart(filtData, x, y) {
+    function drawChart(filtData, y, x) {
       const margin = {
-        t: 45,
-        r: 40,
-        b: 100,
-        l: 100,
+        t: 60,
+        r: 80,
+        b: 80,
+        l: 80,
       };
-      const width = 600;
-      const height = 550;
+      const width = 400;
+      const height = 300;
 
-      const xDomain = [d3.min(filtData, (d) => d[x]), d3.max(filtData, (d) => d[x])];
+      const xDomain = d3.extent(filtData, (d) => d[x]);
       const xRange = [0, width];
 
-      const yDomain = [d3.min(filtData, (d) => d[y]), d3.max(filtData, (d) => d[y])];
+      const yDomain = d3.extent(filtData, (d) => d[y]);
       const yRange = [height, 0];
 
       // console.log('domain', xDomain);
@@ -45,7 +45,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         .select('#chart3')
         .append('svg')
         .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-        .attr('style', 'max-width: 100%; height: auto')
+        .attr('style', 'max-width: 100%; height: auto; height:intrinsic')
         .append('g')
         .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
@@ -86,8 +86,8 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         tooltip
           .html(
             `Country = <b>${d.Location}</b><br>
-           Life expectancy = <b>${Number.parseFloat(d[x]).toFixed(2)} years (${d.Period})</b>
-                    <br>${y} immunization = <b>${d[y]} %</b>`,
+           Life expectancy = <b>${Number.parseFloat(d[y]).toFixed(2)} years (${d.Period})</b>
+                    <br>${y} immunization = <b>${d[x]} %</b>`,
           )
           .style('top', `${event.pageY}px`)
           .style('left', `${event.pageX + 20}px`);
@@ -110,7 +110,6 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         .on('mouseout', mouseout)
         .on('mousemove', mousemove);
 
-      const padding = 100;
       // x-axis name
       svg
         .append('text')
@@ -122,7 +121,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       svg
         .append('text')
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
-        .attr('transform', `translate(${margin.l / 2 - padding},${height / 2})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
+        .attr('transform', `translate(${-margin.l / 2},${margin.t + 50})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
         .attr('class', 'axis-name')
         .text(y);
       // add title
@@ -138,6 +137,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
     function update(selectedGroup, period) {
       d3.selectAll('#chart3 > svg').remove();
 
+      // What the fuck is this!!
       const filtData = data.filter(
         (d) =>
           !isNaN(d['Life expectancy at birth, total (years)']) &&
@@ -169,7 +169,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         default:
           break;
       }
-      console.log(selectedOption);
+      // console.log(selectedOption);
       // run the updateChart function with this selected option
       update(selectedOption, 2015);
     });
