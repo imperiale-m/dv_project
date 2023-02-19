@@ -37,24 +37,22 @@ d3.csv('../data/tgs.csv', d3.autoType)
     const yScale = d3
       .scaleBand()
       .domain(data.map((d) => d.geo_country))
-      .range([0, height])
+      .range([height, 0])
       .padding(1);
+
+    const xScale = d3.scaleLinear().domain(dom).nice().range([0, width]);
+
+    // Add y-axis
+    const yAxis = d3.axisLeft(yScale);
+    svg.append('g').call(yAxis);
+
+    // Add x-axis
+    const xAxis = d3.axisBottom(xScale);
+    svg.append('g').attr('transform', `translate(0, ${height})`).call(xAxis);
 
     const colorScale = d3
       .scaleSequential(d3.interpolateRdYlBu) // set the color scale
       .domain(dom); // set the data domain
-
-    const xScale = d3.scaleLinear().domain(dom).nice().range([0, width]);
-
-    const yAxisGrid = d3.axisLeft(yScale).tickSize(-width).tickFormat('');
-
-    svg.append('g').attr('class', 'y axis-grid').call(yAxisGrid);
-
-    // Modify CSS of the y gridlines
-    svg
-      .selectAll('.y.axis-grid line')
-      .attr('stroke', '#ccc') // Change color to gray
-      .attr('stroke-width', 0.5); // Make lines thinner
 
     // Draw dots
     svg
@@ -68,23 +66,6 @@ d3.csv('../data/tgs.csv', d3.autoType)
       .attr('fill', (d) => colorScale(d.obs_value))
       .attr('stroke', 'black')
       .attr('stroke-width', 1);
-
-    // Add y-axis
-    const yAxis = d3.axisLeft(yScale);
-    svg.append('g').call(yAxis);
-
-    // Add x-axis
-    const xAxis = d3.axisBottom(xScale);
-    svg.append('g').attr('transform', `translate(0, ${height})`).call(xAxis);
-
-    // Add chart title
-    svg
-      .append('text')
-      .attr('x', width / 2)
-      .attr('y', -10)
-      .attr('text-anchor', 'middle')
-      .attr('font-weight', 'bold')
-      .text('Dot Strip Plot Example');
   })
   .catch((e) => {
     console.log(e);
