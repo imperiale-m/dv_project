@@ -2,10 +2,10 @@
 d3.csv('../data/education.csv', d3.autoType)
   .then((data) => {
     const margin = {
-      t: 40,
-      r: 40,
-      b: 40,
-      l: 40,
+      t: 80,
+      r: 80,
+      b: 80,
+      l: 140,
     };
     const sideLength = 400;
 
@@ -13,7 +13,7 @@ d3.csv('../data/education.csv', d3.autoType)
     const subgroups = [...d3.group(data, (d) => d.isced11).keys()];
 
     // Build color scale
-    const color = ['#1f77b4', '#ff7f0e', '#2ca02c'];
+    const color = ['#2ca02c', '#ff7f0e', '#1f77b4'];
 
     // const country = 'IT';
     // const year = 2011;
@@ -22,7 +22,7 @@ d3.csv('../data/education.csv', d3.autoType)
       .select('#chart5')
       .append('svg')
       .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
-      .attr('style', 'max-width: 50%; height: auto; height: intrinsic;')
+      .attr('style', 'max-width: 100%; height: auto; height: intrinsic;')
       .append('g')
       .attr('transform', `translate(${margin.l},${margin.t})`);
 
@@ -79,10 +79,10 @@ d3.csv('../data/education.csv', d3.autoType)
     // console.log(selection);
 
     // Build X scales and axis:
-    const x = d3.scaleBand().range([0, sideLength]).domain(waffleX).padding(0.05);
+    const x = d3.scaleBand().range([0, sideLength]).domain(waffleX).padding(0.08);
 
     // Build X scales and axis:
-    const y = d3.scaleBand().range([sideLength, 0]).domain(waffleY).padding(0.05);
+    const y = d3.scaleBand().range([sideLength, 0]).domain(waffleY).padding(0.08);
 
     // A function that update the chart
     function updateChart(country, year) {
@@ -96,8 +96,8 @@ d3.csv('../data/education.csv', d3.autoType)
         .join('rect')
         .attr('x', (d) => x(d[0]) + 1)
         .attr('y', (d) => y(d[1]))
-        .attr('rx', 4)
-        .attr('ry', 4)
+        .attr('rx', 6)
+        .attr('ry', 6)
         .attr('class', (d) => `group${d[2]}`)
         .style('stroke-width', 2)
         .style('stroke', 'none')
@@ -107,6 +107,49 @@ d3.csv('../data/education.csv', d3.autoType)
         .style('fill', (d) => color[d[2]]);
 
       rect.transition().duration(400).style('opacity', 0.9);
+
+      // add the legend
+      const legend = svg.append('g').attr('class', 'legend');
+      // .attr('transform', `translate(${-margin.left},${margin.top})`);
+
+      legend
+        .append('rect')
+        .attr('fill', 'white')
+        .attr('stroke', 'black')
+        .attr('stroke-width', 1)
+        .attr('width', 120)
+        .attr('height', 100)
+        .attr('rx', 6)
+        .attr('ry', 6)
+        .attr('x', -margin.l + 10)
+        .attr('y', 5);
+
+      legend
+        .append('text')
+        .attr('x', -margin.l + 20)
+        .attr('y', 30)
+        .text('Legend');
+
+      legend
+        .append('text')
+        .attr('x', -margin.l + 20)
+        .attr('y', 50)
+        .text('Primary')
+        .attr('fill', color[0]);
+
+      legend
+        .append('text')
+        .attr('x', -margin.l + 20)
+        .attr('y', 70)
+        .text('Secondary')
+        .attr('fill', color[1]);
+
+      legend
+        .append('text')
+        .attr('x', -margin.l + 20)
+        .attr('y', 90)
+        .text('Tertiary')
+        .attr('fill', color[2]);
     }
 
     const country = 'IT';
