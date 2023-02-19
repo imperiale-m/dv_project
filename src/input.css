@@ -11,41 +11,25 @@
     h6 {
         font-family: 'Roboto Slab', serif;
     }
+}
 
-    html {
-        font-family: 'Fira Sans', sans-serif;
+@layer components {
+    .card {
+        @apply rounded-2xl bg-white shadow-sm hover:shadow-md;
     }
 
-}
+    .card-title {
+        @apply flex items-center justify-center rounded-t-lg border-b border-gray-100 p-4;
+    }
 
-body {
-    background-color: #f5f7fb;
-}
-
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
-    border: solid gray;
-    background-color: white;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    .axis-name {
+        @apply fill-neutral-500 text-xs;
+    }
 }
 
 /* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
-}
-
-.axis-name {
-    fill: black;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    font-weight: 700;
 }
 
 .tooltip {
