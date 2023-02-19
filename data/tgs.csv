@@ -1,0 +1,3321 @@
+geo,geo_label,time_period,obs_value,geo_country
+AL01,Veri,2009,0.0,AL
+AL01,Veri,2010,0.0,AL
+AL01,Veri,2011,0.0,AL
+AL01,Veri,2012,0.0,AL
+AL01,Veri,2013,0.0,AL
+AL01,Veri,2014,0.0,AL
+AL01,Veri,2015,0.0,AL
+AL01,Veri,2016,0.0,AL
+AL01,Veri,2017,0.0,AL
+AL01,Veri,2018,0.0,AL
+AL02,Qender,2009,0.0,AL
+AL02,Qender,2010,0.0,AL
+AL02,Qender,2011,0.0,AL
+AL02,Qender,2012,0.0,AL
+AL02,Qender,2013,0.0,AL
+AL02,Qender,2014,0.0,AL
+AL02,Qender,2015,0.0,AL
+AL02,Qender,2016,0.0,AL
+AL02,Qender,2017,0.0,AL
+AL02,Qender,2018,0.0,AL
+AL03,Jug,2009,0.0,AL
+AL03,Jug,2010,0.0,AL
+AL03,Jug,2011,0.0,AL
+AL03,Jug,2012,0.0,AL
+AL03,Jug,2013,0.0,AL
+AL03,Jug,2014,0.0,AL
+AL03,Jug,2015,0.0,AL
+AL03,Jug,2016,0.0,AL
+AL03,Jug,2017,0.0,AL
+AL03,Jug,2018,0.0,AL
+AT11,Burgenland (AT),2009,80.9,AT
+AT11,Burgenland (AT),2010,80.9,AT
+AT11,Burgenland (AT),2011,81.2,AT
+AT11,Burgenland (AT),2012,80.6,AT
+AT11,Burgenland (AT),2013,81.1,AT
+AT11,Burgenland (AT),2014,81.4,AT
+AT11,Burgenland (AT),2015,81.2,AT
+AT11,Burgenland (AT),2016,81.4,AT
+AT11,Burgenland (AT),2017,81.5,AT
+AT11,Burgenland (AT),2018,81.5,AT
+AT12,Niederösterreich,2009,80.1,AT
+AT12,Niederösterreich,2010,80.5,AT
+AT12,Niederösterreich,2011,80.8,AT
+AT12,Niederösterreich,2012,80.6,AT
+AT12,Niederösterreich,2013,81.0,AT
+AT12,Niederösterreich,2014,81.3,AT
+AT12,Niederösterreich,2015,81.0,AT
+AT12,Niederösterreich,2016,81.4,AT
+AT12,Niederösterreich,2017,81.6,AT
+AT12,Niederösterreich,2018,81.5,AT
+AT13,Wien,2009,79.4,AT
+AT13,Wien,2010,79.6,AT
+AT13,Wien,2011,80.1,AT
+AT13,Wien,2012,80.1,AT
+AT13,Wien,2013,80.1,AT
+AT13,Wien,2014,80.5,AT
+AT13,Wien,2015,80.4,AT
+AT13,Wien,2016,80.9,AT
+AT13,Wien,2017,80.8,AT
+AT13,Wien,2018,80.6,AT
+AT21,Kärnten,2009,80.8,AT
+AT21,Kärnten,2010,81.0,AT
+AT21,Kärnten,2011,81.4,AT
+AT21,Kärnten,2012,81.2,AT
+AT21,Kärnten,2013,81.7,AT
+AT21,Kärnten,2014,81.8,AT
+AT21,Kärnten,2015,81.4,AT
+AT21,Kärnten,2016,81.8,AT
+AT21,Kärnten,2017,81.9,AT
+AT21,Kärnten,2018,81.6,AT
+AT22,Steiermark,2009,80.6,AT
+AT22,Steiermark,2010,81.0,AT
+AT22,Steiermark,2011,81.4,AT
+AT22,Steiermark,2012,81.5,AT
+AT22,Steiermark,2013,81.8,AT
+AT22,Steiermark,2014,82.0,AT
+AT22,Steiermark,2015,81.3,AT
+AT22,Steiermark,2016,82.1,AT
+AT22,Steiermark,2017,81.8,AT
+AT22,Steiermark,2018,82.2,AT
+AT31,Oberösterreich,2009,80.8,AT
+AT31,Oberösterreich,2010,81.0,AT
+AT31,Oberösterreich,2011,81.5,AT
+AT31,Oberösterreich,2012,81.5,AT
+AT31,Oberösterreich,2013,81.4,AT
+AT31,Oberösterreich,2014,82.0,AT
+AT31,Oberösterreich,2015,81.5,AT
+AT31,Oberösterreich,2016,82.2,AT
+AT31,Oberösterreich,2017,82.0,AT
+AT31,Oberösterreich,2018,82.2,AT
+AT32,Salzburg,2009,81.4,AT
+AT32,Salzburg,2010,81.6,AT
+AT32,Salzburg,2011,81.9,AT
+AT32,Salzburg,2012,82.1,AT
+AT32,Salzburg,2013,82.2,AT
+AT32,Salzburg,2014,82.6,AT
+AT32,Salzburg,2015,82.4,AT
+AT32,Salzburg,2016,82.7,AT
+AT32,Salzburg,2017,82.4,AT
+AT32,Salzburg,2018,82.9,AT
+AT33,Tirol,2009,81.6,AT
+AT33,Tirol,2010,81.9,AT
+AT33,Tirol,2011,82.3,AT
+AT33,Tirol,2012,82.2,AT
+AT33,Tirol,2013,82.4,AT
+AT33,Tirol,2014,82.8,AT
+AT33,Tirol,2015,82.4,AT
+AT33,Tirol,2016,82.8,AT
+AT33,Tirol,2017,83.2,AT
+AT33,Tirol,2018,83.0,AT
+AT34,Vorarlberg,2009,81.7,AT
+AT34,Vorarlberg,2010,82.0,AT
+AT34,Vorarlberg,2011,82.5,AT
+AT34,Vorarlberg,2012,82.2,AT
+AT34,Vorarlberg,2013,82.3,AT
+AT34,Vorarlberg,2014,83.1,AT
+AT34,Vorarlberg,2015,82.4,AT
+AT34,Vorarlberg,2016,82.7,AT
+AT34,Vorarlberg,2017,82.4,AT
+AT34,Vorarlberg,2018,82.9,AT
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2009,79.9,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2010,80.2,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2011,80.8,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2012,80.1,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2013,80.6,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2014,81.1,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2015,80.9,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2016,81.3,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2017,81.2,BE
+BE10,Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest,2018,81.5,BE
+BE21,Prov. Antwerpen,2009,80.9,BE
+BE21,Prov. Antwerpen,2010,81.1,BE
+BE21,Prov. Antwerpen,2011,81.6,BE
+BE21,Prov. Antwerpen,2012,81.1,BE
+BE21,Prov. Antwerpen,2013,81.5,BE
+BE21,Prov. Antwerpen,2014,82.2,BE
+BE21,Prov. Antwerpen,2015,82.0,BE
+BE21,Prov. Antwerpen,2016,82.4,BE
+BE21,Prov. Antwerpen,2017,82.4,BE
+BE21,Prov. Antwerpen,2018,82.5,BE
+BE22,Prov. Limburg (BE),2009,81.2,BE
+BE22,Prov. Limburg (BE),2010,81.5,BE
+BE22,Prov. Limburg (BE),2011,81.7,BE
+BE22,Prov. Limburg (BE),2012,81.6,BE
+BE22,Prov. Limburg (BE),2013,82.1,BE
+BE22,Prov. Limburg (BE),2014,82.7,BE
+BE22,Prov. Limburg (BE),2015,82.5,BE
+BE22,Prov. Limburg (BE),2016,82.9,BE
+BE22,Prov. Limburg (BE),2017,83.1,BE
+BE22,Prov. Limburg (BE),2018,83.1,BE
+BE23,Prov. Oost-Vlaanderen,2009,80.4,BE
+BE23,Prov. Oost-Vlaanderen,2010,80.8,BE
+BE23,Prov. Oost-Vlaanderen,2011,81.0,BE
+BE23,Prov. Oost-Vlaanderen,2012,80.9,BE
+BE23,Prov. Oost-Vlaanderen,2013,81.1,BE
+BE23,Prov. Oost-Vlaanderen,2014,82.1,BE
+BE23,Prov. Oost-Vlaanderen,2015,81.5,BE
+BE23,Prov. Oost-Vlaanderen,2016,82.2,BE
+BE23,Prov. Oost-Vlaanderen,2017,82.2,BE
+BE23,Prov. Oost-Vlaanderen,2018,82.3,BE
+BE24,Prov. Vlaams-Brabant,2009,81.5,BE
+BE24,Prov. Vlaams-Brabant,2010,81.7,BE
+BE24,Prov. Vlaams-Brabant,2011,82.1,BE
+BE24,Prov. Vlaams-Brabant,2012,81.9,BE
+BE24,Prov. Vlaams-Brabant,2013,82.0,BE
+BE24,Prov. Vlaams-Brabant,2014,82.6,BE
+BE24,Prov. Vlaams-Brabant,2015,82.5,BE
+BE24,Prov. Vlaams-Brabant,2016,82.9,BE
+BE24,Prov. Vlaams-Brabant,2017,83.0,BE
+BE24,Prov. Vlaams-Brabant,2018,83.0,BE
+BE25,Prov. West-Vlaanderen,2009,80.9,BE
+BE25,Prov. West-Vlaanderen,2010,81.1,BE
+BE25,Prov. West-Vlaanderen,2011,81.6,BE
+BE25,Prov. West-Vlaanderen,2012,81.6,BE
+BE25,Prov. West-Vlaanderen,2013,81.5,BE
+BE25,Prov. West-Vlaanderen,2014,82.3,BE
+BE25,Prov. West-Vlaanderen,2015,82.0,BE
+BE25,Prov. West-Vlaanderen,2016,82.7,BE
+BE25,Prov. West-Vlaanderen,2017,82.4,BE
+BE25,Prov. West-Vlaanderen,2018,82.6,BE
+BE31,Prov. Brabant wallon,2009,80.9,BE
+BE31,Prov. Brabant wallon,2010,81.1,BE
+BE31,Prov. Brabant wallon,2011,81.3,BE
+BE31,Prov. Brabant wallon,2012,81.0,BE
+BE31,Prov. Brabant wallon,2013,82.0,BE
+BE31,Prov. Brabant wallon,2014,81.7,BE
+BE31,Prov. Brabant wallon,2015,81.7,BE
+BE31,Prov. Brabant wallon,2016,82.4,BE
+BE31,Prov. Brabant wallon,2017,82.1,BE
+BE31,Prov. Brabant wallon,2018,82.7,BE
+BE32,Prov. Hainaut,2009,77.8,BE
+BE32,Prov. Hainaut,2010,78.0,BE
+BE32,Prov. Hainaut,2011,78.2,BE
+BE32,Prov. Hainaut,2012,78.2,BE
+BE32,Prov. Hainaut,2013,78.3,BE
+BE32,Prov. Hainaut,2014,78.9,BE
+BE32,Prov. Hainaut,2015,78.6,BE
+BE32,Prov. Hainaut,2016,78.8,BE
+BE32,Prov. Hainaut,2017,79.4,BE
+BE32,Prov. Hainaut,2018,79.1,BE
+BE33,Prov. Liège,2009,78.8,BE
+BE33,Prov. Liège,2010,78.9,BE
+BE33,Prov. Liège,2011,79.0,BE
+BE33,Prov. Liège,2012,79.2,BE
+BE33,Prov. Liège,2013,79.4,BE
+BE33,Prov. Liège,2014,79.9,BE
+BE33,Prov. Liège,2015,79.4,BE
+BE33,Prov. Liège,2016,80.0,BE
+BE33,Prov. Liège,2017,79.9,BE
+BE33,Prov. Liège,2018,80.0,BE
+BE34,Prov. Luxembourg (BE),2009,78.8,BE
+BE34,Prov. Luxembourg (BE),2010,78.9,BE
+BE34,Prov. Luxembourg (BE),2011,79.4,BE
+BE34,Prov. Luxembourg (BE),2012,79.4,BE
+BE34,Prov. Luxembourg (BE),2013,79.2,BE
+BE34,Prov. Luxembourg (BE),2014,80.5,BE
+BE34,Prov. Luxembourg (BE),2015,80.1,BE
+BE34,Prov. Luxembourg (BE),2016,79.9,BE
+BE34,Prov. Luxembourg (BE),2017,80.3,BE
+BE34,Prov. Luxembourg (BE),2018,80.6,BE
+BE35,Prov. Namur,2009,78.7,BE
+BE35,Prov. Namur,2010,78.8,BE
+BE35,Prov. Namur,2011,79.2,BE
+BE35,Prov. Namur,2012,78.7,BE
+BE35,Prov. Namur,2013,78.7,BE
+BE35,Prov. Namur,2014,79.4,BE
+BE35,Prov. Namur,2015,79.3,BE
+BE35,Prov. Namur,2016,79.7,BE
+BE35,Prov. Namur,2017,79.7,BE
+BE35,Prov. Namur,2018,79.9,BE
+BG31,Severozapaden,2009,72.9,BG
+BG31,Severozapaden,2010,72.7,BG
+BG31,Severozapaden,2011,73.0,BG
+BG31,Severozapaden,2012,72.9,BG
+BG31,Severozapaden,2013,73.7,BG
+BG31,Severozapaden,2014,73.0,BG
+BG31,Severozapaden,2015,73.5,BG
+BG31,Severozapaden,2016,73.3,BG
+BG31,Severozapaden,2017,73.5,BG
+BG31,Severozapaden,2018,73.6,BG
+BG32,Severen tsentralen,2009,73.2,BG
+BG32,Severen tsentralen,2010,73.3,BG
+BG32,Severen tsentralen,2011,73.7,BG
+BG32,Severen tsentralen,2012,73.8,BG
+BG32,Severen tsentralen,2013,74.3,BG
+BG32,Severen tsentralen,2014,74.0,BG
+BG32,Severen tsentralen,2015,74.1,BG
+BG32,Severen tsentralen,2016,74.4,BG
+BG32,Severen tsentralen,2017,74.2,BG
+BG32,Severen tsentralen,2018,74.4,BG
+BG33,Severoiztochen,2009,73.2,BG
+BG33,Severoiztochen,2010,73.1,BG
+BG33,Severoiztochen,2011,73.9,BG
+BG33,Severoiztochen,2012,74.0,BG
+BG33,Severoiztochen,2013,74.6,BG
+BG33,Severoiztochen,2014,74.4,BG
+BG33,Severoiztochen,2015,74.4,BG
+BG33,Severoiztochen,2016,74.8,BG
+BG33,Severoiztochen,2017,74.7,BG
+BG33,Severoiztochen,2018,74.7,BG
+BG34,Yugoiztochen,2009,72.9,BG
+BG34,Yugoiztochen,2010,72.6,BG
+BG34,Yugoiztochen,2011,73.4,BG
+BG34,Yugoiztochen,2012,73.9,BG
+BG34,Yugoiztochen,2013,74.5,BG
+BG34,Yugoiztochen,2014,74.0,BG
+BG34,Yugoiztochen,2015,74.3,BG
+BG34,Yugoiztochen,2016,74.4,BG
+BG34,Yugoiztochen,2017,74.3,BG
+BG34,Yugoiztochen,2018,74.4,BG
+BG41,Yugozapaden,2009,74.5,BG
+BG41,Yugozapaden,2010,75.0,BG
+BG41,Yugozapaden,2011,75.2,BG
+BG41,Yugozapaden,2012,75.3,BG
+BG41,Yugozapaden,2013,75.7,BG
+BG41,Yugozapaden,2014,75.3,BG
+BG41,Yugozapaden,2015,75.6,BG
+BG41,Yugozapaden,2016,75.7,BG
+BG41,Yugozapaden,2017,75.7,BG
+BG41,Yugozapaden,2018,75.9,BG
+BG42,Yuzhen tsentralen,2009,74.3,BG
+BG42,Yuzhen tsentralen,2010,74.5,BG
+BG42,Yuzhen tsentralen,2011,74.6,BG
+BG42,Yuzhen tsentralen,2012,74.9,BG
+BG42,Yuzhen tsentralen,2013,75.4,BG
+BG42,Yuzhen tsentralen,2014,75.1,BG
+BG42,Yuzhen tsentralen,2015,74.8,BG
+BG42,Yuzhen tsentralen,2016,75.3,BG
+BG42,Yuzhen tsentralen,2017,75.2,BG
+BG42,Yuzhen tsentralen,2018,75.5,BG
+CH01,Région lémanique,2009,82.4,CH
+CH01,Région lémanique,2010,82.9,CH
+CH01,Région lémanique,2011,83.3,CH
+CH01,Région lémanique,2012,83.2,CH
+CH01,Région lémanique,2013,83.2,CH
+CH01,Région lémanique,2014,83.9,CH
+CH01,Région lémanique,2015,83.4,CH
+CH01,Région lémanique,2016,84.2,CH
+CH01,Région lémanique,2017,83.9,CH
+CH01,Région lémanique,2018,84.2,CH
+CH02,Espace Mittelland,2009,82.1,CH
+CH02,Espace Mittelland,2010,82.3,CH
+CH02,Espace Mittelland,2011,82.3,CH
+CH02,Espace Mittelland,2012,82.4,CH
+CH02,Espace Mittelland,2013,82.5,CH
+CH02,Espace Mittelland,2014,82.9,CH
+CH02,Espace Mittelland,2015,82.6,CH
+CH02,Espace Mittelland,2016,83.1,CH
+CH02,Espace Mittelland,2017,83.1,CH
+CH02,Espace Mittelland,2018,83.3,CH
+CH03,Nordwestschweiz,2009,82.2,CH
+CH03,Nordwestschweiz,2010,82.5,CH
+CH03,Nordwestschweiz,2011,82.8,CH
+CH03,Nordwestschweiz,2012,82.9,CH
+CH03,Nordwestschweiz,2013,82.9,CH
+CH03,Nordwestschweiz,2014,83.3,CH
+CH03,Nordwestschweiz,2015,82.8,CH
+CH03,Nordwestschweiz,2016,83.6,CH
+CH03,Nordwestschweiz,2017,83.8,CH
+CH03,Nordwestschweiz,2018,83.9,CH
+CH04,Zürich,2009,82.6,CH
+CH04,Zürich,2010,82.7,CH
+CH04,Zürich,2011,83.0,CH
+CH04,Zürich,2012,83.0,CH
+CH04,Zürich,2013,83.0,CH
+CH04,Zürich,2014,83.4,CH
+CH04,Zürich,2015,83.2,CH
+CH04,Zürich,2016,83.9,CH
+CH04,Zürich,2017,83.8,CH
+CH04,Zürich,2018,84.0,CH
+CH05,Ostschweiz,2009,82.2,CH
+CH05,Ostschweiz,2010,82.3,CH
+CH05,Ostschweiz,2011,82.6,CH
+CH05,Ostschweiz,2012,82.3,CH
+CH05,Ostschweiz,2013,82.7,CH
+CH05,Ostschweiz,2014,82.8,CH
+CH05,Ostschweiz,2015,82.9,CH
+CH05,Ostschweiz,2016,83.4,CH
+CH05,Ostschweiz,2017,83.5,CH
+CH05,Ostschweiz,2018,83.6,CH
+CH06,Zentralschweiz,2009,82.2,CH
+CH06,Zentralschweiz,2010,82.8,CH
+CH06,Zentralschweiz,2011,83.0,CH
+CH06,Zentralschweiz,2012,83.1,CH
+CH06,Zentralschweiz,2013,83.2,CH
+CH06,Zentralschweiz,2014,83.5,CH
+CH06,Zentralschweiz,2015,83.1,CH
+CH06,Zentralschweiz,2016,84.0,CH
+CH06,Zentralschweiz,2017,84.0,CH
+CH06,Zentralschweiz,2018,84.0,CH
+CH07,Ticino,2009,83.7,CH
+CH07,Ticino,2010,83.3,CH
+CH07,Ticino,2011,84.0,CH
+CH07,Ticino,2012,83.8,CH
+CH07,Ticino,2013,83.8,CH
+CH07,Ticino,2014,84.6,CH
+CH07,Ticino,2015,83.7,CH
+CH07,Ticino,2016,85.0,CH
+CH07,Ticino,2017,84.4,CH
+CH07,Ticino,2018,85.2,CH
+CY00,Kypros,2009,81.0,CY
+CY00,Kypros,2010,81.5,CY
+CY00,Kypros,2011,81.2,CY
+CY00,Kypros,2012,81.1,CY
+CY00,Kypros,2013,82.5,CY
+CY00,Kypros,2014,82.3,CY
+CY00,Kypros,2015,81.8,CY
+CY00,Kypros,2016,82.7,CY
+CY00,Kypros,2017,82.2,CY
+CY00,Kypros,2018,82.9,CY
+CZ01,Praha,2009,79.1,CZ
+CZ01,Praha,2010,79.3,CZ
+CZ01,Praha,2011,79.7,CZ
+CZ01,Praha,2012,79.7,CZ
+CZ01,Praha,2013,80.1,CZ
+CZ01,Praha,2014,80.3,CZ
+CZ01,Praha,2015,80.3,CZ
+CZ01,Praha,2016,80.6,CZ
+CZ01,Praha,2017,80.8,CZ
+CZ01,Praha,2018,80.8,CZ
+CZ02,Strední Cechy,2009,77.2,CZ
+CZ02,Strední Cechy,2010,77.7,CZ
+CZ02,Strední Cechy,2011,77.9,CZ
+CZ02,Strední Cechy,2012,78.0,CZ
+CZ02,Strední Cechy,2013,78.2,CZ
+CZ02,Strední Cechy,2014,79.0,CZ
+CZ02,Strední Cechy,2015,78.8,CZ
+CZ02,Strední Cechy,2016,79.2,CZ
+CZ02,Strední Cechy,2017,79.1,CZ
+CZ02,Strední Cechy,2018,79.0,CZ
+CZ03,Jihozápad,2009,77.6,CZ
+CZ03,Jihozápad,2010,77.9,CZ
+CZ03,Jihozápad,2011,78.1,CZ
+CZ03,Jihozápad,2012,78.3,CZ
+CZ03,Jihozápad,2013,78.4,CZ
+CZ03,Jihozápad,2014,79.1,CZ
+CZ03,Jihozápad,2015,78.5,CZ
+CZ03,Jihozápad,2016,79.3,CZ
+CZ03,Jihozápad,2017,79.2,CZ
+CZ03,Jihozápad,2018,79.2,CZ
+CZ04,Severozápad,2009,75.6,CZ
+CZ04,Severozápad,2010,75.8,CZ
+CZ04,Severozápad,2011,76.3,CZ
+CZ04,Severozápad,2012,76.5,CZ
+CZ04,Severozápad,2013,76.4,CZ
+CZ04,Severozápad,2014,77.0,CZ
+CZ04,Severozápad,2015,76.9,CZ
+CZ04,Severozápad,2016,77.2,CZ
+CZ04,Severozápad,2017,77.1,CZ
+CZ04,Severozápad,2018,77.2,CZ
+CZ05,Severovýchod,2009,77.9,CZ
+CZ05,Severovýchod,2010,78.1,CZ
+CZ05,Severovýchod,2011,78.2,CZ
+CZ05,Severovýchod,2012,78.3,CZ
+CZ05,Severovýchod,2013,78.6,CZ
+CZ05,Severovýchod,2014,79.3,CZ
+CZ05,Severovýchod,2015,79.1,CZ
+CZ05,Severovýchod,2016,79.6,CZ
+CZ05,Severovýchod,2017,79.5,CZ
+CZ05,Severovýchod,2018,79.4,CZ
+CZ06,Jihovýchod,2009,78.1,CZ
+CZ06,Jihovýchod,2010,78.5,CZ
+CZ06,Jihovýchod,2011,78.8,CZ
+CZ06,Jihovýchod,2012,78.8,CZ
+CZ06,Jihovýchod,2013,79.1,CZ
+CZ06,Jihovýchod,2014,79.7,CZ
+CZ06,Jihovýchod,2015,79.5,CZ
+CZ06,Jihovýchod,2016,79.9,CZ
+CZ06,Jihovýchod,2017,79.7,CZ
+CZ06,Jihovýchod,2018,79.7,CZ
+CZ07,Strední Morava,2009,77.2,CZ
+CZ07,Strední Morava,2010,77.6,CZ
+CZ07,Strední Morava,2011,77.9,CZ
+CZ07,Strední Morava,2012,78.2,CZ
+CZ07,Strední Morava,2013,78.1,CZ
+CZ07,Strední Morava,2014,78.9,CZ
+CZ07,Strední Morava,2015,78.6,CZ
+CZ07,Strední Morava,2016,78.9,CZ
+CZ07,Strední Morava,2017,78.9,CZ
+CZ07,Strední Morava,2018,79.1,CZ
+CZ08,Moravskoslezsko,2009,76.2,CZ
+CZ08,Moravskoslezsko,2010,76.4,CZ
+CZ08,Moravskoslezsko,2011,76.5,CZ
+CZ08,Moravskoslezsko,2012,77.0,CZ
+CZ08,Moravskoslezsko,2013,77.1,CZ
+CZ08,Moravskoslezsko,2014,77.6,CZ
+CZ08,Moravskoslezsko,2015,77.5,CZ
+CZ08,Moravskoslezsko,2016,78.0,CZ
+CZ08,Moravskoslezsko,2017,77.8,CZ
+CZ08,Moravskoslezsko,2018,78.0,CZ
+DE11,Stuttgart,2009,81.8,DE
+DE11,Stuttgart,2010,81.8,DE
+DE11,Stuttgart,2011,81.9,DE
+DE11,Stuttgart,2012,81.9,DE
+DE11,Stuttgart,2013,82.0,DE
+DE11,Stuttgart,2014,82.5,DE
+DE11,Stuttgart,2015,81.9,DE
+DE11,Stuttgart,2016,82.2,DE
+DE11,Stuttgart,2017,82.3,DE
+DE11,Stuttgart,2018,82.3,DE
+DE12,Karlsruhe,2009,81.1,DE
+DE12,Karlsruhe,2010,81.4,DE
+DE12,Karlsruhe,2011,81.3,DE
+DE12,Karlsruhe,2012,81.5,DE
+DE12,Karlsruhe,2013,81.6,DE
+DE12,Karlsruhe,2014,81.9,DE
+DE12,Karlsruhe,2015,81.4,DE
+DE12,Karlsruhe,2016,81.6,DE
+DE12,Karlsruhe,2017,81.6,DE
+DE12,Karlsruhe,2018,81.7,DE
+DE13,Freiburg,2009,81.7,DE
+DE13,Freiburg,2010,82.0,DE
+DE13,Freiburg,2011,81.9,DE
+DE13,Freiburg,2012,81.9,DE
+DE13,Freiburg,2013,81.8,DE
+DE13,Freiburg,2014,82.2,DE
+DE13,Freiburg,2015,81.9,DE
+DE13,Freiburg,2016,82.0,DE
+DE13,Freiburg,2017,82.2,DE
+DE13,Freiburg,2018,82.2,DE
+DE14,Tübingen,2009,81.8,DE
+DE14,Tübingen,2010,81.8,DE
+DE14,Tübingen,2011,81.8,DE
+DE14,Tübingen,2012,81.7,DE
+DE14,Tübingen,2013,82.2,DE
+DE14,Tübingen,2014,82.4,DE
+DE14,Tübingen,2015,82.0,DE
+DE14,Tübingen,2016,82.2,DE
+DE14,Tübingen,2017,82.2,DE
+DE14,Tübingen,2018,82.5,DE
+DE21,Oberbayern,2009,81.5,DE
+DE21,Oberbayern,2010,81.7,DE
+DE21,Oberbayern,2011,81.8,DE
+DE21,Oberbayern,2012,81.9,DE
+DE21,Oberbayern,2013,82.1,DE
+DE21,Oberbayern,2014,82.6,DE
+DE21,Oberbayern,2015,82.1,DE
+DE21,Oberbayern,2016,82.5,DE
+DE21,Oberbayern,2017,82.5,DE
+DE21,Oberbayern,2018,82.7,DE
+DE22,Niederbayern,2009,80.1,DE
+DE22,Niederbayern,2010,80.4,DE
+DE22,Niederbayern,2011,80.3,DE
+DE22,Niederbayern,2012,80.7,DE
+DE22,Niederbayern,2013,80.6,DE
+DE22,Niederbayern,2014,80.7,DE
+DE22,Niederbayern,2015,80.4,DE
+DE22,Niederbayern,2016,81.0,DE
+DE22,Niederbayern,2017,80.9,DE
+DE22,Niederbayern,2018,81.1,DE
+DE23,Oberpfalz,2009,80.0,DE
+DE23,Oberpfalz,2010,80.2,DE
+DE23,Oberpfalz,2011,80.4,DE
+DE23,Oberpfalz,2012,80.4,DE
+DE23,Oberpfalz,2013,80.6,DE
+DE23,Oberpfalz,2014,80.9,DE
+DE23,Oberpfalz,2015,80.5,DE
+DE23,Oberpfalz,2016,80.9,DE
+DE23,Oberpfalz,2017,81.0,DE
+DE23,Oberpfalz,2018,80.9,DE
+DE24,Oberfranken,2009,79.7,DE
+DE24,Oberfranken,2010,79.8,DE
+DE24,Oberfranken,2011,80.2,DE
+DE24,Oberfranken,2012,80.1,DE
+DE24,Oberfranken,2013,80.3,DE
+DE24,Oberfranken,2014,81.0,DE
+DE24,Oberfranken,2015,80.1,DE
+DE24,Oberfranken,2016,80.7,DE
+DE24,Oberfranken,2017,80.5,DE
+DE24,Oberfranken,2018,80.6,DE
+DE25,Mittelfranken,2009,80.4,DE
+DE25,Mittelfranken,2010,80.5,DE
+DE25,Mittelfranken,2011,80.6,DE
+DE25,Mittelfranken,2012,80.8,DE
+DE25,Mittelfranken,2013,80.8,DE
+DE25,Mittelfranken,2014,81.2,DE
+DE25,Mittelfranken,2015,80.6,DE
+DE25,Mittelfranken,2016,81.1,DE
+DE25,Mittelfranken,2017,81.0,DE
+DE25,Mittelfranken,2018,81.0,DE
+DE26,Unterfranken,2009,81.0,DE
+DE26,Unterfranken,2010,81.2,DE
+DE26,Unterfranken,2011,81.2,DE
+DE26,Unterfranken,2012,81.2,DE
+DE26,Unterfranken,2013,81.4,DE
+DE26,Unterfranken,2014,81.9,DE
+DE26,Unterfranken,2015,81.3,DE
+DE26,Unterfranken,2016,81.7,DE
+DE26,Unterfranken,2017,81.7,DE
+DE26,Unterfranken,2018,81.6,DE
+DE27,Schwaben,2009,80.9,DE
+DE27,Schwaben,2010,81.1,DE
+DE27,Schwaben,2011,81.2,DE
+DE27,Schwaben,2012,81.3,DE
+DE27,Schwaben,2013,81.3,DE
+DE27,Schwaben,2014,82.0,DE
+DE27,Schwaben,2015,81.6,DE
+DE27,Schwaben,2016,81.9,DE
+DE27,Schwaben,2017,82.0,DE
+DE27,Schwaben,2018,82.1,DE
+DE30,Berlin,2009,80.3,DE
+DE30,Berlin,2010,80.4,DE
+DE30,Berlin,2011,80.3,DE
+DE30,Berlin,2012,80.5,DE
+DE30,Berlin,2013,80.5,DE
+DE30,Berlin,2014,80.9,DE
+DE30,Berlin,2015,80.5,DE
+DE30,Berlin,2016,80.9,DE
+DE30,Berlin,2017,81.2,DE
+DE30,Berlin,2018,80.8,DE
+DE40,Brandenburg,2009,79.7,DE
+DE40,Brandenburg,2010,79.8,DE
+DE40,Brandenburg,2011,80.0,DE
+DE40,Brandenburg,2012,80.3,DE
+DE40,Brandenburg,2013,80.0,DE
+DE40,Brandenburg,2014,80.7,DE
+DE40,Brandenburg,2015,80.3,DE
+DE40,Brandenburg,2016,80.7,DE
+DE40,Brandenburg,2017,80.7,DE
+DE40,Brandenburg,2018,80.7,DE
+DE50,Bremen,2009,79.4,DE
+DE50,Bremen,2010,79.9,DE
+DE50,Bremen,2011,79.7,DE
+DE50,Bremen,2012,79.9,DE
+DE50,Bremen,2013,79.5,DE
+DE50,Bremen,2014,80.1,DE
+DE50,Bremen,2015,79.8,DE
+DE50,Bremen,2016,80.1,DE
+DE50,Bremen,2017,80.1,DE
+DE50,Bremen,2018,79.7,DE
+DE60,Hamburg,2009,80.5,DE
+DE60,Hamburg,2010,80.8,DE
+DE60,Hamburg,2011,80.4,DE
+DE60,Hamburg,2012,80.7,DE
+DE60,Hamburg,2013,80.7,DE
+DE60,Hamburg,2014,81.2,DE
+DE60,Hamburg,2015,80.9,DE
+DE60,Hamburg,2016,81.2,DE
+DE60,Hamburg,2017,81.1,DE
+DE60,Hamburg,2018,81.1,DE
+DE71,Darmstadt,2009,81.2,DE
+DE71,Darmstadt,2010,81.5,DE
+DE71,Darmstadt,2011,81.2,DE
+DE71,Darmstadt,2012,81.4,DE
+DE71,Darmstadt,2013,81.2,DE
+DE71,Darmstadt,2014,81.9,DE
+DE71,Darmstadt,2015,81.3,DE
+DE71,Darmstadt,2016,81.9,DE
+DE71,Darmstadt,2017,81.8,DE
+DE71,Darmstadt,2018,81.8,DE
+DE72,Gießen,2009,80.5,DE
+DE72,Gießen,2010,80.6,DE
+DE72,Gießen,2011,80.8,DE
+DE72,Gießen,2012,80.7,DE
+DE72,Gießen,2013,80.7,DE
+DE72,Gießen,2014,81.3,DE
+DE72,Gießen,2015,80.6,DE
+DE72,Gießen,2016,81.1,DE
+DE72,Gießen,2017,80.6,DE
+DE72,Gießen,2018,80.9,DE
+DE73,Kassel,2009,80.2,DE
+DE73,Kassel,2010,80.8,DE
+DE73,Kassel,2011,80.6,DE
+DE73,Kassel,2012,80.6,DE
+DE73,Kassel,2013,80.4,DE
+DE73,Kassel,2014,81.2,DE
+DE73,Kassel,2015,80.4,DE
+DE73,Kassel,2016,81.0,DE
+DE73,Kassel,2017,81.1,DE
+DE73,Kassel,2018,80.8,DE
+DE80,Mecklenburg-Vorpommern,2009,79.1,DE
+DE80,Mecklenburg-Vorpommern,2010,79.2,DE
+DE80,Mecklenburg-Vorpommern,2011,79.4,DE
+DE80,Mecklenburg-Vorpommern,2012,79.7,DE
+DE80,Mecklenburg-Vorpommern,2013,79.5,DE
+DE80,Mecklenburg-Vorpommern,2014,80.4,DE
+DE80,Mecklenburg-Vorpommern,2015,79.9,DE
+DE80,Mecklenburg-Vorpommern,2016,80.1,DE
+DE80,Mecklenburg-Vorpommern,2017,80.4,DE
+DE80,Mecklenburg-Vorpommern,2018,79.9,DE
+DE91,Braunschweig,2009,80.1,DE
+DE91,Braunschweig,2010,80.2,DE
+DE91,Braunschweig,2011,80.4,DE
+DE91,Braunschweig,2012,80.4,DE
+DE91,Braunschweig,2013,80.2,DE
+DE91,Braunschweig,2014,80.7,DE
+DE91,Braunschweig,2015,80.2,DE
+DE91,Braunschweig,2016,80.1,DE
+DE91,Braunschweig,2017,80.3,DE
+DE91,Braunschweig,2018,80.3,DE
+DE92,Hannover,2009,80.2,DE
+DE92,Hannover,2010,80.4,DE
+DE92,Hannover,2011,80.4,DE
+DE92,Hannover,2012,80.6,DE
+DE92,Hannover,2013,80.4,DE
+DE92,Hannover,2014,80.7,DE
+DE92,Hannover,2015,80.3,DE
+DE92,Hannover,2016,80.8,DE
+DE92,Hannover,2017,80.6,DE
+DE92,Hannover,2018,80.5,DE
+DE93,Lüneburg,2009,79.9,DE
+DE93,Lüneburg,2010,80.2,DE
+DE93,Lüneburg,2011,79.9,DE
+DE93,Lüneburg,2012,80.4,DE
+DE93,Lüneburg,2013,80.1,DE
+DE93,Lüneburg,2014,80.7,DE
+DE93,Lüneburg,2015,80.7,DE
+DE93,Lüneburg,2016,80.6,DE
+DE93,Lüneburg,2017,80.7,DE
+DE93,Lüneburg,2018,80.6,DE
+DE94,Weser-Ems,2009,79.9,DE
+DE94,Weser-Ems,2010,80.3,DE
+DE94,Weser-Ems,2011,80.1,DE
+DE94,Weser-Ems,2012,80.3,DE
+DE94,Weser-Ems,2013,80.1,DE
+DE94,Weser-Ems,2014,80.8,DE
+DE94,Weser-Ems,2015,80.4,DE
+DE94,Weser-Ems,2016,80.5,DE
+DE94,Weser-Ems,2017,80.7,DE
+DE94,Weser-Ems,2018,80.5,DE
+DEA1,Düsseldorf,2009,79.6,DE
+DEA1,Düsseldorf,2010,79.6,DE
+DEA1,Düsseldorf,2011,80.0,DE
+DEA1,Düsseldorf,2012,80.1,DE
+DEA1,Düsseldorf,2013,79.9,DE
+DEA1,Düsseldorf,2014,80.5,DE
+DEA1,Düsseldorf,2015,80.1,DE
+DEA1,Düsseldorf,2016,80.4,DE
+DEA1,Düsseldorf,2017,80.5,DE
+DEA1,Düsseldorf,2018,80.3,DE
+DEA2,Köln,2009,80.4,DE
+DEA2,Köln,2010,80.7,DE
+DEA2,Köln,2011,80.8,DE
+DEA2,Köln,2012,80.7,DE
+DEA2,Köln,2013,80.7,DE
+DEA2,Köln,2014,81.2,DE
+DEA2,Köln,2015,80.8,DE
+DEA2,Köln,2016,81.2,DE
+DEA2,Köln,2017,81.2,DE
+DEA2,Köln,2018,80.9,DE
+DEA3,Münster,2009,79.9,DE
+DEA3,Münster,2010,79.9,DE
+DEA3,Münster,2011,80.2,DE
+DEA3,Münster,2012,80.5,DE
+DEA3,Münster,2013,80.5,DE
+DEA3,Münster,2014,80.9,DE
+DEA3,Münster,2015,80.6,DE
+DEA3,Münster,2016,80.7,DE
+DEA3,Münster,2017,80.9,DE
+DEA3,Münster,2018,80.8,DE
+DEA4,Detmold,2009,80.5,DE
+DEA4,Detmold,2010,80.7,DE
+DEA4,Detmold,2011,81.0,DE
+DEA4,Detmold,2012,80.9,DE
+DEA4,Detmold,2013,80.9,DE
+DEA4,Detmold,2014,81.4,DE
+DEA4,Detmold,2015,81.1,DE
+DEA4,Detmold,2016,81.2,DE
+DEA4,Detmold,2017,81.2,DE
+DEA4,Detmold,2018,81.1,DE
+DEA5,Arnsberg,2009,79.6,DE
+DEA5,Arnsberg,2010,79.6,DE
+DEA5,Arnsberg,2011,79.7,DE
+DEA5,Arnsberg,2012,79.8,DE
+DEA5,Arnsberg,2013,79.6,DE
+DEA5,Arnsberg,2014,80.2,DE
+DEA5,Arnsberg,2015,79.7,DE
+DEA5,Arnsberg,2016,80.0,DE
+DEA5,Arnsberg,2017,80.2,DE
+DEA5,Arnsberg,2018,80.0,DE
+DEB1,Koblenz,2009,79.9,DE
+DEB1,Koblenz,2010,80.4,DE
+DEB1,Koblenz,2011,80.5,DE
+DEB1,Koblenz,2012,80.3,DE
+DEB1,Koblenz,2013,80.5,DE
+DEB1,Koblenz,2014,80.8,DE
+DEB1,Koblenz,2015,80.6,DE
+DEB1,Koblenz,2016,80.7,DE
+DEB1,Koblenz,2017,80.7,DE
+DEB1,Koblenz,2018,80.7,DE
+DEB2,Trier,2009,80.3,DE
+DEB2,Trier,2010,80.8,DE
+DEB2,Trier,2011,80.7,DE
+DEB2,Trier,2012,81.3,DE
+DEB2,Trier,2013,81.0,DE
+DEB2,Trier,2014,81.2,DE
+DEB2,Trier,2015,80.8,DE
+DEB2,Trier,2016,81.3,DE
+DEB2,Trier,2017,81.1,DE
+DEB2,Trier,2018,80.9,DE
+DEB3,Rheinhessen-Pfalz,2009,80.4,DE
+DEB3,Rheinhessen-Pfalz,2010,80.7,DE
+DEB3,Rheinhessen-Pfalz,2011,80.5,DE
+DEB3,Rheinhessen-Pfalz,2012,80.7,DE
+DEB3,Rheinhessen-Pfalz,2013,80.7,DE
+DEB3,Rheinhessen-Pfalz,2014,81.4,DE
+DEB3,Rheinhessen-Pfalz,2015,80.9,DE
+DEB3,Rheinhessen-Pfalz,2016,81.4,DE
+DEB3,Rheinhessen-Pfalz,2017,81.1,DE
+DEB3,Rheinhessen-Pfalz,2018,81.0,DE
+DEC0,Saarland,2009,79.3,DE
+DEC0,Saarland,2010,79.6,DE
+DEC0,Saarland,2011,79.6,DE
+DEC0,Saarland,2012,80.0,DE
+DEC0,Saarland,2013,79.6,DE
+DEC0,Saarland,2014,80.2,DE
+DEC0,Saarland,2015,79.7,DE
+DEC0,Saarland,2016,80.2,DE
+DEC0,Saarland,2017,80.2,DE
+DEC0,Saarland,2018,79.7,DE
+DED2,Dresden,2009,80.6,DE
+DED2,Dresden,2010,0.0,DE
+DED2,Dresden,2011,81.1,DE
+DED2,Dresden,2012,81.1,DE
+DED2,Dresden,2013,81.0,DE
+DED2,Dresden,2014,81.6,DE
+DED2,Dresden,2015,81.0,DE
+DED2,Dresden,2016,81.7,DE
+DED2,Dresden,2017,81.7,DE
+DED2,Dresden,2018,81.5,DE
+DED4,Chemnitz,2009,0.0,DE
+DED4,Chemnitz,2010,0.0,DE
+DED4,Chemnitz,2011,80.2,DE
+DED4,Chemnitz,2012,80.6,DE
+DED4,Chemnitz,2013,80.0,DE
+DED4,Chemnitz,2014,80.9,DE
+DED4,Chemnitz,2015,80.4,DE
+DED4,Chemnitz,2016,80.8,DE
+DED4,Chemnitz,2017,80.9,DE
+DED4,Chemnitz,2018,80.5,DE
+DED5,Leipzig,2009,0.0,DE
+DED5,Leipzig,2010,0.0,DE
+DED5,Leipzig,2011,80.4,DE
+DED5,Leipzig,2012,80.3,DE
+DED5,Leipzig,2013,80.4,DE
+DED5,Leipzig,2014,80.8,DE
+DED5,Leipzig,2015,80.5,DE
+DED5,Leipzig,2016,80.8,DE
+DED5,Leipzig,2017,80.7,DE
+DED5,Leipzig,2018,80.6,DE
+DEE0,Sachsen-Anhalt,2009,78.8,DE
+DEE0,Sachsen-Anhalt,2010,79.0,DE
+DEE0,Sachsen-Anhalt,2011,79.2,DE
+DEE0,Sachsen-Anhalt,2012,79.4,DE
+DEE0,Sachsen-Anhalt,2013,79.3,DE
+DEE0,Sachsen-Anhalt,2014,79.8,DE
+DEE0,Sachsen-Anhalt,2015,79.2,DE
+DEE0,Sachsen-Anhalt,2016,79.8,DE
+DEE0,Sachsen-Anhalt,2017,79.4,DE
+DEE0,Sachsen-Anhalt,2018,79.4,DE
+DEF0,Schleswig-Holstein,2009,80.1,DE
+DEF0,Schleswig-Holstein,2010,80.2,DE
+DEF0,Schleswig-Holstein,2011,80.3,DE
+DEF0,Schleswig-Holstein,2012,80.4,DE
+DEF0,Schleswig-Holstein,2013,80.3,DE
+DEF0,Schleswig-Holstein,2014,80.8,DE
+DEF0,Schleswig-Holstein,2015,80.5,DE
+DEF0,Schleswig-Holstein,2016,80.6,DE
+DEF0,Schleswig-Holstein,2017,80.7,DE
+DEF0,Schleswig-Holstein,2018,80.4,DE
+DEG0,Thüringen,2009,79.5,DE
+DEG0,Thüringen,2010,79.9,DE
+DEG0,Thüringen,2011,79.9,DE
+DEG0,Thüringen,2012,80.0,DE
+DEG0,Thüringen,2013,80.3,DE
+DEG0,Thüringen,2014,80.6,DE
+DEG0,Thüringen,2015,80.0,DE
+DEG0,Thüringen,2016,80.4,DE
+DEG0,Thüringen,2017,80.3,DE
+DEG0,Thüringen,2018,80.3,DE
+DK01,Hovedstaden,2009,78.9,DK
+DK01,Hovedstaden,2010,78.9,DK
+DK01,Hovedstaden,2011,79.6,DK
+DK01,Hovedstaden,2012,80.0,DK
+DK01,Hovedstaden,2013,80.2,DK
+DK01,Hovedstaden,2014,80.7,DK
+DK01,Hovedstaden,2015,80.6,DK
+DK01,Hovedstaden,2016,80.8,DK
+DK01,Hovedstaden,2017,81.0,DK
+DK01,Hovedstaden,2018,81.1,DK
+DK02,Sjælland,2009,78.3,DK
+DK02,Sjælland,2010,78.5,DK
+DK02,Sjælland,2011,78.9,DK
+DK02,Sjælland,2012,79.5,DK
+DK02,Sjælland,2013,79.7,DK
+DK02,Sjælland,2014,80.0,DK
+DK02,Sjælland,2015,80.2,DK
+DK02,Sjælland,2016,80.2,DK
+DK02,Sjælland,2017,80.2,DK
+DK02,Sjælland,2018,80.4,DK
+DK03,Syddanmark,2009,79.0,DK
+DK03,Syddanmark,2010,79.4,DK
+DK03,Syddanmark,2011,79.9,DK
+DK03,Syddanmark,2012,80.3,DK
+DK03,Syddanmark,2013,80.6,DK
+DK03,Syddanmark,2014,80.8,DK
+DK03,Syddanmark,2015,81.1,DK
+DK03,Syddanmark,2016,81.2,DK
+DK03,Syddanmark,2017,81.3,DK
+DK03,Syddanmark,2018,81.1,DK
+DK04,Midtjylland,2009,79.7,DK
+DK04,Midtjylland,2010,80.1,DK
+DK04,Midtjylland,2011,80.7,DK
+DK04,Midtjylland,2012,80.7,DK
+DK04,Midtjylland,2013,80.9,DK
+DK04,Midtjylland,2014,81.2,DK
+DK04,Midtjylland,2015,81.3,DK
+DK04,Midtjylland,2016,81.5,DK
+DK04,Midtjylland,2017,81.6,DK
+DK04,Midtjylland,2018,81.3,DK
+DK05,Nordjylland,2009,78.9,DK
+DK05,Nordjylland,2010,79.5,DK
+DK05,Nordjylland,2011,80.0,DK
+DK05,Nordjylland,2012,80.2,DK
+DK05,Nordjylland,2013,80.1,DK
+DK05,Nordjylland,2014,80.9,DK
+DK05,Nordjylland,2015,80.6,DK
+DK05,Nordjylland,2016,80.5,DK
+DK05,Nordjylland,2017,81.3,DK
+DK05,Nordjylland,2018,80.8,DK
+EE00,Eesti,2009,75.3,EE
+EE00,Eesti,2010,76.0,EE
+EE00,Eesti,2011,76.6,EE
+EE00,Eesti,2012,76.7,EE
+EE00,Eesti,2013,77.5,EE
+EE00,Eesti,2014,77.4,EE
+EE00,Eesti,2015,78.0,EE
+EE00,Eesti,2016,78.0,EE
+EE00,Eesti,2017,78.4,EE
+EE00,Eesti,2018,78.5,EE
+EL30,Attiki,2009,80.2,EL
+EL30,Attiki,2010,80.5,EL
+EL30,Attiki,2011,80.5,EL
+EL30,Attiki,2012,80.6,EL
+EL30,Attiki,2013,81.1,EL
+EL30,Attiki,2014,81.1,EL
+EL30,Attiki,2015,80.7,EL
+EL30,Attiki,2016,81.0,EL
+EL30,Attiki,2017,80.9,EL
+EL30,Attiki,2018,81.3,EL
+EL41,Voreio Aigaio,2009,80.8,EL
+EL41,Voreio Aigaio,2010,81.4,EL
+EL41,Voreio Aigaio,2011,81.6,EL
+EL41,Voreio Aigaio,2012,80.7,EL
+EL41,Voreio Aigaio,2013,81.9,EL
+EL41,Voreio Aigaio,2014,81.9,EL
+EL41,Voreio Aigaio,2015,81.8,EL
+EL41,Voreio Aigaio,2016,82.2,EL
+EL41,Voreio Aigaio,2017,81.8,EL
+EL41,Voreio Aigaio,2018,82.9,EL
+EL42,Notio Aigaio,2009,81.2,EL
+EL42,Notio Aigaio,2010,81.1,EL
+EL42,Notio Aigaio,2011,81.1,EL
+EL42,Notio Aigaio,2012,81.4,EL
+EL42,Notio Aigaio,2013,82.2,EL
+EL42,Notio Aigaio,2014,81.6,EL
+EL42,Notio Aigaio,2015,81.7,EL
+EL42,Notio Aigaio,2016,81.9,EL
+EL42,Notio Aigaio,2017,82.4,EL
+EL42,Notio Aigaio,2018,82.7,EL
+EL43,Kriti,2009,81.3,EL
+EL43,Kriti,2010,81.5,EL
+EL43,Kriti,2011,81.5,EL
+EL43,Kriti,2012,81.4,EL
+EL43,Kriti,2013,82.3,EL
+EL43,Kriti,2014,82.0,EL
+EL43,Kriti,2015,81.7,EL
+EL43,Kriti,2016,82.2,EL
+EL43,Kriti,2017,81.7,EL
+EL43,Kriti,2018,82.6,EL
+EL51,"Anatoliki Makedonia, Thraki",2009,79.1,EL
+EL51,"Anatoliki Makedonia, Thraki",2010,79.0,EL
+EL51,"Anatoliki Makedonia, Thraki",2011,79.7,EL
+EL51,"Anatoliki Makedonia, Thraki",2012,79.8,EL
+EL51,"Anatoliki Makedonia, Thraki",2013,80.0,EL
+EL51,"Anatoliki Makedonia, Thraki",2014,80.6,EL
+EL51,"Anatoliki Makedonia, Thraki",2015,80.5,EL
+EL51,"Anatoliki Makedonia, Thraki",2016,81.0,EL
+EL51,"Anatoliki Makedonia, Thraki",2017,80.1,EL
+EL51,"Anatoliki Makedonia, Thraki",2018,81.4,EL
+EL52,Kentriki Makedonia,2009,80.1,EL
+EL52,Kentriki Makedonia,2010,80.2,EL
+EL52,Kentriki Makedonia,2011,80.7,EL
+EL52,Kentriki Makedonia,2012,80.4,EL
+EL52,Kentriki Makedonia,2013,81.3,EL
+EL52,Kentriki Makedonia,2014,81.2,EL
+EL52,Kentriki Makedonia,2015,81.0,EL
+EL52,Kentriki Makedonia,2016,81.3,EL
+EL52,Kentriki Makedonia,2017,81.4,EL
+EL52,Kentriki Makedonia,2018,81.9,EL
+EL53,Dytiki Makedonia,2009,80.4,EL
+EL53,Dytiki Makedonia,2010,80.9,EL
+EL53,Dytiki Makedonia,2011,81.1,EL
+EL53,Dytiki Makedonia,2012,80.9,EL
+EL53,Dytiki Makedonia,2013,81.3,EL
+EL53,Dytiki Makedonia,2014,82.2,EL
+EL53,Dytiki Makedonia,2015,81.5,EL
+EL53,Dytiki Makedonia,2016,81.8,EL
+EL53,Dytiki Makedonia,2017,82.2,EL
+EL53,Dytiki Makedonia,2018,83.0,EL
+EL54,Ipeiros,2009,82.2,EL
+EL54,Ipeiros,2010,82.7,EL
+EL54,Ipeiros,2011,82.2,EL
+EL54,Ipeiros,2012,82.3,EL
+EL54,Ipeiros,2013,82.6,EL
+EL54,Ipeiros,2014,83.5,EL
+EL54,Ipeiros,2015,82.9,EL
+EL54,Ipeiros,2016,83.4,EL
+EL54,Ipeiros,2017,83.6,EL
+EL54,Ipeiros,2018,83.6,EL
+EL61,Thessalia,2009,80.3,EL
+EL61,Thessalia,2010,81.0,EL
+EL61,Thessalia,2011,80.7,EL
+EL61,Thessalia,2012,80.8,EL
+EL61,Thessalia,2013,81.8,EL
+EL61,Thessalia,2014,81.7,EL
+EL61,Thessalia,2015,81.7,EL
+EL61,Thessalia,2016,81.9,EL
+EL61,Thessalia,2017,81.8,EL
+EL61,Thessalia,2018,82.6,EL
+EL62,Ionia Nisia,2009,80.6,EL
+EL62,Ionia Nisia,2010,81.6,EL
+EL62,Ionia Nisia,2011,81.5,EL
+EL62,Ionia Nisia,2012,81.4,EL
+EL62,Ionia Nisia,2013,81.6,EL
+EL62,Ionia Nisia,2014,81.7,EL
+EL62,Ionia Nisia,2015,80.8,EL
+EL62,Ionia Nisia,2016,81.4,EL
+EL62,Ionia Nisia,2017,80.9,EL
+EL62,Ionia Nisia,2018,81.3,EL
+EL63,Dytiki Ellada,2009,80.2,EL
+EL63,Dytiki Ellada,2010,80.3,EL
+EL63,Dytiki Ellada,2011,80.8,EL
+EL63,Dytiki Ellada,2012,80.4,EL
+EL63,Dytiki Ellada,2013,80.9,EL
+EL63,Dytiki Ellada,2014,81.5,EL
+EL63,Dytiki Ellada,2015,80.9,EL
+EL63,Dytiki Ellada,2016,81.2,EL
+EL63,Dytiki Ellada,2017,81.4,EL
+EL63,Dytiki Ellada,2018,81.7,EL
+EL64,Sterea Ellada,2009,81.2,EL
+EL64,Sterea Ellada,2010,81.4,EL
+EL64,Sterea Ellada,2011,80.9,EL
+EL64,Sterea Ellada,2012,81.1,EL
+EL64,Sterea Ellada,2013,82.2,EL
+EL64,Sterea Ellada,2014,81.9,EL
+EL64,Sterea Ellada,2015,81.7,EL
+EL64,Sterea Ellada,2016,81.8,EL
+EL64,Sterea Ellada,2017,81.9,EL
+EL64,Sterea Ellada,2018,82.3,EL
+EL65,Peloponnisos,2009,80.6,EL
+EL65,Peloponnisos,2010,80.9,EL
+EL65,Peloponnisos,2011,81.2,EL
+EL65,Peloponnisos,2012,80.7,EL
+EL65,Peloponnisos,2013,82.0,EL
+EL65,Peloponnisos,2014,82.0,EL
+EL65,Peloponnisos,2015,81.3,EL
+EL65,Peloponnisos,2016,82.3,EL
+EL65,Peloponnisos,2017,81.8,EL
+EL65,Peloponnisos,2018,82.1,EL
+ES11,Galicia,2009,81.7,ES
+ES11,Galicia,2010,82.3,ES
+ES11,Galicia,2011,82.5,ES
+ES11,Galicia,2012,82.5,ES
+ES11,Galicia,2013,82.9,ES
+ES11,Galicia,2014,83.4,ES
+ES11,Galicia,2015,82.9,ES
+ES11,Galicia,2016,83.0,ES
+ES11,Galicia,2017,83.4,ES
+ES11,Galicia,2018,83.5,ES
+ES12,Principado de Asturias,2009,81.3,ES
+ES12,Principado de Asturias,2010,81.5,ES
+ES12,Principado de Asturias,2011,81.7,ES
+ES12,Principado de Asturias,2012,81.8,ES
+ES12,Principado de Asturias,2013,82.5,ES
+ES12,Principado de Asturias,2014,82.5,ES
+ES12,Principado de Asturias,2015,82.4,ES
+ES12,Principado de Asturias,2016,82.6,ES
+ES12,Principado de Asturias,2017,82.8,ES
+ES12,Principado de Asturias,2018,82.9,ES
+ES13,Cantabria,2009,82.3,ES
+ES13,Cantabria,2010,82.5,ES
+ES13,Cantabria,2011,82.8,ES
+ES13,Cantabria,2012,82.8,ES
+ES13,Cantabria,2013,83.4,ES
+ES13,Cantabria,2014,83.1,ES
+ES13,Cantabria,2015,82.9,ES
+ES13,Cantabria,2016,83.5,ES
+ES13,Cantabria,2017,83.6,ES
+ES13,Cantabria,2018,83.6,ES
+ES21,País Vasco,2009,82.3,ES
+ES21,País Vasco,2010,82.8,ES
+ES21,País Vasco,2011,82.9,ES
+ES21,País Vasco,2012,83.1,ES
+ES21,País Vasco,2013,83.7,ES
+ES21,País Vasco,2014,83.9,ES
+ES21,País Vasco,2015,83.5,ES
+ES21,País Vasco,2016,83.9,ES
+ES21,País Vasco,2017,84.0,ES
+ES21,País Vasco,2018,84.1,ES
+ES22,Comunidad Foral de Navarra,2009,83.3,ES
+ES22,Comunidad Foral de Navarra,2010,84.1,ES
+ES22,Comunidad Foral de Navarra,2011,83.9,ES
+ES22,Comunidad Foral de Navarra,2012,83.8,ES
+ES22,Comunidad Foral de Navarra,2013,84.0,ES
+ES22,Comunidad Foral de Navarra,2014,83.9,ES
+ES22,Comunidad Foral de Navarra,2015,84.0,ES
+ES22,Comunidad Foral de Navarra,2016,84.1,ES
+ES22,Comunidad Foral de Navarra,2017,84.1,ES
+ES22,Comunidad Foral de Navarra,2018,84.4,ES
+ES23,La Rioja,2009,83.0,ES
+ES23,La Rioja,2010,83.3,ES
+ES23,La Rioja,2011,83.2,ES
+ES23,La Rioja,2012,83.0,ES
+ES23,La Rioja,2013,84.0,ES
+ES23,La Rioja,2014,84.2,ES
+ES23,La Rioja,2015,83.7,ES
+ES23,La Rioja,2016,84.3,ES
+ES23,La Rioja,2017,84.0,ES
+ES23,La Rioja,2018,83.9,ES
+ES24,Aragón,2009,82.3,ES
+ES24,Aragón,2010,82.6,ES
+ES24,Aragón,2011,82.7,ES
+ES24,Aragón,2012,83.0,ES
+ES24,Aragón,2013,83.4,ES
+ES24,Aragón,2014,83.2,ES
+ES24,Aragón,2015,83.0,ES
+ES24,Aragón,2016,83.8,ES
+ES24,Aragón,2017,83.5,ES
+ES24,Aragón,2018,83.8,ES
+ES30,Comunidad de Madrid,2009,83.3,ES
+ES30,Comunidad de Madrid,2010,83.9,ES
+ES30,Comunidad de Madrid,2011,84.2,ES
+ES30,Comunidad de Madrid,2012,84.2,ES
+ES30,Comunidad de Madrid,2013,84.8,ES
+ES30,Comunidad de Madrid,2014,84.9,ES
+ES30,Comunidad de Madrid,2015,84.5,ES
+ES30,Comunidad de Madrid,2016,85.2,ES
+ES30,Comunidad de Madrid,2017,85.1,ES
+ES30,Comunidad de Madrid,2018,85.5,ES
+ES41,Castilla y León,2009,83.1,ES
+ES41,Castilla y León,2010,83.4,ES
+ES41,Castilla y León,2011,83.7,ES
+ES41,Castilla y León,2012,83.5,ES
+ES41,Castilla y León,2013,84.0,ES
+ES41,Castilla y León,2014,84.1,ES
+ES41,Castilla y León,2015,83.9,ES
+ES41,Castilla y León,2016,84.3,ES
+ES41,Castilla y León,2017,84.2,ES
+ES41,Castilla y León,2018,84.3,ES
+ES42,Castilla-la Mancha,2009,82.6,ES
+ES42,Castilla-la Mancha,2010,83.1,ES
+ES42,Castilla-la Mancha,2011,83.2,ES
+ES42,Castilla-la Mancha,2012,83.0,ES
+ES42,Castilla-la Mancha,2013,83.5,ES
+ES42,Castilla-la Mancha,2014,83.7,ES
+ES42,Castilla-la Mancha,2015,83.1,ES
+ES42,Castilla-la Mancha,2016,83.6,ES
+ES42,Castilla-la Mancha,2017,83.2,ES
+ES42,Castilla-la Mancha,2018,83.8,ES
+ES43,Extremadura,2009,81.3,ES
+ES43,Extremadura,2010,81.5,ES
+ES43,Extremadura,2011,82.1,ES
+ES43,Extremadura,2012,81.7,ES
+ES43,Extremadura,2013,82.2,ES
+ES43,Extremadura,2014,82.7,ES
+ES43,Extremadura,2015,82.3,ES
+ES43,Extremadura,2016,82.6,ES
+ES43,Extremadura,2017,82.5,ES
+ES43,Extremadura,2018,82.8,ES
+ES51,Cataluña,2009,82.2,ES
+ES51,Cataluña,2010,82.7,ES
+ES51,Cataluña,2011,82.9,ES
+ES51,Cataluña,2012,82.8,ES
+ES51,Cataluña,2013,83.4,ES
+ES51,Cataluña,2014,83.6,ES
+ES51,Cataluña,2015,83.4,ES
+ES51,Cataluña,2016,83.9,ES
+ES51,Cataluña,2017,83.6,ES
+ES51,Cataluña,2018,83.7,ES
+ES52,Comunitat Valenciana,2009,81.6,ES
+ES52,Comunitat Valenciana,2010,81.9,ES
+ES52,Comunitat Valenciana,2011,82.1,ES
+ES52,Comunitat Valenciana,2012,82.1,ES
+ES52,Comunitat Valenciana,2013,82.8,ES
+ES52,Comunitat Valenciana,2014,82.8,ES
+ES52,Comunitat Valenciana,2015,82.5,ES
+ES52,Comunitat Valenciana,2016,83.0,ES
+ES52,Comunitat Valenciana,2017,82.8,ES
+ES52,Comunitat Valenciana,2018,82.9,ES
+ES53,Illes Balears,2009,81.3,ES
+ES53,Illes Balears,2010,81.8,ES
+ES53,Illes Balears,2011,82.2,ES
+ES53,Illes Balears,2012,82.1,ES
+ES53,Illes Balears,2013,82.9,ES
+ES53,Illes Balears,2014,83.0,ES
+ES53,Illes Balears,2015,82.7,ES
+ES53,Illes Balears,2016,83.4,ES
+ES53,Illes Balears,2017,83.1,ES
+ES53,Illes Balears,2018,83.6,ES
+ES61,Andalucía,2009,80.5,ES
+ES61,Andalucía,2010,81.0,ES
+ES61,Andalucía,2011,81.1,ES
+ES61,Andalucía,2012,81.1,ES
+ES61,Andalucía,2013,81.8,ES
+ES61,Andalucía,2014,82.1,ES
+ES61,Andalucía,2015,81.6,ES
+ES61,Andalucía,2016,82.2,ES
+ES61,Andalucía,2017,82.1,ES
+ES61,Andalucía,2018,82.1,ES
+ES62,Región de Murcia,2009,81.1,ES
+ES62,Región de Murcia,2010,81.9,ES
+ES62,Región de Murcia,2011,82.0,ES
+ES62,Región de Murcia,2012,81.9,ES
+ES62,Región de Murcia,2013,82.7,ES
+ES62,Región de Murcia,2014,82.8,ES
+ES62,Región de Murcia,2015,82.5,ES
+ES62,Región de Murcia,2016,82.9,ES
+ES62,Región de Murcia,2017,82.6,ES
+ES62,Región de Murcia,2018,83.0,ES
+ES63,Ciudad de Ceuta,2009,78.2,ES
+ES63,Ciudad de Ceuta,2010,78.6,ES
+ES63,Ciudad de Ceuta,2011,79.5,ES
+ES63,Ciudad de Ceuta,2012,80.7,ES
+ES63,Ciudad de Ceuta,2013,79.7,ES
+ES63,Ciudad de Ceuta,2014,80.6,ES
+ES63,Ciudad de Ceuta,2015,81.1,ES
+ES63,Ciudad de Ceuta,2016,81.4,ES
+ES63,Ciudad de Ceuta,2017,80.3,ES
+ES63,Ciudad de Ceuta,2018,81.5,ES
+ES64,Ciudad de Melilla,2009,81.1,ES
+ES64,Ciudad de Melilla,2010,81.7,ES
+ES64,Ciudad de Melilla,2011,80.0,ES
+ES64,Ciudad de Melilla,2012,80.5,ES
+ES64,Ciudad de Melilla,2013,81.0,ES
+ES64,Ciudad de Melilla,2014,80.7,ES
+ES64,Ciudad de Melilla,2015,80.1,ES
+ES64,Ciudad de Melilla,2016,81.2,ES
+ES64,Ciudad de Melilla,2017,81.0,ES
+ES64,Ciudad de Melilla,2018,80.7,ES
+ES70,Canarias,2009,81.2,ES
+ES70,Canarias,2010,81.9,ES
+ES70,Canarias,2011,81.6,ES
+ES70,Canarias,2012,81.8,ES
+ES70,Canarias,2013,82.7,ES
+ES70,Canarias,2014,82.5,ES
+ES70,Canarias,2015,82.3,ES
+ES70,Canarias,2016,82.7,ES
+ES70,Canarias,2017,83.0,ES
+ES70,Canarias,2018,82.6,ES
+FI19,Länsi-Suomi,2009,80.4,FI
+FI19,Länsi-Suomi,2010,80.6,FI
+FI19,Länsi-Suomi,2011,80.7,FI
+FI19,Länsi-Suomi,2012,81.0,FI
+FI19,Länsi-Suomi,2013,81.4,FI
+FI19,Länsi-Suomi,2014,81.4,FI
+FI19,Länsi-Suomi,2015,81.8,FI
+FI19,Länsi-Suomi,2016,81.7,FI
+FI19,Länsi-Suomi,2017,81.8,FI
+FI19,Länsi-Suomi,2018,82.0,FI
+FI1B,Helsinki-Uusimaa,2009,80.6,FI
+FI1B,Helsinki-Uusimaa,2010,80.5,FI
+FI1B,Helsinki-Uusimaa,2011,81.0,FI
+FI1B,Helsinki-Uusimaa,2012,81.1,FI
+FI1B,Helsinki-Uusimaa,2013,81.7,FI
+FI1B,Helsinki-Uusimaa,2014,81.8,FI
+FI1B,Helsinki-Uusimaa,2015,81.9,FI
+FI1B,Helsinki-Uusimaa,2016,82.0,FI
+FI1B,Helsinki-Uusimaa,2017,82.3,FI
+FI1B,Helsinki-Uusimaa,2018,82.5,FI
+FI1C,Etelä-Suomi,2009,79.6,FI
+FI1C,Etelä-Suomi,2010,79.9,FI
+FI1C,Etelä-Suomi,2011,80.5,FI
+FI1C,Etelä-Suomi,2012,80.5,FI
+FI1C,Etelä-Suomi,2013,80.8,FI
+FI1C,Etelä-Suomi,2014,81.1,FI
+FI1C,Etelä-Suomi,2015,81.5,FI
+FI1C,Etelä-Suomi,2016,81.3,FI
+FI1C,Etelä-Suomi,2017,81.5,FI
+FI1C,Etelä-Suomi,2018,81.5,FI
+FI1D,Pohjois- ja Itä-Suomi,2009,79.6,FI
+FI1D,Pohjois- ja Itä-Suomi,2010,79.8,FI
+FI1D,Pohjois- ja Itä-Suomi,2011,80.1,FI
+FI1D,Pohjois- ja Itä-Suomi,2012,80.2,FI
+FI1D,Pohjois- ja Itä-Suomi,2013,80.4,FI
+FI1D,Pohjois- ja Itä-Suomi,2014,80.7,FI
+FI1D,Pohjois- ja Itä-Suomi,2015,81.1,FI
+FI1D,Pohjois- ja Itä-Suomi,2016,81.0,FI
+FI1D,Pohjois- ja Itä-Suomi,2017,81.1,FI
+FI1D,Pohjois- ja Itä-Suomi,2018,81.1,FI
+FI20,Åland,2009,82.0,FI
+FI20,Åland,2010,83.2,FI
+FI20,Åland,2011,82.1,FI
+FI20,Åland,2012,79.7,FI
+FI20,Åland,2013,82.5,FI
+FI20,Åland,2014,83.0,FI
+FI20,Åland,2015,82.5,FI
+FI20,Åland,2016,80.9,FI
+FI20,Åland,2017,84.0,FI
+FI20,Åland,2018,83.4,FI
+FR10,Île de France,2009,83.1,FR
+FR10,Île de France,2010,83.3,FR
+FR10,Île de France,2011,83.6,FR
+FR10,Île de France,2012,83.6,FR
+FR10,Île de France,2013,83.9,FR
+FR10,Île de France,2014,84.4,FR
+FR10,Île de France,2015,83.9,FR
+FR10,Île de France,2016,84.2,FR
+FR10,Île de France,2017,84.3,FR
+FR10,Île de France,2018,84.4,FR
+FRB0,Centre - Val de Loire,2009,81.4,FR
+FRB0,Centre - Val de Loire,2010,81.6,FR
+FRB0,Centre - Val de Loire,2011,82.4,FR
+FRB0,Centre - Val de Loire,2012,82.2,FR
+FRB0,Centre - Val de Loire,2013,82.3,FR
+FRB0,Centre - Val de Loire,2014,82.9,FR
+FRB0,Centre - Val de Loire,2015,82.4,FR
+FRB0,Centre - Val de Loire,2016,82.6,FR
+FRB0,Centre - Val de Loire,2017,82.5,FR
+FRB0,Centre - Val de Loire,2018,82.7,FR
+FRC1,Bourgogne,2009,81.2,FR
+FRC1,Bourgogne,2010,81.5,FR
+FRC1,Bourgogne,2011,81.4,FR
+FRC1,Bourgogne,2012,81.7,FR
+FRC1,Bourgogne,2013,81.9,FR
+FRC1,Bourgogne,2014,82.4,FR
+FRC1,Bourgogne,2015,81.9,FR
+FRC1,Bourgogne,2016,82.2,FR
+FRC1,Bourgogne,2017,82.0,FR
+FRC1,Bourgogne,2018,82.3,FR
+FRC2,Franche-Comté,2009,81.4,FR
+FRC2,Franche-Comté,2010,81.8,FR
+FRC2,Franche-Comté,2011,81.9,FR
+FRC2,Franche-Comté,2012,81.9,FR
+FRC2,Franche-Comté,2013,82.4,FR
+FRC2,Franche-Comté,2014,82.7,FR
+FRC2,Franche-Comté,2015,82.4,FR
+FRC2,Franche-Comté,2016,82.5,FR
+FRC2,Franche-Comté,2017,82.6,FR
+FRC2,Franche-Comté,2018,82.5,FR
+FRD1,Basse-Normandie,2009,81.2,FR
+FRD1,Basse-Normandie,2010,81.5,FR
+FRD1,Basse-Normandie,2011,82.0,FR
+FRD1,Basse-Normandie,2012,81.5,FR
+FRD1,Basse-Normandie,2013,82.0,FR
+FRD1,Basse-Normandie,2014,82.4,FR
+FRD1,Basse-Normandie,2015,82.1,FR
+FRD1,Basse-Normandie,2016,82.3,FR
+FRD1,Basse-Normandie,2017,82.5,FR
+FRD1,Basse-Normandie,2018,82.3,FR
+FRD2,Haute-Normandie,2009,80.3,FR
+FRD2,Haute-Normandie,2010,80.7,FR
+FRD2,Haute-Normandie,2011,81.1,FR
+FRD2,Haute-Normandie,2012,81.0,FR
+FRD2,Haute-Normandie,2013,81.2,FR
+FRD2,Haute-Normandie,2014,81.5,FR
+FRD2,Haute-Normandie,2015,81.2,FR
+FRD2,Haute-Normandie,2016,81.6,FR
+FRD2,Haute-Normandie,2017,81.6,FR
+FRD2,Haute-Normandie,2018,81.6,FR
+FRE1,Nord-Pas-de-Calais,2009,78.9,FR
+FRE1,Nord-Pas-de-Calais,2010,79.3,FR
+FRE1,Nord-Pas-de-Calais,2011,79.6,FR
+FRE1,Nord-Pas-de-Calais,2012,79.6,FR
+FRE1,Nord-Pas-de-Calais,2013,79.8,FR
+FRE1,Nord-Pas-de-Calais,2014,80.6,FR
+FRE1,Nord-Pas-de-Calais,2015,80.2,FR
+FRE1,Nord-Pas-de-Calais,2016,80.5,FR
+FRE1,Nord-Pas-de-Calais,2017,80.7,FR
+FRE1,Nord-Pas-de-Calais,2018,80.6,FR
+FRE2,Picardie,2009,79.6,FR
+FRE2,Picardie,2010,80.1,FR
+FRE2,Picardie,2011,80.4,FR
+FRE2,Picardie,2012,80.3,FR
+FRE2,Picardie,2013,80.6,FR
+FRE2,Picardie,2014,81.1,FR
+FRE2,Picardie,2015,80.7,FR
+FRE2,Picardie,2016,81.0,FR
+FRE2,Picardie,2017,81.1,FR
+FRE2,Picardie,2018,81.2,FR
+FRF1,Alsace,2009,81.3,FR
+FRF1,Alsace,2010,81.8,FR
+FRF1,Alsace,2011,82.4,FR
+FRF1,Alsace,2012,82.4,FR
+FRF1,Alsace,2013,82.3,FR
+FRF1,Alsace,2014,82.8,FR
+FRF1,Alsace,2015,82.4,FR
+FRF1,Alsace,2016,82.9,FR
+FRF1,Alsace,2017,82.9,FR
+FRF1,Alsace,2018,82.7,FR
+FRF2,Champagne-Ardenne,2009,80.2,FR
+FRF2,Champagne-Ardenne,2010,80.8,FR
+FRF2,Champagne-Ardenne,2011,81.3,FR
+FRF2,Champagne-Ardenne,2012,81.0,FR
+FRF2,Champagne-Ardenne,2013,81.1,FR
+FRF2,Champagne-Ardenne,2014,81.9,FR
+FRF2,Champagne-Ardenne,2015,81.3,FR
+FRF2,Champagne-Ardenne,2016,81.5,FR
+FRF2,Champagne-Ardenne,2017,81.5,FR
+FRF2,Champagne-Ardenne,2018,81.6,FR
+FRF3,Lorraine,2009,80.6,FR
+FRF3,Lorraine,2010,80.8,FR
+FRF3,Lorraine,2011,81.2,FR
+FRF3,Lorraine,2012,81.2,FR
+FRF3,Lorraine,2013,81.5,FR
+FRF3,Lorraine,2014,81.9,FR
+FRF3,Lorraine,2015,81.5,FR
+FRF3,Lorraine,2016,81.7,FR
+FRF3,Lorraine,2017,81.9,FR
+FRF3,Lorraine,2018,81.9,FR
+FRG0,Pays-de-la-Loire,2009,82.1,FR
+FRG0,Pays-de-la-Loire,2010,82.5,FR
+FRG0,Pays-de-la-Loire,2011,82.9,FR
+FRG0,Pays-de-la-Loire,2012,82.6,FR
+FRG0,Pays-de-la-Loire,2013,82.9,FR
+FRG0,Pays-de-la-Loire,2014,83.5,FR
+FRG0,Pays-de-la-Loire,2015,82.8,FR
+FRG0,Pays-de-la-Loire,2016,83.2,FR
+FRG0,Pays-de-la-Loire,2017,83.1,FR
+FRG0,Pays-de-la-Loire,2018,83.3,FR
+FRH0,Bretagne,2009,80.9,FR
+FRH0,Bretagne,2010,81.1,FR
+FRH0,Bretagne,2011,81.5,FR
+FRH0,Bretagne,2012,81.4,FR
+FRH0,Bretagne,2013,81.7,FR
+FRH0,Bretagne,2014,82.3,FR
+FRH0,Bretagne,2015,81.9,FR
+FRH0,Bretagne,2016,82.0,FR
+FRH0,Bretagne,2017,82.2,FR
+FRH0,Bretagne,2018,82.2,FR
+FRI1,Aquitaine,2009,82.1,FR
+FRI1,Aquitaine,2010,82.3,FR
+FRI1,Aquitaine,2011,83.1,FR
+FRI1,Aquitaine,2012,82.5,FR
+FRI1,Aquitaine,2013,82.9,FR
+FRI1,Aquitaine,2014,83.1,FR
+FRI1,Aquitaine,2015,82.9,FR
+FRI1,Aquitaine,2016,83.3,FR
+FRI1,Aquitaine,2017,83.0,FR
+FRI1,Aquitaine,2018,83.3,FR
+FRI2,Limousin,2009,81.4,FR
+FRI2,Limousin,2010,81.6,FR
+FRI2,Limousin,2011,81.8,FR
+FRI2,Limousin,2012,82.1,FR
+FRI2,Limousin,2013,82.1,FR
+FRI2,Limousin,2014,82.7,FR
+FRI2,Limousin,2015,81.9,FR
+FRI2,Limousin,2016,82.3,FR
+FRI2,Limousin,2017,82.7,FR
+FRI2,Limousin,2018,82.4,FR
+FRI3,Poitou-Charentes,2009,81.7,FR
+FRI3,Poitou-Charentes,2010,82.0,FR
+FRI3,Poitou-Charentes,2011,82.2,FR
+FRI3,Poitou-Charentes,2012,82.1,FR
+FRI3,Poitou-Charentes,2013,82.1,FR
+FRI3,Poitou-Charentes,2014,83.2,FR
+FRI3,Poitou-Charentes,2015,82.6,FR
+FRI3,Poitou-Charentes,2016,82.6,FR
+FRI3,Poitou-Charentes,2017,82.7,FR
+FRI3,Poitou-Charentes,2018,82.7,FR
+FRJ1,Languedoc-Roussillon,2009,81.5,FR
+FRJ1,Languedoc-Roussillon,2010,81.8,FR
+FRJ1,Languedoc-Roussillon,2011,82.2,FR
+FRJ1,Languedoc-Roussillon,2012,82.1,FR
+FRJ1,Languedoc-Roussillon,2013,82.5,FR
+FRJ1,Languedoc-Roussillon,2014,82.8,FR
+FRJ1,Languedoc-Roussillon,2015,82.5,FR
+FRJ1,Languedoc-Roussillon,2016,82.7,FR
+FRJ1,Languedoc-Roussillon,2017,82.8,FR
+FRJ1,Languedoc-Roussillon,2018,82.6,FR
+FRJ2,Midi-Pyrénées,2009,82.6,FR
+FRJ2,Midi-Pyrénées,2010,82.8,FR
+FRJ2,Midi-Pyrénées,2011,83.3,FR
+FRJ2,Midi-Pyrénées,2012,83.0,FR
+FRJ2,Midi-Pyrénées,2013,83.4,FR
+FRJ2,Midi-Pyrénées,2014,83.7,FR
+FRJ2,Midi-Pyrénées,2015,83.4,FR
+FRJ2,Midi-Pyrénées,2016,83.7,FR
+FRJ2,Midi-Pyrénées,2017,83.4,FR
+FRJ2,Midi-Pyrénées,2018,83.7,FR
+FRK1,Auvergne,2009,80.8,FR
+FRK1,Auvergne,2010,81.2,FR
+FRK1,Auvergne,2011,81.6,FR
+FRK1,Auvergne,2012,81.5,FR
+FRK1,Auvergne,2013,81.9,FR
+FRK1,Auvergne,2014,82.5,FR
+FRK1,Auvergne,2015,82.1,FR
+FRK1,Auvergne,2016,82.3,FR
+FRK1,Auvergne,2017,82.3,FR
+FRK1,Auvergne,2018,82.5,FR
+FRK2,Rhône-Alpes,2009,82.6,FR
+FRK2,Rhône-Alpes,2010,83.0,FR
+FRK2,Rhône-Alpes,2011,83.5,FR
+FRK2,Rhône-Alpes,2012,83.2,FR
+FRK2,Rhône-Alpes,2013,83.5,FR
+FRK2,Rhône-Alpes,2014,84.0,FR
+FRK2,Rhône-Alpes,2015,83.5,FR
+FRK2,Rhône-Alpes,2016,83.9,FR
+FRK2,Rhône-Alpes,2017,83.9,FR
+FRK2,Rhône-Alpes,2018,84.1,FR
+FRL0,Provence-Alpes-Côte d'Azur,2009,82.2,FR
+FRL0,Provence-Alpes-Côte d'Azur,2010,82.5,FR
+FRL0,Provence-Alpes-Côte d'Azur,2011,82.9,FR
+FRL0,Provence-Alpes-Côte d'Azur,2012,82.7,FR
+FRL0,Provence-Alpes-Côte d'Azur,2013,83.0,FR
+FRL0,Provence-Alpes-Côte d'Azur,2014,83.4,FR
+FRL0,Provence-Alpes-Côte d'Azur,2015,82.8,FR
+FRL0,Provence-Alpes-Côte d'Azur,2016,83.1,FR
+FRL0,Provence-Alpes-Côte d'Azur,2017,83.1,FR
+FRL0,Provence-Alpes-Côte d'Azur,2018,83.4,FR
+FRM0,Corse,2009,81.8,FR
+FRM0,Corse,2010,81.7,FR
+FRM0,Corse,2011,82.3,FR
+FRM0,Corse,2012,83.1,FR
+FRM0,Corse,2013,82.5,FR
+FRM0,Corse,2014,83.2,FR
+FRM0,Corse,2015,83.3,FR
+FRM0,Corse,2016,83.5,FR
+FRM0,Corse,2017,83.7,FR
+FRM0,Corse,2018,84.2,FR
+FRY1,Guadeloupe,2009,0.0,FR
+FRY1,Guadeloupe,2010,0.0,FR
+FRY1,Guadeloupe,2011,0.0,FR
+FRY1,Guadeloupe,2012,0.0,FR
+FRY1,Guadeloupe,2013,0.0,FR
+FRY1,Guadeloupe,2014,80.6,FR
+FRY1,Guadeloupe,2015,0.0,FR
+FRY1,Guadeloupe,2016,81.6,FR
+FRY1,Guadeloupe,2017,0.0,FR
+FRY1,Guadeloupe,2018,0.0,FR
+FRY2,Martinique,2009,81.9,FR
+FRY2,Martinique,2010,81.9,FR
+FRY2,Martinique,2011,82.9,FR
+FRY2,Martinique,2012,82.8,FR
+FRY2,Martinique,2013,0.0,FR
+FRY2,Martinique,2014,81.5,FR
+FRY2,Martinique,2015,82.8,FR
+FRY2,Martinique,2016,82.0,FR
+FRY2,Martinique,2017,82.4,FR
+FRY2,Martinique,2018,82.6,FR
+FRY3,Guyane,2009,0.0,FR
+FRY3,Guyane,2010,79.0,FR
+FRY3,Guyane,2011,0.0,FR
+FRY3,Guyane,2012,79.3,FR
+FRY3,Guyane,2013,80.5,FR
+FRY3,Guyane,2014,0.0,FR
+FRY3,Guyane,2015,0.0,FR
+FRY3,Guyane,2016,80.4,FR
+FRY3,Guyane,2017,79.8,FR
+FRY3,Guyane,2018,0.0,FR
+FRY4,La Réunion,2009,79.2,FR
+FRY4,La Réunion,2010,79.3,FR
+FRY4,La Réunion,2011,80.6,FR
+FRY4,La Réunion,2012,80.5,FR
+FRY4,La Réunion,2013,80.8,FR
+FRY4,La Réunion,2014,81.0,FR
+FRY4,La Réunion,2015,80.9,FR
+FRY4,La Réunion,2016,81.0,FR
+FRY4,La Réunion,2017,81.4,FR
+FRY4,La Réunion,2018,81.0,FR
+FRY5,Mayotte,2009,0.0,FR
+FRY5,Mayotte,2010,0.0,FR
+FRY5,Mayotte,2011,0.0,FR
+FRY5,Mayotte,2012,0.0,FR
+FRY5,Mayotte,2013,0.0,FR
+FRY5,Mayotte,2014,77.0,FR
+FRY5,Mayotte,2015,76.8,FR
+FRY5,Mayotte,2016,0.0,FR
+FRY5,Mayotte,2017,75.7,FR
+FRY5,Mayotte,2018,76.1,FR
+HR03,Jadranska Hrvatska,2009,77.9,HR
+HR03,Jadranska Hrvatska,2010,78.2,HR
+HR03,Jadranska Hrvatska,2011,78.6,HR
+HR03,Jadranska Hrvatska,2012,78.6,HR
+HR03,Jadranska Hrvatska,2013,79.3,HR
+HR03,Jadranska Hrvatska,2014,79.3,HR
+HR03,Jadranska Hrvatska,2015,78.6,HR
+HR03,Jadranska Hrvatska,2016,79.4,HR
+HR03,Jadranska Hrvatska,2017,78.9,HR
+HR03,Jadranska Hrvatska,2018,79.4,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2009,75.5,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2010,76.0,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2011,76.5,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2012,76.7,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2013,77.1,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2014,77.2,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2015,76.9,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2016,77.6,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2017,77.5,HR
+HR04,Kontinentalna Hrvatska (NUTS 2016),2018,77.6,HR
+HU11,Budapest,2009,76.7,HU
+HU11,Budapest,2010,76.9,HU
+HU11,Budapest,2011,77.1,HU
+HU11,Budapest,2012,77.5,HU
+HU11,Budapest,2013,0.0,HU
+HU11,Budapest,2014,78.3,HU
+HU11,Budapest,2015,77.8,HU
+HU11,Budapest,2016,78.3,HU
+HU11,Budapest,2017,78.2,HU
+HU11,Budapest,2018,78.4,HU
+HU12,Pest,2009,74.8,HU
+HU12,Pest,2010,75.2,HU
+HU12,Pest,2011,75.5,HU
+HU12,Pest,2012,75.4,HU
+HU12,Pest,2013,0.0,HU
+HU12,Pest,2014,76.2,HU
+HU12,Pest,2015,75.8,HU
+HU12,Pest,2016,76.5,HU
+HU12,Pest,2017,76.1,HU
+HU12,Pest,2018,76.4,HU
+HU21,Közép-Dunántúl,2009,74.0,HU
+HU21,Közép-Dunántúl,2010,74.7,HU
+HU21,Közép-Dunántúl,2011,75.0,HU
+HU21,Közép-Dunántúl,2012,75.1,HU
+HU21,Közép-Dunántúl,2013,75.5,HU
+HU21,Közép-Dunántúl,2014,75.8,HU
+HU21,Közép-Dunántúl,2015,75.2,HU
+HU21,Közép-Dunántúl,2016,76.0,HU
+HU21,Közép-Dunántúl,2017,75.8,HU
+HU21,Közép-Dunántúl,2018,75.9,HU
+HU22,Nyugat-Dunántúl,2009,75.0,HU
+HU22,Nyugat-Dunántúl,2010,75.1,HU
+HU22,Nyugat-Dunántúl,2011,75.5,HU
+HU22,Nyugat-Dunántúl,2012,75.4,HU
+HU22,Nyugat-Dunántúl,2013,76.1,HU
+HU22,Nyugat-Dunántúl,2014,76.1,HU
+HU22,Nyugat-Dunántúl,2015,76.5,HU
+HU22,Nyugat-Dunántúl,2016,76.6,HU
+HU22,Nyugat-Dunántúl,2017,76.5,HU
+HU22,Nyugat-Dunántúl,2018,76.7,HU
+HU23,Dél-Dunántúl,2009,74.0,HU
+HU23,Dél-Dunántúl,2010,74.2,HU
+HU23,Dél-Dunántúl,2011,74.9,HU
+HU23,Dél-Dunántúl,2012,74.9,HU
+HU23,Dél-Dunántúl,2013,75.2,HU
+HU23,Dél-Dunántúl,2014,75.5,HU
+HU23,Dél-Dunántúl,2015,75.2,HU
+HU23,Dél-Dunántúl,2016,75.9,HU
+HU23,Dél-Dunántúl,2017,75.7,HU
+HU23,Dél-Dunántúl,2018,75.9,HU
+HU31,Észak-Magyarország,2009,72.9,HU
+HU31,Észak-Magyarország,2010,73.2,HU
+HU31,Észak-Magyarország,2011,73.4,HU
+HU31,Észak-Magyarország,2012,73.7,HU
+HU31,Észak-Magyarország,2013,74.2,HU
+HU31,Észak-Magyarország,2014,74.4,HU
+HU31,Észak-Magyarország,2015,74.5,HU
+HU31,Észak-Magyarország,2016,74.6,HU
+HU31,Észak-Magyarország,2017,74.4,HU
+HU31,Észak-Magyarország,2018,74.4,HU
+HU32,Észak-Alföld,2009,73.8,HU
+HU32,Észak-Alföld,2010,74.0,HU
+HU32,Észak-Alföld,2011,74.7,HU
+HU32,Észak-Alföld,2012,74.9,HU
+HU32,Észak-Alföld,2013,75.4,HU
+HU32,Észak-Alföld,2014,75.3,HU
+HU32,Észak-Alföld,2015,75.0,HU
+HU32,Észak-Alföld,2016,75.6,HU
+HU32,Észak-Alföld,2017,75.5,HU
+HU32,Észak-Alföld,2018,75.5,HU
+HU33,Dél-Alföld,2009,74.1,HU
+HU33,Dél-Alföld,2010,74.6,HU
+HU33,Dél-Alföld,2011,74.7,HU
+HU33,Dél-Alföld,2012,75.0,HU
+HU33,Dél-Alföld,2013,75.6,HU
+HU33,Dél-Alföld,2014,75.5,HU
+HU33,Dél-Alföld,2015,75.4,HU
+HU33,Dél-Alföld,2016,75.9,HU
+HU33,Dél-Alföld,2017,75.5,HU
+HU33,Dél-Alföld,2018,76.2,HU
+IE04,Northern and Western,2009,0.0,IE
+IE04,Northern and Western,2010,0.0,IE
+IE04,Northern and Western,2011,0.0,IE
+IE04,Northern and Western,2012,0.0,IE
+IE04,Northern and Western,2013,81.3,IE
+IE04,Northern and Western,2014,81.5,IE
+IE04,Northern and Western,2015,81.7,IE
+IE04,Northern and Western,2016,81.8,IE
+IE04,Northern and Western,2017,82.4,IE
+IE04,Northern and Western,2018,82.6,IE
+IE05,Southern,2009,0.0,IE
+IE05,Southern,2010,0.0,IE
+IE05,Southern,2011,0.0,IE
+IE05,Southern,2012,0.0,IE
+IE05,Southern,2013,80.5,IE
+IE05,Southern,2014,80.8,IE
+IE05,Southern,2015,81.0,IE
+IE05,Southern,2016,80.9,IE
+IE05,Southern,2017,81.7,IE
+IE05,Southern,2018,81.7,IE
+IE06,Eastern and Midland,2009,0.0,IE
+IE06,Eastern and Midland,2010,0.0,IE
+IE06,Eastern and Midland,2011,0.0,IE
+IE06,Eastern and Midland,2012,0.0,IE
+IE06,Eastern and Midland,2013,81.3,IE
+IE06,Eastern and Midland,2014,81.8,IE
+IE06,Eastern and Midland,2015,81.7,IE
+IE06,Eastern and Midland,2016,82.2,IE
+IE06,Eastern and Midland,2017,82.3,IE
+IE06,Eastern and Midland,2018,82.5,IE
+IS00,Ísland,2009,81.8,IS
+IS00,Ísland,2010,81.9,IS
+IS00,Ísland,2011,82.4,IS
+IS00,Ísland,2012,83.0,IS
+IS00,Ísland,2013,82.1,IS
+IS00,Ísland,2014,82.9,IS
+IS00,Ísland,2015,82.5,IS
+IS00,Ísland,2016,82.2,IS
+IS00,Ísland,2017,82.6,IS
+IS00,Ísland,2018,82.9,IS
+ITC1,Piemonte,2009,81.7,IT
+ITC1,Piemonte,2010,82.2,IT
+ITC1,Piemonte,2011,82.3,IT
+ITC1,Piemonte,2012,82.4,IT
+ITC1,Piemonte,2013,82.7,IT
+ITC1,Piemonte,2014,83.2,IT
+ITC1,Piemonte,2015,82.5,IT
+ITC1,Piemonte,2016,83.3,IT
+ITC1,Piemonte,2017,83.0,IT
+ITC1,Piemonte,2018,83.0,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2009,81.9,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2010,82.1,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2011,82.5,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2012,82.7,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2013,83.0,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2014,82.9,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2015,81.6,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2016,83.0,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2017,82.8,IT
+ITC2,Valle d'Aosta/Vallée d'Aoste,2018,82.3,IT
+ITC3,Liguria,2009,81.7,IT
+ITC3,Liguria,2010,82.1,IT
+ITC3,Liguria,2011,82.1,IT
+ITC3,Liguria,2012,82.3,IT
+ITC3,Liguria,2013,82.5,IT
+ITC3,Liguria,2014,83.3,IT
+ITC3,Liguria,2015,82.7,IT
+ITC3,Liguria,2016,83.6,IT
+ITC3,Liguria,2017,83.2,IT
+ITC3,Liguria,2018,83.1,IT
+ITC4,Lombardia,2009,82.2,IT
+ITC4,Lombardia,2010,82.6,IT
+ITC4,Lombardia,2011,83.0,IT
+ITC4,Lombardia,2012,82.8,IT
+ITC4,Lombardia,2013,83.5,IT
+ITC4,Lombardia,2014,83.9,IT
+ITC4,Lombardia,2015,83.2,IT
+ITC4,Lombardia,2016,84.0,IT
+ITC4,Lombardia,2017,83.8,IT
+ITC4,Lombardia,2018,84.0,IT
+ITF1,Abruzzo,2009,81.3,IT
+ITF1,Abruzzo,2010,82.1,IT
+ITF1,Abruzzo,2011,82.4,IT
+ITF1,Abruzzo,2012,82.6,IT
+ITF1,Abruzzo,2013,82.9,IT
+ITF1,Abruzzo,2014,83.1,IT
+ITF1,Abruzzo,2015,82.7,IT
+ITF1,Abruzzo,2016,83.5,IT
+ITF1,Abruzzo,2017,82.9,IT
+ITF1,Abruzzo,2018,83.6,IT
+ITF2,Molise,2009,82.1,IT
+ITF2,Molise,2010,82.2,IT
+ITF2,Molise,2011,82.3,IT
+ITF2,Molise,2012,82.7,IT
+ITF2,Molise,2013,82.8,IT
+ITF2,Molise,2014,82.8,IT
+ITF2,Molise,2015,82.6,IT
+ITF2,Molise,2016,83.4,IT
+ITF2,Molise,2017,82.7,IT
+ITF2,Molise,2018,83.3,IT
+ITF3,Campania,2009,80.2,IT
+ITF3,Campania,2010,80.5,IT
+ITF3,Campania,2011,80.6,IT
+ITF3,Campania,2012,80.8,IT
+ITF3,Campania,2013,81.1,IT
+ITF3,Campania,2014,81.5,IT
+ITF3,Campania,2015,80.8,IT
+ITF3,Campania,2016,81.7,IT
+ITF3,Campania,2017,81.3,IT
+ITF3,Campania,2018,81.9,IT
+ITF4,Puglia,2009,81.9,IT
+ITF4,Puglia,2010,82.5,IT
+ITF4,Puglia,2011,82.5,IT
+ITF4,Puglia,2012,82.7,IT
+ITF4,Puglia,2013,83.1,IT
+ITF4,Puglia,2014,83.2,IT
+ITF4,Puglia,2015,82.8,IT
+ITF4,Puglia,2016,83.5,IT
+ITF4,Puglia,2017,83.1,IT
+ITF4,Puglia,2018,83.6,IT
+ITF5,Basilicata,2009,82.1,IT
+ITF5,Basilicata,2010,82.6,IT
+ITF5,Basilicata,2011,82.5,IT
+ITF5,Basilicata,2012,82.6,IT
+ITF5,Basilicata,2013,82.8,IT
+ITF5,Basilicata,2014,83.1,IT
+ITF5,Basilicata,2015,82.4,IT
+ITF5,Basilicata,2016,83.1,IT
+ITF5,Basilicata,2017,82.7,IT
+ITF5,Basilicata,2018,83.1,IT
+ITF6,Calabria,2009,81.4,IT
+ITF6,Calabria,2010,82.1,IT
+ITF6,Calabria,2011,82.0,IT
+ITF6,Calabria,2012,82.0,IT
+ITF6,Calabria,2013,82.5,IT
+ITF6,Calabria,2014,82.5,IT
+ITF6,Calabria,2015,82.3,IT
+ITF6,Calabria,2016,82.9,IT
+ITF6,Calabria,2017,82.4,IT
+ITF6,Calabria,2018,83.0,IT
+ITG1,Sicilia,2009,80.7,IT
+ITG1,Sicilia,2010,81.4,IT
+ITG1,Sicilia,2011,81.2,IT
+ITG1,Sicilia,2012,81.4,IT
+ITG1,Sicilia,2013,81.9,IT
+ITG1,Sicilia,2014,82.2,IT
+ITG1,Sicilia,2015,81.7,IT
+ITG1,Sicilia,2016,82.4,IT
+ITG1,Sicilia,2017,81.8,IT
+ITG1,Sicilia,2018,82.3,IT
+ITG2,Sardegna,2009,81.6,IT
+ITG2,Sardegna,2010,82.3,IT
+ITG2,Sardegna,2011,82.3,IT
+ITG2,Sardegna,2012,82.3,IT
+ITG2,Sardegna,2013,82.8,IT
+ITG2,Sardegna,2014,83.2,IT
+ITG2,Sardegna,2015,82.8,IT
+ITG2,Sardegna,2016,83.3,IT
+ITG2,Sardegna,2017,83.2,IT
+ITG2,Sardegna,2018,83.8,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2009,83.2,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2010,83.4,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2011,83.7,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2012,83.3,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2013,83.9,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2014,84.0,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2015,83.6,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2016,84.1,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2017,84.3,IT
+ITH1,Provincia Autonoma di Bolzano/Bozen,2018,84.4,IT
+ITH2,Provincia Autonoma di Trento,2009,83.1,IT
+ITH2,Provincia Autonoma di Trento,2010,83.2,IT
+ITH2,Provincia Autonoma di Trento,2011,83.9,IT
+ITH2,Provincia Autonoma di Trento,2012,83.9,IT
+ITH2,Provincia Autonoma di Trento,2013,83.9,IT
+ITH2,Provincia Autonoma di Trento,2014,84.4,IT
+ITH2,Provincia Autonoma di Trento,2015,84.0,IT
+ITH2,Provincia Autonoma di Trento,2016,84.3,IT
+ITH2,Provincia Autonoma di Trento,2017,84.4,IT
+ITH2,Provincia Autonoma di Trento,2018,84.6,IT
+ITH3,Veneto,2009,82.7,IT
+ITH3,Veneto,2010,82.9,IT
+ITH3,Veneto,2011,83.1,IT
+ITH3,Veneto,2012,83.0,IT
+ITH3,Veneto,2013,83.4,IT
+ITH3,Veneto,2014,83.8,IT
+ITH3,Veneto,2015,83.3,IT
+ITH3,Veneto,2016,83.9,IT
+ITH3,Veneto,2017,83.9,IT
+ITH3,Veneto,2018,84.0,IT
+ITH4,Friuli-Venezia Giulia,2009,82.0,IT
+ITH4,Friuli-Venezia Giulia,2010,82.3,IT
+ITH4,Friuli-Venezia Giulia,2011,82.4,IT
+ITH4,Friuli-Venezia Giulia,2012,82.5,IT
+ITH4,Friuli-Venezia Giulia,2013,82.6,IT
+ITH4,Friuli-Venezia Giulia,2014,83.4,IT
+ITH4,Friuli-Venezia Giulia,2015,82.8,IT
+ITH4,Friuli-Venezia Giulia,2016,83.5,IT
+ITH4,Friuli-Venezia Giulia,2017,83.5,IT
+ITH4,Friuli-Venezia Giulia,2018,83.5,IT
+ITH5,Emilia-Romagna,2009,82.5,IT
+ITH5,Emilia-Romagna,2010,82.9,IT
+ITH5,Emilia-Romagna,2011,83.1,IT
+ITH5,Emilia-Romagna,2012,82.9,IT
+ITH5,Emilia-Romagna,2013,83.4,IT
+ITH5,Emilia-Romagna,2014,83.7,IT
+ITH5,Emilia-Romagna,2015,83.2,IT
+ITH5,Emilia-Romagna,2016,83.7,IT
+ITH5,Emilia-Romagna,2017,83.6,IT
+ITH5,Emilia-Romagna,2018,83.9,IT
+ITI1,Toscana,2009,82.5,IT
+ITI1,Toscana,2010,82.9,IT
+ITI1,Toscana,2011,83.1,IT
+ITI1,Toscana,2012,82.9,IT
+ITI1,Toscana,2013,83.4,IT
+ITI1,Toscana,2014,83.8,IT
+ITI1,Toscana,2015,83.1,IT
+ITI1,Toscana,2016,83.9,IT
+ITI1,Toscana,2017,83.7,IT
+ITI1,Toscana,2018,84.0,IT
+ITI2,Umbria,2009,82.8,IT
+ITI2,Umbria,2010,82.9,IT
+ITI2,Umbria,2011,83.3,IT
+ITI2,Umbria,2012,82.9,IT
+ITI2,Umbria,2013,83.3,IT
+ITI2,Umbria,2014,84.0,IT
+ITI2,Umbria,2015,83.2,IT
+ITI2,Umbria,2016,84.1,IT
+ITI2,Umbria,2017,83.9,IT
+ITI2,Umbria,2018,84.3,IT
+ITI3,Marche,2009,83.0,IT
+ITI3,Marche,2010,83.5,IT
+ITI3,Marche,2011,83.5,IT
+ITI3,Marche,2012,83.4,IT
+ITI3,Marche,2013,83.6,IT
+ITI3,Marche,2014,84.0,IT
+ITI3,Marche,2015,83.3,IT
+ITI3,Marche,2016,84.0,IT
+ITI3,Marche,2017,83.6,IT
+ITI3,Marche,2018,84.4,IT
+ITI4,Lazio,2009,81.4,IT
+ITI4,Lazio,2010,81.7,IT
+ITI4,Lazio,2011,81.9,IT
+ITI4,Lazio,2012,82.0,IT
+ITI4,Lazio,2013,82.8,IT
+ITI4,Lazio,2014,83.1,IT
+ITI4,Lazio,2015,82.7,IT
+ITI4,Lazio,2016,83.2,IT
+ITI4,Lazio,2017,83.0,IT
+ITI4,Lazio,2018,83.6,IT
+LI00,Liechtenstein,2009,81.7,LI
+LI00,Liechtenstein,2010,81.8,LI
+LI00,Liechtenstein,2011,81.9,LI
+LI00,Liechtenstein,2012,82.5,LI
+LI00,Liechtenstein,2013,82.5,LI
+LI00,Liechtenstein,2014,82.1,LI
+LI00,Liechtenstein,2015,82.7,LI
+LI00,Liechtenstein,2016,82.3,LI
+LI00,Liechtenstein,2017,83.7,LI
+LI00,Liechtenstein,2018,83.1,LI
+LT01,Sostines regionas,2009,73.2,LT
+LT01,Sostines regionas,2010,73.7,LT
+LT01,Sostines regionas,2011,74.1,LT
+LT01,Sostines regionas,2012,74.2,LT
+LT01,Sostines regionas,2013,74.3,LT
+LT01,Sostines regionas,2014,74.8,LT
+LT01,Sostines regionas,2015,75.0,LT
+LT01,Sostines regionas,2016,75.3,LT
+LT01,Sostines regionas,2017,76.3,LT
+LT01,Sostines regionas,2018,76.3,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2009,72.8,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2010,73.1,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2011,73.6,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2012,74.1,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2013,74.1,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2014,74.7,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2015,74.4,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2016,74.8,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2017,75.6,LT
+LT02,Vidurio ir vakaru Lietuvos regionas,2018,75.9,LT
+LU00,Luxembourg,2009,80.8,LU
+LU00,Luxembourg,2010,80.8,LU
+LU00,Luxembourg,2011,81.1,LU
+LU00,Luxembourg,2012,81.5,LU
+LU00,Luxembourg,2013,81.9,LU
+LU00,Luxembourg,2014,82.3,LU
+LU00,Luxembourg,2015,82.4,LU
+LU00,Luxembourg,2016,82.7,LU
+LU00,Luxembourg,2017,82.1,LU
+LU00,Luxembourg,2018,82.3,LU
+LV00,Latvija,2009,72.8,LV
+LV00,Latvija,2010,73.1,LV
+LV00,Latvija,2011,73.9,LV
+LV00,Latvija,2012,74.1,LV
+LV00,Latvija,2013,74.3,LV
+LV00,Latvija,2014,74.5,LV
+LV00,Latvija,2015,74.8,LV
+LV00,Latvija,2016,74.9,LV
+LV00,Latvija,2017,74.9,LV
+LV00,Latvija,2018,75.1,LV
+ME00,Crna Gora,2009,75.2,ME
+ME00,Crna Gora,2010,76.1,ME
+ME00,Crna Gora,2011,76.1,ME
+ME00,Crna Gora,2012,76.4,ME
+ME00,Crna Gora,2013,76.5,ME
+ME00,Crna Gora,2014,76.5,ME
+ME00,Crna Gora,2015,76.5,ME
+ME00,Crna Gora,2016,76.5,ME
+ME00,Crna Gora,2017,76.6,ME
+ME00,Crna Gora,2018,76.9,ME
+MK00,Severna Makedonija,2009,74.4,MK
+MK00,Severna Makedonija,2010,75.0,MK
+MK00,Severna Makedonija,2011,75.1,MK
+MK00,Severna Makedonija,2012,74.9,MK
+MK00,Severna Makedonija,2013,75.5,MK
+MK00,Severna Makedonija,2014,75.5,MK
+MK00,Severna Makedonija,2015,75.5,MK
+MK00,Severna Makedonija,2016,75.4,MK
+MK00,Severna Makedonija,2017,76.0,MK
+MK00,Severna Makedonija,2018,76.7,MK
+MT00,Malta,2009,80.4,MT
+MT00,Malta,2010,81.5,MT
+MT00,Malta,2011,80.9,MT
+MT00,Malta,2012,80.9,MT
+MT00,Malta,2013,81.9,MT
+MT00,Malta,2014,82.1,MT
+MT00,Malta,2015,82.0,MT
+MT00,Malta,2016,82.6,MT
+MT00,Malta,2017,82.4,MT
+MT00,Malta,2018,82.5,MT
+NL11,Groningen,2009,80.1,NL
+NL11,Groningen,2010,80.0,NL
+NL11,Groningen,2011,80.3,NL
+NL11,Groningen,2012,80.0,NL
+NL11,Groningen,2013,80.3,NL
+NL11,Groningen,2014,80.7,NL
+NL11,Groningen,2015,80.7,NL
+NL11,Groningen,2016,80.8,NL
+NL11,Groningen,2017,80.8,NL
+NL11,Groningen,2018,81.0,NL
+NL12,Friesland (NL),2009,80.8,NL
+NL12,Friesland (NL),2010,81.1,NL
+NL12,Friesland (NL),2011,81.2,NL
+NL12,Friesland (NL),2012,81.0,NL
+NL12,Friesland (NL),2013,81.0,NL
+NL12,Friesland (NL),2014,81.6,NL
+NL12,Friesland (NL),2015,81.5,NL
+NL12,Friesland (NL),2016,81.3,NL
+NL12,Friesland (NL),2017,81.7,NL
+NL12,Friesland (NL),2018,81.7,NL
+NL13,Drenthe,2009,80.8,NL
+NL13,Drenthe,2010,80.9,NL
+NL13,Drenthe,2011,81.1,NL
+NL13,Drenthe,2012,80.9,NL
+NL13,Drenthe,2013,81.2,NL
+NL13,Drenthe,2014,81.9,NL
+NL13,Drenthe,2015,81.3,NL
+NL13,Drenthe,2016,81.4,NL
+NL13,Drenthe,2017,81.3,NL
+NL13,Drenthe,2018,81.6,NL
+NL21,Overijssel,2009,80.5,NL
+NL21,Overijssel,2010,80.8,NL
+NL21,Overijssel,2011,81.1,NL
+NL21,Overijssel,2012,81.2,NL
+NL21,Overijssel,2013,81.2,NL
+NL21,Overijssel,2014,81.6,NL
+NL21,Overijssel,2015,81.5,NL
+NL21,Overijssel,2016,81.6,NL
+NL21,Overijssel,2017,81.7,NL
+NL21,Overijssel,2018,81.7,NL
+NL22,Gelderland,2009,80.8,NL
+NL22,Gelderland,2010,80.9,NL
+NL22,Gelderland,2011,81.3,NL
+NL22,Gelderland,2012,81.1,NL
+NL22,Gelderland,2013,81.5,NL
+NL22,Gelderland,2014,81.9,NL
+NL22,Gelderland,2015,81.7,NL
+NL22,Gelderland,2016,81.8,NL
+NL22,Gelderland,2017,81.8,NL
+NL22,Gelderland,2018,81.8,NL
+NL23,Flevoland,2009,81.0,NL
+NL23,Flevoland,2010,80.9,NL
+NL23,Flevoland,2011,80.9,NL
+NL23,Flevoland,2012,81.1,NL
+NL23,Flevoland,2013,81.3,NL
+NL23,Flevoland,2014,82.3,NL
+NL23,Flevoland,2015,81.9,NL
+NL23,Flevoland,2016,81.7,NL
+NL23,Flevoland,2017,82.5,NL
+NL23,Flevoland,2018,81.9,NL
+NL31,Utrecht,2009,81.5,NL
+NL31,Utrecht,2010,81.5,NL
+NL31,Utrecht,2011,81.7,NL
+NL31,Utrecht,2012,81.9,NL
+NL31,Utrecht,2013,82.0,NL
+NL31,Utrecht,2014,82.2,NL
+NL31,Utrecht,2015,82.1,NL
+NL31,Utrecht,2016,82.1,NL
+NL31,Utrecht,2017,82.3,NL
+NL31,Utrecht,2018,82.4,NL
+NL32,Noord-Holland,2009,81.0,NL
+NL32,Noord-Holland,2010,81.3,NL
+NL32,Noord-Holland,2011,81.4,NL
+NL32,Noord-Holland,2012,81.2,NL
+NL32,Noord-Holland,2013,81.5,NL
+NL32,Noord-Holland,2014,81.8,NL
+NL32,Noord-Holland,2015,81.6,NL
+NL32,Noord-Holland,2016,81.6,NL
+NL32,Noord-Holland,2017,82.0,NL
+NL32,Noord-Holland,2018,82.1,NL
+NL33,Zuid-Holland,2009,80.9,NL
+NL33,Zuid-Holland,2010,81.0,NL
+NL33,Zuid-Holland,2011,81.5,NL
+NL33,Zuid-Holland,2012,81.2,NL
+NL33,Zuid-Holland,2013,81.6,NL
+NL33,Zuid-Holland,2014,82.0,NL
+NL33,Zuid-Holland,2015,81.8,NL
+NL33,Zuid-Holland,2016,81.8,NL
+NL33,Zuid-Holland,2017,82.0,NL
+NL33,Zuid-Holland,2018,81.9,NL
+NL34,Zeeland,2009,81.8,NL
+NL34,Zeeland,2010,81.1,NL
+NL34,Zeeland,2011,81.8,NL
+NL34,Zeeland,2012,81.9,NL
+NL34,Zeeland,2013,81.7,NL
+NL34,Zeeland,2014,82.8,NL
+NL34,Zeeland,2015,82.3,NL
+NL34,Zeeland,2016,82.1,NL
+NL34,Zeeland,2017,82.0,NL
+NL34,Zeeland,2018,82.1,NL
+NL41,Noord-Brabant,2009,80.8,NL
+NL41,Noord-Brabant,2010,81.1,NL
+NL41,Noord-Brabant,2011,81.3,NL
+NL41,Noord-Brabant,2012,81.3,NL
+NL41,Noord-Brabant,2013,81.5,NL
+NL41,Noord-Brabant,2014,81.7,NL
+NL41,Noord-Brabant,2015,81.5,NL
+NL41,Noord-Brabant,2016,81.6,NL
+NL41,Noord-Brabant,2017,81.7,NL
+NL41,Noord-Brabant,2018,81.9,NL
+NL42,Limburg (NL),2009,80.6,NL
+NL42,Limburg (NL),2010,80.5,NL
+NL42,Limburg (NL),2011,81.0,NL
+NL42,Limburg (NL),2012,80.8,NL
+NL42,Limburg (NL),2013,81.1,NL
+NL42,Limburg (NL),2014,81.6,NL
+NL42,Limburg (NL),2015,81.0,NL
+NL42,Limburg (NL),2016,81.5,NL
+NL42,Limburg (NL),2017,81.5,NL
+NL42,Limburg (NL),2018,81.8,NL
+NO01,Oslo og Akershus (statistical region 2016),2009,81.3,NO
+NO01,Oslo og Akershus (statistical region 2016),2010,81.5,NO
+NO01,Oslo og Akershus (statistical region 2016),2011,81.8,NO
+NO01,Oslo og Akershus (statistical region 2016),2012,81.8,NO
+NO01,Oslo og Akershus (statistical region 2016),2013,82.3,NO
+NO01,Oslo og Akershus (statistical region 2016),2014,82.7,NO
+NO01,Oslo og Akershus (statistical region 2016),2015,81.3,NO
+NO01,Oslo og Akershus (statistical region 2016),2016,83.0,NO
+NO01,Oslo og Akershus (statistical region 2016),2017,83.2,NO
+NO01,Oslo og Akershus (statistical region 2016),2018,83.4,NO
+NO02,Innlandet,2009,80.1,NO
+NO02,Innlandet,2010,80.3,NO
+NO02,Innlandet,2011,81.0,NO
+NO02,Innlandet,2012,80.6,NO
+NO02,Innlandet,2013,80.9,NO
+NO02,Innlandet,2014,81.2,NO
+NO02,Innlandet,2015,82.0,NO
+NO02,Innlandet,2016,81.7,NO
+NO02,Innlandet,2017,81.9,NO
+NO02,Innlandet,2018,81.7,NO
+NO03,Sør-Østlandet (statistical region 2016),2009,80.3,NO
+NO03,Sør-Østlandet (statistical region 2016),2010,80.8,NO
+NO03,Sør-Østlandet (statistical region 2016),2011,81.1,NO
+NO03,Sør-Østlandet (statistical region 2016),2012,81.1,NO
+NO03,Sør-Østlandet (statistical region 2016),2013,81.3,NO
+NO03,Sør-Østlandet (statistical region 2016),2014,81.7,NO
+NO03,Sør-Østlandet (statistical region 2016),2015,82.3,NO
+NO03,Sør-Østlandet (statistical region 2016),2016,82.1,NO
+NO03,Sør-Østlandet (statistical region 2016),2017,82.2,NO
+NO03,Sør-Østlandet (statistical region 2016),2018,82.6,NO
+NO04,Agder og Rogaland (statistical region 2016),2009,81.2,NO
+NO04,Agder og Rogaland (statistical region 2016),2010,81.0,NO
+NO04,Agder og Rogaland (statistical region 2016),2011,81.2,NO
+NO04,Agder og Rogaland (statistical region 2016),2012,81.5,NO
+NO04,Agder og Rogaland (statistical region 2016),2013,81.9,NO
+NO04,Agder og Rogaland (statistical region 2016),2014,82.5,NO
+NO04,Agder og Rogaland (statistical region 2016),2015,83.0,NO
+NO04,Agder og Rogaland (statistical region 2016),2016,82.5,NO
+NO04,Agder og Rogaland (statistical region 2016),2017,82.7,NO
+NO04,Agder og Rogaland (statistical region 2016),2018,82.4,NO
+NO05,Vestlandet (statistical region 2016),2009,82.0,NO
+NO05,Vestlandet (statistical region 2016),2010,82.0,NO
+NO05,Vestlandet (statistical region 2016),2011,82.0,NO
+NO05,Vestlandet (statistical region 2016),2012,82.2,NO
+NO05,Vestlandet (statistical region 2016),2013,82.4,NO
+NO05,Vestlandet (statistical region 2016),2014,82.8,NO
+NO05,Vestlandet (statistical region 2016),2015,83.1,NO
+NO05,Vestlandet (statistical region 2016),2016,82.7,NO
+NO05,Vestlandet (statistical region 2016),2017,83.4,NO
+NO05,Vestlandet (statistical region 2016),2018,83.4,NO
+NO06,Trøndelag,2009,81.3,NO
+NO06,Trøndelag,2010,81.4,NO
+NO06,Trøndelag,2011,81.5,NO
+NO06,Trøndelag,2012,82.1,NO
+NO06,Trøndelag,2013,82.1,NO
+NO06,Trøndelag,2014,82.3,NO
+NO06,Trøndelag,2015,83.1,NO
+NO06,Trøndelag,2016,82.8,NO
+NO06,Trøndelag,2017,82.6,NO
+NO06,Trøndelag,2018,83.0,NO
+NO07,Nord-Norge,2009,80.7,NO
+NO07,Nord-Norge,2010,80.7,NO
+NO07,Nord-Norge,2011,80.6,NO
+NO07,Nord-Norge,2012,80.9,NO
+NO07,Nord-Norge,2013,81.1,NO
+NO07,Nord-Norge,2014,81.7,NO
+NO07,Nord-Norge,2015,82.3,NO
+NO07,Nord-Norge,2016,81.9,NO
+NO07,Nord-Norge,2017,82.1,NO
+NO07,Nord-Norge,2018,82.2,NO
+PL21,Malopolskie,2009,77.2,PL
+PL21,Malopolskie,2010,77.8,PL
+PL21,Malopolskie,2011,78.1,PL
+PL21,Malopolskie,2012,78.1,PL
+PL21,Malopolskie,2013,78.5,PL
+PL21,Malopolskie,2014,79.1,PL
+PL21,Malopolskie,2015,78.8,PL
+PL21,Malopolskie,2016,79.3,PL
+PL21,Malopolskie,2017,79.1,PL
+PL21,Malopolskie,2018,79.1,PL
+PL22,Slaskie,2009,75.2,PL
+PL22,Slaskie,2010,75.8,PL
+PL22,Slaskie,2011,76.0,PL
+PL22,Slaskie,2012,76.1,PL
+PL22,Slaskie,2013,76.3,PL
+PL22,Slaskie,2014,77.0,PL
+PL22,Slaskie,2015,76.7,PL
+PL22,Slaskie,2016,77.4,PL
+PL22,Slaskie,2017,77.2,PL
+PL22,Slaskie,2018,77.2,PL
+PL41,Wielkopolskie,2009,76.0,PL
+PL41,Wielkopolskie,2010,76.7,PL
+PL41,Wielkopolskie,2011,77.1,PL
+PL41,Wielkopolskie,2012,77.1,PL
+PL41,Wielkopolskie,2013,77.2,PL
+PL41,Wielkopolskie,2014,77.8,PL
+PL41,Wielkopolskie,2015,77.4,PL
+PL41,Wielkopolskie,2016,78.0,PL
+PL41,Wielkopolskie,2017,77.9,PL
+PL41,Wielkopolskie,2018,77.6,PL
+PL42,Zachodniopomorskie,2009,75.4,PL
+PL42,Zachodniopomorskie,2010,76.0,PL
+PL42,Zachodniopomorskie,2011,76.6,PL
+PL42,Zachodniopomorskie,2012,76.8,PL
+PL42,Zachodniopomorskie,2013,76.7,PL
+PL42,Zachodniopomorskie,2014,77.6,PL
+PL42,Zachodniopomorskie,2015,77.4,PL
+PL42,Zachodniopomorskie,2016,77.7,PL
+PL42,Zachodniopomorskie,2017,77.6,PL
+PL42,Zachodniopomorskie,2018,77.3,PL
+PL43,Lubuskie,2009,75.2,PL
+PL43,Lubuskie,2010,76.1,PL
+PL43,Lubuskie,2011,76.0,PL
+PL43,Lubuskie,2012,76.5,PL
+PL43,Lubuskie,2013,76.3,PL
+PL43,Lubuskie,2014,77.4,PL
+PL43,Lubuskie,2015,76.9,PL
+PL43,Lubuskie,2016,77.4,PL
+PL43,Lubuskie,2017,77.3,PL
+PL43,Lubuskie,2018,76.9,PL
+PL51,Dolnoslaskie,2009,75.3,PL
+PL51,Dolnoslaskie,2010,76.2,PL
+PL51,Dolnoslaskie,2011,76.7,PL
+PL51,Dolnoslaskie,2012,76.6,PL
+PL51,Dolnoslaskie,2013,76.9,PL
+PL51,Dolnoslaskie,2014,77.4,PL
+PL51,Dolnoslaskie,2015,77.2,PL
+PL51,Dolnoslaskie,2016,77.7,PL
+PL51,Dolnoslaskie,2017,77.4,PL
+PL51,Dolnoslaskie,2018,77.2,PL
+PL52,Opolskie,2009,76.9,PL
+PL52,Opolskie,2010,77.0,PL
+PL52,Opolskie,2011,77.5,PL
+PL52,Opolskie,2012,77.1,PL
+PL52,Opolskie,2013,77.2,PL
+PL52,Opolskie,2014,78.1,PL
+PL52,Opolskie,2015,77.5,PL
+PL52,Opolskie,2016,78.2,PL
+PL52,Opolskie,2017,77.6,PL
+PL52,Opolskie,2018,78.0,PL
+PL61,Kujawsko-Pomorskie,2009,75.4,PL
+PL61,Kujawsko-Pomorskie,2010,75.7,PL
+PL61,Kujawsko-Pomorskie,2011,76.6,PL
+PL61,Kujawsko-Pomorskie,2012,76.6,PL
+PL61,Kujawsko-Pomorskie,2013,76.9,PL
+PL61,Kujawsko-Pomorskie,2014,77.5,PL
+PL61,Kujawsko-Pomorskie,2015,77.6,PL
+PL61,Kujawsko-Pomorskie,2016,77.8,PL
+PL61,Kujawsko-Pomorskie,2017,77.7,PL
+PL61,Kujawsko-Pomorskie,2018,77.2,PL
+PL62,Warminsko-Mazurskie,2009,75.3,PL
+PL62,Warminsko-Mazurskie,2010,76.1,PL
+PL62,Warminsko-Mazurskie,2011,76.5,PL
+PL62,Warminsko-Mazurskie,2012,76.5,PL
+PL62,Warminsko-Mazurskie,2013,76.3,PL
+PL62,Warminsko-Mazurskie,2014,77.4,PL
+PL62,Warminsko-Mazurskie,2015,77.1,PL
+PL62,Warminsko-Mazurskie,2016,77.1,PL
+PL62,Warminsko-Mazurskie,2017,77.1,PL
+PL62,Warminsko-Mazurskie,2018,76.9,PL
+PL63,Pomorskie,2009,76.5,PL
+PL63,Pomorskie,2010,77.2,PL
+PL63,Pomorskie,2011,77.7,PL
+PL63,Pomorskie,2012,77.3,PL
+PL63,Pomorskie,2013,77.9,PL
+PL63,Pomorskie,2014,78.2,PL
+PL63,Pomorskie,2015,78.0,PL
+PL63,Pomorskie,2016,78.3,PL
+PL63,Pomorskie,2017,78.4,PL
+PL63,Pomorskie,2018,78.2,PL
+PL71,Lódzkie,2009,0.0,PL
+PL71,Lódzkie,2010,0.0,PL
+PL71,Lódzkie,2011,0.0,PL
+PL71,Lódzkie,2012,0.0,PL
+PL71,Lódzkie,2013,75.4,PL
+PL71,Lódzkie,2014,76.3,PL
+PL71,Lódzkie,2015,75.9,PL
+PL71,Lódzkie,2016,76.5,PL
+PL71,Lódzkie,2017,76.4,PL
+PL71,Lódzkie,2018,76.3,PL
+PL72,Swietokrzyskie,2009,0.0,PL
+PL72,Swietokrzyskie,2010,0.0,PL
+PL72,Swietokrzyskie,2011,0.0,PL
+PL72,Swietokrzyskie,2012,0.0,PL
+PL72,Swietokrzyskie,2013,77.1,PL
+PL72,Swietokrzyskie,2014,77.9,PL
+PL72,Swietokrzyskie,2015,77.4,PL
+PL72,Swietokrzyskie,2016,77.9,PL
+PL72,Swietokrzyskie,2017,77.9,PL
+PL72,Swietokrzyskie,2018,77.7,PL
+PL81,Lubelskie,2009,0.0,PL
+PL81,Lubelskie,2010,0.0,PL
+PL81,Lubelskie,2011,0.0,PL
+PL81,Lubelskie,2012,0.0,PL
+PL81,Lubelskie,2013,77.1,PL
+PL81,Lubelskie,2014,77.8,PL
+PL81,Lubelskie,2015,77.8,PL
+PL81,Lubelskie,2016,78.2,PL
+PL81,Lubelskie,2017,77.8,PL
+PL81,Lubelskie,2018,77.8,PL
+PL82,Podkarpackie,2009,0.0,PL
+PL82,Podkarpackie,2010,0.0,PL
+PL82,Podkarpackie,2011,0.0,PL
+PL82,Podkarpackie,2012,0.0,PL
+PL82,Podkarpackie,2013,78.6,PL
+PL82,Podkarpackie,2014,79.0,PL
+PL82,Podkarpackie,2015,78.7,PL
+PL82,Podkarpackie,2016,79.2,PL
+PL82,Podkarpackie,2017,79.4,PL
+PL82,Podkarpackie,2018,79.4,PL
+PL84,Podlaskie,2009,0.0,PL
+PL84,Podlaskie,2010,0.0,PL
+PL84,Podlaskie,2011,0.0,PL
+PL84,Podlaskie,2012,0.0,PL
+PL84,Podlaskie,2013,77.7,PL
+PL84,Podlaskie,2014,78.4,PL
+PL84,Podlaskie,2015,78.2,PL
+PL84,Podlaskie,2016,78.4,PL
+PL84,Podlaskie,2017,78.5,PL
+PL84,Podlaskie,2018,78.2,PL
+PL91,Warszawski stoleczny,2009,0.0,PL
+PL91,Warszawski stoleczny,2010,0.0,PL
+PL91,Warszawski stoleczny,2011,0.0,PL
+PL91,Warszawski stoleczny,2012,0.0,PL
+PL91,Warszawski stoleczny,2013,0.0,PL
+PL91,Warszawski stoleczny,2014,79.3,PL
+PL91,Warszawski stoleczny,2015,79.2,PL
+PL91,Warszawski stoleczny,2016,79.5,PL
+PL91,Warszawski stoleczny,2017,79.3,PL
+PL91,Warszawski stoleczny,2018,79.1,PL
+PL92,Mazowiecki regionalny,2009,0.0,PL
+PL92,Mazowiecki regionalny,2010,0.0,PL
+PL92,Mazowiecki regionalny,2011,0.0,PL
+PL92,Mazowiecki regionalny,2012,0.0,PL
+PL92,Mazowiecki regionalny,2013,0.0,PL
+PL92,Mazowiecki regionalny,2014,76.8,PL
+PL92,Mazowiecki regionalny,2015,76.8,PL
+PL92,Mazowiecki regionalny,2016,77.0,PL
+PL92,Mazowiecki regionalny,2017,76.8,PL
+PL92,Mazowiecki regionalny,2018,76.8,PL
+PT11,Norte,2009,80.2,PT
+PT11,Norte,2010,80.5,PT
+PT11,Norte,2011,81.0,PT
+PT11,Norte,2012,80.9,PT
+PT11,Norte,2013,81.3,PT
+PT11,Norte,2014,81.7,PT
+PT11,Norte,2015,81.7,PT
+PT11,Norte,2016,81.7,PT
+PT11,Norte,2017,82.0,PT
+PT11,Norte,2018,82.0,PT
+PT15,Algarve,2009,79.3,PT
+PT15,Algarve,2010,80.3,PT
+PT15,Algarve,2011,80.3,PT
+PT15,Algarve,2012,80.3,PT
+PT15,Algarve,2013,80.6,PT
+PT15,Algarve,2014,80.9,PT
+PT15,Algarve,2015,80.8,PT
+PT15,Algarve,2016,80.3,PT
+PT15,Algarve,2017,80.3,PT
+PT15,Algarve,2018,80.3,PT
+PT16,Centro (PT),2009,80.2,PT
+PT16,Centro (PT),2010,80.4,PT
+PT16,Centro (PT),2011,80.9,PT
+PT16,Centro (PT),2012,80.6,PT
+PT16,Centro (PT),2013,81.0,PT
+PT16,Centro (PT),2014,81.5,PT
+PT16,Centro (PT),2015,81.5,PT
+PT16,Centro (PT),2016,81.5,PT
+PT16,Centro (PT),2017,81.6,PT
+PT16,Centro (PT),2018,81.8,PT
+PT17,Área Metropolitana de Lisboa,2009,79.8,PT
+PT17,Área Metropolitana de Lisboa,2010,80.1,PT
+PT17,Área Metropolitana de Lisboa,2011,81.0,PT
+PT17,Área Metropolitana de Lisboa,2012,81.0,PT
+PT17,Área Metropolitana de Lisboa,2013,81.3,PT
+PT17,Área Metropolitana de Lisboa,2014,81.7,PT
+PT17,Área Metropolitana de Lisboa,2015,81.6,PT
+PT17,Área Metropolitana de Lisboa,2016,81.7,PT
+PT17,Área Metropolitana de Lisboa,2017,82.0,PT
+PT17,Área Metropolitana de Lisboa,2018,81.7,PT
+PT18,Alentejo,2009,78.9,PT
+PT18,Alentejo,2010,79.3,PT
+PT18,Alentejo,2011,79.9,PT
+PT18,Alentejo,2012,79.9,PT
+PT18,Alentejo,2013,80.2,PT
+PT18,Alentejo,2014,80.8,PT
+PT18,Alentejo,2015,80.2,PT
+PT18,Alentejo,2016,80.2,PT
+PT18,Alentejo,2017,80.8,PT
+PT18,Alentejo,2018,80.8,PT
+PT20,Região Autónoma dos Açores (PT),2009,75.7,PT
+PT20,Região Autónoma dos Açores (PT),2010,76.2,PT
+PT20,Região Autónoma dos Açores (PT),2011,76.7,PT
+PT20,Região Autónoma dos Açores (PT),2012,77.5,PT
+PT20,Região Autónoma dos Açores (PT),2013,76.7,PT
+PT20,Região Autónoma dos Açores (PT),2014,77.5,PT
+PT20,Região Autónoma dos Açores (PT),2015,77.8,PT
+PT20,Região Autónoma dos Açores (PT),2016,77.6,PT
+PT20,Região Autónoma dos Açores (PT),2017,78.5,PT
+PT20,Região Autónoma dos Açores (PT),2018,78.1,PT
+PT30,Região Autónoma da Madeira (PT),2009,76.5,PT
+PT30,Região Autónoma da Madeira (PT),2010,76.8,PT
+PT30,Região Autónoma da Madeira (PT),2011,77.8,PT
+PT30,Região Autónoma da Madeira (PT),2012,77.6,PT
+PT30,Região Autónoma da Madeira (PT),2013,78.4,PT
+PT30,Região Autónoma da Madeira (PT),2014,77.4,PT
+PT30,Região Autónoma da Madeira (PT),2015,78.3,PT
+PT30,Região Autónoma da Madeira (PT),2016,78.5,PT
+PT30,Região Autónoma da Madeira (PT),2017,79.0,PT
+PT30,Região Autónoma da Madeira (PT),2018,78.7,PT
+RO11,Nord-Vest,2009,73.0,RO
+RO11,Nord-Vest,2010,73.5,RO
+RO11,Nord-Vest,2011,74.1,RO
+RO11,Nord-Vest,2012,74.1,RO
+RO11,Nord-Vest,2013,74.8,RO
+RO11,Nord-Vest,2014,74.8,RO
+RO11,Nord-Vest,2015,74.6,RO
+RO11,Nord-Vest,2016,75.3,RO
+RO11,Nord-Vest,2017,75.2,RO
+RO11,Nord-Vest,2018,75.2,RO
+RO12,Centru,2009,73.9,RO
+RO12,Centru,2010,74.4,RO
+RO12,Centru,2011,74.8,RO
+RO12,Centru,2012,75.0,RO
+RO12,Centru,2013,75.7,RO
+RO12,Centru,2014,75.5,RO
+RO12,Centru,2015,75.5,RO
+RO12,Centru,2016,75.8,RO
+RO12,Centru,2017,75.9,RO
+RO12,Centru,2018,75.8,RO
+RO21,Nord-Est,2009,73.4,RO
+RO21,Nord-Est,2010,73.3,RO
+RO21,Nord-Est,2011,74.3,RO
+RO21,Nord-Est,2012,73.8,RO
+RO21,Nord-Est,2013,74.6,RO
+RO21,Nord-Est,2014,74.3,RO
+RO21,Nord-Est,2015,74.3,RO
+RO21,Nord-Est,2016,74.6,RO
+RO21,Nord-Est,2017,74.5,RO
+RO21,Nord-Est,2018,74.1,RO
+RO22,Sud-Est,2009,73.4,RO
+RO22,Sud-Est,2010,73.4,RO
+RO22,Sud-Est,2011,74.1,RO
+RO22,Sud-Est,2012,73.8,RO
+RO22,Sud-Est,2013,74.5,RO
+RO22,Sud-Est,2014,74.2,RO
+RO22,Sud-Est,2015,74.7,RO
+RO22,Sud-Est,2016,74.4,RO
+RO22,Sud-Est,2017,74.6,RO
+RO22,Sud-Est,2018,74.5,RO
+RO31,Sud - Muntenia,2009,73.2,RO
+RO31,Sud - Muntenia,2010,73.6,RO
+RO31,Sud - Muntenia,2011,74.3,RO
+RO31,Sud - Muntenia,2012,74.5,RO
+RO31,Sud - Muntenia,2013,75.1,RO
+RO31,Sud - Muntenia,2014,75.0,RO
+RO31,Sud - Muntenia,2015,75.1,RO
+RO31,Sud - Muntenia,2016,75.1,RO
+RO31,Sud - Muntenia,2017,75.2,RO
+RO31,Sud - Muntenia,2018,75.3,RO
+RO32,Bucuresti - Ilfov,2009,75.5,RO
+RO32,Bucuresti - Ilfov,2010,75.7,RO
+RO32,Bucuresti - Ilfov,2011,76.1,RO
+RO32,Bucuresti - Ilfov,2012,76.0,RO
+RO32,Bucuresti - Ilfov,2013,76.6,RO
+RO32,Bucuresti - Ilfov,2014,76.7,RO
+RO32,Bucuresti - Ilfov,2015,76.7,RO
+RO32,Bucuresti - Ilfov,2016,76.7,RO
+RO32,Bucuresti - Ilfov,2017,76.7,RO
+RO32,Bucuresti - Ilfov,2018,76.9,RO
+RO41,Sud-Vest Oltenia,2009,73.3,RO
+RO41,Sud-Vest Oltenia,2010,73.7,RO
+RO41,Sud-Vest Oltenia,2011,74.5,RO
+RO41,Sud-Vest Oltenia,2012,74.4,RO
+RO41,Sud-Vest Oltenia,2013,75.1,RO
+RO41,Sud-Vest Oltenia,2014,74.8,RO
+RO41,Sud-Vest Oltenia,2015,75.0,RO
+RO41,Sud-Vest Oltenia,2016,75.7,RO
+RO41,Sud-Vest Oltenia,2017,75.5,RO
+RO41,Sud-Vest Oltenia,2018,76.1,RO
+RO42,Vest,2009,73.1,RO
+RO42,Vest,2010,73.3,RO
+RO42,Vest,2011,74.1,RO
+RO42,Vest,2012,74.3,RO
+RO42,Vest,2013,74.8,RO
+RO42,Vest,2014,74.6,RO
+RO42,Vest,2015,74.5,RO
+RO42,Vest,2016,75.2,RO
+RO42,Vest,2017,74.7,RO
+RO42,Vest,2018,75.4,RO
+RS11,Beogradski region,2009,0.0,RS
+RS11,Beogradski region,2010,0.0,RS
+RS11,Beogradski region,2011,0.0,RS
+RS11,Beogradski region,2012,0.0,RS
+RS11,Beogradski region,2013,0.0,RS
+RS11,Beogradski region,2014,0.0,RS
+RS11,Beogradski region,2015,0.0,RS
+RS11,Beogradski region,2016,0.0,RS
+RS11,Beogradski region,2017,76.8,RS
+RS11,Beogradski region,2018,77.0,RS
+RS12,Region Vojvodine,2009,0.0,RS
+RS12,Region Vojvodine,2010,0.0,RS
+RS12,Region Vojvodine,2011,0.0,RS
+RS12,Region Vojvodine,2012,0.0,RS
+RS12,Region Vojvodine,2013,0.0,RS
+RS12,Region Vojvodine,2014,0.0,RS
+RS12,Region Vojvodine,2015,0.0,RS
+RS12,Region Vojvodine,2016,0.0,RS
+RS12,Region Vojvodine,2017,74.8,RS
+RS12,Region Vojvodine,2018,75.2,RS
+RS21,Region Sumadije i Zapadne Srbije,2009,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2010,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2011,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2012,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2013,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2014,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2015,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2016,0.0,RS
+RS21,Region Sumadije i Zapadne Srbije,2017,75.8,RS
+RS21,Region Sumadije i Zapadne Srbije,2018,76.3,RS
+RS22,Region Juzne i Istocne Srbije,2009,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2010,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2011,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2012,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2013,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2014,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2015,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2016,0.0,RS
+RS22,Region Juzne i Istocne Srbije,2017,75.2,RS
+RS22,Region Juzne i Istocne Srbije,2018,75.3,RS
+SE11,Stockholm,2009,82.1,SE
+SE11,Stockholm,2010,82.0,SE
+SE11,Stockholm,2011,82.3,SE
+SE11,Stockholm,2012,82.4,SE
+SE11,Stockholm,2013,82.8,SE
+SE11,Stockholm,2014,82.7,SE
+SE11,Stockholm,2015,82.7,SE
+SE11,Stockholm,2016,82.9,SE
+SE11,Stockholm,2017,83.1,SE
+SE11,Stockholm,2018,83.0,SE
+SE12,Östra Mellansverige,2009,81.2,SE
+SE12,Östra Mellansverige,2010,81.8,SE
+SE12,Östra Mellansverige,2011,81.8,SE
+SE12,Östra Mellansverige,2012,81.7,SE
+SE12,Östra Mellansverige,2013,81.8,SE
+SE12,Östra Mellansverige,2014,82.5,SE
+SE12,Östra Mellansverige,2015,82.4,SE
+SE12,Östra Mellansverige,2016,82.3,SE
+SE12,Östra Mellansverige,2017,82.4,SE
+SE12,Östra Mellansverige,2018,82.5,SE
+SE21,Småland med öarna,2009,81.8,SE
+SE21,Småland med öarna,2010,81.8,SE
+SE21,Småland med öarna,2011,81.9,SE
+SE21,Småland med öarna,2012,81.9,SE
+SE21,Småland med öarna,2013,82.2,SE
+SE21,Småland med öarna,2014,82.7,SE
+SE21,Småland med öarna,2015,82.4,SE
+SE21,Småland med öarna,2016,82.7,SE
+SE21,Småland med öarna,2017,82.6,SE
+SE21,Småland med öarna,2018,82.8,SE
+SE22,Sydsverige,2009,81.7,SE
+SE22,Sydsverige,2010,81.7,SE
+SE22,Sydsverige,2011,82.1,SE
+SE22,Sydsverige,2012,81.6,SE
+SE22,Sydsverige,2013,82.0,SE
+SE22,Sydsverige,2014,82.2,SE
+SE22,Sydsverige,2015,82.4,SE
+SE22,Sydsverige,2016,82.4,SE
+SE22,Sydsverige,2017,82.4,SE
+SE22,Sydsverige,2018,82.5,SE
+SE23,Västsverige,2009,81.7,SE
+SE23,Västsverige,2010,81.7,SE
+SE23,Västsverige,2011,82.0,SE
+SE23,Västsverige,2012,82.0,SE
+SE23,Västsverige,2013,82.1,SE
+SE23,Västsverige,2014,82.4,SE
+SE23,Västsverige,2015,82.5,SE
+SE23,Västsverige,2016,82.4,SE
+SE23,Västsverige,2017,82.5,SE
+SE23,Västsverige,2018,82.7,SE
+SE31,Norra Mellansverige,2009,80.6,SE
+SE31,Norra Mellansverige,2010,81.1,SE
+SE31,Norra Mellansverige,2011,81.5,SE
+SE31,Norra Mellansverige,2012,81.1,SE
+SE31,Norra Mellansverige,2013,81.6,SE
+SE31,Norra Mellansverige,2014,81.7,SE
+SE31,Norra Mellansverige,2015,81.2,SE
+SE31,Norra Mellansverige,2016,81.8,SE
+SE31,Norra Mellansverige,2017,82.0,SE
+SE31,Norra Mellansverige,2018,82.2,SE
+SE32,Mellersta Norrland,2009,80.6,SE
+SE32,Mellersta Norrland,2010,80.7,SE
+SE32,Mellersta Norrland,2011,80.7,SE
+SE32,Mellersta Norrland,2012,81.2,SE
+SE32,Mellersta Norrland,2013,80.9,SE
+SE32,Mellersta Norrland,2014,81.1,SE
+SE32,Mellersta Norrland,2015,80.9,SE
+SE32,Mellersta Norrland,2016,81.7,SE
+SE32,Mellersta Norrland,2017,81.4,SE
+SE32,Mellersta Norrland,2018,82.0,SE
+SE33,Övre Norrland,2009,81.1,SE
+SE33,Övre Norrland,2010,81.1,SE
+SE33,Övre Norrland,2011,81.1,SE
+SE33,Övre Norrland,2012,81.0,SE
+SE33,Övre Norrland,2013,81.1,SE
+SE33,Övre Norrland,2014,81.5,SE
+SE33,Övre Norrland,2015,81.4,SE
+SE33,Övre Norrland,2016,81.8,SE
+SE33,Övre Norrland,2017,81.9,SE
+SE33,Övre Norrland,2018,81.7,SE
+SI03,Vzhodna Slovenija,2009,78.4,SI
+SI03,Vzhodna Slovenija,2010,78.9,SI
+SI03,Vzhodna Slovenija,2011,79.0,SI
+SI03,Vzhodna Slovenija,2012,79.4,SI
+SI03,Vzhodna Slovenija,2013,79.5,SI
+SI03,Vzhodna Slovenija,2014,80.3,SI
+SI03,Vzhodna Slovenija,2015,79.8,SI
+SI03,Vzhodna Slovenija,2016,80.2,SI
+SI03,Vzhodna Slovenija,2017,80.3,SI
+SI03,Vzhodna Slovenija,2018,80.5,SI
+SI04,Zahodna Slovenija,2009,80.5,SI
+SI04,Zahodna Slovenija,2010,81.0,SI
+SI04,Zahodna Slovenija,2011,81.6,SI
+SI04,Zahodna Slovenija,2012,81.4,SI
+SI04,Zahodna Slovenija,2013,81.7,SI
+SI04,Zahodna Slovenija,2014,82.4,SI
+SI04,Zahodna Slovenija,2015,82.3,SI
+SI04,Zahodna Slovenija,2016,82.6,SI
+SI04,Zahodna Slovenija,2017,82.3,SI
+SI04,Zahodna Slovenija,2018,82.7,SI
+SK01,Bratislavský kraj,2009,77.1,SK
+SK01,Bratislavský kraj,2010,77.0,SK
+SK01,Bratislavský kraj,2011,77.8,SK
+SK01,Bratislavský kraj,2012,78.0,SK
+SK01,Bratislavský kraj,2013,78.1,SK
+SK01,Bratislavský kraj,2014,78.7,SK
+SK01,Bratislavský kraj,2015,78.5,SK
+SK01,Bratislavský kraj,2016,78.9,SK
+SK01,Bratislavský kraj,2017,78.6,SK
+SK01,Bratislavský kraj,2018,78.8,SK
+SK02,Západné Slovensko,2009,75.3,SK
+SK02,Západné Slovensko,2010,75.8,SK
+SK02,Západné Slovensko,2011,76.1,SK
+SK02,Západné Slovensko,2012,76.4,SK
+SK02,Západné Slovensko,2013,76.8,SK
+SK02,Západné Slovensko,2014,76.9,SK
+SK02,Západné Slovensko,2015,76.9,SK
+SK02,Západné Slovensko,2016,77.2,SK
+SK02,Západné Slovensko,2017,77.2,SK
+SK02,Západné Slovensko,2018,77.4,SK
+SK03,Stredné Slovensko,2009,74.8,SK
+SK03,Stredné Slovensko,2010,75.1,SK
+SK03,Stredné Slovensko,2011,75.8,SK
+SK03,Stredné Slovensko,2012,75.8,SK
+SK03,Stredné Slovensko,2013,76.2,SK
+SK03,Stredné Slovensko,2014,76.8,SK
+SK03,Stredné Slovensko,2015,76.3,SK
+SK03,Stredné Slovensko,2016,77.0,SK
+SK03,Stredné Slovensko,2017,77.1,SK
+SK03,Stredné Slovensko,2018,77.1,SK
+SK04,Východné Slovensko,2009,75.1,SK
+SK04,Východné Slovensko,2010,75.2,SK
+SK04,Východné Slovensko,2011,75.7,SK
+SK04,Východné Slovensko,2012,75.9,SK
+SK04,Východné Slovensko,2013,76.2,SK
+SK04,Východné Slovensko,2014,76.6,SK
+SK04,Východné Slovensko,2015,76.3,SK
+SK04,Východné Slovensko,2016,77.2,SK
+SK04,Východné Slovensko,2017,77.2,SK
+SK04,Východné Slovensko,2018,77.2,SK
+TR10,Istanbul,2009,76.6,TR
+TR10,Istanbul,2010,77.5,TR
+TR10,Istanbul,2011,78.1,TR
+TR10,Istanbul,2012,78.3,TR
+TR10,Istanbul,2013,78.8,TR
+TR10,Istanbul,2014,78.5,TR
+TR10,Istanbul,2015,78.5,TR
+TR10,Istanbul,2016,78.5,TR
+TR10,Istanbul,2017,78.9,TR
+TR10,Istanbul,2018,79.4,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2009,75.8,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2010,76.3,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2011,76.8,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2012,77.1,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2013,77.6,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2014,77.3,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2015,77.3,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2016,77.8,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2017,77.7,TR
+TR21,"Tekirdag, Edirne, Kirklareli",2018,77.8,TR
+TR22,"Balikesir, Çanakkale",2009,75.8,TR
+TR22,"Balikesir, Çanakkale",2010,76.3,TR
+TR22,"Balikesir, Çanakkale",2011,76.9,TR
+TR22,"Balikesir, Çanakkale",2012,77.1,TR
+TR22,"Balikesir, Çanakkale",2013,77.8,TR
+TR22,"Balikesir, Çanakkale",2014,77.8,TR
+TR22,"Balikesir, Çanakkale",2015,77.7,TR
+TR22,"Balikesir, Çanakkale",2016,77.7,TR
+TR22,"Balikesir, Çanakkale",2017,77.7,TR
+TR22,"Balikesir, Çanakkale",2018,78.3,TR
+TR31,Izmir,2009,76.7,TR
+TR31,Izmir,2010,77.6,TR
+TR31,Izmir,2011,77.4,TR
+TR31,Izmir,2012,77.8,TR
+TR31,Izmir,2013,79.0,TR
+TR31,Izmir,2014,78.7,TR
+TR31,Izmir,2015,78.7,TR
+TR31,Izmir,2016,78.5,TR
+TR31,Izmir,2017,78.8,TR
+TR31,Izmir,2018,79.2,TR
+TR32,"Aydin, Denizli, Mugla",2009,77.2,TR
+TR32,"Aydin, Denizli, Mugla",2010,77.7,TR
+TR32,"Aydin, Denizli, Mugla",2011,77.7,TR
+TR32,"Aydin, Denizli, Mugla",2012,78.4,TR
+TR32,"Aydin, Denizli, Mugla",2013,79.4,TR
+TR32,"Aydin, Denizli, Mugla",2014,79.5,TR
+TR32,"Aydin, Denizli, Mugla",2015,79.0,TR
+TR32,"Aydin, Denizli, Mugla",2016,78.9,TR
+TR32,"Aydin, Denizli, Mugla",2017,79.1,TR
+TR32,"Aydin, Denizli, Mugla",2018,79.6,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2009,75.4,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2010,76.3,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2011,76.4,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2012,76.5,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2013,77.5,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2014,77.1,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2015,77.1,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2016,77.1,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2017,77.5,TR
+TR33,"Manisa, Afyonkarahisar, Kütahya, Usak",2018,77.7,TR
+TR41,"Bursa, Eskisehir, Bilecik",2009,75.5,TR
+TR41,"Bursa, Eskisehir, Bilecik",2010,76.3,TR
+TR41,"Bursa, Eskisehir, Bilecik",2011,76.6,TR
+TR41,"Bursa, Eskisehir, Bilecik",2012,77.2,TR
+TR41,"Bursa, Eskisehir, Bilecik",2013,77.6,TR
+TR41,"Bursa, Eskisehir, Bilecik",2014,77.6,TR
+TR41,"Bursa, Eskisehir, Bilecik",2015,77.6,TR
+TR41,"Bursa, Eskisehir, Bilecik",2016,77.6,TR
+TR41,"Bursa, Eskisehir, Bilecik",2017,78.1,TR
+TR41,"Bursa, Eskisehir, Bilecik",2018,78.4,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2009,75.9,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2010,76.6,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2011,77.1,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2012,77.5,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2013,78.1,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2014,78.0,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2015,78.0,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2016,77.9,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2017,78.3,TR
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2018,78.5,TR
+TR51,Ankara,2009,77.1,TR
+TR51,Ankara,2010,78.1,TR
+TR51,Ankara,2011,78.5,TR
+TR51,Ankara,2012,78.8,TR
+TR51,Ankara,2013,79.3,TR
+TR51,Ankara,2014,79.4,TR
+TR51,Ankara,2015,79.3,TR
+TR51,Ankara,2016,79.2,TR
+TR51,Ankara,2017,79.4,TR
+TR51,Ankara,2018,79.6,TR
+TR52,"Konya, Karaman",2009,75.8,TR
+TR52,"Konya, Karaman",2010,76.4,TR
+TR52,"Konya, Karaman",2011,76.8,TR
+TR52,"Konya, Karaman",2012,77.6,TR
+TR52,"Konya, Karaman",2013,78.3,TR
+TR52,"Konya, Karaman",2014,78.1,TR
+TR52,"Konya, Karaman",2015,78.5,TR
+TR52,"Konya, Karaman",2016,78.4,TR
+TR52,"Konya, Karaman",2017,78.4,TR
+TR52,"Konya, Karaman",2018,78.8,TR
+TR61,"Antalya, Isparta, Burdur",2009,77.8,TR
+TR61,"Antalya, Isparta, Burdur",2010,77.9,TR
+TR61,"Antalya, Isparta, Burdur",2011,78.4,TR
+TR61,"Antalya, Isparta, Burdur",2012,78.6,TR
+TR61,"Antalya, Isparta, Burdur",2013,79.2,TR
+TR61,"Antalya, Isparta, Burdur",2014,79.3,TR
+TR61,"Antalya, Isparta, Burdur",2015,79.4,TR
+TR61,"Antalya, Isparta, Burdur",2016,79.2,TR
+TR61,"Antalya, Isparta, Burdur",2017,79.4,TR
+TR61,"Antalya, Isparta, Burdur",2018,79.7,TR
+TR62,"Adana, Mersin",2009,76.0,TR
+TR62,"Adana, Mersin",2010,76.6,TR
+TR62,"Adana, Mersin",2011,77.0,TR
+TR62,"Adana, Mersin",2012,77.5,TR
+TR62,"Adana, Mersin",2013,77.7,TR
+TR62,"Adana, Mersin",2014,77.9,TR
+TR62,"Adana, Mersin",2015,77.6,TR
+TR62,"Adana, Mersin",2016,77.5,TR
+TR62,"Adana, Mersin",2017,78.2,TR
+TR62,"Adana, Mersin",2018,78.7,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2009,76.7,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2010,77.4,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2011,77.5,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2012,78.0,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2013,78.5,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2014,78.3,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2015,78.4,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2016,78.2,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2017,78.6,TR
+TR63,"Hatay, Kahramanmaras, Osmaniye",2018,79.1,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2009,75.8,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2010,76.4,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2011,76.5,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2012,77.6,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2013,78.1,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2014,77.7,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2015,78.2,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2016,78.1,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2017,78.1,TR
+TR71,"Kirikkale, Aksaray, Nigde, Nevsehir, Kirsehir",2018,78.7,TR
+TR72,"Kayseri, Sivas, Yozgat",2009,75.7,TR
+TR72,"Kayseri, Sivas, Yozgat",2010,76.6,TR
+TR72,"Kayseri, Sivas, Yozgat",2011,76.9,TR
+TR72,"Kayseri, Sivas, Yozgat",2012,77.7,TR
+TR72,"Kayseri, Sivas, Yozgat",2013,78.0,TR
+TR72,"Kayseri, Sivas, Yozgat",2014,77.9,TR
+TR72,"Kayseri, Sivas, Yozgat",2015,77.7,TR
+TR72,"Kayseri, Sivas, Yozgat",2016,77.8,TR
+TR72,"Kayseri, Sivas, Yozgat",2017,78.3,TR
+TR72,"Kayseri, Sivas, Yozgat",2018,78.7,TR
+TR81,"Zonguldak, Karabük, Bartin",2009,75.9,TR
+TR81,"Zonguldak, Karabük, Bartin",2010,76.8,TR
+TR81,"Zonguldak, Karabük, Bartin",2011,77.0,TR
+TR81,"Zonguldak, Karabük, Bartin",2012,77.3,TR
+TR81,"Zonguldak, Karabük, Bartin",2013,78.0,TR
+TR81,"Zonguldak, Karabük, Bartin",2014,78.0,TR
+TR81,"Zonguldak, Karabük, Bartin",2015,78.1,TR
+TR81,"Zonguldak, Karabük, Bartin",2016,78.0,TR
+TR81,"Zonguldak, Karabük, Bartin",2017,78.4,TR
+TR81,"Zonguldak, Karabük, Bartin",2018,78.2,TR
+TR82,"Kastamonu, Çankiri, Sinop",2009,75.7,TR
+TR82,"Kastamonu, Çankiri, Sinop",2010,76.8,TR
+TR82,"Kastamonu, Çankiri, Sinop",2011,76.9,TR
+TR82,"Kastamonu, Çankiri, Sinop",2012,77.2,TR
+TR82,"Kastamonu, Çankiri, Sinop",2013,78.5,TR
+TR82,"Kastamonu, Çankiri, Sinop",2014,78.0,TR
+TR82,"Kastamonu, Çankiri, Sinop",2015,78.1,TR
+TR82,"Kastamonu, Çankiri, Sinop",2016,78.3,TR
+TR82,"Kastamonu, Çankiri, Sinop",2017,78.6,TR
+TR82,"Kastamonu, Çankiri, Sinop",2018,78.7,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2009,75.8,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2010,76.7,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2011,76.9,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2012,77.6,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2013,78.1,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2014,77.9,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2015,78.2,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2016,78.2,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2017,78.5,TR
+TR83,"Samsun, Tokat, Çorum, Amasya",2018,78.9,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2009,77.2,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2010,78.4,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2011,78.6,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2012,79.1,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2013,80.1,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2014,79.7,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2015,80.0,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2016,79.9,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2017,79.7,TR
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüshane",2018,80.6,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2009,75.0,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2010,76.4,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2011,76.0,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2012,77.1,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2013,77.5,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2014,78.0,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2015,77.9,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2016,78.1,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2017,78.3,TR
+TRA1,"Erzurum, Erzincan, Bayburt",2018,78.8,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2009,74.4,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2010,74.4,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2011,73.7,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2012,75.5,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2013,76.6,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2014,76.7,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2015,77.0,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2016,77.4,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2017,77.8,TR
+TRA2,"Agri, Kars, Igdir, Ardahan",2018,78.0,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2009,76.2,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2010,76.9,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2011,77.5,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2012,78.2,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2013,78.6,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2014,78.8,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2015,79.1,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2016,78.8,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2017,79.2,TR
+TRB1,"Malatya, Elazig, Bingöl, Tunceli",2018,80.1,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2009,73.0,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2010,74.0,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2011,73.9,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2012,76.4,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2013,76.3,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2014,76.9,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2015,77.2,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2016,77.4,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2017,77.6,TR
+TRB2,"Van, Mus, Bitlis, Hakkari",2018,78.4,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2009,75.3,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2010,76.2,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2011,76.8,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2012,77.4,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2013,77.3,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2014,77.4,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2015,77.7,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2016,77.0,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2017,78.0,TR
+TRC1,"Gaziantep, Adiyaman, Kilis",2018,78.1,TR
+TRC2,"Sanliurfa, Diyarbakir",2009,75.2,TR
+TRC2,"Sanliurfa, Diyarbakir",2010,75.4,TR
+TRC2,"Sanliurfa, Diyarbakir",2011,75.9,TR
+TRC2,"Sanliurfa, Diyarbakir",2012,0.0,TR
+TRC2,"Sanliurfa, Diyarbakir",2013,77.5,TR
+TRC2,"Sanliurfa, Diyarbakir",2014,77.9,TR
+TRC2,"Sanliurfa, Diyarbakir",2015,78.4,TR
+TRC2,"Sanliurfa, Diyarbakir",2016,77.7,TR
+TRC2,"Sanliurfa, Diyarbakir",2017,78.8,TR
+TRC2,"Sanliurfa, Diyarbakir",2018,79.4,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2009,76.9,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2010,76.7,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2011,77.6,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2012,0.0,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2013,0.0,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2014,0.0,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2015,0.0,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2016,78.3,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2017,0.0,TR
+TRC3,"Mardin, Batman, Sirnak, Siirt",2018,0.0,TR
+UKC1,Tees Valley and Durham,2009,79.1,UK
+UKC1,Tees Valley and Durham,2010,79.8,UK
+UKC1,Tees Valley and Durham,2011,79.8,UK
+UKC1,Tees Valley and Durham,2012,80.1,UK
+UKC1,Tees Valley and Durham,2013,79.8,UK
+UKC1,Tees Valley and Durham,2014,79.6,UK
+UKC1,Tees Valley and Durham,2015,79.6,UK
+UKC1,Tees Valley and Durham,2016,79.6,UK
+UKC1,Tees Valley and Durham,2017,79.8,UK
+UKC1,Tees Valley and Durham,2018,79.8,UK
+UKC2,Northumberland and Tyne and Wear,2009,79.6,UK
+UKC2,Northumberland and Tyne and Wear,2010,79.6,UK
+UKC2,Northumberland and Tyne and Wear,2011,79.9,UK
+UKC2,Northumberland and Tyne and Wear,2012,80.0,UK
+UKC2,Northumberland and Tyne and Wear,2013,80.2,UK
+UKC2,Northumberland and Tyne and Wear,2014,79.9,UK
+UKC2,Northumberland and Tyne and Wear,2015,79.9,UK
+UKC2,Northumberland and Tyne and Wear,2016,80.1,UK
+UKC2,Northumberland and Tyne and Wear,2017,80.2,UK
+UKC2,Northumberland and Tyne and Wear,2018,79.9,UK
+UKD1,Cumbria,2009,80.6,UK
+UKD1,Cumbria,2010,80.5,UK
+UKD1,Cumbria,2011,80.6,UK
+UKD1,Cumbria,2012,80.9,UK
+UKD1,Cumbria,2013,81.0,UK
+UKD1,Cumbria,2014,81.3,UK
+UKD1,Cumbria,2015,81.4,UK
+UKD1,Cumbria,2016,81.0,UK
+UKD1,Cumbria,2017,81.4,UK
+UKD1,Cumbria,2018,81.6,UK
+UKD3,Greater Manchester,2009,78.7,UK
+UKD3,Greater Manchester,2010,79.0,UK
+UKD3,Greater Manchester,2011,79.5,UK
+UKD3,Greater Manchester,2012,79.5,UK
+UKD3,Greater Manchester,2013,79.7,UK
+UKD3,Greater Manchester,2014,79.7,UK
+UKD3,Greater Manchester,2015,79.5,UK
+UKD3,Greater Manchester,2016,79.7,UK
+UKD3,Greater Manchester,2017,79.7,UK
+UKD3,Greater Manchester,2018,80.0,UK
+UKD4,Lancashire,2009,79.1,UK
+UKD4,Lancashire,2010,79.5,UK
+UKD4,Lancashire,2011,79.6,UK
+UKD4,Lancashire,2012,79.9,UK
+UKD4,Lancashire,2013,79.8,UK
+UKD4,Lancashire,2014,80.1,UK
+UKD4,Lancashire,2015,79.8,UK
+UKD4,Lancashire,2016,80.0,UK
+UKD4,Lancashire,2017,79.9,UK
+UKD4,Lancashire,2018,79.9,UK
+UKD6,Cheshire,2009,81.0,UK
+UKD6,Cheshire,2010,81.1,UK
+UKD6,Cheshire,2011,81.4,UK
+UKD6,Cheshire,2012,81.3,UK
+UKD6,Cheshire,2013,81.5,UK
+UKD6,Cheshire,2014,81.7,UK
+UKD6,Cheshire,2015,81.5,UK
+UKD6,Cheshire,2016,81.5,UK
+UKD6,Cheshire,2017,81.9,UK
+UKD6,Cheshire,2018,81.9,UK
+UKD7,Merseyside,2009,78.8,UK
+UKD7,Merseyside,2010,79.0,UK
+UKD7,Merseyside,2011,79.8,UK
+UKD7,Merseyside,2012,79.5,UK
+UKD7,Merseyside,2013,79.4,UK
+UKD7,Merseyside,2014,79.7,UK
+UKD7,Merseyside,2015,79.4,UK
+UKD7,Merseyside,2016,79.3,UK
+UKD7,Merseyside,2017,79.8,UK
+UKD7,Merseyside,2018,79.6,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2009,79.7,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2010,80.3,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2011,80.3,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2012,80.3,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2013,80.4,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2014,80.8,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2015,80.4,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2016,80.5,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2017,80.2,UK
+UKE1,East Yorkshire and Northern Lincolnshire,2018,80.8,UK
+UKE2,North Yorkshire,2009,81.6,UK
+UKE2,North Yorkshire,2010,81.8,UK
+UKE2,North Yorkshire,2011,81.8,UK
+UKE2,North Yorkshire,2012,81.9,UK
+UKE2,North Yorkshire,2013,82.1,UK
+UKE2,North Yorkshire,2014,82.6,UK
+UKE2,North Yorkshire,2015,82.4,UK
+UKE2,North Yorkshire,2016,82.5,UK
+UKE2,North Yorkshire,2017,82.5,UK
+UKE2,North Yorkshire,2018,82.3,UK
+UKE3,South Yorkshire,2009,79.6,UK
+UKE3,South Yorkshire,2010,79.9,UK
+UKE3,South Yorkshire,2011,80.3,UK
+UKE3,South Yorkshire,2012,80.2,UK
+UKE3,South Yorkshire,2013,80.1,UK
+UKE3,South Yorkshire,2014,80.4,UK
+UKE3,South Yorkshire,2015,80.0,UK
+UKE3,South Yorkshire,2016,80.5,UK
+UKE3,South Yorkshire,2017,80.5,UK
+UKE3,South Yorkshire,2018,80.2,UK
+UKE4,West Yorkshire,2009,79.6,UK
+UKE4,West Yorkshire,2010,79.6,UK
+UKE4,West Yorkshire,2011,80.0,UK
+UKE4,West Yorkshire,2012,80.2,UK
+UKE4,West Yorkshire,2013,80.1,UK
+UKE4,West Yorkshire,2014,80.4,UK
+UKE4,West Yorkshire,2015,80.0,UK
+UKE4,West Yorkshire,2016,80.3,UK
+UKE4,West Yorkshire,2017,80.4,UK
+UKE4,West Yorkshire,2018,80.1,UK
+UKF1,Derbyshire and Nottinghamshire,2009,80.3,UK
+UKF1,Derbyshire and Nottinghamshire,2010,80.7,UK
+UKF1,Derbyshire and Nottinghamshire,2011,81.1,UK
+UKF1,Derbyshire and Nottinghamshire,2012,81.1,UK
+UKF1,Derbyshire and Nottinghamshire,2013,81.1,UK
+UKF1,Derbyshire and Nottinghamshire,2014,80.9,UK
+UKF1,Derbyshire and Nottinghamshire,2015,80.6,UK
+UKF1,Derbyshire and Nottinghamshire,2016,81.1,UK
+UKF1,Derbyshire and Nottinghamshire,2017,81.0,UK
+UKF1,Derbyshire and Nottinghamshire,2018,80.9,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2009,80.7,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2010,80.9,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2011,81.4,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2012,81.4,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2013,81.4,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2014,81.8,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2015,81.4,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2016,81.6,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2017,81.7,UK
+UKF2,"Leicestershire, Rutland and Northamptonshire",2018,81.5,UK
+UKF3,Lincolnshire,2009,80.7,UK
+UKF3,Lincolnshire,2010,81.0,UK
+UKF3,Lincolnshire,2011,81.2,UK
+UKF3,Lincolnshire,2012,81.1,UK
+UKF3,Lincolnshire,2013,81.3,UK
+UKF3,Lincolnshire,2014,82.0,UK
+UKF3,Lincolnshire,2015,81.2,UK
+UKF3,Lincolnshire,2016,81.4,UK
+UKF3,Lincolnshire,2017,81.1,UK
+UKF3,Lincolnshire,2018,81.0,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2009,81.2,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2010,81.6,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2011,82.0,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2012,81.9,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2013,81.8,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2014,82.1,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2015,81.8,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2016,81.9,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2017,82.1,UK
+UKG1,"Herefordshire, Worcestershire and Warwickshire",2018,81.9,UK
+UKG2,Shropshire and Staffordshire,2009,80.3,UK
+UKG2,Shropshire and Staffordshire,2010,80.6,UK
+UKG2,Shropshire and Staffordshire,2011,81.2,UK
+UKG2,Shropshire and Staffordshire,2012,81.0,UK
+UKG2,Shropshire and Staffordshire,2013,80.9,UK
+UKG2,Shropshire and Staffordshire,2014,81.4,UK
+UKG2,Shropshire and Staffordshire,2015,80.8,UK
+UKG2,Shropshire and Staffordshire,2016,81.1,UK
+UKG2,Shropshire and Staffordshire,2017,81.1,UK
+UKG2,Shropshire and Staffordshire,2018,80.9,UK
+UKG3,West Midlands,2009,79.9,UK
+UKG3,West Midlands,2010,79.9,UK
+UKG3,West Midlands,2011,80.4,UK
+UKG3,West Midlands,2012,80.4,UK
+UKG3,West Midlands,2013,80.3,UK
+UKG3,West Midlands,2014,80.1,UK
+UKG3,West Midlands,2015,80.1,UK
+UKG3,West Midlands,2016,80.2,UK
+UKG3,West Midlands,2017,80.3,UK
+UKG3,West Midlands,2018,80.2,UK
+UKH1,East Anglia,2009,81.7,UK
+UKH1,East Anglia,2010,82.0,UK
+UKH1,East Anglia,2011,82.4,UK
+UKH1,East Anglia,2012,82.3,UK
+UKH1,East Anglia,2013,82.2,UK
+UKH1,East Anglia,2014,82.5,UK
+UKH1,East Anglia,2015,82.3,UK
+UKH1,East Anglia,2016,82.3,UK
+UKH1,East Anglia,2017,82.4,UK
+UKH1,East Anglia,2018,82.3,UK
+UKH2,Bedfordshire and Hertfordshire,2009,81.3,UK
+UKH2,Bedfordshire and Hertfordshire,2010,81.6,UK
+UKH2,Bedfordshire and Hertfordshire,2011,82.2,UK
+UKH2,Bedfordshire and Hertfordshire,2012,81.9,UK
+UKH2,Bedfordshire and Hertfordshire,2013,82.3,UK
+UKH2,Bedfordshire and Hertfordshire,2014,82.5,UK
+UKH2,Bedfordshire and Hertfordshire,2015,82.3,UK
+UKH2,Bedfordshire and Hertfordshire,2016,82.6,UK
+UKH2,Bedfordshire and Hertfordshire,2017,82.5,UK
+UKH2,Bedfordshire and Hertfordshire,2018,82.3,UK
+UKH3,Essex,2009,81.7,UK
+UKH3,Essex,2010,81.4,UK
+UKH3,Essex,2011,81.8,UK
+UKH3,Essex,2012,81.9,UK
+UKH3,Essex,2013,81.9,UK
+UKH3,Essex,2014,81.9,UK
+UKH3,Essex,2015,81.6,UK
+UKH3,Essex,2016,81.7,UK
+UKH3,Essex,2017,81.7,UK
+UKH3,Essex,2018,81.8,UK
+UKI3,Inner London - West,2009,0.0,UK
+UKI3,Inner London - West,2010,0.0,UK
+UKI3,Inner London - West,2011,0.0,UK
+UKI3,Inner London - West,2012,0.0,UK
+UKI3,Inner London - West,2013,83.3,UK
+UKI3,Inner London - West,2014,84.0,UK
+UKI3,Inner London - West,2015,83.4,UK
+UKI3,Inner London - West,2016,84.3,UK
+UKI3,Inner London - West,2017,83.9,UK
+UKI3,Inner London - West,2018,84.7,UK
+UKI4,Inner London - East,2009,0.0,UK
+UKI4,Inner London - East,2010,0.0,UK
+UKI4,Inner London - East,2011,0.0,UK
+UKI4,Inner London - East,2012,0.0,UK
+UKI4,Inner London - East,2013,81.3,UK
+UKI4,Inner London - East,2014,81.4,UK
+UKI4,Inner London - East,2015,80.9,UK
+UKI4,Inner London - East,2016,82.1,UK
+UKI4,Inner London - East,2017,81.9,UK
+UKI4,Inner London - East,2018,82.0,UK
+UKI5,Outer London - East and North East,2009,0.0,UK
+UKI5,Outer London - East and North East,2010,0.0,UK
+UKI5,Outer London - East and North East,2011,0.0,UK
+UKI5,Outer London - East and North East,2012,0.0,UK
+UKI5,Outer London - East and North East,2013,81.9,UK
+UKI5,Outer London - East and North East,2014,82.2,UK
+UKI5,Outer London - East and North East,2015,81.6,UK
+UKI5,Outer London - East and North East,2016,82.2,UK
+UKI5,Outer London - East and North East,2017,82.3,UK
+UKI5,Outer London - East and North East,2018,82.4,UK
+UKI6,Outer London - South,2009,0.0,UK
+UKI6,Outer London - South,2010,0.0,UK
+UKI6,Outer London - South,2011,0.0,UK
+UKI6,Outer London - South,2012,0.0,UK
+UKI6,Outer London - South,2013,82.8,UK
+UKI6,Outer London - South,2014,82.6,UK
+UKI6,Outer London - South,2015,82.8,UK
+UKI6,Outer London - South,2016,82.8,UK
+UKI6,Outer London - South,2017,83.1,UK
+UKI6,Outer London - South,2018,82.7,UK
+UKI7,Outer London - West and North West,2009,0.0,UK
+UKI7,Outer London - West and North West,2010,0.0,UK
+UKI7,Outer London - West and North West,2011,0.0,UK
+UKI7,Outer London - West and North West,2012,0.0,UK
+UKI7,Outer London - West and North West,2013,83.0,UK
+UKI7,Outer London - West and North West,2014,83.4,UK
+UKI7,Outer London - West and North West,2015,82.8,UK
+UKI7,Outer London - West and North West,2016,83.5,UK
+UKI7,Outer London - West and North West,2017,83.7,UK
+UKI7,Outer London - West and North West,2018,83.4,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2009,81.9,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2010,82.1,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2011,82.4,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2012,82.3,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2013,82.4,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2014,82.8,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2015,82.8,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2016,82.9,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2017,82.9,UK
+UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",2018,83.2,UK
+UKJ2,"Surrey, East and West Sussex",2009,82.1,UK
+UKJ2,"Surrey, East and West Sussex",2010,82.1,UK
+UKJ2,"Surrey, East and West Sussex",2011,82.6,UK
+UKJ2,"Surrey, East and West Sussex",2012,82.5,UK
+UKJ2,"Surrey, East and West Sussex",2013,82.6,UK
+UKJ2,"Surrey, East and West Sussex",2014,82.9,UK
+UKJ2,"Surrey, East and West Sussex",2015,82.5,UK
+UKJ2,"Surrey, East and West Sussex",2016,82.7,UK
+UKJ2,"Surrey, East and West Sussex",2017,82.8,UK
+UKJ2,"Surrey, East and West Sussex",2018,82.9,UK
+UKJ3,Hampshire and Isle of Wight,2009,82.0,UK
+UKJ3,Hampshire and Isle of Wight,2010,82.0,UK
+UKJ3,Hampshire and Isle of Wight,2011,82.4,UK
+UKJ3,Hampshire and Isle of Wight,2012,82.3,UK
+UKJ3,Hampshire and Isle of Wight,2013,82.0,UK
+UKJ3,Hampshire and Isle of Wight,2014,82.6,UK
+UKJ3,Hampshire and Isle of Wight,2015,82.4,UK
+UKJ3,Hampshire and Isle of Wight,2016,82.4,UK
+UKJ3,Hampshire and Isle of Wight,2017,82.3,UK
+UKJ3,Hampshire and Isle of Wight,2018,82.5,UK
+UKJ4,Kent,2009,80.8,UK
+UKJ4,Kent,2010,81.2,UK
+UKJ4,Kent,2011,81.7,UK
+UKJ4,Kent,2012,81.8,UK
+UKJ4,Kent,2013,81.7,UK
+UKJ4,Kent,2014,81.7,UK
+UKJ4,Kent,2015,81.4,UK
+UKJ4,Kent,2016,81.7,UK
+UKJ4,Kent,2017,81.7,UK
+UKJ4,Kent,2018,81.6,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2009,81.6,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2010,81.8,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2011,82.0,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2012,82.2,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2013,81.7,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2014,82.5,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2015,82.0,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2016,82.0,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2017,82.3,UK
+UKK1,"Gloucestershire, Wiltshire and Bristol/Bath area",2018,82.3,UK
+UKK2,Dorset and Somerset,2009,82.1,UK
+UKK2,Dorset and Somerset,2010,82.2,UK
+UKK2,Dorset and Somerset,2011,82.8,UK
+UKK2,Dorset and Somerset,2012,82.6,UK
+UKK2,Dorset and Somerset,2013,82.4,UK
+UKK2,Dorset and Somerset,2014,82.9,UK
+UKK2,Dorset and Somerset,2015,82.2,UK
+UKK2,Dorset and Somerset,2016,82.3,UK
+UKK2,Dorset and Somerset,2017,82.6,UK
+UKK2,Dorset and Somerset,2018,82.4,UK
+UKK3,Cornwall and Isles of Scilly,2009,80.8,UK
+UKK3,Cornwall and Isles of Scilly,2010,81.7,UK
+UKK3,Cornwall and Isles of Scilly,2011,81.7,UK
+UKK3,Cornwall and Isles of Scilly,2012,81.5,UK
+UKK3,Cornwall and Isles of Scilly,2013,81.6,UK
+UKK3,Cornwall and Isles of Scilly,2014,81.7,UK
+UKK3,Cornwall and Isles of Scilly,2015,81.6,UK
+UKK3,Cornwall and Isles of Scilly,2016,81.7,UK
+UKK3,Cornwall and Isles of Scilly,2017,81.7,UK
+UKK3,Cornwall and Isles of Scilly,2018,81.4,UK
+UKK4,Devon,2009,81.2,UK
+UKK4,Devon,2010,81.8,UK
+UKK4,Devon,2011,82.0,UK
+UKK4,Devon,2012,81.6,UK
+UKK4,Devon,2013,82.0,UK
+UKK4,Devon,2014,82.2,UK
+UKK4,Devon,2015,81.8,UK
+UKK4,Devon,2016,81.8,UK
+UKK4,Devon,2017,82.0,UK
+UKK4,Devon,2018,81.9,UK
+UKL1,West Wales and The Valleys,2009,79.5,UK
+UKL1,West Wales and The Valleys,2010,79.8,UK
+UKL1,West Wales and The Valleys,2011,80.1,UK
+UKL1,West Wales and The Valleys,2012,80.0,UK
+UKL1,West Wales and The Valleys,2013,79.9,UK
+UKL1,West Wales and The Valleys,2014,80.6,UK
+UKL1,West Wales and The Valleys,2015,79.9,UK
+UKL1,West Wales and The Valleys,2016,80.1,UK
+UKL1,West Wales and The Valleys,2017,80.2,UK
+UKL1,West Wales and The Valleys,2018,80.0,UK
+UKL2,East Wales,2009,80.7,UK
+UKL2,East Wales,2010,80.6,UK
+UKL2,East Wales,2011,81.4,UK
+UKL2,East Wales,2012,81.0,UK
+UKL2,East Wales,2013,80.9,UK
+UKL2,East Wales,2014,81.4,UK
+UKL2,East Wales,2015,80.8,UK
+UKL2,East Wales,2016,81.0,UK
+UKL2,East Wales,2017,81.2,UK
+UKL2,East Wales,2018,81.0,UK
+UKM5,North Eastern Scotland,2009,79.6,UK
+UKM5,North Eastern Scotland,2010,79.7,UK
+UKM5,North Eastern Scotland,2011,80.2,UK
+UKM5,North Eastern Scotland,2012,80.2,UK
+UKM5,North Eastern Scotland,2013,80.3,UK
+UKM5,North Eastern Scotland,2014,80.0,UK
+UKM5,North Eastern Scotland,2015,79.9,UK
+UKM5,North Eastern Scotland,2016,80.3,UK
+UKM5,North Eastern Scotland,2017,80.4,UK
+UKM5,North Eastern Scotland,2018,80.3,UK
+UKM6,Highlands and Islands,2009,79.7,UK
+UKM6,Highlands and Islands,2010,79.4,UK
+UKM6,Highlands and Islands,2011,79.5,UK
+UKM6,Highlands and Islands,2012,80.1,UK
+UKM6,Highlands and Islands,2013,80.6,UK
+UKM6,Highlands and Islands,2014,81.0,UK
+UKM6,Highlands and Islands,2015,79.9,UK
+UKM6,Highlands and Islands,2016,80.9,UK
+UKM6,Highlands and Islands,2017,80.4,UK
+UKM6,Highlands and Islands,2018,80.0,UK
+UKM7,Eastern Scotland,2009,0.0,UK
+UKM7,Eastern Scotland,2010,0.0,UK
+UKM7,Eastern Scotland,2011,0.0,UK
+UKM7,Eastern Scotland,2012,0.0,UK
+UKM7,Eastern Scotland,2013,0.0,UK
+UKM7,Eastern Scotland,2014,0.0,UK
+UKM7,Eastern Scotland,2015,0.0,UK
+UKM7,Eastern Scotland,2016,0.0,UK
+UKM7,Eastern Scotland,2017,79.8,UK
+UKM7,Eastern Scotland,2018,79.9,UK
+UKM8,West Central Scotland,2009,0.0,UK
+UKM8,West Central Scotland,2010,0.0,UK
+UKM8,West Central Scotland,2011,0.0,UK
+UKM8,West Central Scotland,2012,0.0,UK
+UKM8,West Central Scotland,2013,0.0,UK
+UKM8,West Central Scotland,2014,0.0,UK
+UKM8,West Central Scotland,2015,0.0,UK
+UKM8,West Central Scotland,2016,0.0,UK
+UKM8,West Central Scotland,2017,77.8,UK
+UKM8,West Central Scotland,2018,77.9,UK
+UKM9,Southern Scotland,2009,0.0,UK
+UKM9,Southern Scotland,2010,0.0,UK
+UKM9,Southern Scotland,2011,0.0,UK
+UKM9,Southern Scotland,2012,0.0,UK
+UKM9,Southern Scotland,2013,0.0,UK
+UKM9,Southern Scotland,2014,0.0,UK
+UKM9,Southern Scotland,2015,0.0,UK
+UKM9,Southern Scotland,2016,0.0,UK
+UKM9,Southern Scotland,2017,79.5,UK
+UKM9,Southern Scotland,2018,79.2,UK
+UKN0,Northern Ireland (UK),2009,79.7,UK
+UKN0,Northern Ireland (UK),2010,79.8,UK
+UKN0,Northern Ireland (UK),2011,80.5,UK
+UKN0,Northern Ireland (UK),2012,80.4,UK
+UKN0,Northern Ireland (UK),2013,80.4,UK
+UKN0,Northern Ireland (UK),2014,80.8,UK
+UKN0,Northern Ireland (UK),2015,80.4,UK
+UKN0,Northern Ireland (UK),2016,80.8,UK
+UKN0,Northern Ireland (UK),2017,80.6,UK
+UKN0,Northern Ireland (UK),2018,80.9,UK
