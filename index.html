@@ -19,18 +19,30 @@
     <script defer src='./asset/chart7.js'></script>
     <!--    <script src="https://unpkg.com/d3-sankey"></script>-->
     <!--    <script defer src="./asset/chart9.js"></script>-->
+    <script defer src="./asset/chart2.js"></script>
+    <script defer src="./asset/chart3.js"></script>
+    <script defer src="./asset/chart4.js"></script>
+    <script defer src="./asset/chart6.js"></script>
+    <script defer src="./asset/chart8.js"></script>
+    <script src="https://unpkg.com/eurostat-map"></script>
   </head>
   <body>
     <div class="grid grid-cols-3 gap-4 px-6 py-8 sm:px-12">
-      <div class="col-span-3 row-span-1 bg-sky-300 text-center">Data visualization Project</div>
-      <div class="col-span-1 row-span-2 bg-red-300" id="chart1">1</div>
-      <div class="col-span-1 bg-green-300" id="chart2">2</div>
-      <div class="col-span-1 bg-yellow-300" id="chart3">3</div>
-      <div class='col-span-1 bg-yellow-300' id='chart4'>4</div>
+      <div class="col-span-3 row-span-1 bg-sky-300 text-center"> Data visualization Project</div>
+      <div class="col-span-1 row-span-2 bg-red-300" id="chart1">1 </div>
+      <div class="card col-span-1" id="chart2"></div>
+      <div class="card col-span-1" id="chart3">
+        <!-- Initialize a select button -->
+        <select id="selectButtonScatter"></select>
+      </div>
+      <div class="card col-span-1" id="chart4"></div>
       <div class="col-span-1 bg-blue-300" id="chart5">5</div>
-      <div class="col-span-2 bg-purple-300" id="chart6">6</div>
+      <div class="card col-span-2" id="chart6"></div>
       <div class="col-span-1 row-span-2 bg-teal-300" id="chart7">7</div>
-      <div class="col-span-2 bg-orange-300" id="chart8">8</div>
+      <div class="card col-span-2" id="chart8">
+        <!-- Initialize a select button -->
+        <select id="selectButtonBubble"></select>
+      </div>
       <div class="col-span-3 row-span-1 bg-lime-300" id="chart9">9</div>
       <div class="col-span-3 row-span-1 bg-lime-300" id="footer">
         <footer aria-label="Footer" class="bg-white">
