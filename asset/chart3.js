@@ -1,6 +1,6 @@
 // Task 3
 // Data
-d3.csv('data/preprocessedData.csv', d3.autoType)
+d3.csv('data/eurostat_data_2.csv', d3.autoType)
   .then((data) => {
     // console.log(data);
 
@@ -16,7 +16,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       .text((d) => d) // text showed in the menu
       .attr('value', (d) => d); // corresponding value returned by the button
 
-    function drawChart(filtData, y, x) {
+    function drawChart(filtData, x, y) {
       const margin = {
         t: 60,
         r: 80,
@@ -59,7 +59,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       // plot the y-axis
       svg.append('g').call(yAxis);
 
-      const countries = data.map((d) => d.Location);
+      const countries = data.map((d) => d.country);
       const species = [...new Set(countries)];
       // Add a scale for bubble color
       const color = d3
@@ -85,9 +85,9 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       const mousemove = function (event, d) {
         tooltip
           .html(
-            `Country = <b>${d.Location}</b><br>
-           Life expectancy = <b>${Number.parseFloat(d[y]).toFixed(2)} years (${d.Period})</b>
-                    <br>${y} immunization = <b>${d[x]} %</b>`,
+            `Country = <b>${d.country}</b><br>
+           Life expectancy = <b>${Number.parseFloat(d[y]).toFixed(2)} years (${d.time_period})</b>
+                    <br>${x.toUpperCase()} immunization = <b>${d[x]} %</b>`,
           )
           .style('top', `${event.pageY}px`)
           .style('left', `${event.pageX + 20}px`);
@@ -96,15 +96,15 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       svg
         .append('g')
         .selectAll('dot')
-        .data(filtData)
+        .data(filtData.filter((d) => d[x] !== 0))
         .join('circle')
-        .attr('class', (d) => `dot ${d.Location}`)
+        .attr('class', (d) => `dot ${d.country}`)
         .attr('cx', (d) => xScale(d[x]))
         .attr('cy', (d) => yScale(d[y]))
         .attr('r', 4)
         .attr('stroke', 'black')
         .style('stroke-width', 'px')
-        .style('fill', (d) => color(d.Location))
+        .style('fill', (d) => color(d.country))
         .style('opacity', 0.8)
         .on('mouseover', mouseover)
         .on('mouseout', mouseout)
@@ -116,14 +116,14 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
         .attr('transform', `translate(${width / 2}, ${height + margin.b / 2})`)
         .attr('class', 'axis-name')
-        .text(x);
+        .text(x.toUpperCase());
       // y-axis name
       svg
         .append('text')
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
         .attr('transform', `translate(${-margin.l / 2},${margin.t + 50})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
         .attr('class', 'axis-name')
-        .text(y);
+        .text('Life expectancy (years)');
       // add title
       svg
         .append('text')
@@ -137,15 +137,9 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
     function update(selectedGroup, period) {
       d3.selectAll('#chart3 > svg').remove();
 
-      // What the fuck is this!!
-      const filtData = data.filter(
-        (d) =>
-          !isNaN(d['Life expectancy at birth, total (years)']) &&
-          d[selectedGroup] !== '..' &&
-          d.Period === period,
-      );
+      const filtData = data.filter((d) => d.time_period === period);
 
-      drawChart(filtData, 'Life expectancy at birth, total (years)', selectedGroup);
+      drawChart(filtData, selectedGroup, 'life_expectancy_total');
     }
 
     // When the button is changed, run the updateChart function
@@ -155,16 +149,16 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
 
       switch (selectedOption) {
         case 'Measles':
-          selectedOption = 'Measles';
+          selectedOption = 'measles';
           break;
         case 'DPT':
-          selectedOption = 'DPT';
+          selectedOption = 'dpt';
           break;
         case 'BCG':
-          selectedOption = 'BCGValue';
+          selectedOption = 'bcg';
           break;
         case 'HEPB':
-          selectedOption = 'HEPBValue';
+          selectedOption = 'hepb';
           break;
         default:
           break;
@@ -173,7 +167,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
       // run the updateChart function with this selected option
       update(selectedOption, 2015);
     });
-    update(allGroup[0], 2015);
+    update('measles', 2015);
   })
   .catch((e) => {
     console.log(e);
