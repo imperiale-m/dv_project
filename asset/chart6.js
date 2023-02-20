@@ -1,5 +1,5 @@
 // Parse the Data
-d3.csv('data/preprocessedData.csv').then((data) => {
+d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
   // set the dimensions and margins of the graph
   const margin = {
     t: 90,
@@ -19,16 +19,16 @@ d3.csv('data/preprocessedData.csv').then((data) => {
     .append('g')
     .attr('transform', `translate(${margin.l},${margin.t})`);
 
-  const filtData = data.filter(
-    (d) => d['Life expectancy at birth, female (years)'] !== '..'
-          && d['Life expectancy at birth, male (years)'] !== '..'
-          && d.Period === '2015',
-  );
+  const filtData = data.filter((d) => d.time_period === 2015);
 
   /// Add X axis --> it is a date format
   const xAxis = d3
-    .scaleBand()
-    .domain(d3.map(filtData, (d) => d.Location))
+    .scaleLinear()
+    .domain([
+      d3.min(filtData, (d) => d.life_expectancy_male - 5),
+      d3.max(filtData, (d) => d.life_expectancy_female),
+    ])
+    .nice()
     .range([0, width]);
   svg
     .append('g')
@@ -36,58 +36,98 @@ d3.csv('data/preprocessedData.csv').then((data) => {
     .call(d3.axisBottom(xAxis))
     .selectAll('text')
     .style('text-anchor', 'end')
-    .attr('dx', '-.8em')
-    .attr('dy', '.15em')
-    .attr('transform', 'rotate(-45)');
+    .attr('dx', '.5em')
+    .attr('dy', '.60em');
+  // .attr('transform', 'rotate(-45)');
   // Add Y axis
   const yAxis = d3
-    .scaleLinear()
-    .domain([d3.min(filtData, (d) => d['Life expectancy at birth, male (years)'] - 5), d3.max(filtData, (d) => d['Life expectancy at birth, female (years)'])])
+    .scaleBand()
+    .domain(d3.map(filtData, (d) => d.country))
     .range([height, 0]);
   svg.append('g').call(d3.axisLeft(yAxis));
 
   // Lines
-  svg.selectAll('myline')
+  svg
+    .selectAll('myline')
     .data(filtData)
     .join('line')
-    .attr('x1', (d) => xAxis(d.Location))
-    .attr('x2', (d) => xAxis(d.Location))
-    .attr('y1', (d) => yAxis(d['Life expectancy at birth, male (years)']))
-    .attr('y2', (d) => yAxis(d['Life expectancy at birth, female (years)']))
+    .attr('x1', (d) => xAxis(d.life_expectancy_male))
+    .attr('x2', (d) => xAxis(d.life_expectancy_female))
+    .attr('y1', (d) => yAxis(d.country))
+    .attr('y2', (d) => yAxis(d.country))
     .attr('stroke', 'grey')
     .attr('stroke-width', '1px');
 
+  svg
+    .append('g')
+    .selectAll('myline')
+    .data(filtData)
+    .join('text')
+    .attr('x', (d) => xAxis(d.life_expectancy_male) + 10)
+    .attr('y', (d) => yAxis(d.country))
+    .text(
+      (d) => `+ ${Number.parseFloat(d.life_expectancy_female - d.life_expectancy_male).toFixed(2)}`,
+    )
+    .attr('alignment-baseline', 'middle')
+    .attr('background-color', 'white')
+    .attr('font-size', '10px')
+    .attr('fill', 'grey');
+
   // Circles of variable 1
-  svg.selectAll('mycircle')
+  svg
+    .selectAll('mycircle')
     .data(filtData)
     .join('circle')
-    .attr('cx', (d) => xAxis(d.Location))
-    .attr('cy', (d) => yAxis(d['Life expectancy at birth, male (years)']))
+    .attr('cx', (d) => xAxis(d.life_expectancy_male))
+    .attr('cy', (d) => yAxis(d.country))
     .attr('r', '6')
     .style('fill', '#031bb7');
 
+  svg
+    .selectAll('mycircle')
+    .data(filtData)
+    .join('text')
+    .attr('x', (d) => xAxis(d.life_expectancy_male) - 26)
+    .attr('y', (d) => yAxis(d.country))
+    .text((d) => `${d.life_expectancy_male}`)
+    .attr('alignment-baseline', 'middle')
+    .attr('font-size', '10px')
+    .attr('fill', '#031bb7');
+
   // Circles of variable 2
-  svg.selectAll('mycircle')
+  svg
+    .selectAll('mycircle')
     .data(filtData)
     .join('circle')
-    .attr('cx', (d) => xAxis(d.Location))
-    .attr('cy', (d) => yAxis(d['Life expectancy at birth, female (years)']))
+    .attr('cx', (d) => xAxis(d.life_expectancy_female))
+    .attr('cy', (d) => yAxis(d.country))
     .attr('r', '6')
     .style('fill', '#730160');
+
+  svg
+    .selectAll('mycircle')
+    .data(filtData)
+    .join('text')
+    .attr('x', (d) => xAxis(d.life_expectancy_female) + 10)
+    .attr('y', (d) => yAxis(d.country))
+    .text((d) => `${d.life_expectancy_female}`)
+    .attr('alignment-baseline', 'middle')
+    .attr('font-size', '10px')
+    .attr('fill', '#730160');
 
   // x-axis name
   svg
     .append('text')
-    .attr('transform', `translate(${width / 2}, ${height + margin.b - 20})`)
+    .attr('transform', `translate(${width / 2 - 100}, ${height + margin.b - 50})`)
     .attr('class', 'axis-name')
-    .text('Country');
+    .text('Life expectancy at birth, female and male (years)');
 
   // y-axis name
   svg
     .append('text')
-    .attr('transform', `translate(${-margin.l + 40}, ${height / 2 + 150}) rotate(-90)`)
+    .attr('transform', `translate(${-margin.l + 20}, ${height / 2}) rotate(-90)`)
     .attr('class', 'axis-name')
-    .text('Life expectancy at birth, female and male (years)');
+    .text('Country');
   // add title
   svg
     .append('text')
