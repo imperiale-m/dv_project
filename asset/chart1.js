@@ -46,6 +46,11 @@ d3.json('../data/CNTR_RG_10M_2016_4326.geojson')
 
     const pathGenerator = d3.geoPath().projection(projection);
 
+    svg
+      .append('path')
+      .attr('d', pathGenerator({ type: 'Sphere' }))
+      .attr('fill', 'lightcyan');
+
     const g = svg.append('g');
 
     g.selectAll('path')
