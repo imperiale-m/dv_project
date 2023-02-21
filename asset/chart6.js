@@ -59,11 +59,34 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .attr('stroke-width', '1px');
 
   svg
-    .append('g')
-    .selectAll('myline')
+    .selectAll('myrect')
+    .data(filtData)
+    .join('rect')
+    .attr('width', 30)
+    .attr('height', 15)
+    .attr(
+      'x',
+      (d) =>
+        xAxis(d.life_expectancy_male) +
+        (xAxis(d.life_expectancy_female) - xAxis(d.life_expectancy_male)) / 2 -
+        10,
+    )
+    .attr('y', (d) => yAxis(d.country) - 10)
+    .style('fill', 'white');
+
+  console.log(filtData);
+
+  svg
+    .selectAll('myrect')
     .data(filtData)
     .join('text')
-    .attr('x', (d) => xAxis(d.life_expectancy_male) + 10)
+    .attr(
+      'x',
+      (d) =>
+        xAxis(d.life_expectancy_male) +
+        (xAxis(d.life_expectancy_female) - xAxis(d.life_expectancy_male)) / 2 -
+        10,
+    )
     .attr('y', (d) => yAxis(d.country))
     .text(
       (d) => `+ ${Number.parseFloat(d.life_expectancy_female - d.life_expectancy_male).toFixed(2)}`,
@@ -78,6 +101,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .selectAll('mycircle')
     .data(filtData)
     .join('circle')
+    .attr('class', (d) => d.country.replaceAll(' ', '_'))
     .attr('cx', (d) => xAxis(d.life_expectancy_male))
     .attr('cy', (d) => yAxis(d.country))
     .attr('r', '6')
@@ -91,6 +115,17 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .attr('y', (d) => yAxis(d.country))
     .text((d) => `${d.life_expectancy_male}`)
     .attr('alignment-baseline', 'middle')
+    .attr('font-size', '10px')
+    .attr('fill', '#031bb7');
+
+  svg
+    .selectAll('mycircle')
+    .data(filtData.filter((d) => d.geo === 'UK'))
+    .join('text')
+    .attr('x', (d) => xAxis(d.life_expectancy_male) - 10)
+    .attr('y', (d) => yAxis(d.country) - 15)
+    .text('Male')
+    .attr('alignment-baseline', 'top')
     .attr('font-size', '10px')
     .attr('fill', '#031bb7');
 
@@ -112,6 +147,17 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .attr('y', (d) => yAxis(d.country))
     .text((d) => `${d.life_expectancy_female}`)
     .attr('alignment-baseline', 'middle')
+    .attr('font-size', '10px')
+    .attr('fill', '#730160');
+
+  svg
+    .selectAll('mycircle')
+    .data(filtData.filter((d) => d.geo === 'UK'))
+    .join('text')
+    .attr('x', (d) => xAxis(d.life_expectancy_female) - 10)
+    .attr('y', (d) => yAxis(d.country) - 15)
+    .text('Female')
+    .attr('alignment-baseline', 'top')
     .attr('font-size', '10px')
     .attr('fill', '#730160');
 
