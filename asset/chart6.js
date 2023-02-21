@@ -19,7 +19,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .append('g')
     .attr('transform', `translate(${margin.l},${margin.t})`);
 
-  const filtData = data.filter((d) => d.time_period === 2015);
+  let filtData = data.filter((d) => d.time_period === 2018);
+  filtData = filtData.filter((d) => d.life_expectancy_male !== 0);
 
   /// Add X axis --> it is a date format
   const xAxis = d3
@@ -62,6 +63,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .selectAll('myrect')
     .data(filtData)
     .join('rect')
+    .attr('class', (d) => d.country.replaceAll(' ', '_'))
     .attr('width', 30)
     .attr('height', 15)
     .attr(
@@ -93,6 +95,23 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     )
     .attr('alignment-baseline', 'middle')
     .attr('background-color', 'white')
+    .attr('font-size', '10px')
+    .attr('fill', 'grey');
+
+  svg
+    .selectAll('myrect')
+    .data(filtData.filter((d) => d.geo === 'UK'))
+    .join('text')
+    .attr(
+      'x',
+      (d) =>
+        xAxis(d.life_expectancy_male) +
+        (xAxis(d.life_expectancy_female) - xAxis(d.life_expectancy_male)) / 2 -
+        5,
+    )
+    .attr('y', (d) => yAxis(d.country) - 15)
+    .text('Gap')
+    .attr('alignment-baseline', 'top')
     .attr('font-size', '10px')
     .attr('fill', 'grey');
 
