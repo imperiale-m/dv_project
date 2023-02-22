@@ -20,7 +20,7 @@
 
 const dataset = new Map();
 
-const colorScale = d3.scaleQuantize().domain([0, 3024]).range(d3.schemeGreens[7]);
+const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
 
 Promise.all([
   d3.json('../data/CNTR_RG_10M_2016_4326.geojson'),
@@ -43,8 +43,14 @@ Promise.all([
     const width = 600;
     const height = 400;
 
+    // group data by 'geo'
+    const dataByYear = d3.group(data[1], (d) => d.time_period);
+
+    const dataBySelectedYear = dataByYear.get(2018) ?? 0;
+    // group data by 'geo'
+    const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
     // console.log(geoData.features);
-    console.log(dataset);
+    console.log(dataByGeo.get('IT')[0].life_expectancy_total);
 
     const eu_countries = [
       'ALB',
@@ -88,13 +94,9 @@ Promise.all([
       eu_countries.includes(feature.properties.ISO3_CODE),
     );
 
-    console.log(filteredEuFeatures);
-
     const filteredNotEuFeatures = geoData.features.filter(
       (feature) => !eu_countries.includes(feature.properties.ISO3_CODE),
     );
-
-    console.log(filteredNotEuFeatures);
 
     const finalMap = [...filteredNotEuFeatures, ...filteredEuFeatures];
 
@@ -130,7 +132,7 @@ Promise.all([
       .attr('d', pathGenerator)
       .attr('fill', (d) => {
         if (eu_countries.includes(d.properties.ISO3_CODE)) {
-          d.lifeExp = dataset.get(d.id);
+          d.lifeExp = dataByGeo.get(d.id)[0].life_expectancy_total;
           return colorScale(d.lifeExp);
         }
         return '#e0dfdf';
