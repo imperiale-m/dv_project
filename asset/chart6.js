@@ -73,6 +73,17 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .attr('stroke', 'grey')
     .attr('stroke-width', '1px');
 
+  // grid lines
+  svg
+    .selectAll('.grid')
+    .data(filteredData)
+    .join('line')
+    .attr('class', 'gridline')
+    .attr('x1', 0)
+    .attr('x2', width)
+    .attr('y1', (d) => yAxis(d.country))
+    .attr('y2', (d) => yAxis(d.country));
+
   svg
     .selectAll('myrect')
     .data(filteredData)
@@ -121,9 +132,14 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .text((d) => `${d.life_expectancy_male}`)
     .attr('dominant-baseline', 'middle')
     .attr('font-size', '10px')
-    .attr('fill', 'steelblue');
+    .attr('fill', 'steelblue')
+    .attr('stroke-linejoin', 'round')
+    .call((text) => text.clone(true))
+    .attr('fill', 'none')
+    .attr('stroke', 'white')
+    .attr('stroke-width', '6px');
 
-  console.log(filteredData);
+  // console.log(filteredData);
 
   svg
     .append('text')
@@ -153,7 +169,12 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .text((d) => `${d.life_expectancy_female}`)
     .attr('dominant-baseline', 'middle')
     .attr('font-size', '10px')
-    .attr('fill', 'firebrick');
+    .attr('fill', 'firebrick')
+    .attr('stroke-linejoin', 'round')
+    .call((text) => text.clone(true))
+    .attr('fill', 'none')
+    .attr('stroke', 'white')
+    .attr('stroke-width', '6px');
 
   svg
     .append('text')
