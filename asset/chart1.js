@@ -17,8 +17,23 @@
 //   .catch((e) => {
 //     console.log(e);
 //   });
-d3.json('../data/CNTR_RG_10M_2016_4326.geojson')
+
+const dataset = new Map();
+
+const colorScale = d3.scaleQuantize().domain([0, 3024]).range(d3.schemeGreens[7]);
+
+Promise.all([
+  d3.json('../data/CNTR_RG_10M_2016_4326.geojson'),
+  d3.csv(
+    'data/eurostat_data_2.csv',
+    (d) => {
+      dataset.set(d.geo, d.life_expectancy_total);
+    },
+    d3.autoType,
+  ),
+])
   .then((data) => {
+    const geoData = data[0];
     const margin = {
       t: 40,
       r: 60,
@@ -28,7 +43,63 @@ d3.json('../data/CNTR_RG_10M_2016_4326.geojson')
     const width = 600;
     const height = 400;
 
-    // console.log(data);
+    // console.log(geoData.features);
+    console.log(dataset);
+
+    const eu_countries = [
+      'ALB',
+      'AUT',
+      'BEL',
+      'BGR',
+      'CHE',
+      'CYP',
+      'CZE',
+      'DEU',
+      'DNK',
+      'EST',
+      'GRC',
+      'ESP',
+      'FIN',
+      'FRA',
+      'HRV',
+      'HUN',
+      'IRL',
+      'ISL',
+      'ITA',
+      'LTU',
+      'LUX',
+      'LVA',
+      'MKD',
+      'MLT',
+      'NLD',
+      'NOR',
+      'POL',
+      'PRT',
+      'ROU',
+      'SRB',
+      'SWE',
+      'SVN',
+      'SVK',
+      'TUR',
+      'GBR',
+    ];
+
+    const filteredEuFeatures = geoData.features.filter((feature) =>
+      eu_countries.includes(feature.properties.ISO3_CODE),
+    );
+
+    console.log(filteredEuFeatures);
+
+    const filteredNotEuFeatures = geoData.features.filter(
+      (feature) => !eu_countries.includes(feature.properties.ISO3_CODE),
+    );
+
+    console.log(filteredNotEuFeatures);
+
+    const finalMap = [...filteredNotEuFeatures, ...filteredEuFeatures];
+
+    console.log('Final', finalMap);
+
     // append the svg object to the div with id #a3_task1
     const svg = d3
       .select('#chart1')
@@ -54,11 +125,20 @@ d3.json('../data/CNTR_RG_10M_2016_4326.geojson')
     const g = svg.append('g');
 
     g.selectAll('path')
-      .data(data.features)
+      .data(finalMap)
       .join('path')
       .attr('d', pathGenerator)
-      .attr('fill', 'lightgray')
-      .style('stroke', 'black')
+      .attr('fill', (d) => {
+        if (eu_countries.includes(d.properties.ISO3_CODE)) {
+          d.lifeExp = dataset.get(d.id);
+          return colorScale(d.lifeExp);
+        }
+        return '#e0dfdf';
+      })
+      .style('stroke', (d) => {
+        if (eu_countries.includes(d.properties.ISO3_CODE)) return 'black';
+        return 'none';
+      })
       .style('stroke-width', '0.5px');
 
     function zoomed(event) {
