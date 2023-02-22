@@ -2,56 +2,70 @@
 d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
   // set the dimensions and margins of the graph
   const margin = {
-    t: 90,
-    r: 40,
+    t: 20,
+    r: 80,
     b: 100,
-    l: 100,
+    l: 120,
   };
-  const width = 600;
-  const height = 550;
+  const width = 800;
+  const height = 600;
 
   // append the svg object to the body of the page
   const svg = d3
     .select('#chart6')
     .append('svg')
     .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-    .attr('style', 'max-width: 100%; height: auto')
+    .attr('style', 'max-width: 100%; height: auto;')
     .append('g')
     .attr('transform', `translate(${margin.l},${margin.t})`);
 
-  let filtData = data.filter((d) => d.time_period === 2018);
-  filtData = filtData.filter((d) => d.life_expectancy_male !== 0);
+  const dataByYear = d3.group(
+    data.filter((d) => d.life_expectancy_male !== 0),
+    (d) => d.time_period,
+  );
+  const filteredData =
+    dataByYear
+      .get(2010)
+      .sort((a, b) =>
+        d3.descending(
+          Math.abs(a.life_expectancy_male - a.life_expectancy_female),
+          Math.abs(b.life_expectancy_male - b.life_expectancy_female),
+        ),
+      ) ?? 0;
+
+  const m = d3.extent(filteredData, (d) => d.life_expectancy_male);
+  const f = d3.extent(filteredData, (d) => d.life_expectancy_female);
+
+  const [minY, maxY] = d3.extent([...m, ...f]);
 
   /// Add X axis --> it is a date format
   const xAxis = d3
     .scaleLinear()
-    .domain([
-      d3.min(filtData, (d) => d.life_expectancy_male - 5),
-      d3.max(filtData, (d) => d.life_expectancy_female),
-    ])
-    .nice()
-    .range([0, width]);
+    .domain([minY - 2, maxY + 2])
+    .rangeRound([0, width])
+    .nice();
+
   svg
     .append('g')
     .attr('transform', `translate(0, ${height})`)
     .call(d3.axisBottom(xAxis))
     .selectAll('text')
-    .style('text-anchor', 'end')
-    .attr('dx', '.5em')
-    .attr('dy', '.60em');
-  // .attr('transform', 'rotate(-45)');
+    .style('text-anchor', 'middle');
+
   // Add Y axis
   const yAxis = d3
     .scaleBand()
-    .domain(d3.map(filtData, (d) => d.country))
-    .range([height, 0]);
+    .domain(d3.map(filteredData, (d) => d.country))
+    .rangeRound([height, 0])
+    .padding(1);
   svg.append('g').call(d3.axisLeft(yAxis));
 
   // Lines
   svg
-    .selectAll('myline')
-    .data(filtData)
+    .selectAll('.line')
+    .data(filteredData)
     .join('line')
+    .attr('class', 'line')
     .attr('x1', (d) => xAxis(d.life_expectancy_male))
     .attr('x2', (d) => xAxis(d.life_expectancy_female))
     .attr('y1', (d) => yAxis(d.country))
@@ -61,124 +75,94 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
 
   svg
     .selectAll('myrect')
-    .data(filtData)
-    .join('rect')
-    .attr('class', (d) => d.country.replaceAll(' ', '_'))
-    .attr('width', 30)
-    .attr('height', 15)
-    .attr(
-      'x',
-      (d) =>
-        xAxis(d.life_expectancy_male) +
-        (xAxis(d.life_expectancy_female) - xAxis(d.life_expectancy_male)) / 2 -
-        10,
-    )
-    .attr('y', (d) => yAxis(d.country) - 10)
-    .style('fill', 'white');
-
-  console.log(filtData);
-
-  svg
-    .selectAll('myrect')
-    .data(filtData)
+    .data(filteredData)
     .join('text')
-    .attr(
-      'x',
-      (d) =>
-        xAxis(d.life_expectancy_male) +
-        (xAxis(d.life_expectancy_female) - xAxis(d.life_expectancy_male)) / 2 -
-        10,
-    )
+    .attr('x', (d) => xAxis(d.life_expectancy_total))
     .attr('y', (d) => yAxis(d.country))
     .text(
       (d) => `+ ${Number.parseFloat(d.life_expectancy_female - d.life_expectancy_male).toFixed(2)}`,
     )
-    .attr('alignment-baseline', 'middle')
+    .attr('text-anchor', 'middle')
+    .attr('dominant-baseline', 'middle')
     .attr('background-color', 'white')
     .attr('font-size', '10px')
-    .attr('fill', 'grey');
+    .attr('fill', 'black')
+    .call((text) => text.clone(true))
+    .attr('fill', 'none')
+    .attr('stroke', 'white')
+    .attr('stroke-width', '6px');
 
   svg
-    .selectAll('myrect')
-    .data(filtData.filter((d) => d.geo === 'UK'))
-    .join('text')
-    .attr(
-      'x',
-      (d) =>
-        xAxis(d.life_expectancy_male) +
-        (xAxis(d.life_expectancy_female) - xAxis(d.life_expectancy_male)) / 2 -
-        5,
-    )
-    .attr('y', (d) => yAxis(d.country) - 15)
-    .text('Gap')
-    .attr('alignment-baseline', 'top')
+    .append('text')
+    .attr('x', xAxis(filteredData[filteredData.length - 1].life_expectancy_total) + 3)
+    .attr('text-anchor', 'middle')
+    .attr('y', yAxis(filteredData[filteredData.length - 1].geo))
+    .text('GAP')
     .attr('font-size', '10px')
-    .attr('fill', 'grey');
+    .attr('fill', 'black');
 
   // Circles of variable 1
   svg
     .selectAll('mycircle')
-    .data(filtData)
+    .data(filteredData)
     .join('circle')
     .attr('class', (d) => d.country.replaceAll(' ', '_'))
     .attr('cx', (d) => xAxis(d.life_expectancy_male))
     .attr('cy', (d) => yAxis(d.country))
-    .attr('r', '6')
-    .style('fill', '#031bb7');
+    .attr('r', '4px')
+    .style('fill', 'steelblue');
 
   svg
     .selectAll('mycircle')
-    .data(filtData)
+    .data(filteredData)
     .join('text')
     .attr('x', (d) => xAxis(d.life_expectancy_male) - 26)
     .attr('y', (d) => yAxis(d.country))
     .text((d) => `${d.life_expectancy_male}`)
-    .attr('alignment-baseline', 'middle')
+    .attr('dominant-baseline', 'middle')
     .attr('font-size', '10px')
-    .attr('fill', '#031bb7');
+    .attr('fill', 'steelblue');
+
+  console.log(filteredData);
 
   svg
-    .selectAll('mycircle')
-    .data(filtData.filter((d) => d.geo === 'UK'))
-    .join('text')
-    .attr('x', (d) => xAxis(d.life_expectancy_male) - 10)
-    .attr('y', (d) => yAxis(d.country) - 15)
+    .append('text')
+    .attr('x', xAxis(filteredData[filteredData.length - 1].life_expectancy_male))
+    .attr('text-anchor', 'middle')
+    .attr('y', yAxis(filteredData[filteredData.length - 1].geo))
     .text('Male')
-    .attr('alignment-baseline', 'top')
     .attr('font-size', '10px')
-    .attr('fill', '#031bb7');
+    .attr('fill', 'steelblue');
 
   // Circles of variable 2
   svg
     .selectAll('mycircle')
-    .data(filtData)
+    .data(filteredData)
     .join('circle')
     .attr('cx', (d) => xAxis(d.life_expectancy_female))
     .attr('cy', (d) => yAxis(d.country))
-    .attr('r', '6')
-    .style('fill', '#730160');
+    .attr('r', '4px')
+    .style('fill', 'firebrick');
 
   svg
     .selectAll('mycircle')
-    .data(filtData)
+    .data(filteredData)
     .join('text')
     .attr('x', (d) => xAxis(d.life_expectancy_female) + 10)
     .attr('y', (d) => yAxis(d.country))
     .text((d) => `${d.life_expectancy_female}`)
-    .attr('alignment-baseline', 'middle')
+    .attr('dominant-baseline', 'middle')
     .attr('font-size', '10px')
-    .attr('fill', '#730160');
+    .attr('fill', 'firebrick');
 
   svg
-    .selectAll('mycircle')
-    .data(filtData.filter((d) => d.geo === 'UK'))
-    .join('text')
-    .attr('x', (d) => xAxis(d.life_expectancy_female) - 10)
-    .attr('y', (d) => yAxis(d.country) - 15)
+    .append('text')
+    .attr('x', xAxis(filteredData[filteredData.length - 1].life_expectancy_female))
+    .attr('text-anchor', 'middle')
+    .attr('y', yAxis(filteredData[filteredData.length - 1].geo))
     .text('Female')
-    .attr('alignment-baseline', 'top')
     .attr('font-size', '10px')
-    .attr('fill', '#730160');
+    .attr('fill', 'firebrick');
 
   // x-axis name
   svg
@@ -193,12 +177,4 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .attr('transform', `translate(${-margin.l + 20}, ${height / 2}) rotate(-90)`)
     .attr('class', 'axis-name')
     .text('Country');
-  // add title
-  svg
-    .append('text')
-    .attr('x', width / 2)
-    .attr('y', 10 - margin.t / 2)
-    .attr('text-anchor', 'middle')
-    .style('font-size', '20px')
-    .text('Title');
 });
