@@ -13,18 +13,24 @@ d3.csv('../data/education.csv', d3.autoType)
     const subgroups = [...d3.group(data, (d) => d.isced11).keys()];
 
     // Build color scale
-    const color = ['#2ca02c', '#ff7f0e', '#1f77b4'];
+    const color = ['#6eb06e', '#e39c5e', '#4eabec'];
 
     // const country = 'IT';
     // const year = 2011;
 
-    const svg = d3
-      .select('#chart5')
-      .append('svg')
-      .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
-      .attr('style', 'max-width: 100%; height: auto; height: intrinsic;')
-      .append('g')
-      .attr('transform', `translate(${margin.l},${margin.t})`);
+    const svg = [];
+
+    for (let i = 0; i < 4; i += 1) {
+      svg[i] = d3
+        .select('#chart5')
+        .append('svg')
+        .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
+        .attr('style', 'max-width: 40%; height: auto;')
+        .append('g')
+        .attr('transform', `translate(${margin.l},${margin.t})`);
+    }
+
+    // console.log(svg);
 
     // Labels of row and columns
     const waffleX = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10'];
@@ -85,7 +91,7 @@ d3.csv('../data/education.csv', d3.autoType)
     const y = d3.scaleBand().range([sideLength, 0]).domain(waffleY).padding(0.08);
 
     // A function that update the chart
-    function updateChart(country, year) {
+    function updateChart(svg, country, year) {
       svg.selectAll('*').remove();
 
       const selection = waffleData(country, year);
@@ -152,9 +158,12 @@ d3.csv('../data/education.csv', d3.autoType)
         .attr('fill', color[2]);
     }
 
-    const country = 'IT';
+    // const country = 'IT';
     const year = 2015;
-    updateChart(country, year);
+    updateChart(svg[0], 'IT', year);
+    updateChart(svg[1], 'FR', year);
+    updateChart(svg[2], 'DE', year);
+    updateChart(svg[3], 'ES', year);
   })
   .catch((e) => {
     console.log(e);
