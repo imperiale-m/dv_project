@@ -50,52 +50,18 @@ Promise.all([
     // group data by 'geo'
     const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
     // console.log(geoData.features);
-    console.log(dataByGeo.get('IT')[0].life_expectancy_total);
+    // console.log(dataByGeo.get('IT')[0].life_expectancy_total);
 
-    const eu_countries = [
-      'ALB',
-      'AUT',
-      'BEL',
-      'BGR',
-      'CHE',
-      'CYP',
-      'CZE',
-      'DEU',
-      'DNK',
-      'EST',
-      'GRC',
-      'ESP',
-      'FIN',
-      'FRA',
-      'HRV',
-      'HUN',
-      'IRL',
-      'ISL',
-      'ITA',
-      'LTU',
-      'LUX',
-      'LVA',
-      'MKD',
-      'MLT',
-      'NLD',
-      'NOR',
-      'POL',
-      'PRT',
-      'ROU',
-      'SRB',
-      'SWE',
-      'SVN',
-      'SVK',
-      'TUR',
-      'GBR',
-    ];
+    // List of subgroups
+    const euCountries = [...dataByGeo.keys()];
+    console.log(euCountries);
 
     const filteredEuFeatures = geoData.features.filter((feature) =>
-      eu_countries.includes(feature.properties.ISO3_CODE),
+      euCountries.includes(feature.id),
     );
 
     const filteredNotEuFeatures = geoData.features.filter(
-      (feature) => !eu_countries.includes(feature.properties.ISO3_CODE),
+      (feature) => !euCountries.includes(feature.id),
     );
 
     const finalMap = [...filteredNotEuFeatures, ...filteredEuFeatures];
@@ -119,6 +85,40 @@ Promise.all([
 
     const pathGenerator = d3.geoPath().projection(projection);
 
+    const tooltip = d3.select('#chart1').append('div').attr('class', 'tooltip');
+
+    const mouseover = function () {
+      if (this.getAttribute('fill') !== '#e0dfdf') {
+        tooltip.style('z-index', 1);
+        tooltip.transition().style('opacity', 0.9);
+        d3.select(this).transition().attr('fill', 'gold');
+      }
+    };
+
+    const mouseout = function (event, d) {
+      tooltip.style('z-index', -1);
+      tooltip.transition().style('opacity', 0);
+      if (this.getAttribute('fill') !== '#e0dfdf') {
+        d3.select(this)
+          .transition()
+          .attr('fill', colorScale(dataByGeo.get(d.id)[0].life_expectancy_total));
+      }
+    };
+
+    // const f = d3.format('.2f');
+    const mousemove = function (event, d) {
+      if (this.getAttribute('fill') !== '#e0dfdf') {
+        const countryData = dataByGeo.get(d.id)[0];
+        tooltip
+          .html(
+            `<b>${countryData.country}</b><br>
+           Life expectancy = <b>${countryData.life_expectancy_total} years</b>`,
+          )
+          .style('top', `${event.pageY}px`)
+          .style('left', `${event.pageX + 20}px`);
+      }
+    };
+
     svg
       .append('path')
       .attr('d', pathGenerator({ type: 'Sphere' }))
@@ -126,22 +126,26 @@ Promise.all([
 
     const g = svg.append('g');
 
-    g.selectAll('path')
+    const states = g
+      .selectAll('path')
       .data(finalMap)
       .join('path')
       .attr('d', pathGenerator)
       .attr('fill', (d) => {
-        if (eu_countries.includes(d.properties.ISO3_CODE)) {
+        if (euCountries.includes(d.id)) {
           d.lifeExp = dataByGeo.get(d.id)[0].life_expectancy_total;
           return colorScale(d.lifeExp);
         }
         return '#e0dfdf';
       })
       .style('stroke', (d) => {
-        if (eu_countries.includes(d.properties.ISO3_CODE)) return 'black';
+        if (euCountries.includes(d.id)) return 'white';
         return 'none';
       })
-      .style('stroke-width', '0.5px');
+      .style('stroke-width', '0.5px')
+      .on('mouseover', mouseover)
+      .on('mouseout', mouseout)
+      .on('mousemove', mousemove);
 
     function zoomed(event) {
       const { transform } = event;
@@ -155,6 +159,41 @@ Promise.all([
     const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', zoomed);
 
     svg.call(zoom);
+
+    function reset() {
+      states.transition().style('fill', null);
+      svg
+        .transition()
+        .duration(750)
+        .call(
+          zoom.transform,
+          d3.zoomIdentity,
+          d3.zoomTransform(svg.node()).invert([width / 2, height / 2]),
+        );
+    }
+
+    function clicked(event, d) {
+      if (this.getAttribute('fill') !== '#e0dfdf') {
+        const [[x0, y0], [x1, y1]] = pathGenerator.bounds(d);
+        event.stopPropagation();
+        states.transition().style('fill', null);
+        d3.select(this).transition().style('fill', 'gold');
+        svg
+          .transition()
+          .duration(750)
+          .call(
+            zoom.transform,
+            d3.zoomIdentity
+              .translate(width / 2, height / 2)
+              .scale(Math.min(8, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
+              .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
+            d3.pointer(event, svg.node()),
+          );
+      }
+    }
+
+    g.selectAll('path').on('click', clicked);
+    svg.on('click', reset);
   })
   .catch((e) => {
     console.log(e);
