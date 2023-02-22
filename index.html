@@ -2,132 +2,133 @@
 <html lang="en">
   <head>
     <title>Data Visualization Homework</title>
-    <meta content='Data Visualization project' name='description' />
-    <meta charset='UTF-8' />
-    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-    <link href='output.css' rel='stylesheet' />
+    <meta content="Data Visualization project" name="description" />
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="output.css" rel="stylesheet" />
 
     <!-- Roboto Slab & Fira Sans -->
-    <link href='https://fonts.googleapis.com' rel='preconnect' />
-    <link crossorigin href='https://fonts.gstatic.com' rel='preconnect' />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href='https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto+Slab'
-      rel='stylesheet' />
-    <script src='https://d3js.org/d3.v7.min.js'></script>
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto+Slab"
+      rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
-    <script defer src='./asset/chart5.js'></script>
-    <script defer src='./asset/chart7.js'></script>
+    <script defer src="./asset/chart5.js"></script>
+    <script defer src="./asset/chart7.js"></script>
     <!--    <script src="https://unpkg.com/d3-sankey"></script>-->
     <!--    <script defer src="./asset/chart9.js"></script>-->
-    <!--    <script defer src="./asset/chart1.js"></script>-->
-    <script defer src='./asset/chart2.js'></script>
-    <script defer src='./asset/chart3.js'></script>
+    <script defer src="./asset/chart1.js"></script>
+    <script defer src="./asset/chart2.js"></script>
+    <script defer src="./asset/chart3.js"></script>
     <!--    <script src="https://cdn.jsdelivr.net/npm/d3-zoom@3"></script>-->
-    <script defer src='./asset/chart4.js'></script>
-    <script defer src='./asset/chart6.js'></script>
-    <script defer src='./asset/chart8.js'></script>
-    <script src='https://unpkg.com/eurostat-map'></script>
+    <script defer src="./asset/chart4.js"></script>
+    <script defer src="./asset/chart6.js"></script>
+    <script defer src="./asset/chart8.js"></script>
+    <script src="https://unpkg.com/eurostat-map"></script>
   </head>
-  <body class='bg-neutral-100'>
-  <div class='grid grid-cols-3 gap-4 px-6 py-8 sm:px-12'>
-    <div class='col-span-3 row-span-1 text-center text-3xl'>Data visualization Project</div>
-    <!-- Chart 1 -->
-    <div class='card col-span-1 row-span-2'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Choropleth Map</h2>
-      </div>
-      <div class='px-4 py-2' id='chart1'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 2 -->
-    <div class='card col-span-1'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Line Chart</h2>
-      </div>
-      <div class='px-4 py-2' id='chart2'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 3 -->
-    <div class='card col-span-1'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Scatter-plot</h2>
-      </div>
-      <div class='px-4 py-2' id='chart3'>
-        <label for='selectButtonScatter'></label><select id='selectButtonScatter'></select>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 4 -->
-    <div class='col-span-1 rounded-2xl bg-white shadow-sm hover:shadow-md'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Connected Scatter-plot</h2>
-      </div>
-      <div class='px-4 py-2' id='chart4'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 5 -->
-    <div class='card col-span-1'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Waffle chart</h2>
-      </div>
-      <div class='px-4 py-2' id='chart5'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 6 -->
-    <div class='card col-span-2'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Dot-plot</h2>
-      </div>
-      <div class='px-4 py-2' id='chart6'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 7 -->
-    <div class='card col-span-1'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Strip-plot</h2>
-      </div>
-      <div class='px-4 py-2' id='chart7'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 8 -->
-    <div class='card col-span-2'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Bubble Chart</h2>
-      </div>
-      <div class='px-4 py-2' id='chart8'>
-        <label for='selectButtonBubble'></label
-        ><select id='selectButtonBubble'></select>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <!-- Chart 9 -->
-    <div class='card col-span-3'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Sankey</h2>
-      </div>
-      <div class='px-4 py-2' id='chart9'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='col-span-3 row-span-1' id='footer'>
-      <footer aria-label='Footer' class=''>
-        <div
-          class='border-t border-neutral-100 py-4 text-center sm:flex sm:justify-between sm:text-left'>
-          <p class='text-sm text-neutral-500'>
-            <span class='block sm:inline'>All rights reserved</span>
-          </p>
-          <p class='mt-2 text-sm text-neutral-500 sm:order-first sm:mt-0'>
-            &copy; 2022 Massimiliano Imperiale & Ani Gjergji
-          </p>
+  <body class="bg-neutral-100">
+    <div class="grid grid-cols-3 gap-4 px-6 py-8 sm:px-12">
+      <div class="col-span-3 row-span-1 text-center text-3xl">Data visualization Project</div>
+      <!-- Chart 1 -->
+      <div class="card col-span-1 row-span-2">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Choropleth Map</h2>
         </div>
-      </footer>
+        <div class="px-4 py-2" id="chart1">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 2 -->
+      <div class="card col-span-1">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Line Chart</h2>
+        </div>
+        <div class="px-4 py-2" id="chart2">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 3 -->
+      <div class="card col-span-1">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Scatter-plot</h2>
+        </div>
+        <div class="px-4 py-2" id="chart3">
+          <label for="selectButtonScatter"></label
+          ><select id="selectButtonScatter"></select>
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 4 -->
+      <div class="col-span-1 rounded-2xl bg-white shadow-sm hover:shadow-md">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Connected Scatter-plot</h2>
+        </div>
+        <div class="px-4 py-2" id="chart4">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 5 -->
+      <div class="card col-span-1">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Waffle chart</h2>
+        </div>
+        <div class="px-4 py-2" id="chart5">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 6 -->
+      <div class="card col-span-2">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Dot-plot</h2>
+        </div>
+        <div class="px-4 py-2" id="chart6">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 7 -->
+      <div class="card col-span-1">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Strip-plot</h2>
+        </div>
+        <div class="px-4 py-2" id="chart7">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 8 -->
+      <div class="card col-span-2">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Bubble Chart</h2>
+        </div>
+        <div class="px-4 py-2" id="chart8">
+          <label for="selectButtonBubble"></label
+          ><select id="selectButtonBubble"></select>
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <!-- Chart 9 -->
+      <div class="card col-span-3">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Sankey</h2>
+        </div>
+        <div class="px-4 py-2" id="chart9">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <div class="col-span-3 row-span-1" id="footer">
+        <footer aria-label="Footer" class="">
+          <div
+            class="border-t border-neutral-100 py-4 text-center sm:flex sm:justify-between sm:text-left">
+            <p class="text-sm text-neutral-500">
+              <span class="block sm:inline">All rights reserved</span>
+            </p>
+            <p class="mt-2 text-sm text-neutral-500 sm:order-first sm:mt-0">
+              &copy; 2022 Massimiliano Imperiale & Ani Gjergji
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
-  </div>
   </body>
 </html>
