@@ -4,8 +4,8 @@ d3.csv('../data/tgs.csv', d3.autoType)
     const margin = {
       t: 40,
       r: 40,
-      b: 40,
-      l: 40,
+      b: 60,
+      l: 100,
     };
     const width = 400;
     const height = 600;
@@ -36,7 +36,7 @@ d3.csv('../data/tgs.csv', d3.autoType)
     // Define scales
     const yScale = d3
       .scaleBand()
-      .domain(data.map((d) => d.geo_country))
+      .domain(data.map((d) => d.country))
       .range([height, 0])
       .padding(1);
 
@@ -58,14 +58,41 @@ d3.csv('../data/tgs.csv', d3.autoType)
     svg
       .selectAll('circle')
       .data(test)
-      .enter()
-      .append('circle')
+      .join('circle')
       .attr('cx', (d) => xScale(d.obs_value))
-      .attr('cy', (d) => yScale(d.geo_country) + yScale.bandwidth() / 2)
+      .attr('cy', (d) => yScale(d.country) + yScale.bandwidth() / 2)
       .attr('r', 4)
       .attr('fill', (d) => colorScale(d.obs_value))
       .attr('stroke', 'black')
       .attr('stroke-width', 1);
+
+    const names = data.map((d) => d.country);
+    const countries = [...new Set(names)];
+
+    // grid lines
+    svg
+      .selectAll('.grid')
+      .data(countries)
+      .join('line')
+      .attr('class', 'gridline')
+      .attr('x1', 0)
+      .attr('x2', width)
+      .attr('y1', (d) => yScale(d))
+      .attr('y2', (d) => yScale(d));
+
+    // x-axis name
+    svg
+      .append('text')
+      .attr('transform', `translate(${width / 2 - 100}, ${height + margin.b - 15})`)
+      .attr('class', 'axis-name')
+      .text('Life expectancy at birth (years)');
+
+    // y-axis name
+    svg
+      .append('text')
+      .attr('transform', `translate(${-margin.l + 20}, ${height / 2}) rotate(-90)`)
+      .attr('class', 'axis-name')
+      .text('Country');
   })
   .catch((e) => {
     console.log(e);
