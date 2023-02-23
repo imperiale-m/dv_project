@@ -2,12 +2,12 @@
 d3.csv('../data/tgs.csv', d3.autoType)
   .then((data) => {
     const margin = {
-      t: 40,
-      r: 40,
-      b: 60,
+      t: 20,
+      r: 80,
+      b: 100,
       l: 100,
     };
-    const width = 400;
+    const width = 800;
     const height = 600;
 
     // console.log(data);
@@ -15,7 +15,6 @@ d3.csv('../data/tgs.csv', d3.autoType)
     // group data by 'time_period'
     const dataByYear = d3.group(data, (d) => d.time_period);
     // console.log(dataByYear.get(2009));
-
     const test = dataByYear.get(2018);
 
     // Domain excluding zeroes
@@ -83,7 +82,7 @@ d3.csv('../data/tgs.csv', d3.autoType)
     // x-axis name
     svg
       .append('text')
-      .attr('transform', `translate(${width / 2 - 100}, ${height + margin.b - 15})`)
+      .attr('transform', `translate(${width / 2 - 100}, ${height + margin.b - 50})`)
       .attr('class', 'axis-name')
       .text('Life expectancy at birth (years)');
 
