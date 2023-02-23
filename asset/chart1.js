@@ -41,7 +41,7 @@ Promise.all([
       l: 60,
     };
     const width = 600;
-    const height = 400;
+    const height = 600;
 
     // group data by 'geo'
     const dataByYear = d3.group(data[1], (d) => d.time_period);
@@ -54,7 +54,7 @@ Promise.all([
 
     // List of subgroups
     const euCountries = [...dataByGeo.keys()];
-    console.log(euCountries);
+    // console.log(euCountries);
 
     const filteredEuFeatures = geoData.features.filter((feature) =>
       euCountries.includes(feature.id),
@@ -66,7 +66,7 @@ Promise.all([
 
     const finalMap = [...filteredNotEuFeatures, ...filteredEuFeatures];
 
-    console.log('Final', finalMap);
+    // console.log('Final', finalMap);
 
     // append the svg object to the div with id #a3_task1
     const svg = d3
