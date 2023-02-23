@@ -2,10 +2,10 @@
 d3.csv('../data/education.csv', d3.autoType)
   .then((data) => {
     const margin = {
-      t: 80,
-      r: 80,
-      b: 80,
-      l: 140,
+      t: 50,
+      r: 20,
+      b: 30,
+      l: 20,
     };
     const sideLength = 400;
 
@@ -114,48 +114,57 @@ d3.csv('../data/education.csv', d3.autoType)
 
       rect.transition().duration(400).style('opacity', 0.9);
 
-      // add the legend
-      const legend = svg.append('g').attr('class', 'legend');
-      // .attr('transform', `translate(${-margin.left},${margin.top})`);
-
-      legend
-        .append('rect')
-        .attr('fill', 'white')
-        .attr('stroke', 'black')
-        .attr('stroke-width', 1)
-        .attr('width', 120)
-        .attr('height', 100)
-        .attr('rx', 6)
-        .attr('ry', 6)
-        .attr('x', -margin.l + 10)
-        .attr('y', 5);
-
-      legend
+      // add title
+      svg
         .append('text')
-        .attr('x', -margin.l + 20)
-        .attr('y', 30)
-        .text('Legend');
+        .attr('x', sideLength / 2)
+        .attr('y', 10 - margin.t / 2)
+        .attr('text-anchor', 'middle')
+        .style('font-size', '40px')
+        .text(country);
 
-      legend
-        .append('text')
-        .attr('x', -margin.l + 20)
-        .attr('y', 50)
-        .text('Primary')
-        .attr('fill', color[0]);
-
-      legend
-        .append('text')
-        .attr('x', -margin.l + 20)
-        .attr('y', 70)
-        .text('Secondary')
-        .attr('fill', color[1]);
-
-      legend
-        .append('text')
-        .attr('x', -margin.l + 20)
-        .attr('y', 90)
-        .text('Tertiary')
-        .attr('fill', color[2]);
+      // // add the legend
+      // const legend = svg.append('g').attr('class', 'legend');
+      // // .attr('transform', `translate(${-margin.left},${margin.top})`);
+      //
+      // legend
+      //   .append('rect')
+      //   .attr('fill', 'white')
+      //   .attr('stroke', 'black')
+      //   .attr('stroke-width', 1)
+      //   .attr('width', 120)
+      //   .attr('height', 100)
+      //   .attr('rx', 6)
+      //   .attr('ry', 6)
+      //   .attr('x', -margin.l + 10)
+      //   .attr('y', 5);
+      //
+      // legend
+      //   .append('text')
+      //   .attr('x', -margin.l + 20)
+      //   .attr('y', 30)
+      //   .text('Legend');
+      //
+      // legend
+      //   .append('text')
+      //   .attr('x', -margin.l + 20)
+      //   .attr('y', 50)
+      //   .text('Primary')
+      //   .attr('fill', color[0]);
+      //
+      // legend
+      //   .append('text')
+      //   .attr('x', -margin.l + 20)
+      //   .attr('y', 70)
+      //   .text('Secondary')
+      //   .attr('fill', color[1]);
+      //
+      // legend
+      //   .append('text')
+      //   .attr('x', -margin.l + 20)
+      //   .attr('y', 90)
+      //   .text('Tertiary')
+      //   .attr('fill', color[2]);
     }
 
     // const country = 'IT';
