@@ -18,7 +18,7 @@
     <script defer src="./asset/chart5.js"></script>
     <script defer src="./asset/chart7.js"></script>
     <!--    <script src="https://unpkg.com/d3-sankey"></script>-->
-    <!--    <script defer src="./asset/chart9.js"></script>-->
+    <script defer src="./asset/chart9.js"></script>
     <script defer src="./asset/chart1.js"></script>
     <script defer src="./asset/chart2.js"></script>
     <script defer src="./asset/chart3.js"></script>
@@ -26,39 +26,32 @@
     <script defer src="./asset/chart4.js"></script>
     <script defer src="./asset/chart6.js"></script>
     <script defer src="./asset/chart8.js"></script>
+    <script defer src="./asset/card-interaction.js"></script>
     <!--    <script src="https://unpkg.com/eurostat-map"></script>-->
   </head>
   <body class="bg-neutral-100">
-    <nav class="fixed sticky top-0 z-50 border-gray-200 bg-white px-2 py-2.5 sm:px-4">
-      <div class="container mx-auto text-center">
-        <div class="text-center text-3xl">Data visualization Project</div>
-        <div class="col-span-4 row-span-1 text-center text-3xl">
-          <label for="minmax-range" class="mb-2 block text-sm font-medium text-gray-900"
-            >Year</label
-          >
+    <div class="grid grid-cols-4 gap-4 px-6 py-8 sm:px-12">
+      <div class="col-span-4 row-span-1 text-center text-3xl">Data visualization Project</div>
+      <div class="card col-span-2 row-span-1">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Year Selector</h2>
+        </div>
+        <div class="px-4 py-2" id="timeline">
+          <!-- Card content goes here -->
           <input
             id="minmax-range"
             type="range"
-            min="0"
-            max="10"
-            value="5"
+            min="2010"
+            max="2020"
+            value="1"
             class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200" />
         </div>
       </div>
-    </nav>
-
-    <div class="grid grid-cols-4 gap-4 px-6 py-8 sm:px-12">
-      <div class="col-span-4 row-span-1 text-center text-3xl">Data visualization Project</div>
-      <!--      <div class="col-span-4 row-span-1 text-center text-3xl">-->
-      <!--        <label for="minmax-range" class="mb-2 block text-sm font-medium text-gray-900">Year</label>-->
-      <!--        <input-->
-      <!--          id="minmax-range"-->
-      <!--          type="range"-->
-      <!--          min="0"-->
-      <!--          max="10"-->
-      <!--          value="5"-->
-      <!--          class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200" />-->
-      <!--      </div>-->
+      <div class="card col-span-2 row-span-1">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Indicators</h2>
+        </div>
+      </div>
       <!-- Chart 1 -->
       <div class="card col-span-2 row-span-2">
         <div class="card-title">
@@ -69,18 +62,46 @@
         </div>
       </div>
       <!-- Chart 2 -->
-      <div class="card col-span-1">
-        <div class="card-title">
+      <div id="card2" class="card col-span-1">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Line Chart</h2>
+          <button
+            id="button2"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="expandCard(card2, button2, closeButton2)"
+            >Open</button
+          >
+          <button
+            id="closeButton2"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="closeCard(card2, button2, closeButton2)"
+            >Close</button
+          >
         </div>
         <div class="px-4 py-2" id="chart2">
           <!-- Card content goes here -->
         </div>
       </div>
       <!-- Chart 3 -->
-      <div class="card col-span-1">
-        <div class="card-title">
+      <div id="card3" class="card col-span-1">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Scatter-plot</h2>
+          <button
+            id="button3"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="expandCard(card3, button3, closeButton3)"
+            >Open</button
+          >
+          <button
+            id="closeButton3"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="closeCard(card3, button3, closeButton3)"
+            >Close</button
+          >
         </div>
         <div class="px-4 py-2" id="chart3">
           <label for="selectButtonScatter"></label
@@ -89,45 +110,115 @@
         </div>
       </div>
       <!-- Chart 4 -->
-      <div class="col-span-1 rounded-2xl bg-white shadow-sm hover:shadow-md">
-        <div class="card-title">
+      <div id="card4" class="col-span-1 rounded-2xl bg-white shadow-sm hover:shadow-md">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Connected Scatter-plot</h2>
+          <button
+            id="button4"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="expandCard(card4, button4, closeButton4)"
+            >Open</button
+          >
+          <button
+            id="closeButton4"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="closeCard(card4, button4, closeButton4)"
+            >Close</button
+          >
         </div>
         <div class="px-4 py-2" id="chart4">
           <!-- Card content goes here -->
         </div>
       </div>
       <!-- Chart 5 -->
-      <div class="card col-span-1">
-        <div class="card-title">
+      <div id="card5" class="card col-span-1">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Waffle chart</h2>
+          <button
+            id="button5"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="expandCard(card5, button5, closeButton5)"
+            >Open</button
+          >
+          <button
+            id="closeButton5"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="closeCard(card5, button5, closeButton5)"
+            >Close</button
+          >
         </div>
         <div class="flex-waffle px-4 py-2" id="chart5">
           <!-- Card content goes here -->
         </div>
       </div>
       <!-- Chart 6 -->
-      <div class="card col-span-2">
-        <div class="card-title">
+      <div id="card6" class="card col-span-2">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Dot-plot</h2>
+          <button
+            id="button6"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="expandCard(card6, button6, closeButton6)"
+            >Open</button
+          >
+          <button
+            id="closeButton6"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="closeCard(card6, button6, closeButton6)"
+            >Close</button
+          >
         </div>
         <div class="px-4 py-2" id="chart6">
           <!-- Card content goes here -->
         </div>
       </div>
       <!-- Chart 7 -->
-      <div class="card col-span-2">
-        <div class="card-title">
+      <div id="card7" class="card col-span-2">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Strip-plot</h2>
+          <button
+            id="button7"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="expandCard(card7, button7, closeButton7)"
+            >Open</button
+          >
+          <button
+            id="closeButton7"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onclick="closeCard(card7, button7, closeButton7)"
+            >Close</button
+          >
         </div>
         <div class="px-4 py-2" id="chart7">
           <!-- Card content goes here -->
         </div>
       </div>
       <!-- Chart 8 -->
-      <div class="card col-span-2">
-        <div class="card-title">
+      <div id="card8" class="card col-span-2">
+        <div class="card-title justify-between">
           <h2 class="inline text-lg text-neutral-800">Bubble Chart</h2>
+          <button
+            id="button8"
+            type="button"
+            class="popup-btn mr-2 mb-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            onclick="expandCard(card8, button8, closeButton8)"
+            >Open</button
+          >
+          <button
+            id="closeButton8"
+            type="button"
+            class="popup-btn mr-2 mb-2 hidden rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            onclick="closeCard(card8, button8, closeButton8)"
+            >Close</button
+          >
         </div>
         <div class="px-4 py-2" id="chart8">
           <label for="selectButtonBubble"></label
@@ -135,10 +226,10 @@
           <!-- Card content goes here -->
         </div>
       </div>
-      <!-- Chart 9 -->
-      <div class="card col-span-3">
+      <!-- Chart 9-->
+      <div class="card col-span-2">
         <div class="card-title">
-          <h2 class="inline text-lg text-neutral-800">Sankey</h2>
+          <h2 class="inline text-lg text-neutral-800">Bar Chart</h2>
         </div>
         <div class="px-4 py-2" id="chart9">
           <!-- Card content goes here -->
@@ -158,5 +249,6 @@
         </footer>
       </div>
     </div>
+    <div id="blur" class="hidden blur"></div>
   </body>
 </html>
