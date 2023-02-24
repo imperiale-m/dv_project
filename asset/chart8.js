@@ -1,41 +1,22 @@
-// Task 5
 // Data
 d3.csv('data/eurostat_data_2.csv', d3.autoType)
   .then((data) => {
-    // console.log(data);
+    // List of groups
+    const allGroup = ['CO2', 'Nitrous oxide', 'PM 2.5', 'PM 10'];
 
-    // List of groups (here I have one group per column)
-    const allGroup = ['CO2', 'Nitrous oxide', 'PM2.5', 'PM10'];
-
-    // add the options to the button
+    // Add the options to the button
     d3.select('#selectButtonBubble')
       .selectAll('myOptions')
       .data(allGroup)
-      .enter()
-      .append('option')
+      .join('option')
       .text((d) => d) // text showed in the menu
       .attr('value', (d) => d); // corresponding value returned by the button
 
-    const convertName = (label) => {
-      switch (label) {
-        case 'co2_metric_tons_per_capita':
-          return 'CO2';
-        case 'nitrous_oxide_metric_tons':
-          return 'Nitrous oxide';
-        case 'pm2_5':
-          return 'PM2.5';
-        case 'pm10':
-          return 'PM10';
-        case 'life_expectancy_total':
-          return 'Life expectancy';
-        default:
-          return 'Error';
-      }
-    };
+    const params = ['co2_metric_tons_per_capita', 'nitrous_oxide_metric_tons', 'pm2_5', 'pm10'];
 
-    function drawChart(filtData, x, y, z) {
+    function drawChart(filteredData, x, y, z) {
       const margin = {
-        t: 45,
+        t: 80,
         r: 40,
         b: 100,
         l: 100,
@@ -43,31 +24,25 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const width = 600;
       const height = 400;
 
-      const yDomain = [0, d3.max(filtData, (d) => d[y])];
-      const yRange = [height, 0];
+      const dataX = filteredData.filter((d) => d[params[x]] !== 0);
+      const dataY = filteredData.filter((d) => d[y] !== 0);
 
-      const zDomain = d3.extent(filtData, (d) => d[z]);
-      const zRange = [1, 16];
-
-      // Domain excluding zeroes
-      const dom = d3.extent(
-        filtData.filter((d) => d[x] !== 0),
-        (d) => d[x],
-      );
-
-      // Construct scales and axes.
-      const xScale = d3.scaleLinear().domain(dom).nice().range([0, width]);
-      const yScale = d3.scaleLinear(yDomain, yRange).nice();
-      // Add a scale for bubble size
-      const zScale = d3.scaleLinear(zDomain, zRange);
-
+      // xAxis
+      const xDomain = d3.extent(dataX, (d) => d[params[x]]);
+      const xRange = [20, width - 20];
+      const xScale = d3.scaleLinear(xDomain, xRange).nice();
       const xAxis = d3.axisBottom(xScale);
+
+      // yAxis
+      const yDomain = d3.extent(dataY, (d) => d[y]);
+      const yRange = [height - 20, 20];
+      const yScale = d3.scaleLinear(yDomain, yRange).nice();
       const yAxis = d3.axisLeft(yScale);
 
-      const names = filtData.map((d) => d.country);
-      const species = [...new Set(names)];
-      // Add a scale for bubble color
-      const color = d3.scaleOrdinal().domain(species).range(d3.schemeCategory10);
+      // Add a scale for bubble size
+      const zDomain = d3.extent(filteredData, (d) => d[z]);
+      const zRange = [2, 16];
+      const zScale = d3.scaleLinear(zDomain, zRange);
 
       const svg = d3
         .select('#chart8')
@@ -77,15 +52,16 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
         .append('g')
         .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
-      // plot the x-axis
+      // plot the xAxis
       svg
         .append('g')
         .attr('transform', `translate(0, ${height})`)
         .call(xAxis)
+        .transition()
         .selectAll('text')
         .style('text-anchor', 'end');
 
-      // plot the y-axis
+      // plot the yAxis
       svg.append('g').call(yAxis);
 
       const tooltip = d3.select('#chart8').append('div').attr('class', 'tooltip');
@@ -93,23 +69,21 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const mouseover = function () {
         tooltip.style('z-index', 1);
         tooltip.transition().style('opacity', 0.9);
-        d3.select(this).style('opacity', 1);
+        d3.select(this).transition().style('fill', 'steelblue');
       };
 
       const mouseout = function () {
         tooltip.style('z-index', -1);
         tooltip.transition().style('opacity', 0);
-        d3.select(this).style('opacity', 0.8);
+        d3.select(this).transition().style('fill', 'gray');
       };
 
       const mousemove = function (event, d) {
-        const xLabel = convertName(x);
-        const yLabel = convertName(y);
         tooltip
           .html(
-            `Country = <b>${d.country}</b><br>${xLabel} = <b>${d[x]}</b>
-                    <br>${yLabel} = <b>${d[y]}</b>
-                    <br>${z} = <b>${d[z]}</b>`,
+            `<b>${d.country}</b><br>GDP = ${d[z]}
+                <br>${allGroup[x]} = ${d[params[x]]}
+                <br>Life Expectancy = ${d[y]}`,
           )
           .style('top', `${event.pageY}px`)
           .style('left', `${event.pageX + 20}px`);
@@ -118,36 +92,59 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       svg
         .append('g')
         .selectAll('dot')
-        .data(filtData.filter((d) => d[x] !== 0))
+        .data(filteredData.filter((d) => d[params[x]] !== 0))
         .join('circle')
-        .attr('cx', (d) => xScale(d[x]))
+        .attr('cx', (d) => xScale(d[params[x]]))
         .attr('cy', (d) => yScale(d[y]))
         .attr('r', (d) => zScale(d[z]))
-        .style('fill', (d) => color(d.country))
-        .style('opacity', '0.7')
+        .style('fill', 'gray')
+        .style('opacity', 0.8)
         .attr('stroke', 'black')
         .style('stroke-width', '1px')
         .on('mouseover', mouseover)
         .on('mouseout', mouseout)
         .on('mousemove', mousemove);
 
-      const padding = 100;
+      /// TEST
+      const meanLifeExp = d3.mean(filteredData, (d) => d[y]);
 
-      // x-axis name
+      svg
+        .append('g')
+        .attr('transform', `translate(0, ${yScale(meanLifeExp)})`)
+        .append('line')
+        .attr('x1', 20)
+        .attr('x2', width - 20)
+        .style('stroke', 'steelblue')
+        .style('stroke-width', '1px')
+        .style('stroke-dasharray', '6, 6')
+        .style('opacity', 1);
+
+      svg
+        .append('text')
+        .attr('transform', `translate(${width - 140}, ${yScale(meanLifeExp) - 5})`)
+        .text('EU Average life expectancy')
+        .style('fill', 'steelblue')
+        .style('font-size', '10px')
+        .style('opacity', 1);
+      /// END TEST
+
+      // xAxis name
       svg
         .append('text')
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
         .attr('transform', `translate(${width / 2}, ${height + margin.b / 2})`)
         .attr('class', 'axis-name')
-        .text(convertName(x));
-      // y-axis name
+        .text(allGroup[x]);
+
+      // yAxis name
       svg
         .append('text')
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
-        .attr('transform', `translate(${margin.l / 2 - padding},${height / 2})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
+        .attr('transform', `translate(${margin.l / 2 - margin.l},${height / 2})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
         .attr('class', 'axis-name')
         .text('Life expectancy (years)');
-      // add title
+
+      // Add title
       svg
         .append('text')
         .attr('x', width / 2)
@@ -162,8 +159,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
       // group data by 'time_period'
       const dataByYear = d3.group(data, (d) => d.time_period);
-      // console.log(dataByYear.get(2009));
 
+      // console.log(dataByYear.get(2009));
       const filtData = dataByYear.get(period);
 
       drawChart(filtData, selectedGroup, 'life_expectancy_total', 'gdp');
@@ -172,29 +169,12 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     // When the button is changed, run the updateChart function
     d3.select('#selectButtonBubble').on('change', function () {
       // recover the option that has been chosen
-      let selectedOption = d3.select(this).property('value');
+      const selectedOption = d3.select(this).property('selectedIndex');
 
-      switch (selectedOption) {
-        case 'CO2':
-          selectedOption = 'co2_metric_tons_per_capita';
-          break;
-        case 'Nitrous oxide':
-          selectedOption = 'nitrous_oxide_metric_tons';
-          break;
-        case 'PM2.5':
-          selectedOption = 'pm2_5';
-          break;
-        case 'PM10':
-          selectedOption = 'pm10';
-          break;
-        default:
-          break;
-      }
-      console.log(selectedOption);
       // run the updateChart function with this selected option
       update(selectedOption, 2015);
     });
-    update('co2_metric_tons_per_capita', 2015);
+    update(0, 2015);
   })
   .catch((e) => {
     console.log(e);
