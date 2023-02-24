@@ -12,8 +12,20 @@ d3.csv('../data/education.csv', d3.autoType)
     // List of subgroups
     const subgroups = [...d3.group(data, (d) => d.isced11).keys()];
 
+    [
+      '#4e79a7',
+      '#f28e2c',
+      '#e15759',
+      '#76b7b2',
+      '#59a14f',
+      '#edc949',
+      '#af7aa1',
+      '#ff9da7',
+      '#9c755f',
+      '#bab0ab',
+    ];
     // Build color scale
-    const color = ['#6eb06e', '#e39c5e', '#4eabec'];
+    const color = ['#59a14f', '#f28e2c', '#4e79a7'];
 
     // const country = 'IT';
     // const year = 2011;
@@ -25,7 +37,7 @@ d3.csv('../data/education.csv', d3.autoType)
         .select('#chart5')
         .append('svg')
         .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
-        .attr('style', 'max-width: 40%; height: auto;')
+        .attr('style', 'max-width: 40%; height: auto; max-height: 40vh;')
         .append('g')
         .attr('transform', `translate(${margin.l},${margin.t})`);
     }
@@ -90,7 +102,7 @@ d3.csv('../data/education.csv', d3.autoType)
     // Build X scales and axis:
     const y = d3.scaleBand().range([sideLength, 0]).domain(waffleY).padding(0.08);
 
-    // A function that update the chart
+    // A function that updates the chart
     function updateChart(svg, country, year) {
       svg.selectAll('*').remove();
 
@@ -112,7 +124,7 @@ d3.csv('../data/education.csv', d3.autoType)
         .attr('height', y.bandwidth())
         .style('fill', (d) => color[d[2]]);
 
-      rect.transition().duration(400).style('opacity', 0.9);
+      rect.transition().duration(400).style('opacity', 1);
 
       // add title
       svg
