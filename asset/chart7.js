@@ -5,9 +5,9 @@ d3.csv('../data/tgs.csv', d3.autoType)
       t: 20,
       r: 80,
       b: 100,
-      l: 100,
+      l: 120,
     };
-    const width = 800;
+    const width = 600;
     const height = 600;
 
     // console.log(data);
@@ -35,15 +35,17 @@ d3.csv('../data/tgs.csv', d3.autoType)
     // Define scales
     const yScale = d3
       .scaleBand()
-      .domain(data.map((d) => d.country))
-      .range([height, 0])
-      .padding(1);
+      .domain(data.map((d) => d.country).sort(d3.descending))
+      .rangeRound([height, 0]);
 
     const xScale = d3.scaleLinear().domain(dom).nice().range([0, width]);
 
     // Add y-axis
-    const yAxis = d3.axisLeft(yScale);
-    svg.append('g').call(yAxis);
+    const yAxis = d3.axisLeft(yScale).tickPadding(5).tickSize(0);
+    svg
+      .append('g')
+      .call(yAxis)
+      .call((g) => g.selectAll('.domain').remove());
 
     // Add x-axis
     const xAxis = d3.axisBottom(xScale);
