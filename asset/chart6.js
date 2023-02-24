@@ -7,7 +7,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     b: 100,
     l: 120,
   };
-  const width = 800;
+  const width = 600;
   const height = 600;
 
   // append the svg object to the body of the page
@@ -58,7 +58,10 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .domain(d3.map(filteredData, (d) => d.country))
     .rangeRound([height, 0])
     .padding(1);
-  svg.append('g').call(d3.axisLeft(yAxis));
+  svg
+    .append('g')
+    .call(d3.axisLeft(yAxis).tickPadding(10))
+    .call((g) => g.selectAll('.domain').remove());
 
   // Lines
   svg
@@ -93,9 +96,9 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .text(
       (d) => `+ ${Number.parseFloat(d.life_expectancy_female - d.life_expectancy_male).toFixed(2)}`,
     )
+    .attr('stroke-linejoin', 'round')
     .attr('text-anchor', 'middle')
     .attr('dominant-baseline', 'middle')
-    .attr('background-color', 'white')
     .attr('font-size', '10px')
     .attr('fill', 'black')
     .call((text) => text.clone(true))
@@ -185,14 +188,14 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType).then((data) => {
     .attr('font-size', '10px')
     .attr('fill', 'firebrick');
 
-  // x-axis name
+  // xAxis name
   svg
     .append('text')
     .attr('transform', `translate(${width / 2 - 100}, ${height + margin.b - 50})`)
     .attr('class', 'axis-name')
     .text('Life expectancy at birth, female and male (years)');
 
-  // y-axis name
+  // yAxis name
   svg
     .append('text')
     .attr('transform', `translate(${-margin.l + 20}, ${height / 2}) rotate(-90)`)
