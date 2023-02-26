@@ -34,7 +34,7 @@ d3.csv('../data/education.csv', d3.autoType)
 
     for (let i = 0; i < 4; i += 1) {
       svg[i] = d3
-        .select('#chart5')
+        .select('#chart9')
         .append('svg')
         .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
         .attr('style', 'max-width: 40%; height: auto; max-height: 40vh;')
@@ -179,7 +179,6 @@ d3.csv('../data/education.csv', d3.autoType)
       //   .attr('fill', color[2]);
     }
 
-    // const country = 'IT';
     const year = 2015;
     updateChart(svg[0], 'IT', year);
     updateChart(svg[1], 'FR', year);
