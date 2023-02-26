@@ -55,6 +55,30 @@ d3.csv('../data/tgs.csv', d3.autoType)
       .scaleSequential(d3.interpolateRdYlBu) // set the color scale
       .domain(dom); // set the data domain
 
+    const tooltip = d3.select('#chart7').append('div').attr('class', 'tooltip');
+
+    const mouseover = function () {
+      tooltip.style('z-index', 2);
+      tooltip.transition().style('opacity', 0.9);
+      d3.select(this).transition().style('opacity', 1).attr('r', 6);
+    };
+
+    const mouseout = function () {
+      tooltip.style('z-index', -1);
+      tooltip.transition().style('opacity', 0);
+      d3.select(this).transition().style('opacity', 0.8).attr('r', 4);
+    };
+
+    const mousemove = function (event, d) {
+      tooltip
+        .html(
+          `<b>${d.geo_label}</b>
+                <br>Life Expectancy = ${d.obs_value} years`,
+        )
+        .style('top', `${event.pageY}px`)
+        .style('left', `${event.pageX + 20}px`);
+    };
+
     // Draw dots
     svg
       .selectAll('circle')
@@ -65,7 +89,10 @@ d3.csv('../data/tgs.csv', d3.autoType)
       .attr('r', 4)
       .attr('fill', (d) => colorScale(d.obs_value))
       .attr('stroke', 'black')
-      .attr('stroke-width', 1);
+      .attr('stroke-width', 1)
+      .on('mouseover', mouseover)
+      .on('mouseout', mouseout)
+      .on('mousemove', mousemove);
 
     const names = data.map((d) => d.country);
     const countries = [...new Set(names)];
