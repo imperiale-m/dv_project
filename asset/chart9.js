@@ -51,66 +51,86 @@ d3.csv('../data/death_causes.csv', d3.autoType).then((data) => {
   // group data by 'year'
   const dataByYear = d3.group(data, (d) => d.time_period);
 
-  const dataBySelectedYear = dataByYear.get(2018) ?? 0;
-  // group data by 'geo'
-  const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
+  function updateChart5(year) {
+    svg.selectAll('*').remove();
 
-  const dataBySelectedCountry = dataByGeo.get('Italy') ?? 0;
+    const dataBySelectedYear = dataByYear.get(year) ?? 0;
+    // console.log(dataBySelectedYear);
 
-  // console.log(dataByGeo);
-  // console.log(dataBySelectedCountry.sort((a, b) => d3.descending(a.value, b.value)));
+    if (dataBySelectedYear !== 0) {
+      // group data by 'geo'
+      const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
 
-  const top10 = dataBySelectedCountry.sort((a, b) => d3.descending(a.value, b.value)).slice(1, 10);
-  console.log(top10);
+      const dataBySelectedCountry = dataByGeo.get('Italy') ?? 0;
 
-  // Add X axis
-  const x = d3
-    .scaleLinear()
-    .domain([0, d3.max(top10.map((d) => d.value))])
-    .range([0, width]);
-  svg
-    .append('g')
-    .attr('transform', `translate(0, ${height})`)
-    .call(d3.axisBottom(x).tickFormat(d3.format('.2s')))
-    .selectAll('text')
-    .style('text-anchor', 'end');
+      // console.log(dataByGeo);
+      // console.log(dataBySelectedCountry.sort((a, b) => d3.descending(a.value, b.value)));
 
-  // Y axis
-  const y = d3
-    .scaleBand()
-    .range([0, height])
-    .domain(top10.map((d) => d.icd10))
-    .padding(0.1);
-  svg.append('g').call(d3.axisLeft(y)).selectAll('.tick text').call(wrap, 150);
+      const top10 = dataBySelectedCountry
+        .sort((a, b) => d3.descending(a.value, b.value))
+        .slice(1, 10);
+      // console.log(top10);
 
-  // Bars
-  svg
-    .selectAll('myRect')
-    .data(top10)
-    .join('rect')
-    .attr('x', x(0))
-    .attr('y', (d) => y(d.icd10))
-    .attr('width', (d) => x(d.value))
-    .attr('height', y.bandwidth())
-    .attr('fill', 'steelblue');
+      // Add X axis
+      const x = d3
+        .scaleLinear()
+        .domain([0, d3.max(top10.map((d) => d.value))])
+        .range([0, width]);
+      svg
+        .append('g')
+        .attr('transform', `translate(0, ${height})`)
+        .call(d3.axisBottom(x).tickFormat(d3.format('.2s')))
+        .selectAll('text')
+        .style('text-anchor', 'end');
 
-  // Bars
-  svg
-    .selectAll('rect')
-    .data(top10)
-    .join('text')
-    .attr('x', x(0))
-    .attr('y', (d) => y(d.icd10))
-    .text('prova');
+      // Y axis
+      const y = d3
+        .scaleBand()
+        .range([0, height])
+        .domain(top10.map((d) => d.icd10))
+        .padding(0.1);
+      svg.append('g').call(d3.axisLeft(y)).selectAll('.tick text').call(wrap, 150);
 
-  svg
-    .selectAll('myRect')
-    .data(top10)
-    .join('text')
-    .attr('x', (d) => x(d.value) - margin.r)
-    .attr('y', (d) => y(d.icd10) + 25)
-    .text((d) => d.value)
-    .attr('dominant-baseline', 'middle')
-    .attr('font-size', '12px')
-    .attr('fill', 'white');
+      // Bars
+      svg
+        .selectAll('myRect')
+        .data(top10)
+        .join('rect')
+        .attr('x', x(0))
+        .attr('y', (d) => y(d.icd10))
+        .attr('width', (d) => x(d.value))
+        .attr('height', y.bandwidth())
+        .attr('fill', 'steelblue');
+
+      // Bars
+      svg
+        .selectAll('rect')
+        .data(top10)
+        .join('text')
+        .attr('x', x(0))
+        .attr('y', (d) => y(d.icd10))
+        .text('prova');
+
+      svg
+        .selectAll('myRect')
+        .data(top10)
+        .join('text')
+        .attr('x', (d) => x(d.value) - margin.r)
+        .attr('y', (d) => y(d.icd10) + 25)
+        .text((d) => d.value)
+        .attr('dominant-baseline', 'middle')
+        .attr('font-size', '12px')
+        .attr('fill', 'white');
+    } else {
+      svg
+        .append('text')
+        .attr('x', width / 2 - margin.r)
+        .attr('y', height / 2 - margin.b)
+        .style('font-size', 'xxx-large')
+        .style('text-anchor', 'middle')
+        .text('No Data for selected year');
+    }
+  }
+  window.updateChart5 = updateChart5;
+  updateChart5(2010);
 });
