@@ -1,121 +1,116 @@
 // Assignment 5
-d3.csv('../data/death_causes.csv', d3.autoType)
-  .then((data) => {
-    const margin = {
-      t: 40,
-      r: 40,
-      b: 40,
-      l: 40,
-    };
-    const width = 600;
-    const height = 400;
-
-    // console.log(data);
-
-    // Format data for Sankey diagram
-    // NODES
-    const col = data.columns.slice(1);
-    const names = [...data.map((d) => d.icd10)];
-    let nodes = [];
-    for (let y = 0; y < col.length; y += 1) {
-      const nodes1 = d3.map(names, (d, i) => {
-        const node = i + y * 21;
-        const name = `${col[y]} ${d}`;
-        return { node, name };
-      });
-      nodes = [...nodes, ...nodes1];
+function wrap(text, width2) {
+  text.each(function () {
+    const text2 = d3.select(this);
+    const words = text2.text().split(/\s+/).reverse();
+    let word;
+    let line = [];
+    let lineNumber = 0;
+    const lineHeight = 1.1; // ems
+    const y = text2.attr('y');
+    const x = text2.attr('x');
+    const dy = parseFloat(text2.attr('dy'));
+    let tspan = text2.text(null).append('tspan').attr('x', x).attr('y', y).attr('dy', `${dy}em`);
+    while ((word = words.pop())) {
+      line.push(word);
+      tspan.text(line.join(' '));
+      if (tspan.node().getComputedTextLength() > width2) {
+        line.pop();
+        tspan.text(line.join(' '));
+        line = [word];
+        tspan = text2
+          .append('tspan')
+          .attr('x', x)
+          .attr('y', y)
+          .attr('dy', `${++lineNumber * lineHeight + dy}em`)
+          .text(word);
+      }
     }
-
-    // console.log('Nodes', nodes);
-
-    // LINKS
-    // const tot1 = d3.sum(d3.map(data, (d) => d[col[0]]));
-    // const tot2 = d3.sum(d3.map(data, (d) => d[col[1]]));
-    let links = [];
-    for (let y = 0; y < col.length - 1; y += 1) {
-      const tot = d3.sum(d3.map(data, (e) => e[col[y]]));
-      // console.log(tot);
-      const link1 = d3.map(data, (d, i) => {
-        const source = i + y * 21;
-        const target = i + (y + 1) * 21;
-        const value = d[col[y]] / tot;
-        return {
-          source,
-          target,
-          value,
-        };
-      });
-      links = [...links, ...link1];
-    }
-    // console.log('Links', links);
-
-    // Append the svg object to the div with id #a5
-    const svg = d3
-      .select('#chart9')
-      .append('svg')
-      .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-      .attr('style', 'max-width: 100%; height: auto')
-      .append('g')
-      .attr('transform', `translate(${margin.l}, ${margin.t})`);
-
-    // Set the Sankey diagram properties
-    const sankey = d3
-      .sankey()
-      .nodeWidth(12)
-      .nodePadding(4)
-      .size([width, height])
-      .nodeSort((a, b) => b.value - a.value)
-      .linkSort((a, b) => b.value - a.value)
-      .nodeAlign(d3.sankeyJustify);
-
-    // const color = d3.scaleOrdinal(colors);
-
-    const sankeyData = JSON.parse(JSON.stringify({ nodes, links }));
-    const graph = sankey(sankeyData);
-
-    const node = svg
-      .append('g')
-      .selectAll('.node')
-      .data(graph.nodes)
-      .join('g')
-      .attr('class', 'node');
-    node
-      .append('rect')
-      .attr('x', (d) => d.x0)
-      .attr('y', (d) => d.y0)
-      .attr('height', (d) => d.y1 - d.y0)
-      .attr('width', (d) => d.x1 - d.x0)
-      // .attr('fill', (d) => color(d.value))
-      .attr('class', 'node')
-      .attr('stroke', 'black')
-      .attr('stroke-width', '0.5');
-
-    // Add the links
-    svg
-      .append('g')
-      .selectAll('.link')
-      .data(graph.links)
-      .join('path')
-      .attr('class', 'link')
-      .attr('d', d3.sankeyLinkHorizontal())
-      .attr('stroke-opacity', 0.2)
-      .attr('stroke-width', (d) => Math.max(1, d.width))
-      .attr('stroke', 'black')
-      .attr('fill', 'none');
-
-    // Add the title for the nodes
-    //   node
-    //     .append('text')
-    //     .attr('x', (d) => d.x0 - 5)
-    //     .attr('y', (d) => (d.y1 + d.y0) / 2)
-    //     .attr('dy', 2)
-    //     .text((d) => d.name)
-    //     .attr('text-anchor', 'end')
-    //     .attr('font-size', '0.6rem')
-    //     .filter((d) => d.x0 < width / 2)
-    //     .attr('x', (d) => d.x1 + 5)
-    //     .attr('text-anchor', 'start');
-  })
-  .catch((e) => {
-    console.log(e);
   });
+}
+
+// Parse the Data
+d3.csv('../data/death_causes.csv', d3.autoType).then((data) => {
+  const margin = {
+    t: 40,
+    r: 40,
+    b: 40,
+    l: 180,
+  };
+  const width = 600;
+  const height = 500;
+
+  const svg = d3
+    .select('#chart5')
+    .append('svg')
+    .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
+    .attr('style', 'max-width: 100%; height: auto')
+    .append('g')
+    .attr('transform', `translate(${margin.l}, ${margin.t})`);
+
+  // group data by 'year'
+  const dataByYear = d3.group(data, (d) => d.time_period);
+
+  const dataBySelectedYear = dataByYear.get(2018) ?? 0;
+  // group data by 'geo'
+  const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
+
+  const dataBySelectedCountry = dataByGeo.get('Italy') ?? 0;
+
+  // console.log(dataByGeo);
+  // console.log(dataBySelectedCountry.sort((a, b) => d3.descending(a.value, b.value)));
+
+  const top10 = dataBySelectedCountry.sort((a, b) => d3.descending(a.value, b.value)).slice(1, 10);
+  console.log(top10);
+
+  // Add X axis
+  const x = d3
+    .scaleLinear()
+    .domain([0, d3.max(top10.map((d) => d.value))])
+    .range([0, width]);
+  svg
+    .append('g')
+    .attr('transform', `translate(0, ${height})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format('.2s')))
+    .selectAll('text')
+    .style('text-anchor', 'end');
+
+  // Y axis
+  const y = d3
+    .scaleBand()
+    .range([0, height])
+    .domain(top10.map((d) => d.icd10))
+    .padding(0.1);
+  svg.append('g').call(d3.axisLeft(y)).selectAll('.tick text').call(wrap, 150);
+
+  // Bars
+  svg
+    .selectAll('myRect')
+    .data(top10)
+    .join('rect')
+    .attr('x', x(0))
+    .attr('y', (d) => y(d.icd10))
+    .attr('width', (d) => x(d.value))
+    .attr('height', y.bandwidth())
+    .attr('fill', 'steelblue');
+
+  // Bars
+  svg
+    .selectAll('rect')
+    .data(top10)
+    .join('text')
+    .attr('x', x(0))
+    .attr('y', (d) => y(d.icd10))
+    .text('prova');
+
+  svg
+    .selectAll('myRect')
+    .data(top10)
+    .join('text')
+    .attr('x', (d) => x(d.value) - margin.r)
+    .attr('y', (d) => y(d.icd10) + 25)
+    .text((d) => d.value)
+    .attr('dominant-baseline', 'middle')
+    .attr('font-size', '12px')
+    .attr('fill', 'white');
+});
