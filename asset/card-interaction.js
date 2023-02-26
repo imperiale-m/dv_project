@@ -13,3 +13,25 @@ function closeCard(card, open, close) {
   d3.select(close).classed('hidden', true);
   document.exitFullscreen();
 }
+
+function inc(element) {
+  const el = document.querySelector(`#${element}`);
+  if (parseInt(el.value, 10) < 2021) {
+    el.value = parseInt(el.value, 10) + 1;
+    updateChart6(parseInt(el.value, 10));
+    updateChart1(parseInt(el.value, 10));
+    updateChart5(parseInt(el.value, 10));
+    updateChart7(parseInt(el.value, 10));
+  }
+}
+
+function dec(element) {
+  const el = document.querySelector(`#${element}`);
+  if (parseInt(el.value, 10) > 2010) {
+    el.value = parseInt(el.value, 10) - 1;
+    updateChart6(parseInt(el.value, 10));
+    updateChart1(parseInt(el.value, 10));
+    updateChart5(parseInt(el.value, 10));
+    updateChart7(parseInt(el.value, 10));
+  }
+}
