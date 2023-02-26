@@ -26,7 +26,7 @@
     @apply fill-neutral-500 text-xs;
   }
   .modalButton {
-    @apply rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800
+    @apply rounded-2xl bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800
     focus:outline-none focus:ring-4 focus:ring-blue-300;
   }
 }
@@ -35,10 +35,6 @@
 .container {
   padding: 2px 16px;
 }
-
-/*svg {*/
-/*  shape-rendering: crispEdges;*/
-/*}*/
 
 .tooltip {
   position: absolute;
@@ -63,6 +59,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  transition: all 3s ease-in-out;
 }
 
 .active {
@@ -75,6 +72,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  transition: all 3s;
 }
 
 .modal {
@@ -86,4 +84,26 @@
   bottom: 0;
   left: 0;
   right: 0;
+  transition: all 1s;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/*.card:hover {*/
+/*  transform: rotateY(180deg);*/
+/*  transform-style: preserve-3d;*/
+/*}*/
+
+/*.card-back {*/
+/*  transform: rotateY(180deg);*/
+/*}*/
