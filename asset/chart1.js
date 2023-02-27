@@ -186,6 +186,7 @@ Promise.all([
             d3.select('#lifeExpValue').text(`${d3.select(this).data()[0].lifeExp} years`);
             d3.select('#gdpValue').text(d3.select(this).data()[0].gdp);
             drawChart2(d3.select(this).data()[0].properties.ISO3_CODE);
+            drawChart4(d3.select(this).data()[0].properties.CNTR_ID);
             d3.select(this).transition().style('fill', 'gold');
           }
           svg
