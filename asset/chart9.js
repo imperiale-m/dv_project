@@ -38,7 +38,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
     l: 180,
   };
   const width = 600;
-  const height = 500;
+  const height = 600;
 
   const svg = d3
     .select('#chart9')

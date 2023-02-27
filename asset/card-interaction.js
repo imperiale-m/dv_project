@@ -34,38 +34,47 @@ function closeInitialPopup() {
   document.body.style.overflow = 'auto';
 }
 
-function inc(el) {
-  let year = parseInt(el.value, 10);
-  if (year < 2021) {
-    year += 1;
-    el.value = year;
-    updateChart6(year);
-    updateChart1(year);
-    const country = document.getElementById('countryValue').textContent;
-    updateChart5(country, year);
-    updateChart9(country, year);
-    updateChart7(year);
-    updateChart3(0, year);
-    updateChart8(0, year);
-  } else {
-    el.value = 2020;
-  }
+function changeYear(el) {
+  // console.log(el.value);
+  const year = parseInt(el.value, 10);
+  updateChart1(year);
+  const country = document.getElementById('countryValue').textContent;
+  updateChart3(0, year);
+  // updateChart5(country, year);
+  updateChart6(year);
+  updateChart7(year);
+  updateChart8(0, year);
+  updateChart9(country, year);
 }
-
-function dec(el) {
-  let year = parseInt(el.value, 10);
-  if (year > 2010) {
-    year -= 1;
-    el.value = year;
-    updateChart6(year);
-    updateChart1(year);
-    const country = document.getElementById('countryValue').textContent;
-    updateChart5(country, year);
-    updateChart9(country, year);
-    updateChart7(year);
-    updateChart3(0, year);
-    updateChart8(0, year);
-  } else {
-    el.value = 2010;
-  }
-}
+//
+// function inc(el) {
+//   if (parseInt(el.value, 10) < 2021) {
+//     el.value = parseInt(el.value, 10) + 1;
+//     updateChart6(parseInt(el.value, 10));
+//     updateChart1(parseInt(el.value, 10));
+//     const country = document.getElementById('countryValue').textContent;
+//     updateChart5(country, parseInt(el.value, 10));
+//     updateChart9(country, parseInt(el.value, 10));
+//     updateChart7(parseInt(el.value, 10));
+//     updateChart3(0, parseInt(el.value, 10));
+//     updateChart8(0, parseInt(el.value, 10));
+//   } else {
+//     el.value = 2020;
+//   }
+// }
+//
+// function dec(el) {
+//   if (parseInt(el.value, 10) > 2010) {
+//     el.value = parseInt(el.value, 10) - 1;
+//     updateChart6(parseInt(el.value, 10));
+//     updateChart1(parseInt(el.value, 10));
+//     const country = document.getElementById('countryValue').textContent;
+//     updateChart5(country, parseInt(el.value, 10));
+//     updateChart9(country, parseInt(el.value, 10));
+//     updateChart7(parseInt(el.value, 10));
+//     updateChart3(0, parseInt(el.value, 10));
+//     updateChart8(0, parseInt(el.value, 10));
+//   } else {
+//     el.value = 2010;
+//   }
+// }

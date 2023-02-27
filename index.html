@@ -41,34 +41,32 @@
         </div>
         <div class="px-4 py-2" id="timeline">
           <!-- Card content goes here-->
-          <div class="flex h-8 items-center">
-            <!--            <label class="mr-4 w-full text-sm font-semibold text-gray-700" for="amount"-->
-            <!--              >Year-->
-            <!--            </label>-->
-            <div class="relative flex h-8 w-full flex-row rounded-lg bg-transparent">
-              <button
-                class="h-full w-20 cursor-pointer rounded-l bg-gray-300 text-gray-600 outline-none hover:bg-gray-400 hover:text-gray-700"
-                onclick="dec(yearValue)">
-                <span class="m-auto text-2xl font-thin">−</span>
-              </button>
-              <input
-                class="text-md md:text-basecursor-default flex w-full items-center bg-gray-300 text-center font-semibold text-gray-700 outline-none outline-none hover:text-black focus:text-black focus:outline-none"
-                id="yearValue"
-                type="number"
-                value="2012" />
-              <button
-                class="h-full w-20 cursor-pointer rounded-r bg-gray-300 text-gray-600 hover:bg-gray-400 hover:text-gray-700"
-                onclick="inc(yearValue)">
-                <span class="m-auto text-2xl font-thin">+</span>
-              </button>
-            </div>
-          </div>
+
+          <label for="timelineRange" class="mb-2 block text-sm font-medium text-gray-900">
+            Year <span class="text-blue-800" id="yearRange"></span
+          ></label>
+          <input
+            id="timelineRange"
+            type="range"
+            min="2010"
+            max="2020"
+            value="2012"
+            step="1"
+            class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200"
+            onchange="changeYear(timelineRange)" />
         </div>
       </div>
-      <div class="card col-span-2 col-start-3 row-start-2">
-        <!--        <div class="card-title">-->
-        <!--          <h2 class="inline text-lg text-neutral-800">Info</h2>-->
-        <!--        </div>-->
+      <div class="card-front z-[2] col-span-2 col-start-3 row-start-2" id="cardFrontInfo">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Indicators</h2>
+          <button
+            class="info z-[10] underline"
+            id="info0"
+            onclick="InfoCard(cardFrontInfo, cardBackInfo, info0)"
+            type="button">
+            Info
+          </button>
+        </div>
         <dl
           class="mx-auto grid max-w-screen-xl grid-cols-2 gap-8 p-4 text-gray-900 sm:grid-cols-2 sm:p-8 xl:grid-cols-3">
           <div class="flex flex-col items-center justify-center">
@@ -84,6 +82,17 @@
             <dd class="font-light text-gray-400">GDP</dd>
           </div>
         </dl>
+      </div>
+      <div class="card-back z-[1] col-span-2 col-start-3 row-start-2" id="cardBackInfo">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">GDP</h2>
+          <p>
+            Gross domestic product per capita in purchasing power standards (PPS) is the ratio
+            between the level of gross domestic product (GDP), expressed in purchasing power
+            standards, and total population. GDP in PPS is obtained by converting GDP to a fictive
+            currency using special conversion factors.
+          </p>
+        </div>
       </div>
       <!-- Chart 1-->
       <div class="card-front z-[2] col-span-2 col-start-1 row-span-2 row-start-3" id="cardFront1">

@@ -195,7 +195,7 @@ Promise.all([
       function clicked(event, d) {
         if (this.getAttribute('fill') !== '#e0dfdf') {
           const [[x0, y0], [x1, y1]] = pathGenerator.bounds(d);
-          let year = document.getElementById('yearValue');
+          let year = document.getElementById('timelineRange');
           year = parseInt(year.value, 10);
           event.stopPropagation();
           states.transition().style('fill', null);
