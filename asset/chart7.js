@@ -25,6 +25,7 @@ d3.csv('./data/tgs.csv', d3.autoType)
 
     function updateChart7(year) {
       svg.selectAll('*').remove();
+      d3.select('#chart7Year').html(year);
 
       // console.log(dataByYear.get(2009));
       const test = dataByYear.get(year) ?? 0;
@@ -139,7 +140,7 @@ d3.csv('./data/tgs.csv', d3.autoType)
       }
     }
     window.updateChart7 = updateChart7;
-    updateChart7(2010);
+    updateChart7(2012);
   })
   .catch((e) => {
     console.log(e);

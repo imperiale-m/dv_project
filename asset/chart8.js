@@ -173,6 +173,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
     function updateChart8(selectedGroup, year) {
       d3.selectAll('#chart8 > svg').remove();
+      d3.select('#chart8Year').html(year);
 
       // group data by 'time_period'
       const dataByYear = d3.group(data, (d) => d.time_period);
@@ -188,13 +189,13 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // recover the option that has been chosen
       const selectedOption = d3.select(this).property('selectedIndex');
 
-      const el = document.querySelector('#amount');
+      const el = document.querySelector('#yearValue');
       console.log(parseInt(el.value, 10));
       // run the updateChart function with this selected option
       updateChart8(selectedOption, parseInt(el.value, 10));
     });
     window.updateChart8 = updateChart8;
-    updateChart8(0, 2010);
+    updateChart8(0, 2012);
   })
   .catch((e) => {
     console.log(e);

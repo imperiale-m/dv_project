@@ -72,15 +72,15 @@
         <dl
           class="mx-auto grid max-w-screen-xl grid-cols-2 gap-8 p-4 text-gray-900 sm:grid-cols-2 sm:p-8 xl:grid-cols-3">
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="countryValue">-</dt>
+            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="countryValue">Italy</dt>
             <dd class="font-light text-gray-400">Country</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="lifeExpValue">0</dt>
+            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="lifeExpValue">82.4 years</dt>
             <dd class="font-light text-gray-400">Life expectancy</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="gdpValue">0</dt>
+            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="gdpValue">103</dt>
             <dd class="font-light text-gray-400">GDP</dd>
           </div>
         </dl>
@@ -223,7 +223,9 @@
       <!-- Chart 5 -->
       <div class="card-front z-[2] col-span-1 col-start-4 row-start-4" id="cardFront5">
         <div class="card-title">
-          <h2 class="inline text-xl text-neutral-800">Waffle-chart</h2>
+          <h2 class="inline text-xl text-neutral-800">
+            Educational attainment level in <span class="font-bold" id="chart5Year"></span>
+          </h2>
           <div class="flex">
             <button
               class="mr-2 justify-self-end underline"
@@ -255,7 +257,8 @@
       <div class="card-front z-[2] col-span-2 col-start-1 row-start-5" id="cardFront6">
         <div class="card-title">
           <h2 class="inline text-xl text-neutral-800">
-            Gender Gap in Life Expectancy in the European Union
+            Gender Gap in Life Expectancy in the European Union in
+            <span class="font-bold" id="chart6Year"></span>
           </h2>
           <div class="flex">
             <button
@@ -291,7 +294,8 @@
       <div class="card-front z-[2] col-span-2 col-start-3 row-start-5" id="cardFront7">
         <div class="card-title">
           <h2 class="inline text-xl text-neutral-800">
-            Exploring Regional Variations in Life Expectancy
+            Exploring Regional Variations in Life Expectancy in
+            <span class="font-bold" id="chart7Year"></span>
           </h2>
           <div class="flex">
             <button
@@ -327,7 +331,8 @@
       <div class="card-front z-[2] col-span-2 col-start-1 row-start-6" id="cardFront8">
         <div class="card-title">
           <h2 class="inline text-2xl text-neutral-800">
-            <span id="chart8Variable"></span> vs Life Expectancy
+            <span id="chart8Variable"></span> vs Life Expectancy in
+            <span class="font-bold" id="chart8Year"></span>
           </h2>
           <div class="flex">
             <button
@@ -358,7 +363,10 @@
       <!-- Chart 9-->
       <div class="card-front z-[2] col-span-2 col-start-3 row-start-6" id="cardFront9">
         <div class="card-title">
-          <h2 class="inline text-xl text-neutral-800">Top 9 deadliest diseases</h2>
+          <h2 class="inline text-xl text-neutral-800">
+            <span class="text-blue-800" id="chart9Country"></span> top 9 deadliest diseases in
+            <span class="font-bold" id="chart9Year"></span>
+          </h2>
           <div class="flex">
             <button
               class="mr-2 justify-self-end underline"
@@ -390,41 +398,6 @@
           </p>
         </div>
       </div>
-      <!--      <div class="card col-span-2 row-start-5" id="card9">-->
-      <!--        <div class="card-title">-->
-      <!--          <h2 class="inline text-xl text-neutral-800">Waffle Chart</h2>-->
-      <!--          &lt;!&ndash;          <div class="wrapper">&ndash;&gt;-->
-      <!--          &lt;!&ndash;            <div class="container hidden" id="dropdownSelected"></div>&ndash;&gt;-->
-      <!--          &lt;!&ndash;            <div class="container">&ndash;&gt;-->
-      <!--          &lt;!&ndash;              <select id="options" multiple search="true">&ndash;&gt;-->
-      <!--          &lt;!&ndash;                <option value="Singapore">Singapore</option>&ndash;&gt;-->
-      <!--          &lt;!&ndash;                <option value="Portland">Portland</option>&ndash;&gt;-->
-      <!--          &lt;!&ndash;                <option value="Halifax">Halifax</option>&ndash;&gt;-->
-      <!--          &lt;!&ndash;                <option value="London">London</option>&ndash;&gt;-->
-      <!--          &lt;!&ndash;                <option value="Seattle">Seattle</option>&ndash;&gt;-->
-      <!--          &lt;!&ndash;                <option value="Toronto">Toronto</option>&ndash;&gt;-->
-      <!--          &lt;!&ndash;              </select>&ndash;&gt;-->
-      <!--          &lt;!&ndash;            </div>&ndash;&gt;-->
-      <!--          &lt;!&ndash;          </div>&ndash;&gt;-->
-      <!--          <button-->
-      <!--            class="popup-btn modalButton"-->
-      <!--            id="button9"-->
-      <!--            onclick="expandCard(card9, button9, closeButton9)"-->
-      <!--            type="button">-->
-      <!--            <img alt="expand icon" class="inline" height="18" src="./data/expand.svg" width="18" />-->
-      <!--          </button>-->
-      <!--          <button-->
-      <!--            class="popup-btn modalButton hidden"-->
-      <!--            id="closeButton9"-->
-      <!--            onclick="closeCard(card9, button9, closeButton9)"-->
-      <!--            type="button">-->
-      <!--            <img alt="close icon" class="inline" height="18" src="./data/close.svg" width="18" />-->
-      <!--          </button>-->
-      <!--        </div>-->
-      <!--        <div class="flex-waffle px-4 py-2" id="chart9">-->
-      <!--          &lt;!&ndash; Card content goes here &ndash;&gt;-->
-      <!--        </div>-->
-      <!--      </div>-->
       <div class="col-span-4 row-span-1" id="footer">
         <footer aria-label="Footer" class="">
           <div

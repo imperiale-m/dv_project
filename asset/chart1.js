@@ -190,6 +190,8 @@ Promise.all([
       function clicked(event, d) {
         if (this.getAttribute('fill') !== '#e0dfdf') {
           const [[x0, y0], [x1, y1]] = pathGenerator.bounds(d);
+          let year = document.getElementById('yearValue');
+          year = parseInt(year.value, 10);
           event.stopPropagation();
           states.transition().style('fill', null);
           // console.log(d3.select(this).data()[0].properties.NAME_ENGL);
@@ -204,7 +206,8 @@ Promise.all([
             d3.select(this).transition().style('fill', 'gold');
             drawChart2(d3.select(this).data()[0].properties.ISO3_CODE);
             drawChart4(d3.select(this).data()[0].properties.CNTR_ID);
-            updateChart5(d3.select(this).data()[0].properties.NAME_ENGL, 2012);
+            updateChart5(d3.select(this).data()[0].properties.NAME_ENGL, year);
+            updateChart9(d3.select(this).data()[0].properties.NAME_ENGL, year);
           }
           svg
             .transition()

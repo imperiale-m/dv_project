@@ -28,6 +28,7 @@ d3.csv('./data/eurostat_data_2.csv', d3.autoType)
 
     function updateChart6(year) {
       svg.selectAll('*').remove();
+      d3.select('#chart6Year').html(year);
 
       const filteredData =
         dataByYear
@@ -208,7 +209,7 @@ d3.csv('./data/eurostat_data_2.csv', d3.autoType)
     }
 
     window.updateChart6 = updateChart6;
-    updateChart6(2010);
+    updateChart6(2012);
   })
   .catch((e) => {
     console.log(e);

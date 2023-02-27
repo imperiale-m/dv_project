@@ -54,6 +54,9 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
   function updateChart9(country, year) {
     svg.selectAll('*').remove();
 
+    d3.select('#chart9Country').html(country);
+    d3.select('#chart9Year').html(year);
+
     const dataBySelectedYear = dataByYear.get(year) ?? 0;
     // console.log(dataBySelectedYear);
 

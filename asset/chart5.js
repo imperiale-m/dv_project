@@ -85,6 +85,8 @@ d3.csv('./data/education.csv', d3.autoType)
     function updateChart5(country, year) {
       svg.selectAll('*').remove();
 
+      d3.select('#chart5Year').html(year);
+
       const query = dataByGeo.get(country)?.get(year) ?? [];
 
       console.log(country);

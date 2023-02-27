@@ -166,14 +166,14 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // recover the option that has been chosen
       const selectedOption = d3.select(this).property('selectedIndex');
 
-      const el = document.querySelector('#amount');
+      const el = document.querySelector('#yearValue');
       console.log(parseInt(el.value, 10));
       // console.log(selectedOption);
       // run the updateChart function with this selected option
       updateChart3(selectedOption, parseInt(el.value, 10));
     });
     window.updateChart3 = updateChart3;
-    updateChart3(0, 2010);
+    updateChart3(0, 2012);
   })
   .catch((e) => {
     console.log(e);
