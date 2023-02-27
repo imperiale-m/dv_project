@@ -35,7 +35,7 @@
       <div class="col-span-4 row-span-1 text-center text-3xl font-bold">
         Data visualization Project
       </div>
-      <div class="card col-span-2 col-start-1 row-start-2 h-fit">
+      <div class="card col-span-2 col-start-1 row-start-2">
         <!--        <div class="card-title">-->
         <!--          <h2 class="inline text-lg text-neutral-800">Year Selector</h2>-->
         <!--        </div>-->
@@ -54,16 +54,16 @@
             max="2020"
             value="2012"
             step="1"
-            class="h-1 h-full w-full cursor-pointer appearance-none rounded-lg bg-gray-200"
+            class="h-1 w-full cursor-pointer appearance-none rounded-lg bg-gray-200"
             onchange="changeYear(timelineRange)"
             oninput="this.previousElementSibling.innerText = this.value" />
           <div class="flex justify-between">
-            <div class="relative bottom-0 left-0 px-2 text-gray-500">2010</div>
-            <div class="relative bottom-0 right-0 px-2 text-gray-500">2020</div>
+            <div class="relative bottom-0 left-0 text-xl text-gray-500">2010</div>
+            <div class="relative bottom-0 right-0 text-xl text-gray-500">2020</div>
           </div>
         </div>
       </div>
-      <div class="card-front z-[2] col-span-2 col-start-3 row-start-2 h-fit" id="cardFrontInfo">
+      <div class="card-front z-[2] col-span-2 col-start-3 row-start-2" id="cardFrontInfo">
         <div class="card-title">
           <h2 class="inline text-lg text-neutral-800">Indicators</h2>
           <button
