@@ -166,7 +166,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // recover the option that has been chosen
       const selectedOption = d3.select(this).property('selectedIndex');
 
-      const el = document.querySelector('#yearValue');
+      const el = document.querySelector('#timelineRange');
       console.log(parseInt(el.value, 10));
       // console.log(selectedOption);
       // run the updateChart function with this selected option
