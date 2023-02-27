@@ -32,27 +32,28 @@ function wrap(text, width2) {
 // Parse the Data
 d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
   const margin = {
-    t: 40,
+    t: 60,
     r: 40,
     b: 40,
     l: 180,
   };
-  const width = 600;
-  const height = 600;
-
-  const svg = d3
-    .select('#chart9')
-    .append('svg')
-    .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-    .attr('style', 'max-width: 100%; height: auto')
-    .append('g')
-    .attr('transform', `translate(${margin.l}, ${margin.t})`);
+  const width = 500;
+  const height = 450;
 
   // group data by 'year'
   const dataByYear = d3.group(data, (d) => d.time_period);
 
+  const chart = d3.select('#chart9');
+
   function updateChart9(country, year) {
-    svg.selectAll('*').remove();
+    chart.selectAll('*').remove();
+
+    const svg = chart
+      .append('svg')
+      .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
+      .attr('style', 'max-width: 100%; height: auto')
+      .append('g')
+      .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
     d3.select('#chart9Country').html(country);
     d3.select('#chart9Year').html(year);
@@ -80,7 +81,8 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
       const x = d3
         .scaleLinear()
         .domain([0, d3.max(top10.map((d) => d.value))])
-        .range([0, width]);
+        .range([0, width])
+        .nice();
       svg
         .append('g')
         .attr('transform', `translate(0, ${height})`)
@@ -108,34 +110,34 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
         .attr('fill', 'steelblue');
 
       // Bars
-      svg
-        .selectAll('rect')
-        .data(top10)
-        .join('text')
-        .attr('x', x(0))
-        .attr('y', (d) => y(d.icd10))
-        .text('prova');
+      // svg
+      //   .selectAll('rect')
+      //   .data(top10)
+      //   .join('text')
+      //   .attr('x', x(0))
+      //   .attr('y', (d) => y(d.icd10))
+      //   .text('prova');
 
       svg
         .selectAll('myRect')
         .data(top10)
         .join('text')
-        .attr('x', (d) => x(d.value) - margin.r)
+        .attr('x', (d) => x(d.value) - 50)
         .attr('y', (d) => y(d.icd10) + 25)
         .text((d) => d.value)
         .attr('dominant-baseline', 'middle')
-        .attr('font-size', '12px')
+        .attr('font-size', '14px')
         .attr('fill', 'white');
     } else {
-      svg
-        .append('text')
-        .attr('x', width / 2 - 80)
-        .attr('y', height / 2 - margin.b)
-        .attr('text-anchor', 'middle')
-        .style('font-size', 'xxx-large')
-        .attr('alignment-baseline', 'middle')
-        .text('No Data for selected year')
-        .attr('fill', '#CCCCCC');
+      chart.selectAll('*').remove();
+      chart
+        .attr('class', 'h-[200px] md:h-[600px]')
+        .append('div')
+        .attr(
+          'class',
+          'inset-0 flex items-center justify-center rounded-2xl h-full text-3xl text-neutral-400',
+        )
+        .html('No data for selected year!');
     }
   }
 
