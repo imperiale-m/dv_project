@@ -5,7 +5,9 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
     (data) => {
       // console.log(data);
 
-      function drawChart(filtData) {
+      function drawChart(filteredData) {
+        d3.selectAll('#chart2 > svg').remove();
+
         const margin = {
           t: 40,
           r: 60,
@@ -27,7 +29,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         // Add X axis --> it is a date format
         const xAxis = d3
           .scaleBand()
-          .domain(d3.map(filtData, (d) => d.time_period))
+          .domain(d3.map(filteredData, (d) => d.time_period))
           .rangeRound([0, width])
           .padding(1);
 
@@ -42,7 +44,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         // console.log(meanData);
 
         const f1 = d3.extent(meanData, (d) => d.value);
-        const f2 = d3.extent(filtData, (d) => d.life_expectancy_total);
+        const f2 = d3.extent(filteredData, (d) => d.life_expectancy_total);
 
         const padding = 0.05; // 5% padding
         const [minY, maxY] = d3.extent([...f1, ...f2]);
@@ -58,7 +60,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
         // Add the line
         const line = svg
           .append('path')
-          .datum(filtData)
+          .datum(filteredData)
           .attr('fill', 'none')
           .attr('stroke', 'steelblue')
           .attr('stroke-width', 1.5)
@@ -81,7 +83,7 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
           .duration(2000);
 
         // add the label to the end of the line
-        const lastDataPoint = filtData[filtData.length - 1];
+        const lastDataPoint = filteredData[filteredData.length - 1];
         svg
           .append('text')
           .attr('x', xAxis(lastDataPoint.time_period) + 5)
@@ -205,9 +207,26 @@ d3.csv('data/preprocessedData.csv', d3.autoType)
           .text('Life expectancy at birth, total (years)');
       }
 
-      const filtData = data.filter((d) => d.country === 'Italy');
+      // const el = document.querySelector('#countryValue');
+      // Select the element you want to observe
+      const targetNode = document.getElementById('countryValue');
 
-      drawChart(filtData);
+      // Store the initial value
+      let previousValue = targetNode.textContent;
+
+      const filteredData = data.filter((d) => d.country === 'Italy');
+      drawChart(filteredData);
+
+      // Set an interval to check for changes
+      setInterval(() => {
+        if (targetNode.textContent !== previousValue) {
+          const newValue = targetNode.textContent;
+          previousValue = newValue;
+          // console.log(newValue.toString());
+          const filteredData = data.filter((d) => d.country === newValue.toString());
+          drawChart(filteredData);
+        }
+      }, 500); // Check every second
     },
   )
   .catch((e) => {

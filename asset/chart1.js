@@ -219,6 +219,23 @@ Promise.all([
             );
         }
       }
+      const targetNode = document.getElementById('amount');
+
+      // Store the initial value
+      let previousValue = parseInt(targetNode.value, 10);
+
+      console.log(previousValue);
+
+      // Set an interval to check for changes
+      setInterval(() => {
+        if (targetNode.textContent !== previousValue) {
+          const newValue = targetNode.textContent;
+          previousValue = newValue;
+          console.log(d3.select('#countryValue').text());
+          // d3.select('#lifeExpValue').text(`${d3.select(this).data()[0].lifeExp} years`);
+          // d3.select('#gdpValue').text(d3.select(this).data()[0].gdp);
+        }
+      }, 500); // Check every second
 
       g.selectAll('path').on('click', clicked);
       svg.on('click', reset);

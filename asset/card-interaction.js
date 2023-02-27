@@ -24,6 +24,8 @@ function inc(element) {
     updateChart1(parseInt(el.value, 10));
     updateChart5(parseInt(el.value, 10));
     updateChart7(parseInt(el.value, 10));
+    updateChart3(0, parseInt(el.value, 10));
+    updateChart8(0, parseInt(el.value, 10));
   }
 }
 
@@ -35,5 +37,7 @@ function dec(element) {
     updateChart1(parseInt(el.value, 10));
     updateChart5(parseInt(el.value, 10));
     updateChart7(parseInt(el.value, 10));
+    updateChart3(0, parseInt(el.value, 10));
+    updateChart8(0, parseInt(el.value, 10));
   }
 }

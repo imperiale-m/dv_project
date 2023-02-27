@@ -5,6 +5,15 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
     // List of groups (here I have one group per column)
     const allGroup = ['Alcohol', 'Tobacco', 'Working Hours', 'Measles', 'HEPB', 'DPT', 'BCG'];
+    const xAxisLabels = [
+      'Alcohol (litres of pure alcohol per capita)',
+      'Tobacco (age-standardized % of current tobacco use)',
+      'Working Hours (hours/year)',
+      'Measles (% of children ages 12-23 months)',
+      'HEPB (% of children ages 12-23 months)',
+      'DPT (% of children ages 12-23 months)',
+      'BCG (% of children ages 12-23 months)',
+    ];
 
     // add the options to the button
     d3.select('#selectButtonScatter')
@@ -16,7 +25,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
     const params = ['alcohol', 'tobacco', 'working_hours', 'measles', 'hepb', 'dpt', 'bcg'];
 
-    function drawChart(filtData, x, y) {
+    function drawChart(filteredData, x, y) {
       const margin = {
         t: 60,
         r: 80,
@@ -28,7 +37,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
       // xAxis
       const xDomain = d3.extent(
-        filtData.filter((d) => d[params[x]] !== 0),
+        filteredData.filter((d) => d[params[x]] !== 0),
         (d) => d[params[x]],
       );
       const xRange = [10, width - 10];
@@ -36,7 +45,10 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const xAxis = d3.axisBottom(xScale);
 
       // yAxis
-      const yDomain = d3.extent(filtData, (d) => d[y]);
+      const yDomain = d3.extent(
+        filteredData.filter((d) => d[y] !== 0),
+        (d) => d[y],
+      );
       const yRange = [height - 10, 10];
       const yScale = d3.scaleLinear(yDomain, yRange).nice();
       const yAxis = d3.axisLeft(yScale);
@@ -88,7 +100,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
           .html(
             `Country = <b>${d.country}</b><br>
            Life expectancy = <b>${Number.parseFloat(d[y]).toFixed(2)} years (${d.time_period})</b>
-                    <br>${params[x].toUpperCase()} immunization = <b>${d[params[x]]} %</b>`,
+                    <br>${xAxisLabels[x]} = <b>${d[params[x]]}</b>`,
           )
           .style('top', `${event.pageY}px`)
           .style('left', `${event.pageX + 20}px`);
@@ -97,7 +109,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       svg
         .append('g')
         .selectAll('dot')
-        .data(filtData.filter((d) => d[params[x]] !== 0))
+        .data(filteredData.filter((d) => d[params[x]] !== 0))
         .join('circle')
         .attr('class', (d) => `dot ${d.country}`)
         .attr('cx', (d) => xScale(d[params[x]]))
@@ -117,7 +129,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
         .attr('text-anchor', 'middle')
         .attr('transform', `translate(${width / 2}, ${height + margin.b / 2})`)
         .attr('class', 'axis-name')
-        .text(params[x].toUpperCase());
+        .text(xAxisLabels[x]);
 
       // y-axis name
       svg
@@ -128,21 +140,25 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
         .text('Life expectancy (years)');
 
       // add title
-      svg
-        .append('text')
-        .attr('x', width / 2)
-        .attr('y', 10 - margin.t / 2)
-        .attr('text-anchor', 'middle')
-        .style('font-size', '20px')
-        .text('Title');
+      // svg
+      //   .append('text')
+      //   .attr('x', width / 2)
+      //   .attr('y', 10 - margin.t / 2)
+      //   .attr('text-anchor', 'middle')
+      //   .style('font-size', '20px')
+      //   .text('Title');
     }
 
-    function update(selectedGroup, period) {
+    function updateChart3(selectedGroup, year) {
       d3.selectAll('#chart3 > svg').remove();
 
-      const filtData = data.filter((d) => d.time_period === period);
+      // group data by 'time_period'
+      const dataByYear = d3.group(data, (d) => d.time_period);
 
-      drawChart(filtData, selectedGroup, 'life_expectancy_total');
+      // console.log(dataByYear.get(2009));
+      const filteredData = dataByYear.get(year) ?? 0;
+
+      drawChart(filteredData, selectedGroup, 'life_expectancy_total');
     }
 
     // When the button is changed, run the updateChart function
@@ -150,11 +166,14 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // recover the option that has been chosen
       const selectedOption = d3.select(this).property('selectedIndex');
 
+      const el = document.querySelector('#amount');
+      console.log(parseInt(el.value, 10));
       // console.log(selectedOption);
       // run the updateChart function with this selected option
-      update(selectedOption, 2015);
+      updateChart3(selectedOption, parseInt(el.value, 10));
     });
-    update(0, 2015);
+    window.updateChart3 = updateChart3;
+    updateChart3(0, 2010);
   })
   .catch((e) => {
     console.log(e);
