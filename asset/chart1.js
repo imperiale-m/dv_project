@@ -1,6 +1,22 @@
 const dataset = new Map();
 
-const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
+const colorScale = d3.scaleThreshold().domain([65, 70, 75, 80, 85, 90]).range(d3.schemeGreens[6]);
+
+// Add color legend
+legendWidth = 50;
+const labels = [65, 70, 75, 80, 85, 90];
+const legendSize = legendWidth * labels.length;
+
+const legend = d3
+  .legendColor()
+  .labels((d) => labels[d.i])
+  .shapePadding(0)
+  .orient('horizontal')
+  .shapeWidth(legendWidth)
+  .scale(colorScale)
+  .labelAlign('start');
+
+// const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
 
 Promise.all([
   d3.json('./data/CNTR_RG_10M_2016_4326.geojson'),
@@ -205,6 +221,30 @@ Promise.all([
 
       g.selectAll('path').on('click', clicked);
       svg.on('click', reset);
+
+      svg
+        .append('g')
+        .attr('class', 'legendThreshold')
+        .attr('font-family', 'Fira Sans, sans-serif')
+        .attr('font-size', '12px')
+        .attr(
+          'transform',
+          `translate(${(1 * width - legendSize - (margin.l - margin.r)) / 2},
+                                  ${height})`,
+        );
+
+      svg
+        .select('.legendThreshold')
+        .append('text')
+        .attr('class', 'caption')
+        .attr('x', legendWidth)
+        .attr('y', -10)
+        .style('font-family', 'Fira Sans, sans-serif')
+        .style('font-size', '14px')
+        .attr('text-anchor', 'middle')
+        .text('Life Expectancy');
+
+      svg.select('.legendThreshold').call(legend);
     }
     window.updateChart1 = updateChart1;
     updateChart1(2010);
