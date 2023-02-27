@@ -77,8 +77,8 @@ d3.csv('./data/healthExpenditure2.csv', d3.autoType)
           .transition()
           .ease(d3.easeLinear)
           .attr('stroke-dashoffset', 0)
-          .delay(1000)
-          .duration(3000);
+          .delay(100)
+          .duration(2000);
         // Add the points
         svg
           .append('g')
