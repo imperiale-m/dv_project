@@ -1,19 +1,36 @@
-function expandCard(card, open, close) {
-  d3.select('#modal').classed('hidden', false);
-  d3.select(card).classed('active', true);
-  d3.select(open).classed('hidden', true);
-  d3.select(close).classed('hidden', false);
-  document.body.style.overflow = 'hidden';
-  document.documentElement.requestFullscreen();
+function zoom(card, button) {
+  const modal = document.getElementById('modal');
+  modal.classList.toggle('hidden');
+  if (modal.classList.contains('hidden')) {
+    card.classList.toggle('active');
+    document.body.style.overflow = 'auto';
+    document.exitFullscreen();
+    button.innerHTML = 'Zoom';
+  } else {
+    card.classList.toggle('active');
+    document.body.style.overflow = 'hidden';
+    document.documentElement.requestFullscreen();
+    button.innerHTML = 'Exit Zoom';
+  }
 }
 
-function closeCard(card, open, close) {
-  d3.select('#modal').classed('hidden', true);
-  d3.select(card).classed('active', false);
-  d3.select(open).classed('hidden', false);
-  d3.select(close).classed('hidden', true);
+function InfoCard(cardFront, cardBack, info) {
+  cardFront.classList.toggle('z-[2]');
+  cardBack.classList.toggle('z-[1]');
+  info.classList.toggle('text-white');
+  if (cardFront.classList.contains('z-[2]')) {
+    info.innerHTML = 'Info';
+  } else {
+    info.innerHTML = 'Close Info';
+  }
+  if (cardFront.classList.contains('active')) {
+    cardBack.classList.toggle('active');
+  }
+}
+
+function closeInitialPopup() {
+  document.getElementById('initialPopup').classList.add('hidden');
   document.body.style.overflow = 'auto';
-  document.exitFullscreen();
 }
 
 function inc(element) {

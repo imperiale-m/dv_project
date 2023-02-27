@@ -8,7 +8,7 @@ d3.csv('../data/tgs.csv', d3.autoType)
       l: 120,
     };
     const width = 600;
-    const height = 600;
+    const height = 500;
 
     // console.log(data);
 
@@ -63,7 +63,7 @@ d3.csv('../data/tgs.csv', d3.autoType)
         const tooltip = d3.select('#chart7').append('div').attr('class', 'tooltip');
 
         const mouseover = function () {
-          tooltip.style('z-index', 2);
+          tooltip.style('z-index', 40);
           tooltip.transition().style('opacity', 0.9);
           d3.select(this).transition().style('opacity', 1).attr('r', 6);
         };

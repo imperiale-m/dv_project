@@ -49,6 +49,7 @@ Promise.all([
       .append('svg')
       .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
       .attr('style', 'max-width: 100%; height: auto')
+      .attr('class', 'cursor-pointer')
       .append('g')
       .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
@@ -174,7 +175,7 @@ Promise.all([
       // Redraw the map with the updated projection
       g.selectAll('path').attr('d', pathGenerator);
 
-      const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', zoomed);
+      const zoom = d3.zoom().scaleExtent([1, 3]).on('zoom', zoomed);
 
       svg.call(zoom).on('wheel.zoom', null);
 
@@ -204,6 +205,7 @@ Promise.all([
             d3.select('#countryValue').text(d3.select(this).data()[0].properties.NAME_ENGL);
             d3.select('#lifeExpValue').text(`${d3.select(this).data()[0].lifeExp} years`);
             d3.select('#gdpValue').text(d3.select(this).data()[0].gdp);
+            drawChart2(d3.select(this).data()[0].properties.ISO3_CODE);
             d3.select(this).transition().style('fill', 'gold');
           }
           svg
@@ -213,7 +215,7 @@ Promise.all([
               zoom.transform,
               d3.zoomIdentity
                 .translate(width / 2, height / 2)
-                .scale(Math.min(8, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
+                .scale(Math.min(3, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
                 .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
               d3.pointer(event, svg.node()),
             );

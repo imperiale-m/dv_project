@@ -14,20 +14,29 @@
 }
 
 @layer components {
-  .card {
-    @apply rounded-2xl bg-white shadow-sm hover:shadow-md;
-  }
+    .card {
+        @apply relative rounded-2xl  bg-white;
+    }
 
-  .card-title {
-    @apply flex items-center justify-between rounded-t-lg border-b border-gray-100 py-4 px-6;
-  }
+    .card-front {
+        @apply inset-0 rounded-2xl bg-white shadow-sm;
+    }
 
-  .axis-name {
-    @apply fill-neutral-500 text-xs;
-  }
-  .modalButton {
-    @apply rounded-2xl bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800
-    focus:outline-none focus:ring-4 focus:ring-blue-300;
+    .card-back {
+        @apply inset-0 flex items-center justify-center rounded-2xl border border-neutral-100 bg-neutral-800 text-white;
+    }
+
+    .card-title {
+        @apply flex items-center justify-between rounded-t-lg border-b border-gray-100 py-3 px-6;
+    }
+
+    .axis-name {
+        @apply fill-neutral-500 text-xs;
+    }
+
+    .modalButton {
+        @apply rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800
+        focus:outline-none focus:ring-4 focus:ring-blue-300;
   }
 }
 
@@ -63,28 +72,28 @@
 }
 
 .active {
-  position: fixed;
-  z-index: 10;
-  max-height: 90%;
-  width: 60%;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all 3s;
+    position: fixed;
+    z-index: 20;
+    max-height: 85%;
+    width: 60%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*transition: all 3s;*/
 }
 
 .modal {
-  position: fixed;
-  z-index: 5;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all 1s;
+    position: fixed;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*transition: all 1s;*/
 }
 
 /* Chrome, Safari, Edge, Opera */
