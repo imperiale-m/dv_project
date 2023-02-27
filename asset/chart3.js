@@ -1,5 +1,5 @@
 // Data
-d3.csv('data/eurostat_data_2.csv', d3.autoType)
+d3.csv('./data/eurostat_data_2.csv', d3.autoType)
   .then((data) => {
     // console.log(data);
 

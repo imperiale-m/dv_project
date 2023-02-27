@@ -1,5 +1,5 @@
 // Dot-plot
-d3.csv('data/eurostat_data_2.csv', d3.autoType)
+d3.csv('./data/eurostat_data_2.csv', d3.autoType)
   .then((data) => {
     // set the dimensions and margins of the graph
     const margin = {

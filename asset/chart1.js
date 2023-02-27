@@ -1,31 +1,11 @@
-// const urls = ['file1.csv', 'file2.csv'];
-//
-// // Create an array of Promises for each file
-// const promises = urls.map((url) => d3.csv(url));
-//
-// // Wait for all the Promises to complete
-// Promise.all(promises)
-//   .then((data) => {
-//     // data will be an array of arrays, one for each CSV file
-//     const data1 = data[0];
-//     const data2 = data[1];
-//
-//     // Process the data here
-//     console.log(data1);
-//     console.log(data2);
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
-
 const dataset = new Map();
 
 const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
 
 Promise.all([
-  d3.json('../data/CNTR_RG_10M_2016_4326.geojson'),
+  d3.json('./data/CNTR_RG_10M_2016_4326.geojson'),
   d3.csv(
-    'data/eurostat_data_2.csv',
+    './data/eurostat_data_2.csv',
     (d) => {
       dataset.set(d.geo, d.life_expectancy_total);
     },

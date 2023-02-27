@@ -1,5 +1,5 @@
 // Data
-d3.csv('../data/education.csv', d3.autoType)
+d3.csv('./data/education.csv', d3.autoType)
   .then((data) => {
     const margin = {
       t: 50,

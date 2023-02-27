@@ -30,7 +30,7 @@ function wrap(text, width2) {
 }
 
 // Parse the Data
-d3.csv('../data/death_causes.csv', d3.autoType).then((data) => {
+d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
   const margin = {
     t: 40,
     r: 40,

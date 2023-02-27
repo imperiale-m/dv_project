@@ -1,5 +1,5 @@
 // Read the data
-d3.csv('data/preprocessedData.csv', d3.autoType)
+d3.csv('./data/preprocessedData.csv', d3.autoType)
   .then(
     // Now I can use this dataset:
     (data) => {
