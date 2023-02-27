@@ -18,33 +18,33 @@
     <script defer src="./asset/chart1.js"></script>
     <script defer src="./asset/chart2.js"></script>
     <script defer src="./asset/chart3.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/d3-zoom@3'></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-zoom@3"></script>
     <script defer src="./asset/chart4.js"></script>
     <script defer src="asset/chart5.js"></script>
     <script defer src="./asset/chart6.js"></script>
     <script defer src="./asset/chart7.js"></script>
     <script defer src="./asset/chart8.js"></script>
-    <script defer src="asset/chart9.js"></script>
+    <script defer src="./asset/chart9.js"></script>
     <script defer src="./asset/card-interaction.js"></script>
-<!--    <script defer src="./asset/multi-select-dropdown.js"></script>-->
+    <!--    <script defer src="./asset/multi-select-dropdown.js"></script>-->
   </head>
 
-  <body class='bg-neutral-100'>
-  <div class='grid grid-cols-4 gap-4 px-4 py-4 sm:px-12'>
-    <div class='col-span-4 row-span-1 text-center text-3xl font-bold'>
-      Data visualization Project
-    </div>
-    <div class='card col-span-2 col-start-1 row-start-2'>
-      <div class='card-title'>
-        <h2 class='inline text-lg text-neutral-800'>Year Selector</h2>
+  <body class="bg-neutral-100">
+    <div class="grid grid-cols-4 gap-4 px-4 py-4 sm:px-12">
+      <div class="col-span-4 row-span-1 text-center text-3xl font-bold">
+        Data visualization Project
       </div>
-      <div class='px-4 py-2' id='timeline'>
-        <!-- Card content goes here-->
-        <div class='flex h-8 items-center'>
-          <!--            <label class="mr-4 w-full text-sm font-semibold text-gray-700" for="amount"-->
-          <!--              >Year-->
-          <!--            </label>-->
-          <div class='relative flex h-8 w-full flex-row rounded-lg bg-transparent'>
+      <div class="card col-span-2 col-start-1 row-start-2">
+        <div class="card-title">
+          <h2 class="inline text-lg text-neutral-800">Year Selector</h2>
+        </div>
+        <div class="px-4 py-2" id="timeline">
+          <!-- Card content goes here-->
+          <div class="flex h-8 items-center">
+            <!--            <label class="mr-4 w-full text-sm font-semibold text-gray-700" for="amount"-->
+            <!--              >Year-->
+            <!--            </label>-->
+            <div class="relative flex h-8 w-full flex-row rounded-lg bg-transparent">
               <button
                 class="h-full w-20 cursor-pointer rounded-l bg-gray-300 text-gray-600 outline-none hover:bg-gray-400 hover:text-gray-700"
                 onclick="dec('amount')">
@@ -64,388 +64,405 @@
           </div>
         </div>
       </div>
-    <div class='card col-span-2 col-start-3 row-start-2'>
-      <!--        <div class="card-title">-->
-      <!--          <h2 class="inline text-lg text-neutral-800">Info</h2>-->
-      <!--        </div>-->
-      <dl
-        class='mx-auto grid max-w-screen-xl grid-cols-2 gap-8 p-4 text-gray-900 sm:grid-cols-2 sm:p-8 xl:grid-cols-3'>
-        <div class='flex flex-col items-center justify-center'>
-          <dt class='mb-2 font-extrabold sm:text-xl xl:text-3xl' id='countryValue'>-</dt>
-          <dd class='font-light text-gray-400'>Country</dd>
-        </div>
-        <div class='flex flex-col items-center justify-center'>
-          <dt class='mb-2 font-extrabold sm:text-xl xl:text-3xl' id='lifeExpValue'>0</dt>
-          <dd class='font-light text-gray-400'>Life expectancy</dd>
-        </div>
-        <div class='flex flex-col items-center justify-center'>
-          <dt class='mb-2 font-extrabold sm:text-xl xl:text-3xl' id='gdpValue'>0</dt>
-          <dd class='font-light text-gray-400'>GDP</dd>
-        </div>
-      </dl>
-    </div>
-    <!-- Chart 1-->
-    <div class='card-front z-[2] col-span-2 col-start-1 row-span-2 row-start-3' id='cardFront1'>
-      <div class='card-title'>
-        <h2 class='inline text-2xl text-neutral-800'>Life expectancy in the European Union</h2>
-        <button
-          class='info z-[10] underline'
-          id='info1'
-          onclick='InfoCard(cardFront1, cardBack1, info1)'
-          type='button'>
-          Info
-        </button>
+      <div class="card col-span-2 col-start-3 row-start-2">
+        <!--        <div class="card-title">-->
+        <!--          <h2 class="inline text-lg text-neutral-800">Info</h2>-->
+        <!--        </div>-->
+        <dl
+          class="mx-auto grid max-w-screen-xl grid-cols-2 gap-8 p-4 text-gray-900 sm:grid-cols-2 sm:p-8 xl:grid-cols-3">
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="countryValue">-</dt>
+            <dd class="font-light text-gray-400">Country</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="lifeExpValue">0</dt>
+            <dd class="font-light text-gray-400">Life expectancy</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 font-extrabold sm:text-xl xl:text-3xl" id="gdpValue">0</dt>
+            <dd class="font-light text-gray-400">GDP</dd>
+          </div>
+        </dl>
       </div>
-      <div class='px-4 py-2' id='chart1'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='card-back z-[1] col-span-2 col-start-1 row-span-2 row-start-3' id='cardBack1'>
-      <div class='px-[10%]'>
-        <h2 class='inline text-2xl text-neutral-100'>Choropleth Map</h2>
-        <p>
-          Our choropleth map visualizes life expectancy data across different regions or
-          countries. The map uses color-coding to show variations in life expectancy, with darker
-          colors indicating higher life expectancy and lighter colors representing lower life
-          expectancy. This map provides a quick and intuitive way to compare life expectancy
-          across different geographic areas and can be a useful tool for understanding disparities
-          in health outcomes.
-        </p>
-      </div>
-    </div>
-    <!-- Chart 2 -->
-    <div class='card-front z-[2] col-span-1 col-start-3 row-start-3' id='cardFront2'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>
-          <span class='text-blue-800' id='chart2Country'></span> life expectancy trend
-        </h2>
-        <div class='flex'>
+      <!-- Chart 1-->
+      <div class="card-front z-[2] col-span-2 col-start-1 row-span-2 row-start-3" id="cardFront1">
+        <div class="card-title">
+          <h2 class="inline text-2xl text-neutral-800">Life expectancy in the European Union</h2>
           <button
-            class='mr-2 justify-self-end underline'
-            id='button2'
-            onclick='zoom(cardFront2, button2)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info2'
-            onclick='InfoCard(cardFront2, cardBack2, info2)'
-            type='button'>
+            class="info z-[10] underline"
+            id="info1"
+            onclick="InfoCard(cardFront1, cardBack1, info1)"
+            type="button">
             Info
           </button>
         </div>
-      </div>
-      <div class='px-4 py-2' id='chart2'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='card-back z-[1] col-span-1 col-start-3 row-start-3' id='cardBack2'>
-      <div class='px-[10%]'>
-        <h2 class='inline text-2xl text-neutral-100'>Line Chart</h2>
-        <p>
-          In this chart the primary objective is to track the trends in life expectancy over a
-          20-year period, from 2000 to 2020, in the selected country, and to compare it with the
-          European Union average.
-        </p>
-      </div>
-    </div>
-    <!-- Chart 3 -->
-    <div class='card-front z-[2] col-span-1 col-start-4 row-start-3' id='cardFront3'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>Scatter-plot</h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button3'
-            onclick='zoom(cardFront3, button3)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info3'
-            onclick='InfoCard(cardFront3, cardBack3, info3)'
-            type='button'>
-            Info
-          </button>
+        <div class="px-4 py-2" id="chart1">
+          <!-- Card content goes here -->
         </div>
       </div>
-      <div class='rounded-t-lg border-b border-gray-100 py-3 px-6'>
-        <label class='mr-2' for='selectButtonScatter'>Variable</label
-        ><select id='selectButtonScatter'></select>
-      </div>
-      <div class='px-4 py-2' id='chart3'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='card-back z-[1] col-span-1 col-start-4 row-start-3' id='cardBack3'>
-      Scatter-plot
-    </div>
-    <!-- Chart 4 -->
-    <div class='card-front z-[2] col-span-1 col-start-3 row-start-4' id='cardFront4'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>The Impact of Health Spending</h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button4'
-            onclick='zoom(cardFront4, button4)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info4'
-            onclick='InfoCard(cardFront4, cardBack4, info4)'
-            type='button'>
-            Info
-          </button>
+      <div class="card-back z-[1] col-span-2 col-start-1 row-span-2 row-start-3" id="cardBack1">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Choropleth Map</h2>
+          <p>
+            Our choropleth map visualizes life expectancy data across different regions or
+            countries. The map uses color-coding to show variations in life expectancy, with darker
+            colors indicating higher life expectancy and lighter colors representing lower life
+            expectancy. This map provides a quick and intuitive way to compare life expectancy
+            across different geographic areas and can be a useful tool for understanding disparities
+            in health outcomes.
+          </p>
         </div>
       </div>
-      <div class='px-4 py-2' id='chart4'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='card-back z-[1] col-span-1 col-start-3 row-start-4' id='cardBack4'>
-      Connected Scatter-plot
-    </div>
-    <!-- Chart 5 -->
-    <div class='card-front z-[2] col-span-1 col-start-4 row-start-4' id='cardFront5'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>Top 9 deadliest diseases</h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button5'
-            onclick='zoom(cardFront5, button5)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info5'
-            onclick='InfoCard(cardFront5, cardBack5, info5)'
-            type='button'>
-            Info
-          </button>
+      <!-- Chart 2 -->
+      <div class="card-front z-[2] col-span-1 col-start-3 row-start-3" id="cardFront2">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">
+            <span class="text-blue-800" id="chart2Country"></span> life expectancy trend
+          </h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button2"
+              onclick="zoom(cardFront2, button2)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info2"
+              onclick="InfoCard(cardFront2, cardBack2, info2)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="px-4 py-2" id="chart2">
+          <!-- Card content goes here -->
         </div>
       </div>
+      <div class="card-back z-[1] col-span-1 col-start-3 row-start-3" id="cardBack2">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Line Chart</h2>
+          <p>
+            In this chart the primary objective is to track the trends in life expectancy over a
+            20-year period, from 2000 to 2020, in the selected country, and to compare it with the
+            European Union average.
+          </p>
+        </div>
+      </div>
+      <!-- Chart 3 -->
+      <div class="card-front z-[2] col-span-1 col-start-4 row-start-3" id="cardFront3">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">Scatter-plot</h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button3"
+              onclick="zoom(cardFront3, button3)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info3"
+              onclick="InfoCard(cardFront3, cardBack3, info3)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="rounded-t-lg border-b border-gray-100 py-3 px-6">
+          <label class="mr-2" for="selectButtonScatter">Variable</label
+          ><select id="selectButtonScatter"></select>
+        </div>
+        <div class="px-4 py-2" id="chart3">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <div class="card-back z-[1] col-span-1 col-start-4 row-start-3" id="cardBack3">
+        Scatter-plot
+      </div>
+      <!-- Chart 4 -->
+      <div class="card-front z-[2] col-span-1 col-start-3 row-start-4" id="cardFront4">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">The Impact of Health Spending</h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button4"
+              onclick="zoom(cardFront4, button4)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info4"
+              onclick="InfoCard(cardFront4, cardBack4, info4)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="px-4 py-2" id="chart4">
+          <!-- Card content goes here -->
+        </div>
+      </div>
+      <div class="card-back z-[1] col-span-1 col-start-3 row-start-4" id="cardBack4">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Connected scatter plot</h2>
+          <p>
+            In this graph, we use a connected scatter plot to examine the relationship between
+            health expenditure and life expectancy over time. The visualization enables us to
+            explore how changes in health expenditure have impacted life expectancy trends and
+            allows us to identify patterns or trends in the data.
+          </p>
+        </div>
+      </div>
+      <!-- Chart 5 -->
+      <div class="card-front z-[2] col-span-1 col-start-4 row-start-4" id="cardFront5">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">Top 9 deadliest diseases</h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button5"
+              onclick="zoom(cardFront5, button5)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info5"
+              onclick="InfoCard(cardFront5, cardBack5, info5)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
         <div class="px-4 py-2" id="chart5">
           <!-- Card content goes here -->
         </div>
       </div>
-    <div class='card-back z-[1] col-span-1 col-start-4 row-start-4' id='cardBack5'>Bar chart</div>
+      <div class="card-back z-[1] col-span-1 col-start-4 row-start-4" id="cardBack5">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Bar plot</h2>
+          <p>
+            This graph displays the top deadliest diseases in the European Union, presenting the
+            number of deaths attributed to each disease. The data are organized in descending order,
+            with the disease responsible for the highest number of deaths listed first.
+          </p>
+        </div>
+      </div>
       <!-- Chart 6 -->
-    <div class='card-front z-[2] col-span-2 col-start-1 row-start-5' id='cardFront6'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>
-          Gender Gap in Life Expectancy in the European Union
-        </h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button6'
-            onclick='zoom(cardFront6, button6)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info6'
-            onclick='InfoCard(cardFront6, cardBack6, info6)'
-            type='button'>
-            Info
-          </button>
+      <div class="card-front z-[2] col-span-2 col-start-1 row-start-5" id="cardFront6">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">
+            Gender Gap in Life Expectancy in the European Union
+          </h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button6"
+              onclick="zoom(cardFront6, button6)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info6"
+              onclick="InfoCard(cardFront6, cardBack6, info6)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="px-4 py-2" id="chart6">
+          <!-- Card content goes here -->
         </div>
       </div>
-      <div class='px-4 py-2' id='chart6'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='card-back z-[1] col-span-2 col-start-1 row-start-5' id='cardBack6'>
-      <div class='px-[10%]'>
-        <h2 class='inline text-2xl text-neutral-100'>Dot-Plot</h2>
-        <p>
-          The purpose of this chart is to visually depict and compare the differences in life
-          expectancy between men and women in different countries in Europe
-        </p>
-      </div>
-    </div>
-    <!-- Chart 7 -->
-    <div class='card-front z-[2] col-span-2 col-start-3 row-start-5' id='cardFront7'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>
-          Exploring Regional Variations in Life Expectancy
-        </h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button7'
-            onclick='zoom(cardFront7, button7)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info7'
-            onclick='InfoCard(cardFront7, cardBack7, info7)'
-            type='button'>
-            Info
-          </button>
+      <div class="card-back z-[1] col-span-2 col-start-1 row-start-5" id="cardBack6">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Dot-Plot</h2>
+          <p>
+            The purpose of this chart is to visually depict and compare the differences in life
+            expectancy between men and women in different countries in Europe
+          </p>
         </div>
       </div>
-      <div class='px-4 py-2' id='chart7'>
-        <!-- Card content goes here -->
-      </div>
-    </div>
-    <div class='card-back z-[1] col-span-2 col-start-3 row-start-5' id='cardBack7'>
-      <div class='px-[10%]'>
-        <h2 class='inline text-2xl text-neutral-100'>Strip-Plot</h2>
-        <p>
-          With this chart we can observe the regional difference inside the different countries in
-          the European Union.
-        </p>
-      </div>
-    </div>
-    <!-- Chart 8 -->
-    <div class='card-front z-[2] col-span-2 col-start-1 row-start-6' id='cardFront8'>
-      <div class='card-title'>
-        <h2 class='inline text-2xl text-neutral-800'>
-          <span id='chart8Variable'></span> vs Life Expectancy
-        </h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button8'
-            onclick='zoom(cardFront8, button8)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info8'
-            onclick='InfoCard(cardFront8, cardBack8, info8)'
-            type='button'>
-            Info
-          </button>
+      <!-- Chart 7 -->
+      <div class="card-front z-[2] col-span-2 col-start-3 row-start-5" id="cardFront7">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">
+            Exploring Regional Variations in Life Expectancy
+          </h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button7"
+              onclick="zoom(cardFront7, button7)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info7"
+              onclick="InfoCard(cardFront7, cardBack7, info7)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="px-4 py-2" id="chart7">
+          <!-- Card content goes here -->
         </div>
       </div>
-      <div class='rounded-t-lg border-b border-gray-100 py-3 px-6'>
-        <label class='mr-2' for='selectButtonBubble'>Variable</label
-        ><select id='selectButtonBubble'></select>
+      <div class="card-back z-[1] col-span-2 col-start-3 row-start-5" id="cardBack7">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Strip-Plot</h2>
+          <p>
+            With this chart we can observe the regional difference inside the different countries in
+            the European Union.
+          </p>
+        </div>
       </div>
-      <div class='px-4 py-2' id='chart8'>
-        <!-- Card content goes here -->
+      <!-- Chart 8 -->
+      <div class="card-front z-[2] col-span-2 col-start-1 row-start-6" id="cardFront8">
+        <div class="card-title">
+          <h2 class="inline text-2xl text-neutral-800">
+            <span id="chart8Variable"></span> vs Life Expectancy
+          </h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button8"
+              onclick="zoom(cardFront8, button8)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info8"
+              onclick="InfoCard(cardFront8, cardBack8, info8)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="rounded-t-lg border-b border-gray-100 py-3 px-6">
+          <label class="mr-2" for="selectButtonBubble">Variable</label
+          ><select id="selectButtonBubble"></select>
+        </div>
+        <div class="px-4 py-2" id="chart8">
+          <!-- Card content goes here -->
+        </div>
       </div>
-    </div>
-    <div class='card-back z-[1] col-span-2 col-start-1 row-start-6' id='cardBack8'>Bar chart</div>
+      <div class="card-back z-[1] col-span-2 col-start-1 row-start-6" id="cardBack8">Bar chart</div>
       <!-- Chart 9-->
-    <div class='card-front z-[2] col-span-2 col-start-3 row-start-6' id='cardFront9'>
-      <div class='card-title'>
-        <h2 class='inline text-xl text-neutral-800'>Waffle-chart</h2>
-        <div class='flex'>
-          <button
-            class='mr-2 justify-self-end underline'
-            id='button9'
-            onclick='zoom(cardFront9, button9)'
-            type='button'>
-            Zoom
-          </button>
-          <button
-            class='info z-[10] underline'
-            id='info9'
-            onclick='InfoCard(cardFront9, cardBack9, info9)'
-            type='button'>
-            Info
-          </button>
+      <div class="card-front z-[2] col-span-2 col-start-3 row-start-6" id="cardFront9">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">Waffle-chart</h2>
+          <div class="flex">
+            <button
+              class="mr-2 justify-self-end underline"
+              id="button9"
+              onclick="zoom(cardFront9, button9)"
+              type="button">
+              Zoom
+            </button>
+            <button
+              class="info z-[10] underline"
+              id="info9"
+              onclick="InfoCard(cardFront9, cardBack9, info9)"
+              type="button">
+              Info
+            </button>
+          </div>
+        </div>
+        <div class="flex-waffle px-4 py-2" id="chart9">
+          <!-- Card content goes here -->
         </div>
       </div>
-      <div class='flex-waffle px-4 py-2' id='chart9'>
-        <!-- Card content goes here -->
+      <div class="card-back z-[1] col-span-2 col-start-3 row-start-6" id="cardBack9">
+        Waffle chart
+      </div>
+      <!--      <div class="card col-span-2 row-start-5" id="card9">-->
+      <!--        <div class="card-title">-->
+      <!--          <h2 class="inline text-xl text-neutral-800">Waffle Chart</h2>-->
+      <!--          &lt;!&ndash;          <div class="wrapper">&ndash;&gt;-->
+      <!--          &lt;!&ndash;            <div class="container hidden" id="dropdownSelected"></div>&ndash;&gt;-->
+      <!--          &lt;!&ndash;            <div class="container">&ndash;&gt;-->
+      <!--          &lt;!&ndash;              <select id="options" multiple search="true">&ndash;&gt;-->
+      <!--          &lt;!&ndash;                <option value="Singapore">Singapore</option>&ndash;&gt;-->
+      <!--          &lt;!&ndash;                <option value="Portland">Portland</option>&ndash;&gt;-->
+      <!--          &lt;!&ndash;                <option value="Halifax">Halifax</option>&ndash;&gt;-->
+      <!--          &lt;!&ndash;                <option value="London">London</option>&ndash;&gt;-->
+      <!--          &lt;!&ndash;                <option value="Seattle">Seattle</option>&ndash;&gt;-->
+      <!--          &lt;!&ndash;                <option value="Toronto">Toronto</option>&ndash;&gt;-->
+      <!--          &lt;!&ndash;              </select>&ndash;&gt;-->
+      <!--          &lt;!&ndash;            </div>&ndash;&gt;-->
+      <!--          &lt;!&ndash;          </div>&ndash;&gt;-->
+      <!--          <button-->
+      <!--            class="popup-btn modalButton"-->
+      <!--            id="button9"-->
+      <!--            onclick="expandCard(card9, button9, closeButton9)"-->
+      <!--            type="button">-->
+      <!--            <img alt="expand icon" class="inline" height="18" src="./data/expand.svg" width="18" />-->
+      <!--          </button>-->
+      <!--          <button-->
+      <!--            class="popup-btn modalButton hidden"-->
+      <!--            id="closeButton9"-->
+      <!--            onclick="closeCard(card9, button9, closeButton9)"-->
+      <!--            type="button">-->
+      <!--            <img alt="close icon" class="inline" height="18" src="./data/close.svg" width="18" />-->
+      <!--          </button>-->
+      <!--        </div>-->
+      <!--        <div class="flex-waffle px-4 py-2" id="chart9">-->
+      <!--          &lt;!&ndash; Card content goes here &ndash;&gt;-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <div class="col-span-4 row-span-1" id="footer">
+        <footer aria-label="Footer" class="">
+          <div
+            class="border-t border-neutral-100 py-4 text-center sm:flex sm:justify-between sm:text-left">
+            <p class="text-sm text-neutral-500">
+              <span class="block sm:inline">All rights reserved</span>
+            </p>
+            <p class="mt-2 text-sm text-neutral-500 sm:order-first sm:mt-0">
+              &copy; 2022 Massimiliano Imperiale & Ani Gjergji
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
-    <div class='card-back z-[1] col-span-2 col-start-3 row-start-6' id='cardBack9'>
-      Waffle chart
+    <div class="modal hidden" id="modal"></div>
+    <div
+      class="fixed inset-0 z-50 flex h-full w-full items-center bg-black opacity-90"
+      id="initialPopup">
+      <script>
+        document.body.style.overflow = 'hidden';
+      </script>
+      <div class="mx-[30%]">
+        <h1 class="mb-4 text-5xl font-bold text-white">Data Visualization Project</h1>
+        <p class="text-xl text-neutral-100">
+          Our Data Visualization project focuses on life expectancy in the European Union. In this
+          project, we explore the differences in life expectancy between different countries and the
+          impact of social and economic factors.<br />
+          Life expectancy is a statistical measure that estimates the average amount of time a
+          person is likely to live based on current mortality rates. It's calculated by analyzing
+          the death rates of different age groups within a population and is expressed as the number
+          of years a newborn is expected to live if mortality rates remain constant throughout their
+          lifetime.<br />
+          The data has been sourced from the statistical office of the European Union (EUROSTAT) and
+          the World Health Organization (WHO).
+          <button
+            class="opacity-85 mt-6 block rounded-md bg-blue-700 px-5 py-2 text-center text-xl text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            id="initialPopupButton"
+            onclick="closeInitialPopup()"
+            type="button">
+            Continue
+          </button>
+        </p>
+      </div>
     </div>
-    <!--      <div class="card col-span-2 row-start-5" id="card9">-->
-    <!--        <div class="card-title">-->
-    <!--          <h2 class="inline text-xl text-neutral-800">Waffle Chart</h2>-->
-    <!--          &lt;!&ndash;          <div class="wrapper">&ndash;&gt;-->
-    <!--          &lt;!&ndash;            <div class="container hidden" id="dropdownSelected"></div>&ndash;&gt;-->
-    <!--          &lt;!&ndash;            <div class="container">&ndash;&gt;-->
-    <!--          &lt;!&ndash;              <select id="options" multiple search="true">&ndash;&gt;-->
-    <!--          &lt;!&ndash;                <option value="Singapore">Singapore</option>&ndash;&gt;-->
-    <!--          &lt;!&ndash;                <option value="Portland">Portland</option>&ndash;&gt;-->
-    <!--          &lt;!&ndash;                <option value="Halifax">Halifax</option>&ndash;&gt;-->
-    <!--          &lt;!&ndash;                <option value="London">London</option>&ndash;&gt;-->
-    <!--          &lt;!&ndash;                <option value="Seattle">Seattle</option>&ndash;&gt;-->
-    <!--          &lt;!&ndash;                <option value="Toronto">Toronto</option>&ndash;&gt;-->
-    <!--          &lt;!&ndash;              </select>&ndash;&gt;-->
-    <!--          &lt;!&ndash;            </div>&ndash;&gt;-->
-    <!--          &lt;!&ndash;          </div>&ndash;&gt;-->
-    <!--          <button-->
-    <!--            class="popup-btn modalButton"-->
-    <!--            id="button9"-->
-    <!--            onclick="expandCard(card9, button9, closeButton9)"-->
-    <!--            type="button">-->
-    <!--            <img alt="expand icon" class="inline" height="18" src="./data/expand.svg" width="18" />-->
-    <!--          </button>-->
-    <!--          <button-->
-    <!--            class="popup-btn modalButton hidden"-->
-    <!--            id="closeButton9"-->
-    <!--            onclick="closeCard(card9, button9, closeButton9)"-->
-    <!--            type="button">-->
-    <!--            <img alt="close icon" class="inline" height="18" src="./data/close.svg" width="18" />-->
-    <!--          </button>-->
-    <!--        </div>-->
-    <!--        <div class="flex-waffle px-4 py-2" id="chart9">-->
-    <!--          &lt;!&ndash; Card content goes here &ndash;&gt;-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <div class='col-span-4 row-span-1' id='footer'>
-      <footer aria-label='Footer' class=''>
-        <div
-          class='border-t border-neutral-100 py-4 text-center sm:flex sm:justify-between sm:text-left'>
-          <p class='text-sm text-neutral-500'>
-            <span class='block sm:inline'>All rights reserved</span>
-          </p>
-          <p class='mt-2 text-sm text-neutral-500 sm:order-first sm:mt-0'>
-            &copy; 2022 Massimiliano Imperiale & Ani Gjergji
-          </p>
-        </div>
-      </footer>
-    </div>
-  </div>
-  <div class='modal hidden' id='modal'></div>
-  <div
-    class='fixed inset-0 z-50 flex h-full w-full items-center bg-black opacity-90'
-    id='initialPopup'>
-    <script>
-      document.body.style.overflow = 'hidden';
-    </script>
-    <div class='mx-[30%]'>
-      <h1 class='mb-4 text-5xl font-bold text-white'>Data Visualization Project</h1>
-      <p class='text-xl text-neutral-100'>
-        Our Data Visualization project focuses on life expectancy in the European Union. In this
-        project, we explore the differences in life expectancy between different countries and the
-        impact of social and economic factors.<br />
-        Life expectancy is a statistical measure that estimates the average amount of time a
-        person is likely to live based on current mortality rates. It's calculated by analyzing
-        the death rates of different age groups within a population and is expressed as the number
-        of years a newborn is expected to live if mortality rates remain constant throughout their
-        lifetime.<br />
-        The data has been sourced from the statistical office of the European Union (EUROSTAT) and
-        the World Health Organization (WHO).
-        <button
-          class='opacity-85 mt-6 block rounded-md bg-blue-700 px-5 py-2 text-center text-xl text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300'
-          id='initialPopupButton'
-          onclick='closeInitialPopup()'
-          type='button'>
-          Continue
-        </button>
-      </p>
-    </div>
-  </div>
   </body>
 </html>
