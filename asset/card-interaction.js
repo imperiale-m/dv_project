@@ -40,7 +40,7 @@ function changeYear(el) {
   updateChart1(year);
   const country = document.getElementById('countryValue').textContent;
   updateChart3(0, year);
-  // updateChart5(country, year);
+  updateChart5(country, year);
   updateChart6(year);
   updateChart7(year);
   updateChart8(0, year);

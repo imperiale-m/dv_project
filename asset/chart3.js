@@ -15,6 +15,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       'BCG (% of children ages 12-23 months)',
     ];
 
+    const chart = d3.select('#chart3');
+
     // add the options to the button
     d3.select('#selectButtonScatter')
       .selectAll('myOptions')
@@ -53,8 +55,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const yScale = d3.scaleLinear(yDomain, yRange).nice();
       const yAxis = d3.axisLeft(yScale);
 
-      const svg = d3
-        .select('#chart3')
+      const svg = chart
         .append('svg')
         .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
         .attr('style', 'max-width: 100%; height: auto;')
@@ -150,7 +151,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     }
 
     function updateChart3(selectedGroup, year) {
-      d3.selectAll('#chart3 > svg').remove();
+      chart.selectAll('*').remove();
 
       // group data by 'time_period'
       const dataByYear = d3.group(data, (d) => d.time_period);
@@ -158,7 +159,22 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // console.log(dataByYear.get(2009));
       const filteredData = dataByYear.get(year) ?? 0;
 
-      drawChart(filteredData, selectedGroup, 'life_expectancy_total');
+      // const group = d3.group(filteredData, (d) => d[allGroup[selectedGroup]]);
+      const group = filteredData.filter((d) => d[params[selectedGroup]] !== 0);
+
+      if (group.length !== 0) {
+        drawChart(filteredData, selectedGroup, 'life_expectancy_total', 'gdp');
+      } else {
+        chart.selectAll('*').remove();
+        chart
+          .attr('class', 'h-[70%]')
+          .append('div')
+          .attr(
+            'class',
+            'inset-0 flex items-center justify-center rounded-2xl h-full text-xl text-neutral-400',
+          )
+          .html('No data for selected year!');
+      }
     }
 
     // When the button is changed, run the updateChart function
@@ -167,7 +183,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const selectedOption = d3.select(this).property('selectedIndex');
 
       const el = document.querySelector('#timelineRange');
-      console.log(parseInt(el.value, 10));
+      // console.log(parseInt(el.value, 10));
       // console.log(selectedOption);
       // run the updateChart function with this selected option
       updateChart3(selectedOption, parseInt(el.value, 10));

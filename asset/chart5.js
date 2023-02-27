@@ -15,14 +15,6 @@ d3.csv('./data/education.csv', d3.autoType)
     // Build color scale
     const color = ['#59a14f', '#f28e2c', '#4e79a7'];
 
-    const svg = d3
-      .select('#chart5')
-      .append('svg')
-      .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
-      .attr('style', 'max-width: 100%; height: auto;')
-      .append('g')
-      .attr('transform', `translate(${margin.l},${margin.t})`);
-
     // Labels of row and columns
     const waffleX = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10'];
     const waffleY = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b10'];
@@ -81,180 +73,199 @@ d3.csv('./data/education.csv', d3.autoType)
     // Build X scales and axis:
     const y = d3.scaleBand().range([sideLength, 0]).domain(waffleY).padding(0.08);
 
+    const chart = d3.select('#chart5');
+
     // A function that updates the chart
     function updateChart5(country, year) {
-      svg.selectAll('*').remove();
+      chart.selectAll('*').remove();
+
+      const svg = chart
+        .append('svg')
+        .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
+        .attr('style', 'max-width: 100%; height: auto;')
+        .append('g')
+        .attr('transform', `translate(${margin.l},${margin.t})`);
 
       d3.select('#chart5Year').html(year);
 
       const query = dataByGeo.get(country)?.get(year) ?? [];
 
-      console.log(country);
+      if (query.length !== 0) {
+        const selection = waffleData(query);
+        console.log('slelection', selection);
+        const rect = svg
+          .selectAll()
+          .data(selection[0])
+          .join('rect')
+          .attr('x', (d) => x(d[0]) + 1)
+          .attr('y', (d) => y(d[1]))
+          .attr('rx', 6)
+          .attr('ry', 6)
+          .attr('class', (d) => `group${d[2]}`)
+          .style('stroke-width', 2)
+          .style('stroke', 'none')
+          .style('opacity', 0)
+          .attr('width', x.bandwidth())
+          .attr('height', y.bandwidth())
+          .style('fill', (d) => color[d[2]]);
 
-      const selection = waffleData(query);
-      console.log('slelection', selection);
-      const rect = svg
-        .selectAll()
-        .data(selection[0])
-        .join('rect')
-        .attr('x', (d) => x(d[0]) + 1)
-        .attr('y', (d) => y(d[1]))
-        .attr('rx', 6)
-        .attr('ry', 6)
-        .attr('class', (d) => `group${d[2]}`)
-        .style('stroke-width', 2)
-        .style('stroke', 'none')
-        .style('opacity', 0)
-        .attr('width', x.bandwidth())
-        .attr('height', y.bandwidth())
-        .style('fill', (d) => color[d[2]]);
+        rect.transition().duration(400).style('opacity', 1);
 
-      rect.transition().duration(400).style('opacity', 1);
+        // add title
+        svg
+          .append('text')
+          .attr('x', sideLength / 2)
+          .attr('y', 10 - margin.t / 2)
+          .attr('text-anchor', 'middle')
+          .style('font-size', '2.5em')
+          .text(query[0].country);
 
-      // add title
-      svg
-        .append('text')
-        .attr('x', sideLength / 2)
-        .attr('y', 10 - margin.t / 2)
-        .attr('text-anchor', 'middle')
-        .style('font-size', '2.5em')
-        .text(query[0].country);
+        // add the legend
+        const legend = svg.append('g').attr('class', 'legend');
+        // .attr('transform', `translate(${-margin.left},${margin.top})`);
 
-      // add the legend
-      const legend = svg.append('g').attr('class', 'legend');
-      // .attr('transform', `translate(${-margin.left},${margin.top})`);
+        // Blue legend
+        legend
+          .append('rect')
+          .attr('fill', 'white')
+          .attr('stroke', 'black')
+          .attr('stroke-width', 1)
+          .attr('width', 180)
+          .attr('height', 125)
+          .attr('rx', 6)
+          .attr('ry', 6)
+          .attr('x', sideLength + 20)
+          .attr('y', 5)
+          .attr('fill', color[2]);
+        // .attr('fill', 'white');
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 5 + 30)
+          .text('Tertiary')
+          .attr('fill', 'white')
+          .attr('font-size', '1.5em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[2]);
 
-      // Blue legend
-      legend
-        .append('rect')
-        .attr('fill', 'white')
-        .attr('stroke', 'black')
-        .attr('stroke-width', 1)
-        .attr('width', 180)
-        .attr('height', 125)
-        .attr('rx', 6)
-        .attr('ry', 6)
-        .attr('x', sideLength + 20)
-        .attr('y', 5)
-        .attr('fill', color[2]);
-      // .attr('fill', 'white');
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 5 + 30)
-        .text('Tertiary')
-        .attr('fill', 'white')
-        .attr('font-size', '1.5em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[2]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 5 + 55)
+          .text('Education')
+          .attr('fill', 'white')
+          .attr('font-size', '1.5em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[2]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 5 + 55)
-        .text('Education')
-        .attr('fill', 'white')
-        .attr('font-size', '1.5em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[2]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 10 + 105)
+          .text(`${format(selection[1][2])}%`)
+          .attr('fill', 'white')
+          .attr('font-size', '3em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[2]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 10 + 105)
-        .text(`${format(selection[1][2])}%`)
-        .attr('fill', 'white')
-        .attr('font-size', '3em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[2]);
+        // Orange legend
+        legend
+          .append('rect')
+          .attr('fill', 'white')
+          .attr('stroke', 'black')
+          .attr('stroke-width', 1)
+          .attr('width', 180)
+          .attr('height', 120)
+          .attr('rx', 6)
+          .attr('ry', 6)
+          .attr('x', sideLength + 20)
+          .attr('y', 130 + 10)
+          .attr('fill', color[1]);
 
-      // Orange legend
-      legend
-        .append('rect')
-        .attr('fill', 'white')
-        .attr('stroke', 'black')
-        .attr('stroke-width', 1)
-        .attr('width', 180)
-        .attr('height', 120)
-        .attr('rx', 6)
-        .attr('ry', 6)
-        .attr('x', sideLength + 20)
-        .attr('y', 130 + 10)
-        .attr('fill', color[1]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 130 + 10 + 30)
+          .text('Secondary')
+          .attr('fill', 'white')
+          .attr('font-size', '1.5em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[1]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 130 + 10 + 30)
-        .text('Secondary')
-        .attr('fill', 'white')
-        .attr('font-size', '1.5em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[1]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 130 + 10 + 55)
+          .text('Education')
+          .attr('fill', 'white')
+          .attr('font-size', '1.5em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[1]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 130 + 10 + 55)
-        .text('Education')
-        .attr('fill', 'white')
-        .attr('font-size', '1.5em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[1]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 130 + 10 + 105)
+          .text(`${format(selection[1][1])}%`)
+          .attr('fill', 'white')
+          .attr('font-size', '3em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[1]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 130 + 10 + 105)
-        .text(`${format(selection[1][1])}%`)
-        .attr('fill', 'white')
-        .attr('font-size', '3em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[1]);
+        // Green legen
+        legend
+          .append('rect')
+          .attr('fill', 'white')
+          .attr('stroke', 'black')
+          .attr('stroke-width', 1)
+          .attr('width', 180)
+          .attr('height', 125)
+          .attr('rx', 6)
+          .attr('ry', 6)
+          .attr('x', sideLength + 20)
+          .attr('y', 260 + 10)
+          .attr('fill', color[0]);
 
-      // Green legen
-      legend
-        .append('rect')
-        .attr('fill', 'white')
-        .attr('stroke', 'black')
-        .attr('stroke-width', 1)
-        .attr('width', 180)
-        .attr('height', 125)
-        .attr('rx', 6)
-        .attr('ry', 6)
-        .attr('x', sideLength + 20)
-        .attr('y', 260 + 10)
-        .attr('fill', color[0]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 260 + 10 + 30)
+          .text('Primary')
+          .attr('fill', 'white')
+          .attr('font-size', '1.5em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[2]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 260 + 10 + 30)
-        .text('Primary')
-        .attr('fill', 'white')
-        .attr('font-size', '1.5em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[2]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 260 + 10 + 55)
+          .text('Education')
+          .attr('fill', 'white')
+          .attr('font-size', '1.5em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[2]);
 
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 260 + 10 + 55)
-        .text('Education')
-        .attr('fill', 'white')
-        .attr('font-size', '1.5em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[2]);
-
-      legend
-        .append('text')
-        .attr('x', sideLength + 20 + 15)
-        .attr('y', 260 + 10 + 105)
-        .text(`${format(selection[1][0])}%`)
-        .attr('fill', 'white')
-        .attr('font-size', '3em')
-        .attr('font-weight', 'bold');
-      // .attr('fill', color[2]);
+        legend
+          .append('text')
+          .attr('x', sideLength + 20 + 15)
+          .attr('y', 260 + 10 + 105)
+          .text(`${format(selection[1][0])}%`)
+          .attr('fill', 'white')
+          .attr('font-size', '3em')
+          .attr('font-weight', 'bold');
+        // .attr('fill', color[2]);
+      } else {
+        chart.selectAll('*').remove();
+        chart
+          .attr('class', 'h-[70%]')
+          .append('div')
+          .attr(
+            'class',
+            'inset-0 flex items-center justify-center rounded-2xl h-full text-xl text-neutral-400',
+          )
+          .html('No data for selected year!');
+      }
     }
 
     window.updateChart5 = updateChart5;

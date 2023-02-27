@@ -10,18 +10,19 @@ d3.csv('./data/healthExpenditure2.csv', d3.autoType)
     const width = 500;
     const height = 400;
 
-    const svg = d3
-      .select('#chart4')
-      .append('svg')
-      .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-      .attr('style', 'max-width: 100%; height: auto;')
-      .append('g')
-      .attr('transform', `translate(${margin.l},${margin.t})`);
+    const chart = d3.select('#chart4');
 
     const dataByGeo = d3.group(data, (d) => d.geo);
 
     function drawChart4(countryId) {
-      svg.selectAll('*').remove();
+      chart.selectAll('*').remove();
+
+      const svg = chart
+        .append('svg')
+        .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
+        .attr('style', 'max-width: 100%; height: auto;')
+        .append('g')
+        .attr('transform', `translate(${margin.l},${margin.t})`);
 
       // // group data by 'geo'
       // const dataByGeo = d3.group(data, (d) => d.geo);
@@ -129,15 +130,15 @@ d3.csv('./data/healthExpenditure2.csv', d3.autoType)
           .attr('class', 'axis-name')
           .text('Life Expectancy');
       } else {
-        svg
-          .append('text')
-          .attr('x', width / 2 - 40)
-          .attr('y', height / 2 - margin.b)
-          .attr('text-anchor', 'middle')
-          .style('font-size', 'xx-large')
-          .attr('alignment-baseline', 'middle')
-          .text('No Data for selected year')
-          .attr('fill', '#CCCCCC');
+        chart.selectAll('*').remove();
+        chart
+          .attr('class', 'h-[70%]')
+          .append('div')
+          .attr(
+            'class',
+            'inset-0 flex items-center justify-center rounded-2xl h-full text-xl text-neutral-400',
+          )
+          .html('No data for selected country!');
       }
     }
 
