@@ -12,38 +12,16 @@ d3.csv('./data/education.csv', d3.autoType)
     // List of subgroups
     const subgroups = [...d3.group(data, (d) => d.isced11).keys()];
 
-    [
-      '#4e79a7',
-      '#f28e2c',
-      '#e15759',
-      '#76b7b2',
-      '#59a14f',
-      '#edc949',
-      '#af7aa1',
-      '#ff9da7',
-      '#9c755f',
-      '#bab0ab',
-    ];
     // Build color scale
     const color = ['#59a14f', '#f28e2c', '#4e79a7'];
 
-    // const country = 'IT';
-    // const year = 2011;
-
-    const svg = [];
-
-    // for (let i = 0; i < 4; i += 1) {
-    svg[0] = d3
+    const svg = d3
       .select('#chart5')
       .append('svg')
       .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
-      // .attr('style', 'max-width: 40%; height: auto; max-height: 40vh;')
       .attr('style', 'max-width: 100%; height: auto;')
       .append('g')
       .attr('transform', `translate(${margin.l},${margin.t})`);
-    // }
-
-    // console.log(svg);
 
     // Labels of row and columns
     const waffleX = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10'];
@@ -51,19 +29,18 @@ d3.csv('./data/education.csv', d3.autoType)
 
     const waffleUnits = waffleX.length * waffleY.length;
 
-    // group data by 'geo'
+    // group data by 'country'
     const dataByGeo = d3.group(
       data,
-      (d) => d.geo,
+      (d) => d.country,
       (d) => d.time_period,
     );
-
-    const p = [];
 
     const format = d3.format('.2f');
 
     // DRAW WAFFLE
     function waffleData(query) {
+      const p = [];
       if (query.length === 0) {
         return [];
       }
@@ -75,10 +52,9 @@ d3.csv('./data/education.csv', d3.autoType)
       subgroups.forEach((subgroup, subgroupIdx) => {
         const squareValue = tot / waffleUnits;
         const subgroupObs = query[subgroupIdx]?.obs_value || 0;
-        const trueP = subgroupObs / squareValue;
-        const cellsNeeded = Math.ceil(trueP);
-        p.push(trueP);
+        const cellsNeeded = Math.ceil(subgroupObs / squareValue);
         const rowsNeeded = Math.ceil(cellsNeeded / waffleX.length);
+        p.push(subgroupObs);
 
         for (
           let row = Math.floor(currX / 10), cellsPlaced = 0;
@@ -96,11 +72,8 @@ d3.csv('./data/education.csv', d3.autoType)
           }
         }
       });
-      return waffleSquares;
+      return [waffleSquares, p];
     }
-
-    // console.log(dataByGeo.get('CC').get(2015));
-    // console.log(selection);
 
     // Build X scales and axis:
     const x = d3.scaleBand().range([0, sideLength]).domain(waffleX).padding(0.08);
@@ -109,16 +82,18 @@ d3.csv('./data/education.csv', d3.autoType)
     const y = d3.scaleBand().range([sideLength, 0]).domain(waffleY).padding(0.08);
 
     // A function that updates the chart
-    function updateChart(svg, country, year) {
+    function updateChart5(country, year) {
       svg.selectAll('*').remove();
 
       const query = dataByGeo.get(country)?.get(year) ?? [];
 
-      const selection = waffleData(query);
+      console.log(country);
 
+      const selection = waffleData(query);
+      console.log('slelection', selection);
       const rect = svg
         .selectAll()
-        .data(selection, (d) => `${d[0]}:${d[1]}`)
+        .data(selection[0])
         .join('rect')
         .attr('x', (d) => x(d[0]) + 1)
         .attr('y', (d) => y(d[1]))
@@ -185,7 +160,7 @@ d3.csv('./data/education.csv', d3.autoType)
         .append('text')
         .attr('x', sideLength + 20 + 15)
         .attr('y', 10 + 105)
-        .text(`${format(p[2])}%`)
+        .text(`${format(selection[1][2])}%`)
         .attr('fill', 'white')
         .attr('font-size', '3em')
         .attr('font-weight', 'bold');
@@ -229,7 +204,7 @@ d3.csv('./data/education.csv', d3.autoType)
         .append('text')
         .attr('x', sideLength + 20 + 15)
         .attr('y', 130 + 10 + 105)
-        .text(`${format(p[1])}%`)
+        .text(`${format(selection[1][1])}%`)
         .attr('fill', 'white')
         .attr('font-size', '3em')
         .attr('font-weight', 'bold');
@@ -273,31 +248,15 @@ d3.csv('./data/education.csv', d3.autoType)
         .append('text')
         .attr('x', sideLength + 20 + 15)
         .attr('y', 260 + 10 + 105)
-        .text(`${format(p[0])}%`)
+        .text(`${format(selection[1][0])}%`)
         .attr('fill', 'white')
         .attr('font-size', '3em')
         .attr('font-weight', 'bold');
       // .attr('fill', color[2]);
     }
 
-    // const geos = data.map((d) => d.geo);
-    // const countries = [...new Set(geos)];
-
-    // const select = d3.select('#waffleOptions');
-    // console.log(select);
-    //
-    // select
-    //   .selectAll('option')
-    //   .data(countries)
-    //   .join('option')
-    //   .attr('value', (d) => d)
-    //   .text((d) => d);
-
-    const year = 2015;
-    updateChart(svg[0], 'IT', year);
-    // updateChart(svg[1], 'FR', year);
-    // updateChart(svg[2], 'DE', year);
-    // updateChart(svg[3], 'ES', year);
+    window.updateChart5 = updateChart5;
+    // updateChart5('Italy', 2012);
   })
   .catch((e) => {
     console.log(e);

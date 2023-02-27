@@ -33,28 +33,32 @@ function closeInitialPopup() {
   document.body.style.overflow = 'auto';
 }
 
-function inc(element) {
-  const el = document.querySelector(`#${element}`);
+function inc(el) {
   if (parseInt(el.value, 10) < 2021) {
     el.value = parseInt(el.value, 10) + 1;
     updateChart6(parseInt(el.value, 10));
     updateChart1(parseInt(el.value, 10));
-    updateChart5(parseInt(el.value, 10));
+    const country = document.getElementById('countryValue').textContent;
+    updateChart5(country, parseInt(el.value, 10));
     updateChart7(parseInt(el.value, 10));
     updateChart3(0, parseInt(el.value, 10));
     updateChart8(0, parseInt(el.value, 10));
+  } else {
+    el.value = 2020;
   }
 }
 
-function dec(element) {
-  const el = document.querySelector(`#${element}`);
+function dec(el) {
   if (parseInt(el.value, 10) > 2010) {
     el.value = parseInt(el.value, 10) - 1;
     updateChart6(parseInt(el.value, 10));
     updateChart1(parseInt(el.value, 10));
-    updateChart5(parseInt(el.value, 10));
+    const country = document.getElementById('countryValue').textContent;
+    updateChart5(country, parseInt(el.value, 10));
     updateChart7(parseInt(el.value, 10));
     updateChart3(0, parseInt(el.value, 10));
     updateChart8(0, parseInt(el.value, 10));
+  } else {
+    el.value = 2010;
   }
 }

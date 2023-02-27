@@ -201,9 +201,10 @@ Promise.all([
             d3.select('#countryValue').text(d3.select(this).data()[0].properties.NAME_ENGL);
             d3.select('#lifeExpValue').text(`${d3.select(this).data()[0].lifeExp} years`);
             d3.select('#gdpValue').text(d3.select(this).data()[0].gdp);
+            d3.select(this).transition().style('fill', 'gold');
             drawChart2(d3.select(this).data()[0].properties.ISO3_CODE);
             drawChart4(d3.select(this).data()[0].properties.CNTR_ID);
-            d3.select(this).transition().style('fill', 'gold');
+            updateChart5(d3.select(this).data()[0].properties.NAME_ENGL, 2012);
           }
           svg
             .transition()
@@ -229,7 +230,7 @@ Promise.all([
         .attr('font-size', '12px')
         .attr(
           'transform',
-          `translate(${(1 * width - legendSize - (margin.l - margin.r)) / 2},
+          `translate(${(width - legendSize - (margin.l - margin.r)) / 2},
                                   ${height})`,
         );
 
@@ -246,8 +247,9 @@ Promise.all([
 
       svg.select('.legendThreshold').call(legend);
     }
+
     window.updateChart1 = updateChart1;
-    updateChart1(2010);
+    updateChart1(2012);
   })
   .catch((e) => {
     console.log(e);

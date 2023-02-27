@@ -51,7 +51,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
   // group data by 'year'
   const dataByYear = d3.group(data, (d) => d.time_period);
 
-  function updateChart5(year) {
+  function updateChart9(year) {
     svg.selectAll('*').remove();
 
     const dataBySelectedYear = dataByYear.get(year) ?? 0;
@@ -133,6 +133,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
         .attr('fill', '#CCCCCC');
     }
   }
-  window.updateChart5 = updateChart5;
-  updateChart5(2010);
+
+  window.updateChart9 = updateChart9;
+  updateChart9(2010);
 });
