@@ -10,6 +10,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       'PM10 (µg/m3)',
     ];
 
+    const chart = d3.select('#chart8');
+
     // Add the options to the button
     d3.select('#selectButtonBubble')
       .selectAll('myOptions')
@@ -19,6 +21,9 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       .attr('value', (d) => d); // corresponding value returned by the button
 
     const params = ['co2_metric_tons_per_capita', 'nitrous_oxide_metric_tons', 'pm2_5', 'pm10'];
+
+    // group data by 'time_period'
+    const dataByYear = d3.group(data, (d) => d.time_period);
 
     function drawChart(filteredData, x, y, z) {
       d3.select('#chart8Variable').html(allGroup[x]);
@@ -32,8 +37,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const width = 600;
       const height = 400;
 
-      const svg = d3
-        .select('#chart8')
+      const svg = chart
         .append('svg')
         .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
         .attr('style', 'max-width: 100%; height: auto')
@@ -172,16 +176,28 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     }
 
     function updateChart8(selectedGroup, year) {
-      d3.selectAll('#chart8 > svg').remove();
+      // d3.selectAll('#chart8 > svg').remove();
+      chart.selectAll('*').remove();
       d3.select('#chart8Year').html(year);
-
-      // group data by 'time_period'
-      const dataByYear = d3.group(data, (d) => d.time_period);
 
       // console.log(dataByYear.get(2009));
       const filteredData = dataByYear.get(year) ?? 0;
 
-      drawChart(filteredData, selectedGroup, 'life_expectancy_total', 'gdp');
+      // const group = d3.group(filteredData, (d) => d[allGroup[selectedGroup]]);
+      const group = filteredData.filter((d) => d[params[selectedGroup]] !== 0);
+
+      if (group.length !== 0) {
+        drawChart(filteredData, selectedGroup, 'life_expectancy_total', 'gdp');
+      } else {
+        chart
+          .attr('class', 'h-[70%]')
+          .append('div')
+          .attr(
+            'class',
+            'inset-0 flex items-center justify-center rounded-2xl h-full text-3xl text-neutral-400',
+          )
+          .html('No data for selected year!');
+      }
     }
 
     // When the button is changed, run the updateChart function
@@ -190,7 +206,6 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const selectedOption = d3.select(this).property('selectedIndex');
 
       const el = document.querySelector('#timelineRange');
-      console.log(parseInt(el.value, 10));
       // run the updateChart function with this selected option
       updateChart8(selectedOption, parseInt(el.value, 10));
     });
