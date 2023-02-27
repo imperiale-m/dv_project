@@ -1,23 +1,5 @@
 const dataset = new Map();
 
-const colorScale = d3.scaleThreshold().domain([65, 70, 75, 80, 85, 90]).range(d3.schemeGreens[6]);
-
-// Add color legend
-legendWidth = 50;
-const labels = [65, 70, 75, 80, 85, 90];
-const legendSize = legendWidth * labels.length;
-
-const legend = d3
-  .legendColor()
-  .labels((d) => labels[d.i])
-  .shapePadding(0)
-  .orient('horizontal')
-  .shapeWidth(legendWidth)
-  .scale(colorScale)
-  .labelAlign('start');
-
-// const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
-
 Promise.all([
   d3.json('./data/CNTR_RG_10M_2016_4326.geojson'),
   d3.csv(
@@ -29,6 +11,27 @@ Promise.all([
   ),
 ])
   .then((data) => {
+    const colorScale = d3
+      .scaleThreshold()
+      .domain([65, 70, 75, 80, 85, 90])
+      .range(d3.schemeGreens[6]);
+
+    // Add color legend
+    const legendWidth = 50;
+    const labels = [65, 70, 75, 80, 85, 90];
+    const legendSize = legendWidth * labels.length;
+
+    const legend = d3
+      .legendColor()
+      .labels((d) => labels[d.i])
+      .shapePadding(0)
+      .orient('horizontal')
+      .shapeWidth(legendWidth)
+      .scale(colorScale)
+      .labelAlign('start');
+
+    // const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
+
     const geoData = data[0];
     const margin = {
       t: 40,
@@ -51,6 +54,8 @@ Promise.all([
 
     // group data by 'year'
     const dataByYear = d3.group(data[1], (d) => d.time_period);
+
+    //
 
     function updateChart1(year) {
       svg.selectAll('*').remove();
