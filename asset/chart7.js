@@ -12,19 +12,23 @@ d3.csv('./data/tgs.csv', d3.autoType)
 
     // console.log(data);
 
-    const svg = d3
-      .select('#chart7')
-      .append('svg')
-      .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-      .attr('style', 'max-width: 100%; height: auto;')
-      .append('g')
-      .attr('transform', `translate(${margin.l},${margin.t})`);
-
     // group data by 'time_period'
     const dataByYear = d3.group(data, (d) => d.time_period);
 
+    const chart = d3.select('#chart7');
+
     function updateChart7(year) {
-      svg.selectAll('*').remove();
+      chart.selectAll('*').remove();
+
+      const tooltip = chart.append('div').attr('class', 'tooltip');
+
+      const svg = chart
+        .append('svg')
+        .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
+        .attr('style', 'max-width: 100%; height: auto;')
+        .append('g')
+        .attr('transform', `translate(${margin.l},${margin.t})`);
+
       d3.select('#chart7Year').html(year);
 
       // console.log(dataByYear.get(2009));
@@ -60,8 +64,6 @@ d3.csv('./data/tgs.csv', d3.autoType)
         const colorScale = d3
           .scaleSequential(d3.interpolateRdYlBu) // set the color scale
           .domain(dom); // set the data domain
-
-        const tooltip = d3.select('#chart7').append('div').attr('class', 'tooltip');
 
         const mouseover = function () {
           tooltip.style('z-index', 40);
@@ -128,15 +130,15 @@ d3.csv('./data/tgs.csv', d3.autoType)
           .attr('class', 'axis-name')
           .text('Country');
       } else {
-        svg
-          .append('text')
-          .attr('x', width / 2 - 80)
-          .attr('y', height / 2 - margin.b)
-          .attr('text-anchor', 'middle')
-          .style('font-size', 'xxx-large')
-          .attr('alignment-baseline', 'middle')
-          .text('No Data for selected year')
-          .attr('fill', '#CCCCCC');
+        chart.selectAll('*').remove();
+        chart
+          .attr('class', 'h-[80%]')
+          .append('div')
+          .attr(
+            'class',
+            'inset-0 flex items-center justify-center rounded-2xl h-full text-3xl text-neutral-400',
+          )
+          .html('No data for selected year!');
       }
     }
     window.updateChart7 = updateChart7;
