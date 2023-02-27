@@ -129,11 +129,13 @@ d3.csv('./data/tgs.csv', d3.autoType)
       } else {
         svg
           .append('text')
-          .attr('x', width / 2 - margin.r)
+          .attr('x', width / 2 - 80)
           .attr('y', height / 2 - margin.b)
+          .attr('text-anchor', 'middle')
           .style('font-size', 'xxx-large')
-          .style('text-anchor', 'middle')
-          .text('No Data for selected year');
+          .attr('alignment-baseline', 'middle')
+          .text('No Data for selected year')
+          .attr('fill', '#CCCCCC');
       }
     }
     window.updateChart7 = updateChart7;
