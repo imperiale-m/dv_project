@@ -256,7 +256,7 @@ d3.csv('./data/education.csv', d3.autoType)
     }
 
     window.updateChart5 = updateChart5;
-    // updateChart5('Italy', 2012);
+    updateChart5('Italy', 2012);
   })
   .catch((e) => {
     console.log(e);
