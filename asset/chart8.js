@@ -21,6 +21,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     const params = ['co2_metric_tons_per_capita', 'nitrous_oxide_metric_tons', 'pm2_5', 'pm10'];
 
     function drawChart(filteredData, x, y, z) {
+      d3.select('#chart8Variable').html(allGroup[x]);
+
       const margin = {
         t: 80,
         r: 40,
@@ -29,6 +31,14 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       };
       const width = 600;
       const height = 400;
+
+      const svg = d3
+        .select('#chart8')
+        .append('svg')
+        .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
+        .attr('style', 'max-width: 100%; height: auto')
+        .append('g')
+        .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
       const dataX = filteredData.filter((d) => d[params[x]] !== 0);
       const dataY = filteredData.filter((d) => d[y] !== 0);
@@ -50,30 +60,23 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const zRange = [2, 16];
       const zScale = d3.scaleLinear(zDomain, zRange);
 
-      const svg = d3
-        .select('#chart8')
-        .append('svg')
-        .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-        .attr('style', 'max-width: 100%; height: auto')
-        .append('g')
-        .attr('transform', `translate(${margin.l}, ${margin.t})`);
-
       // plot the xAxis
       svg
         .append('g')
         .attr('transform', `translate(0, ${height})`)
-        .call(xAxis)
         .transition()
-        .selectAll('text')
-        .style('text-anchor', 'end');
+        .duration(750)
+        .call(xAxis)
+        .style('text-anchor', 'end')
+        .selectAll('text');
 
       // plot the yAxis
-      svg.append('g').call(yAxis);
+      svg.append('g').transition().duration(750).call(yAxis);
 
       const tooltip = d3.select('#chart8').append('div').attr('class', 'tooltip');
 
       const mouseover = function () {
-        tooltip.style('z-index', 1);
+        tooltip.style('z-index', 40);
         tooltip.transition().style('opacity', 0.9);
         d3.select(this).transition().style('fill', 'steelblue');
       };
@@ -96,7 +99,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
           .style('left', `${event.pageX + 20}px`);
       };
 
-      svg
+      const bubble = svg
         .append('g')
         .selectAll('dot')
         .data(filteredData.filter((d) => d[params[x]] !== 0))
@@ -111,6 +114,13 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
         .on('mouseover', mouseover)
         .on('mouseout', mouseout)
         .on('mousemove', mousemove);
+
+      bubble
+        .attr('r', zRange[0])
+        .transition()
+        .duration(500)
+        .attr('r', (d) => zScale(d[z]))
+        .delay((_, i) => i * 10);
 
       /// TEST
       const meanLifeExp = d3.mean(filteredData, (d) => d[y]);
