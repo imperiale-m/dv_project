@@ -1,4 +1,5 @@
-function zoom(card, button) {
+function zoom(card, button, info) {
+  info.classList.toggle('hidden');
   const modal = document.getElementById('modal');
   modal.classList.toggle('hidden');
   if (modal.classList.contains('hidden')) {

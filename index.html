@@ -47,19 +47,19 @@
             <!--            </label>-->
             <div class="relative flex h-8 w-full flex-row rounded-lg bg-transparent">
               <button
-                class='h-full w-20 cursor-pointer rounded-l bg-gray-300 text-gray-600 outline-none hover:bg-gray-400 hover:text-gray-700'
-                onclick='dec(yearValue)'>
-                <span class='m-auto text-2xl font-thin'>−</span>
+                class="h-full w-20 cursor-pointer rounded-l bg-gray-300 text-gray-600 outline-none hover:bg-gray-400 hover:text-gray-700"
+                onclick="dec(yearValue)">
+                <span class="m-auto text-2xl font-thin">−</span>
               </button>
               <input
-                class='text-md md:text-basecursor-default flex w-full items-center bg-gray-300 text-center font-semibold text-gray-700 outline-none outline-none hover:text-black focus:text-black focus:outline-none'
-                id='yearValue'
-                type='number'
-                value='2012' />
+                class="text-md md:text-basecursor-default flex w-full items-center bg-gray-300 text-center font-semibold text-gray-700 outline-none outline-none hover:text-black focus:text-black focus:outline-none"
+                id="yearValue"
+                type="number"
+                value="2012" />
               <button
-                class='h-full w-20 cursor-pointer rounded-r bg-gray-300 text-gray-600 hover:bg-gray-400 hover:text-gray-700'
-                onclick='inc(yearValue)'>
-                <span class='m-auto text-2xl font-thin'>+</span>
+                class="h-full w-20 cursor-pointer rounded-r bg-gray-300 text-gray-600 hover:bg-gray-400 hover:text-gray-700"
+                onclick="inc(yearValue)">
+                <span class="m-auto text-2xl font-thin">+</span>
               </button>
             </div>
           </div>
@@ -125,7 +125,7 @@
             <button
               class="mr-2 justify-self-end underline"
               id="button2"
-              onclick="zoom(cardFront2, button2)"
+              onclick="zoom(cardFront2, button2, info2)"
               type="button">
               Zoom
             </button>
@@ -160,7 +160,7 @@
             <button
               class="mr-2 justify-self-end underline"
               id="button3"
-              onclick="zoom(cardFront3, button3)"
+              onclick="zoom(cardFront3, button3, info3)"
               type="button">
               Zoom
             </button>
@@ -192,7 +192,7 @@
             <button
               class="mr-2 justify-self-end underline"
               id="button4"
-              onclick="zoom(cardFront4, button4)"
+              onclick="zoom(cardFront4, button4, info4)"
               type="button">
               Zoom
             </button>
@@ -223,12 +223,12 @@
       <!-- Chart 5 -->
       <div class="card-front z-[2] col-span-1 col-start-4 row-start-4" id="cardFront5">
         <div class="card-title">
-          <h2 class='inline text-xl text-neutral-800'>Waffle-chart</h2>
+          <h2 class="inline text-xl text-neutral-800">Waffle-chart</h2>
           <div class="flex">
             <button
               class="mr-2 justify-self-end underline"
               id="button5"
-              onclick="zoom(cardFront5, button5)"
+              onclick="zoom(cardFront5, button5, info5)"
               type="button">
               Zoom
             </button>
@@ -247,10 +247,8 @@
       </div>
       <div class="card-back z-[1] col-span-1 col-start-4 row-start-4" id="cardBack5">
         <div class="px-[10%]">
-          <h2 class='inline text-2xl text-neutral-100'>Waffle chart</h2>
-          <p>
-            Lorem ipsum
-          </p>
+          <h2 class="inline text-2xl text-neutral-100">Waffle chart</h2>
+          <p>Lorem ipsum</p>
         </div>
       </div>
       <!-- Chart 6 -->
@@ -263,7 +261,7 @@
             <button
               class="mr-2 justify-self-end underline"
               id="button6"
-              onclick="zoom(cardFront6, button6)"
+              onclick="zoom(cardFront6, button6, info6)"
               type="button">
               Zoom
             </button>
@@ -299,7 +297,7 @@
             <button
               class="mr-2 justify-self-end underline"
               id="button7"
-              onclick="zoom(cardFront7, button7)"
+              onclick="zoom(cardFront7, button7, info7)"
               type="button">
               Zoom
             </button>
@@ -335,7 +333,7 @@
             <button
               class="mr-2 justify-self-end underline"
               id="button8"
-              onclick="zoom(cardFront8, button8)"
+              onclick="zoom(cardFront8, button8, info8)"
               type="button">
               Zoom
             </button>
@@ -360,12 +358,12 @@
       <!-- Chart 9-->
       <div class="card-front z-[2] col-span-2 col-start-3 row-start-6" id="cardFront9">
         <div class="card-title">
-          <h2 class='inline text-xl text-neutral-800'>Top 9 deadliest diseases</h2>
+          <h2 class="inline text-xl text-neutral-800">Top 9 deadliest diseases</h2>
           <div class="flex">
             <button
               class="mr-2 justify-self-end underline"
               id="button9"
-              onclick="zoom(cardFront9, button9)"
+              onclick="zoom(cardFront9, button9, info9)"
               type="button">
               Zoom
             </button>
@@ -382,9 +380,9 @@
           <!-- Card content goes here -->
         </div>
       </div>
-      <div class='card-back z-[1] col-span-2 col-start-3 row-start-6' id='cardBack9'>
-        <div class='px-[10%]'>
-          <h2 class='inline text-2xl text-neutral-100'>Bar plot</h2>
+      <div class="card-back z-[1] col-span-2 col-start-3 row-start-6" id="cardBack9">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Bar plot</h2>
           <p>
             This graph displays the top deadliest diseases in the European Union, presenting the
             number of deaths attributed to each disease. The data are organized in descending order,
