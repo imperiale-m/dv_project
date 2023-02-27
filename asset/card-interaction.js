@@ -40,6 +40,7 @@ function inc(el) {
     updateChart1(parseInt(el.value, 10));
     const country = document.getElementById('countryValue').textContent;
     updateChart5(country, parseInt(el.value, 10));
+    updateChart9(country, parseInt(el.value, 10));
     updateChart7(parseInt(el.value, 10));
     updateChart3(0, parseInt(el.value, 10));
     updateChart8(0, parseInt(el.value, 10));
@@ -55,6 +56,7 @@ function dec(el) {
     updateChart1(parseInt(el.value, 10));
     const country = document.getElementById('countryValue').textContent;
     updateChart5(country, parseInt(el.value, 10));
+    updateChart9(country, parseInt(el.value, 10));
     updateChart7(parseInt(el.value, 10));
     updateChart3(0, parseInt(el.value, 10));
     updateChart8(0, parseInt(el.value, 10));
