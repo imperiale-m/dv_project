@@ -41,7 +41,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
   const height = 500;
 
   const svg = d3
-    .select('#chart5')
+    .select('#chart9')
     .append('svg')
     .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
     .attr('style', 'max-width: 100%; height: auto')

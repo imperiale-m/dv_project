@@ -2,10 +2,10 @@
 d3.csv('./data/education.csv', d3.autoType)
   .then((data) => {
     const margin = {
-      t: 50,
-      r: 20,
-      b: 30,
-      l: 20,
+      t: 60,
+      r: 240,
+      b: 40,
+      l: 40,
     };
     const sideLength = 400;
 
@@ -32,15 +32,16 @@ d3.csv('./data/education.csv', d3.autoType)
 
     const svg = [];
 
-    for (let i = 0; i < 4; i += 1) {
-      svg[i] = d3
-        .select('#chart9')
-        .append('svg')
-        .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
-        .attr('style', 'max-width: 40%; height: auto; max-height: 40vh;')
-        .append('g')
-        .attr('transform', `translate(${margin.l},${margin.t})`);
-    }
+    // for (let i = 0; i < 4; i += 1) {
+    svg[0] = d3
+      .select('#chart5')
+      .append('svg')
+      .attr('viewBox', [0, 0, sideLength + margin.l + margin.r, sideLength + margin.t + margin.b])
+      // .attr('style', 'max-width: 40%; height: auto; max-height: 40vh;')
+      .attr('style', 'max-width: 100%; height: auto;')
+      .append('g')
+      .attr('transform', `translate(${margin.l},${margin.t})`);
+    // }
 
     // console.log(svg);
 
@@ -57,9 +58,12 @@ d3.csv('./data/education.csv', d3.autoType)
       (d) => d.time_period,
     );
 
-    function waffleData(countryCode, year) {
-      const query = dataByGeo.get(countryCode)?.get(year) ?? [];
+    const p = [];
 
+    const format = d3.format('.2f');
+
+    // DRAW WAFFLE
+    function waffleData(query) {
       if (query.length === 0) {
         return [];
       }
@@ -71,7 +75,9 @@ d3.csv('./data/education.csv', d3.autoType)
       subgroups.forEach((subgroup, subgroupIdx) => {
         const squareValue = tot / waffleUnits;
         const subgroupObs = query[subgroupIdx]?.obs_value || 0;
-        const cellsNeeded = Math.ceil(subgroupObs / squareValue);
+        const trueP = subgroupObs / squareValue;
+        const cellsNeeded = Math.ceil(trueP);
+        p.push(trueP);
         const rowsNeeded = Math.ceil(cellsNeeded / waffleX.length);
 
         for (
@@ -106,7 +112,9 @@ d3.csv('./data/education.csv', d3.autoType)
     function updateChart(svg, country, year) {
       svg.selectAll('*').remove();
 
-      const selection = waffleData(country, year);
+      const query = dataByGeo.get(country)?.get(year) ?? [];
+
+      const selection = waffleData(query);
 
       const rect = svg
         .selectAll()
@@ -132,58 +140,164 @@ d3.csv('./data/education.csv', d3.autoType)
         .attr('x', sideLength / 2)
         .attr('y', 10 - margin.t / 2)
         .attr('text-anchor', 'middle')
-        .style('font-size', '40px')
-        .text(country);
+        .style('font-size', '2.5em')
+        .text(query[0].country);
 
-      // // add the legend
-      // const legend = svg.append('g').attr('class', 'legend');
-      // // .attr('transform', `translate(${-margin.left},${margin.top})`);
-      //
-      // legend
-      //   .append('rect')
-      //   .attr('fill', 'white')
-      //   .attr('stroke', 'black')
-      //   .attr('stroke-width', 1)
-      //   .attr('width', 120)
-      //   .attr('height', 100)
-      //   .attr('rx', 6)
-      //   .attr('ry', 6)
-      //   .attr('x', -margin.l + 10)
-      //   .attr('y', 5);
-      //
-      // legend
-      //   .append('text')
-      //   .attr('x', -margin.l + 20)
-      //   .attr('y', 30)
-      //   .text('Legend');
-      //
-      // legend
-      //   .append('text')
-      //   .attr('x', -margin.l + 20)
-      //   .attr('y', 50)
-      //   .text('Primary')
-      //   .attr('fill', color[0]);
-      //
-      // legend
-      //   .append('text')
-      //   .attr('x', -margin.l + 20)
-      //   .attr('y', 70)
-      //   .text('Secondary')
-      //   .attr('fill', color[1]);
-      //
-      // legend
-      //   .append('text')
-      //   .attr('x', -margin.l + 20)
-      //   .attr('y', 90)
-      //   .text('Tertiary')
-      //   .attr('fill', color[2]);
+      // add the legend
+      const legend = svg.append('g').attr('class', 'legend');
+      // .attr('transform', `translate(${-margin.left},${margin.top})`);
+
+      // Blue legend
+      legend
+        .append('rect')
+        .attr('fill', 'white')
+        .attr('stroke', 'black')
+        .attr('stroke-width', 1)
+        .attr('width', 180)
+        .attr('height', 125)
+        .attr('rx', 6)
+        .attr('ry', 6)
+        .attr('x', sideLength + 20)
+        .attr('y', 5)
+        .attr('fill', color[2]);
+      // .attr('fill', 'white');
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 5 + 30)
+        .text('Tertiary')
+        .attr('fill', 'white')
+        .attr('font-size', '1.5em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[2]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 5 + 55)
+        .text('Education')
+        .attr('fill', 'white')
+        .attr('font-size', '1.5em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[2]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 10 + 105)
+        .text(`${format(p[2])}%`)
+        .attr('fill', 'white')
+        .attr('font-size', '3em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[2]);
+
+      // Orange legend
+      legend
+        .append('rect')
+        .attr('fill', 'white')
+        .attr('stroke', 'black')
+        .attr('stroke-width', 1)
+        .attr('width', 180)
+        .attr('height', 120)
+        .attr('rx', 6)
+        .attr('ry', 6)
+        .attr('x', sideLength + 20)
+        .attr('y', 130 + 10)
+        .attr('fill', color[1]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 130 + 10 + 30)
+        .text('Secondary')
+        .attr('fill', 'white')
+        .attr('font-size', '1.5em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[1]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 130 + 10 + 55)
+        .text('Education')
+        .attr('fill', 'white')
+        .attr('font-size', '1.5em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[1]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 130 + 10 + 105)
+        .text(`${format(p[1])}%`)
+        .attr('fill', 'white')
+        .attr('font-size', '3em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[1]);
+
+      // Green legen
+      legend
+        .append('rect')
+        .attr('fill', 'white')
+        .attr('stroke', 'black')
+        .attr('stroke-width', 1)
+        .attr('width', 180)
+        .attr('height', 125)
+        .attr('rx', 6)
+        .attr('ry', 6)
+        .attr('x', sideLength + 20)
+        .attr('y', 260 + 10)
+        .attr('fill', color[0]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 260 + 10 + 30)
+        .text('Primary')
+        .attr('fill', 'white')
+        .attr('font-size', '1.5em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[2]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 260 + 10 + 55)
+        .text('Education')
+        .attr('fill', 'white')
+        .attr('font-size', '1.5em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[2]);
+
+      legend
+        .append('text')
+        .attr('x', sideLength + 20 + 15)
+        .attr('y', 260 + 10 + 105)
+        .text(`${format(p[0])}%`)
+        .attr('fill', 'white')
+        .attr('font-size', '3em')
+        .attr('font-weight', 'bold');
+      // .attr('fill', color[2]);
     }
+
+    // const geos = data.map((d) => d.geo);
+    // const countries = [...new Set(geos)];
+
+    // const select = d3.select('#waffleOptions');
+    // console.log(select);
+    //
+    // select
+    //   .selectAll('option')
+    //   .data(countries)
+    //   .join('option')
+    //   .attr('value', (d) => d)
+    //   .text((d) => d);
 
     const year = 2015;
     updateChart(svg[0], 'IT', year);
-    updateChart(svg[1], 'FR', year);
-    updateChart(svg[2], 'DE', year);
-    updateChart(svg[3], 'ES', year);
+    // updateChart(svg[1], 'FR', year);
+    // updateChart(svg[2], 'DE', year);
+    // updateChart(svg[3], 'ES', year);
   })
   .catch((e) => {
     console.log(e);

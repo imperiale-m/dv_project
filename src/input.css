@@ -27,7 +27,7 @@
     }
 
     .card-title {
-        @apply flex items-center justify-between rounded-t-lg border-b border-gray-100 py-3 px-6;
+        @apply flex items-center justify-between rounded-t-lg border-b border-gray-100 py-3 px-8;
     }
 
     .axis-name {
