@@ -522,40 +522,6 @@ h1,
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .card {
   position: relative;
   border-radius: 1rem;
@@ -629,6 +595,15 @@ h1,
   font-size: 0.875rem;
   line-height: 1.25rem;
   opacity: 0;
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .visible {
@@ -1078,50 +1053,9 @@ h1,
   transition-duration: 150ms;
 }
 
-/* Add some padding inside the card container */
-
-.container {
-  padding: 2px 16px;
-}
-
-/*.tooltip {*/
-
-/*  position: fixed;*/
-
-/*  border-radius: 0.5rem;*/
-
-/*  border-width: 1px;*/
-
-/*  --tw-border-opacity: 1;*/
-
-/*  border-color: rgb(0 0 0 / var(--tw-border-opacity));*/
-
-/*  --tw-bg-opacity: 1;*/
-
-/*  background-color: rgb(255 255 255 / var(--tw-bg-opacity));*/
-
-/*  padding: 0.5rem;*/
-
-/*  font-size: 0.875rem;*/
-
-/*  line-height: 1.25rem;*/
-
-/*  opacity: 0;*/
-
-/*    !*z-index: 99999;*!*/
-
-/*}*/
-
 .gridline {
   stroke: black;
   opacity: 0.1;
-}
-
-.flex-waffle {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  transition: all 3s ease-in-out;
 }
 
 .active {
@@ -1136,7 +1070,6 @@ h1,
   right: 0;
   height: -moz-fit-content;
   height: fit-content;
-  /*transition: all 3s;*/
 }
 
 .modal {
@@ -1148,36 +1081,7 @@ h1,
   bottom: 0;
   left: 0;
   right: 0;
-  /*transition: all 1s;*/
 }
-
-/* Chrome, Safari, Edge, Opera */
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-
-input[type='number'] {
-  -moz-appearance: textfield;
-}
-
-/*.card:hover {*/
-
-/*  transform: rotateY(180deg);*/
-
-/*  transform-style: preserve-3d;*/
-
-/*}*/
-
-/*.card-back {*/
-
-/*  transform: rotateY(180deg);*/
-
-/*}*/
 
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
