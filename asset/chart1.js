@@ -11,24 +11,38 @@ Promise.all([
   ),
 ])
   .then((data) => {
+    //   const colorScale = d3
+    //     .scaleThreshold()
+    //     .domain([70, 73, 76, 79, 81, 84, 87])
+    //     .range(d3.schemeGreens[7]);
+
     const colorScale = d3
-      .scaleThreshold()
-      .domain([65, 70, 75, 80, 85, 90])
-      .range(d3.schemeGreens[6]);
+      .scaleQuantize()
+      .domain(
+        d3.extent(
+          data[1].filter((d) => d.life_expectancy_total !== 0),
+          (d) => d.life_expectancy_total,
+        ),
+      )
+      .range(d3.schemeGreens[7]);
 
     // Add color legend
-    const legendWidth = 50;
-    const labels = [65, 70, 75, 80, 85, 90];
+    const legendWidth = 80;
+    // const labels = [70, 73, 76, 79, 81, 84, 87];
+    const f = d3.format('.1f');
+    // console.log(colorScale.thresholds().map((d) => f(d)));
+    // const labels = colorScale.thresholds().map((d) => f(d));
+    const labels = colorScale.thresholds();
     const legendSize = legendWidth * labels.length;
 
     const legend = d3
       .legendColor()
-      .labels((d) => labels[d.i])
-      .shapePadding(0)
+      .labelFormat(f)
+      .shapePadding(2)
       .orient('horizontal')
       .shapeWidth(legendWidth)
       .scale(colorScale)
-      .labelAlign('start');
+      .labelAlign('middle');
 
     // const colorScale = d3.scaleQuantize().domain([70, 85]).range(d3.schemeGreens[9]);
 
@@ -236,11 +250,12 @@ Promise.all([
         .attr('class', 'legendThreshold')
         .attr('font-family', 'Fira Sans, sans-serif')
         .attr('font-size', '12px')
-        .attr(
-          'transform',
-          `translate(${(width - legendSize - (margin.l - margin.r)) / 2},
-                                  ${height})`,
-        );
+        // .attr(
+        //   'transform',
+        //   `translate(${(width - legendSize - (margin.l - margin.r)) / 2}, ${height})`,
+        // );
+        // .attr('transform', `translate(50%, 20%)`);
+        .attr('transform', `translate(${10}, ${height - 5})`);
 
       svg
         .select('.legendThreshold')

@@ -162,26 +162,29 @@
         <div class="px-[10%]">
           <h2 class="inline text-2xl text-neutral-100">Line Chart</h2>
           <p>
-            In this chart the primary objective is to track the trends in life expectancy over a
-            20-year period, from 2000 to 2020, in the selected country, and to compare it with the
-            European Union average.
+            The primary objective of this chart is to track trends in life expectancy over a 20-year
+            period, from 2000 to 2020, in the selected country, and to compare it with the European
+            Union average.
           </p>
         </div>
       </div>
       <!-- Chart 3 -->
       <div class="card-front z-[2] col-span-1 col-start-4 row-start-3" id="cardFront3">
-        <div class="card-title">
-          <h2 class="inline text-xl text-neutral-800">Scatter-plot</h2>
-          <div class="flex">
+        <div class='card-title'>
+          <h2 class='inline text-xl text-neutral-800'>
+            Life Expectancy Correlation with <span id='scatterVariable'></span> in
+            <span id='scatterYear'></span>
+          </h2>
+          <div class='flex'>
             <button
-              class="mr-2 justify-self-end underline"
-              id="button3"
-              onclick="zoom(cardFront3, button3, info3)"
-              type="button">
+              class='mr-2 justify-self-end underline'
+              id='button3'
+              onclick='zoom(cardFront3, button3, info3)'
+              type='button'>
               Zoom
             </button>
             <button
-              class="info z-[10] underline"
+              class='info z-[10] underline'
               id="info3"
               onclick="InfoCard(cardFront3, cardBack3, info3)"
               type="button">
@@ -197,8 +200,15 @@
           <!-- Card content goes here -->
         </div>
       </div>
-      <div class="card-back z-[1] col-span-1 col-start-4 row-start-3" id="cardBack3">
-        Scatter-plot
+      <div class='card-back z-[1] col-span-1 col-start-4 row-start-3' id='cardBack3'>
+        <div class='px-[10%]'>
+          <h2 class='inline text-2xl text-neutral-100'>Scatter plot</h2>
+          <p>
+            This scatter plot illustrates the relationship between life expectancy and several
+            variables. The variables include factors such as vaccination percentage and behavioral
+            risk factors like alcohol and tobacco consumption.
+          </p>
+        </div>
       </div>
       <!-- Chart 4 -->
       <div class="card-front z-[2] col-span-1 col-start-3 row-start-4" id="cardFront4">
@@ -264,9 +274,15 @@
         </div>
       </div>
       <div class="card-back z-[1] col-span-1 col-start-4 row-start-4" id="cardBack5">
-        <div class="px-[10%]">
-          <h2 class="inline text-2xl text-neutral-100">Waffle chart</h2>
-          <p>Lorem ipsum</p>
+        <div class='px-[10%]'>
+          <h2 class='inline text-2xl text-neutral-100'>Waffle chart</h2>
+          <p>
+            This waffle chart visually represents the distribution of education levels within a
+            particular country, with the educational data organized using the International Standard
+            Classification of Education (ISCED 2011). The ISCED 2011 framework classifies education
+            levels into three main categories: Primary (levels 0-2), Secondary (levels 3-4), and
+            Tertiary (levels 5-8).
+          </p>
         </div>
       </div>
       <!-- Chart 6 -->
@@ -299,10 +315,10 @@
       </div>
       <div class="card-back z-[1] col-span-2 col-start-1 row-start-5" id="cardBack6">
         <div class="px-[10%]">
-          <h2 class="inline text-2xl text-neutral-100">Dot-Plot</h2>
+          <h2 class='inline text-2xl text-neutral-100'>Dot Plot</h2>
           <p>
             The purpose of this chart is to visually depict and compare the differences in life
-            expectancy between men and women in different countries in Europe
+            expectancy between men and women in different countries in Europe.
           </p>
         </div>
       </div>
@@ -336,7 +352,7 @@
       </div>
       <div class="card-back z-[1] col-span-2 col-start-3 row-start-5" id="cardBack7">
         <div class="px-[10%]">
-          <h2 class="inline text-2xl text-neutral-100">Strip-Plot</h2>
+          <h2 class='inline text-2xl text-neutral-100'>Strip Plot</h2>
           <p>
             With this chart we can observe the regional difference inside the different countries in
             the European Union.
@@ -367,25 +383,34 @@
             </button>
           </div>
         </div>
-        <div class="rounded-t-lg border-b border-gray-100 py-3 px-6">
-          <label class="mr-2" for="selectButtonBubble">Variable</label
-          ><select id="selectButtonBubble"></select>
+        <div class='rounded-t-lg border-b border-gray-100 py-3 px-6'>
+          <label class='mr-2' for='selectButtonBubble'>Variable</label
+          ><select id='selectButtonBubble'></select>
         </div>
-        <div class="px-4 py-2" id="chart8">
+        <div class='px-4 py-2' id='chart8'>
           <!-- Card content goes here -->
         </div>
       </div>
-      <div class="card-back z-[1] col-span-2 col-start-1 row-start-6" id="cardBack8">Bar chart</div>
+      <div class='card-back z-[1] col-span-2 col-start-1 row-start-6' id='cardBack8'>
+        <div class='px-[10%]'>
+          <h2 class='inline text-2xl text-neutral-100'>Bubble plot</h2>
+          <p>
+            This bubble plot represents the relationship between GDP, life expectancy, and a
+            different environmental variables for European countries. Each bubble represents a
+            country, with the size of the bubble corresponding to the country's GDP.
+          </p>
+        </div>
+      </div>
       <!-- Chart 9-->
-      <div class="card-front z-[2] col-span-2 col-start-3 row-start-6" id="cardFront9">
-        <div class="card-title">
-          <h2 class="inline text-xl text-neutral-800">
-            <span class="text-blue-800" id="chart9Country"></span> top 9 deadliest diseases in
-            <span class="font-bold" id="chart9Year"></span>
+      <div class='card-front z-[2] col-span-2 col-start-3 row-start-6' id='cardFront9'>
+        <div class='card-title'>
+          <h2 class='inline text-xl text-neutral-800'>
+            <span class='text-blue-800' id='chart9Country'></span> top 10 deadliest diseases in
+            <span class='font-bold' id='chart9Year'></span>
           </h2>
-          <div class="flex">
+          <div class='flex'>
             <button
-              class="mr-2 justify-self-end underline"
+              class='mr-2 justify-self-end underline'
               id="button9"
               onclick="zoom(cardFront9, button9, info9)"
               type="button">

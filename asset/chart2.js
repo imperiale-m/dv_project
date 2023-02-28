@@ -8,18 +8,19 @@ d3.csv('./data/preprocessedData.csv', d3.autoType)
       const margin = {
         t: 40,
         r: 60,
-        b: 45,
+        b: 60,
         l: 60,
       };
       const width = 400;
-      const height = 300;
+      const height = 350;
 
       // append the svg object to the body of the page
       const svg = d3
         .select('#chart2')
         .append('svg')
         .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-        .attr('style', 'max-width: 100%; height: auto; height:intrinsic;')
+        .attr('style', 'max-width: 100%; max-height: 70vh;')
+        .attr('preserveAspectRatio', 'xMidYMid meet')
         .append('g')
         .attr('transform', `translate(${margin.l},${margin.t})`);
 
@@ -198,7 +199,7 @@ d3.csv('./data/preprocessedData.csv', d3.autoType)
         // xAxis name
         svg
           .append('text')
-          .attr('transform', `translate(${width / 2}, ${height + margin.b})`)
+          .attr('transform', `translate(${width / 2}, ${height + 45})`)
           .attr('class', 'axis-name')
           .text('Year');
 

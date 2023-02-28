@@ -74,7 +74,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
 
       const top10 = dataBySelectedCountry
         .sort((a, b) => d3.descending(a.value, b.value))
-        .slice(1, 10);
+        .slice(1, 11);
       // console.log(top10);
 
       // Add X axis

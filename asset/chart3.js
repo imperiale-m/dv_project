@@ -29,13 +29,15 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
     function drawChart(filteredData, x, y) {
       const margin = {
-        t: 60,
+        t: 30,
         r: 80,
         b: 80,
         l: 80,
       };
       const width = 400;
       const height = 300;
+
+      d3.select('#scatterVariable').html(allGroup[x]);
 
       // xAxis
       const xDomain = d3.extent(
@@ -152,6 +154,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
 
     function updateChart3(selectedGroup, year) {
       chart.selectAll('*').remove();
+
+      d3.select('#scatterYear').html(year);
 
       // group data by 'time_period'
       const dataByYear = d3.group(data, (d) => d.time_period);
