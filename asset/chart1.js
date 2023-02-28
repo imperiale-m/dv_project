@@ -32,8 +32,8 @@ Promise.all([
     const f = d3.format('.1f');
     // console.log(colorScale.thresholds().map((d) => f(d)));
     // const labels = colorScale.thresholds().map((d) => f(d));
-    const labels = colorScale.thresholds();
-    const legendSize = legendWidth * labels.length;
+    // const labels = colorScale.thresholds();
+    // const legendSize = legendWidth * labels.length;
 
     const legend = d3
       .legendColor()
@@ -54,7 +54,7 @@ Promise.all([
       l: 60,
     };
     const width = 600;
-    const height = 500;
+    const height = 550;
 
     const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
 
@@ -71,9 +71,14 @@ Promise.all([
     // group data by 'year'
     const dataByYear = d3.group(data[1], (d) => d.time_period);
 
-    //
+    // append the svg object to the div with id #a3_task1
+    const legendSvg = d3
+      .select('#chart1')
+      .append('svg')
+      .attr('viewBox', [0, 0, width + margin.l + margin.r, 100]);
+    // .attr('style', 'max-width: 100%; height: auto');
 
-    function updateChart1(year) {
+    function updateChart1(year, country) {
       svg.selectAll('*').remove();
 
       const dataBySelectedYear = dataByYear.get(year) ?? 0;
@@ -100,8 +105,8 @@ Promise.all([
 
       const projection = d3
         .geoTransverseMercator()
-        .center([15, 50])
-        .scale(700)
+        .center([12, 53])
+        .scale(800)
         .translate([width / 2, height / 2]);
 
       const pathGenerator = d3.geoPath().projection(projection);
@@ -162,6 +167,7 @@ Promise.all([
         .data(finalMap)
         .join('path')
         .attr('d', pathGenerator)
+        .attr('class', (d) => d.properties.NAME_ENGL)
         .attr('fill', (d) => {
           if (euCountries.includes(d.id)) {
             d.lifeExp = dataByGeo.get(d.id)[0].life_expectancy_total;
@@ -240,37 +246,52 @@ Promise.all([
         }
       }
 
+      function start() {
+        const dd = data[0].features.filter((d) => d.properties.NAME_ENGL === country)[0];
+        const [[x0, y0], [x1, y1]] = pathGenerator.bounds(dd);
+        d3.select('#countryValue').text(dd.properties.NAME_ENGL);
+        d3.select('#lifeExpValue').text(`${dd.lifeExp} years`);
+        d3.select('#gdpValue').text(dd.gdp);
+        d3.select(`path.${country}`).transition().style('fill', 'gold');
+        svg
+          .transition()
+          .duration(750)
+          .call(
+            zoom.transform,
+            d3.zoomIdentity
+              .translate(width / 2, height / 2)
+              .scale(Math.min(3, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
+              .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
+          );
+      }
+      start();
+
       g.selectAll('path').on('click', clicked);
       svg.on('click', reset);
 
-      svg
+      legendSvg
         .append('g')
-        .attr('class', 'legendThreshold')
+        .attr('class', 'legendQuantize')
         .attr('font-family', 'Fira Sans, sans-serif')
         .attr('font-size', '12px')
-        // .attr(
-        //   'transform',
-        //   `translate(${(width - legendSize - (margin.l - margin.r)) / 2}, ${height})`,
-        // );
-        // .attr('transform', `translate(50%, 20%)`);
-        .attr('transform', `translate(${10}, ${height - 5})`);
+        .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
-      svg
-        .select('.legendThreshold')
+      legendSvg
+        .select('.legendQuantize')
         .append('text')
         .attr('class', 'caption')
-        .attr('x', legendWidth)
+        .attr('x', 50)
         .attr('y', -10)
         .style('font-family', 'Fira Sans, sans-serif')
         .style('font-size', '14px')
         .attr('text-anchor', 'middle')
         .text('Life Expectancy');
 
-      svg.select('.legendThreshold').call(legend);
+      legendSvg.select('.legendQuantize').call(legend);
     }
 
     window.updateChart1 = updateChart1;
-    updateChart1(2012);
+    updateChart1(2012, 'Italy', true);
   })
   .catch((e) => {
     console.log(e);

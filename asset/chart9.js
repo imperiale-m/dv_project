@@ -65,7 +65,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
       // group data by 'geo'
       const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
 
-      console.log(country);
+      // console.log(country);
 
       const dataBySelectedCountry = dataByGeo.get(country) ?? 0;
 

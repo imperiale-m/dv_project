@@ -12,7 +12,7 @@ d3.csv('./data/preprocessedData.csv', d3.autoType)
         l: 60,
       };
       const width = 400;
-      const height = 350;
+      const height = 300;
 
       // append the svg object to the body of the page
       const svg = d3

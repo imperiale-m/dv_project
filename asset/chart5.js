@@ -92,7 +92,7 @@ d3.csv('./data/education.csv', d3.autoType)
 
       if (query.length !== 0) {
         const selection = waffleData(query);
-        console.log('slelection', selection);
+        // console.log('slelection', selection);
         const rect = svg
           .selectAll()
           .data(selection[0])

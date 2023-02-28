@@ -24,7 +24,7 @@ d3.csv('./data/eurostat_data_2.csv', d3.autoType)
       data.filter((d) => d.life_expectancy_male !== 0),
       (d) => d.time_period,
     );
-    console.log(dataByYear);
+    // console.log(dataByYear);
 
     function updateChart6(year) {
       svg.selectAll('*').remove();

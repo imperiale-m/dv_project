@@ -27,7 +27,6 @@
     <script defer src="./asset/chart8.js"></script>
     <script defer src="./asset/chart9.js"></script>
     <script defer src="./asset/card-interaction.js"></script>
-    <!--    <script defer src="./asset/multi-select-dropdown.js"></script>-->
   </head>
 
   <body class="bg-neutral-100">
@@ -36,9 +35,6 @@
         Data visualization Project
       </div>
       <div class="card col-span-2 col-start-1 row-start-2">
-        <!--        <div class="card-title">-->
-        <!--          <h2 class="inline text-lg text-neutral-800">Year Selector</h2>-->
-        <!--        </div>-->
         <div class="px-8 py-4" id="timeline">
           <!-- Card content goes here-->
           <label class="relative text-xl font-bold text-gray-900">Selected year</label>
@@ -139,8 +135,8 @@
           </h2>
           <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button2'
+              class="mx-2 justify-self-end underline"
+              id="button2"
               onclick="zoom(cardFront2, button2, info2)"
               type="button">
               Zoom
@@ -168,45 +164,42 @@
           </p>
         </div>
       </div>
-      <!-- Chart 3 -->
-      <div class="card-front z-[2] col-span-1 col-start-4 row-start-3" id="cardFront3">
-        <div class='card-title'>
-          <h2 class='inline text-xl text-neutral-800'>
-            Life Expectancy Correlation with <span id='scatterVariable'></span> in
-            <span id='scatterYear'></span>
+      <!-- Chart 5 -->
+      <div class="card-front z-[2] col-span-1 col-start-4 row-start-3" id="cardFront5">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">
+            Educational attainment level in <span class="font-bold" id="chart5Year"></span>
           </h2>
-          <div class='flex'>
+          <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button3'
-              onclick='zoom(cardFront3, button3, info3)'
-              type='button'>
+              class="mx-2 justify-self-end underline"
+              id="button5"
+              onclick="zoom(cardFront5, button5, info5)"
+              type="button">
               Zoom
             </button>
             <button
-              class='info z-[10] underline'
-              id="info3"
-              onclick="InfoCard(cardFront3, cardBack3, info3)"
+              class="info z-[10] underline"
+              id="info5"
+              onclick="InfoCard(cardFront5, cardBack5, info5)"
               type="button">
               Info
             </button>
           </div>
         </div>
-        <div class="rounded-t-lg border-b border-gray-100 py-3 px-6">
-          <label class='mx-2' for='selectButtonScatter'>Variable</label
-          ><select id='selectButtonScatter'></select>
-        </div>
-        <div class="px-4 py-2" id="chart3">
+        <div class="px-4 py-2" id="chart5">
           <!-- Card content goes here -->
         </div>
       </div>
-      <div class='card-back z-[1] col-span-1 col-start-4 row-start-3' id='cardBack3'>
-        <div class='px-[10%]'>
-          <h2 class='inline text-2xl text-neutral-100'>Scatter plot</h2>
+      <div class="card-back z-[1] col-span-1 col-start-4 row-start-3" id="cardBack5">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Waffle chart</h2>
           <p>
-            This scatter plot illustrates the relationship between life expectancy and several
-            variables. The variables include factors such as vaccination percentage and behavioral
-            risk factors like alcohol and tobacco consumption.
+            This waffle chart visually represents the distribution of education levels within a
+            particular country, with the educational data organized using the International Standard
+            Classification of Education (ISCED 2011). The ISCED 2011 framework classifies education
+            levels into three main categories: Primary (levels 0-2), Secondary (levels 3-4), and
+            Tertiary (levels 5-8).
           </p>
         </div>
       </div>
@@ -216,8 +209,8 @@
           <h2 class="inline text-xl text-neutral-800">The Impact of Health Spending</h2>
           <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button4'
+              class="mx-2 justify-self-end underline"
+              id="button4"
               onclick="zoom(cardFront4, button4, info4)"
               type="button">
               Zoom
@@ -246,42 +239,45 @@
           </p>
         </div>
       </div>
-      <!-- Chart 5 -->
-      <div class="card-front z-[2] col-span-1 col-start-4 row-start-4" id="cardFront5">
+      <!-- Chart 3 -->
+      <div class="card-front z-[2] col-span-1 col-start-4 row-start-4" id="cardFront3">
         <div class="card-title">
           <h2 class="inline text-xl text-neutral-800">
-            Educational attainment level in <span class="font-bold" id="chart5Year"></span>
+            Life Expectancy Correlation with <span id="scatterVariable"></span> in
+            <span id="scatterYear"></span>
           </h2>
           <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button5'
-              onclick="zoom(cardFront5, button5, info5)"
+              class="mx-2 justify-self-end underline"
+              id="button3"
+              onclick="zoom(cardFront3, button3, info3)"
               type="button">
               Zoom
             </button>
             <button
               class="info z-[10] underline"
-              id="info5"
-              onclick="InfoCard(cardFront5, cardBack5, info5)"
+              id="info3"
+              onclick="InfoCard(cardFront3, cardBack3, info3)"
               type="button">
               Info
             </button>
           </div>
         </div>
-        <div class="px-4 py-2" id="chart5">
+        <div class="rounded-t-lg border-b border-gray-100 py-3 px-6">
+          <label class="mx-2" for="selectButtonScatter">Variable</label
+          ><select id="selectButtonScatter"></select>
+        </div>
+        <div class="px-4 py-2" id="chart3">
           <!-- Card content goes here -->
         </div>
       </div>
-      <div class="card-back z-[1] col-span-1 col-start-4 row-start-4" id="cardBack5">
-        <div class='px-[10%]'>
-          <h2 class='inline text-2xl text-neutral-100'>Waffle chart</h2>
+      <div class="card-back z-[1] col-span-1 col-start-4 row-start-4" id="cardBack3">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Scatter plot</h2>
           <p>
-            This waffle chart visually represents the distribution of education levels within a
-            particular country, with the educational data organized using the International Standard
-            Classification of Education (ISCED 2011). The ISCED 2011 framework classifies education
-            levels into three main categories: Primary (levels 0-2), Secondary (levels 3-4), and
-            Tertiary (levels 5-8).
+            This scatter plot illustrates the relationship between life expectancy and several
+            variables. The variables include factors such as vaccination percentage and behavioral
+            risk factors like alcohol and tobacco consumption.
           </p>
         </div>
       </div>
@@ -294,8 +290,8 @@
           </h2>
           <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button6'
+              class="mx-2 justify-self-end underline"
+              id="button6"
               onclick="zoom(cardFront6, button6, info6)"
               type="button">
               Zoom
@@ -315,7 +311,7 @@
       </div>
       <div class="card-back z-[1] col-span-2 col-start-1 row-start-5" id="cardBack6">
         <div class="px-[10%]">
-          <h2 class='inline text-2xl text-neutral-100'>Dot Plot</h2>
+          <h2 class="inline text-2xl text-neutral-100">Dot Plot</h2>
           <p>
             The purpose of this chart is to visually depict and compare the differences in life
             expectancy between men and women in different countries in Europe.
@@ -331,8 +327,8 @@
           </h2>
           <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button7'
+              class="mx-2 justify-self-end underline"
+              id="button7"
               onclick="zoom(cardFront7, button7, info7)"
               type="button">
               Zoom
@@ -352,7 +348,7 @@
       </div>
       <div class="card-back z-[1] col-span-2 col-start-3 row-start-5" id="cardBack7">
         <div class="px-[10%]">
-          <h2 class='inline text-2xl text-neutral-100'>Strip Plot</h2>
+          <h2 class="inline text-2xl text-neutral-100">Strip Plot</h2>
           <p>
             With this chart we can observe the regional difference inside the different countries in
             the European Union.
@@ -368,8 +364,8 @@
           </h2>
           <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button8'
+              class="mx-2 justify-self-end underline"
+              id="button8"
               onclick="zoom(cardFront8, button8, info8)"
               type="button">
               Zoom
@@ -383,17 +379,17 @@
             </button>
           </div>
         </div>
-        <div class='rounded-t-lg border-b border-gray-100 py-3 px-6'>
-          <label class='mr-2' for='selectButtonBubble'>Variable</label
-          ><select id='selectButtonBubble'></select>
+        <div class="rounded-t-lg border-b border-gray-100 py-3 px-6">
+          <label class="mr-2" for="selectButtonBubble">Variable</label
+          ><select id="selectButtonBubble"></select>
         </div>
-        <div class='px-4 py-2' id='chart8'>
+        <div class="px-4 py-2" id="chart8">
           <!-- Card content goes here -->
         </div>
       </div>
-      <div class='card-back z-[1] col-span-2 col-start-1 row-start-6' id='cardBack8'>
-        <div class='px-[10%]'>
-          <h2 class='inline text-2xl text-neutral-100'>Bubble plot</h2>
+      <div class="card-back z-[1] col-span-2 col-start-1 row-start-6" id="cardBack8">
+        <div class="px-[10%]">
+          <h2 class="inline text-2xl text-neutral-100">Bubble plot</h2>
           <p>
             This bubble plot represents the relationship between GDP, life expectancy, and a
             different environmental variables for European countries. Each bubble represents a
@@ -402,16 +398,16 @@
         </div>
       </div>
       <!-- Chart 9-->
-      <div class='card-front z-[2] col-span-2 col-start-3 row-start-6' id='cardFront9'>
-        <div class='card-title'>
-          <h2 class='inline text-xl text-neutral-800'>
-            <span class='text-blue-800' id='chart9Country'></span> top 10 deadliest diseases in
-            <span class='font-bold' id='chart9Year'></span>
+      <div class="card-front z-[2] col-span-2 col-start-3 row-start-6" id="cardFront9">
+        <div class="card-title">
+          <h2 class="inline text-xl text-neutral-800">
+            <span class="text-blue-800" id="chart9Country"></span> top 10 deadliest diseases in
+            <span class="font-bold" id="chart9Year"></span>
           </h2>
-          <div class='flex'>
+          <div class="flex">
             <button
-              class='mx-2 justify-self-end underline'
-              id='button9'
+              class="mx-2 justify-self-end underline"
+              id="button9"
               onclick="zoom(cardFront9, button9, info9)"
               type="button">
               Zoom

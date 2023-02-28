@@ -92,8 +92,6 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       };
 
       const mousemove = function (event, d) {
-        const bbox = this.getBoundingClientRect();
-        console.log(bbox);
         tooltip
           .html(
             `<b>${d.country}</b><br>GDP = <b>${d[z]}</b>
@@ -101,8 +99,6 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
                 <br>Life Expectancy = <b>${Number.parseFloat(d[y]).toFixed(2)} 
                 years (${d.time_period})</b>`,
           )
-          // .style('top', `${bbox.y}px`)
-          // .style('left', `${bbox.x + bbox.width + 20}px`);
           .style('top', `${event.pageY}px`)
           .style('left', `${event.pageX + 20}px`);
       };

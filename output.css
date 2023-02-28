@@ -522,6 +522,40 @@ h1,
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .card {
   position: relative;
   border-radius: 1rem;
@@ -579,6 +613,22 @@ h1,
   fill: #737373;
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 50;
+  display: none;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0;
 }
 
 .visible {
@@ -682,6 +732,11 @@ h1,
 
 .row-start-6 {
   grid-row-start: 6;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mx-\[30\%\] {
@@ -1029,19 +1084,33 @@ h1,
   padding: 2px 16px;
 }
 
-.tooltip {
-  position: absolute;
-  border-radius: 0.5rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  opacity: 0;
-}
+/*.tooltip {*/
+
+/*  position: fixed;*/
+
+/*  border-radius: 0.5rem;*/
+
+/*  border-width: 1px;*/
+
+/*  --tw-border-opacity: 1;*/
+
+/*  border-color: rgb(0 0 0 / var(--tw-border-opacity));*/
+
+/*  --tw-bg-opacity: 1;*/
+
+/*  background-color: rgb(255 255 255 / var(--tw-bg-opacity));*/
+
+/*  padding: 0.5rem;*/
+
+/*  font-size: 0.875rem;*/
+
+/*  line-height: 1.25rem;*/
+
+/*  opacity: 0;*/
+
+/*    !*z-index: 99999;*!*/
+
+/*}*/
 
 .gridline {
   stroke: black;
