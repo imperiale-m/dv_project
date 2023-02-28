@@ -77,15 +77,6 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // plot the y-axis
       svg.append('g').call(yAxis);
 
-      // const countries = data.map((d) => d.country);
-      // const species = [...new Set(countries)];
-      // // Add a scale for bubble color
-      // const color = d3
-      //   .scaleOrdinal()
-      //   .domain(species)
-      //   // .domain((d) => d.name)
-      //   .range(d3.schemeCategory10);
-
       const mouseover = function () {
         tooltip.style('display', 'block');
         tooltip.style('opacity', 0.9);
@@ -108,19 +99,22 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
           .style('left', `${event.pageX + 20}px`);
       };
 
+      const selectedCountry = d3.select('#countryValue').text();
+
       svg
         .append('g')
         .selectAll('dot')
         .data(filteredData.filter((d) => d[params[x]] !== 0))
         .join('circle')
+        .attr('id', (d) => `${d.country}`)
         .attr('class', (d) => `dot ${d.country}`)
         .attr('cx', (d) => xScale(d[params[x]]))
         .attr('cy', (d) => yScale(d[y]))
         .attr('r', 4)
-        .attr('stroke', 'black')
+        .attr('stroke', 'none')
         .style('stroke-width', 'px')
-        .style('fill', 'steelblue')
-        .style('opacity', 0.8)
+        .style('fill', (d) => (d.country === selectedCountry ? 'steelblue' : 'gray'))
+        .style('opacity', (d) => (d.country === selectedCountry ? 1 : 0.8))
         .on('mouseover', mouseover)
         .on('mouseout', mouseout)
         .on('mousemove', mousemove);
@@ -140,15 +134,6 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
         .attr('transform', `translate(${-margin.l / 2},${margin.t + 50})rotate(-90)`)
         .attr('class', 'axis-name')
         .text('Life expectancy (years)');
-
-      // add title
-      // svg
-      //   .append('text')
-      //   .attr('x', width / 2)
-      //   .attr('y', 10 - margin.t / 2)
-      //   .attr('text-anchor', 'middle')
-      //   .style('font-size', '20px')
-      //   .text('Title');
     }
 
     function updateChart3(selectedGroup, year) {
@@ -186,8 +171,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const selectedOption = d3.select(this).property('selectedIndex');
 
       const el = document.querySelector('#timelineRange');
-      // console.log(parseInt(el.value, 10));
-      // console.log(selectedOption);
+
       // run the updateChart function with this selected option
       updateChart3(selectedOption, parseInt(el.value, 10));
     });

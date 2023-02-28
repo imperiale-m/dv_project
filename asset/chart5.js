@@ -104,12 +104,12 @@ d3.csv('./data/education.csv', d3.autoType)
           .attr('class', (d) => `group${d[2]}`)
           .style('stroke-width', 2)
           .style('stroke', 'none')
-          .style('opacity', 0)
+          .style('opacity', 1)
           .attr('width', x.bandwidth())
           .attr('height', y.bandwidth())
           .style('fill', (d) => color[d[2]]);
 
-        rect.transition().duration(400).style('opacity', 1);
+        // rect.transition().style('opacity', 1);
 
         // add title
         svg

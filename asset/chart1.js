@@ -54,7 +54,7 @@ Promise.all([
       l: 60,
     };
     const width = 600;
-    const height = 550;
+    const height = 450;
 
     const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
 
@@ -112,13 +112,14 @@ Promise.all([
       const pathGenerator = d3.geoPath().projection(projection);
 
       const mouseover = function () {
-        const fill = this.getAttribute('fill');
-        const isNotSelected = fill !== '#e0dfdf' && fill !== 'gray';
-
-        tooltip.style('display', 'block').style('opacity', 0.9);
-
-        if (isNotSelected) {
+        if (this.getAttribute('fill') !== '#e0dfdf' && this.getAttribute('fill') !== 'gray') {
+          tooltip.style('display', 'block');
+          tooltip.style('opacity', 0.9);
           d3.select(this).transition().attr('fill', 'gold');
+        }
+        if (this.getAttribute('fill') === 'gray') {
+          tooltip.style('display', 'block');
+          tooltip.style('opacity', 0.9);
         }
       };
 
@@ -230,6 +231,7 @@ Promise.all([
             drawChart2(d3.select(this).data()[0].properties.ISO3_CODE);
             drawChart4(d3.select(this).data()[0].properties.CNTR_ID);
             updateChart5(d3.select(this).data()[0].properties.NAME_ENGL, year);
+            updateChart3(0, year);
             updateChart9(d3.select(this).data()[0].properties.NAME_ENGL, year);
           }
           svg
