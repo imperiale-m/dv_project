@@ -6,7 +6,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     // List of groups (here I have one group per column)
     const allGroup = ['Alcohol', 'Tobacco', 'Working Hours', 'Measles', 'HEPB', 'DPT', 'BCG'];
     const xAxisLabels = [
-      'Alcohol (litres of pure alcohol per capita)',
+      'Alcohol (liters of pure alcohol per capita)',
       'Tobacco (age-standardized % of current tobacco use)',
       'Working Hours (hours/year)',
       'Measles (% of children ages 12-23 months)',
@@ -16,6 +16,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     ];
 
     const chart = d3.select('#chart3');
+
+    const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
 
     // add the options to the button
     d3.select('#selectButtonScatter')
@@ -84,17 +86,14 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       //   // .domain((d) => d.name)
       //   .range(d3.schemeCategory10);
 
-      const tooltip = d3.select('#chart3').append('div').attr('class', 'tooltip');
-
       const mouseover = function () {
-        tooltip.style('z-index', 1);
-        tooltip.transition().style('opacity', 0.9);
+        tooltip.style('display', 'block');
+        tooltip.style('opacity', 0.9);
         d3.select(this).transition().style('opacity', 1).attr('r', 6);
       };
 
       const mouseout = function () {
-        tooltip.style('z-index', -1);
-        tooltip.transition().style('opacity', 0);
+        tooltip.style('opacity', 0).style('display', 'none');
         d3.select(this).transition().style('opacity', 0.8).attr('r', 4);
       };
 

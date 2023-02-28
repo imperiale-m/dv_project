@@ -1,4 +1,4 @@
-// Data
+// Bubble chart
 d3.csv('data/eurostat_data_2.csv', d3.autoType)
   .then((data) => {
     // List of groups
@@ -11,6 +11,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
     ];
 
     const chart = d3.select('#chart8');
+
+    const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
 
     // Add the options to the button
     d3.select('#selectButtonBubble')
@@ -29,10 +31,10 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       d3.select('#chart8Variable').html(allGroup[x]);
 
       const margin = {
-        t: 80,
+        t: 40,
         r: 40,
         b: 100,
-        l: 100,
+        l: 80,
       };
       const width = 600;
       const height = 400;
@@ -40,7 +42,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const svg = chart
         .append('svg')
         .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
-        .attr('style', 'max-width: 100%; height: auto')
+        .attr('style', 'max-width: auto; height: 100%')
+        .attr('preserveAspectRatio', 'xMidYMid meet')
         .append('g')
         .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
@@ -77,21 +80,20 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       // plot the yAxis
       svg.append('g').transition().duration(750).call(yAxis);
 
-      const tooltip = d3.select('#chart8').append('div').attr('class', 'tooltip');
-
       const mouseover = function () {
-        tooltip.style('z-index', 40);
-        tooltip.transition().style('opacity', 0.9);
+        tooltip.style('display', 'block');
+        tooltip.style('opacity', 0.9);
         d3.select(this).transition().style('fill', 'steelblue');
       };
 
       const mouseout = function () {
-        tooltip.style('z-index', -1);
-        tooltip.transition().style('opacity', 0);
+        tooltip.style('opacity', 0).style('display', 'none');
         d3.select(this).transition().style('fill', 'gray');
       };
 
       const mousemove = function (event, d) {
+        const bbox = this.getBoundingClientRect();
+        console.log(bbox);
         tooltip
           .html(
             `<b>${d.country}</b><br>GDP = <b>${d[z]}</b>
@@ -99,6 +101,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
                 <br>Life Expectancy = <b>${Number.parseFloat(d[y]).toFixed(2)} 
                 years (${d.time_period})</b>`,
           )
+          // .style('top', `${bbox.y}px`)
+          // .style('left', `${bbox.x + bbox.width + 20}px`);
           .style('top', `${event.pageY}px`)
           .style('left', `${event.pageX + 20}px`);
       };
@@ -153,7 +157,7 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       svg
         .append('text')
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
-        .attr('transform', `translate(${width / 2}, ${height + margin.b / 2})`)
+        .attr('transform', `translate(${width / 2}, ${height + 40})`)
         .attr('class', 'axis-name')
         .text(xAxisLabels[x]);
 
@@ -161,18 +165,9 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       svg
         .append('text')
         .attr('text-anchor', 'middle') // this makes it easy to centre the text as the transform is applied to the anchor
-        .attr('transform', `translate(${margin.l / 2 - margin.l},${height / 2})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
+        .attr('transform', `translate(-40, ${height / 2})rotate(-90)`) // text is drawn off the screen top left, move down and out and rotate
         .attr('class', 'axis-name')
         .text('Life expectancy (years)');
-
-      // Add title
-      // svg
-      //   .append('text')
-      //   .attr('x', width / 2)
-      //   .attr('y', 10 - margin.t / 2)
-      //   .attr('text-anchor', 'middle')
-      //   .style('font-size', '20px')
-      //   .text('Title');
     }
 
     function updateChart8(selectedGroup, year) {

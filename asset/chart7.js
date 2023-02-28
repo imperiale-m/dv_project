@@ -17,10 +17,10 @@ d3.csv('./data/tgs.csv', d3.autoType)
 
     const chart = d3.select('#chart7');
 
+    const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
+
     function updateChart7(year) {
       chart.selectAll('*').remove();
-
-      const tooltip = chart.append('div').attr('class', 'tooltip');
 
       const svg = chart
         .append('svg')
@@ -66,14 +66,13 @@ d3.csv('./data/tgs.csv', d3.autoType)
           .domain(dom); // set the data domain
 
         const mouseover = function () {
-          tooltip.style('z-index', 40);
-          tooltip.transition().style('opacity', 0.9);
+          tooltip.style('display', 'block');
+          tooltip.style('opacity', 0.9);
           d3.select(this).transition().style('opacity', 1).attr('r', 6);
         };
 
         const mouseout = function () {
-          tooltip.style('z-index', -1);
-          tooltip.transition().style('opacity', 0);
+          tooltip.style('opacity', 0).style('display', 'none');
           d3.select(this).transition().style('opacity', 0.8).attr('r', 4);
         };
 
@@ -119,14 +118,16 @@ d3.csv('./data/tgs.csv', d3.autoType)
         // x-axis name
         svg
           .append('text')
-          .attr('transform', `translate(${width / 2 - 100}, ${height + margin.b - 50})`)
+          .attr('text-anchor', 'middle')
+          .attr('transform', `translate(${width / 2}, ${height + 40})`)
           .attr('class', 'axis-name')
           .text('Life expectancy at birth (years)');
 
         // y-axis name
         svg
           .append('text')
-          .attr('transform', `translate(${-margin.l + 20}, ${height / 2}) rotate(-90)`)
+          .attr('text-anchor', 'middle')
+          .attr('transform', `translate(-100, ${height / 2}) rotate(-90)`)
           .attr('class', 'axis-name')
           .text('Country');
       } else {

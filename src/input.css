@@ -37,37 +37,42 @@
     .modalButton {
         @apply rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800
         focus:outline-none focus:ring-4 focus:ring-blue-300;
-  }
+    }
+
+    .tooltip {
+        @apply absolute rounded-lg border border-black bg-white p-2 text-sm leading-5 opacity-0 z-50 hidden;
+    }
 }
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+    padding: 2px 16px;
 }
 
-.tooltip {
-  position: absolute;
-  border-radius: 0.5rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  opacity: 0;
-}
+/*.tooltip {*/
+/*  position: fixed;*/
+/*  border-radius: 0.5rem;*/
+/*  border-width: 1px;*/
+/*  --tw-border-opacity: 1;*/
+/*  border-color: rgb(0 0 0 / var(--tw-border-opacity));*/
+/*  --tw-bg-opacity: 1;*/
+/*  background-color: rgb(255 255 255 / var(--tw-bg-opacity));*/
+/*  padding: 0.5rem;*/
+/*  font-size: 0.875rem;*/
+/*  line-height: 1.25rem;*/
+/*  opacity: 0;*/
+/*    !*z-index: 99999;*!*/
+/*}*/
 
 .gridline {
-  stroke: black;
-  opacity: 0.1;
+    stroke: black;
+    opacity: 0.1;
 }
 
 .flex-waffle {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   transition: all 3s ease-in-out;
 }
 

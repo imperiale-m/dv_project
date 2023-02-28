@@ -123,7 +123,7 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
         .data(top10)
         .join('text')
         .attr('x', (d) => x(d.value) - 50)
-        .attr('y', (d) => y(d.icd10) + 25)
+        .attr('y', (d) => y(d.icd10) + 22)
         .text((d) => d.value)
         .attr('dominant-baseline', 'middle')
         .attr('font-size', '14px')

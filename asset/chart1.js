@@ -56,13 +56,15 @@ Promise.all([
     const width = 600;
     const height = 500;
 
+    const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
+
     // append the svg object to the div with id #a3_task1
     const svg = d3
       .select('#chart1')
       .append('svg')
       .attr('viewBox', [0, 0, width + margin.l + margin.r, height + margin.t + margin.b])
       .attr('style', 'max-width: 100%; height: auto')
-      .attr('class', 'cursor-pointer')
+      // .attr('class', 'cursor-pointer')
       .append('g')
       .attr('transform', `translate(${margin.l}, ${margin.t})`);
 
@@ -104,23 +106,19 @@ Promise.all([
 
       const pathGenerator = d3.geoPath().projection(projection);
 
-      const tooltip = d3.select('#chart1').append('div').attr('class', 'tooltip');
-
       const mouseover = function () {
-        if (this.getAttribute('fill') !== '#e0dfdf' && this.getAttribute('fill') !== 'gray') {
-          tooltip.style('z-index', 1);
-          tooltip.transition().style('opacity', 0.9);
+        const fill = this.getAttribute('fill');
+        const isNotSelected = fill !== '#e0dfdf' && fill !== 'gray';
+
+        tooltip.style('display', 'block').style('opacity', 0.9);
+
+        if (isNotSelected) {
           d3.select(this).transition().attr('fill', 'gold');
-        }
-        if (this.getAttribute('fill') === 'gray') {
-          tooltip.style('z-index', 1);
-          tooltip.transition().style('opacity', 0.9);
         }
       };
 
       const mouseout = function (event, d) {
-        tooltip.style('z-index', -1);
-        tooltip.transition().style('opacity', 0);
+        tooltip.style('opacity', 0).style('display', 'none');
         if (this.getAttribute('fill') !== '#e0dfdf' && this.getAttribute('fill') !== 'gray') {
           d3.select(this)
             .transition()
