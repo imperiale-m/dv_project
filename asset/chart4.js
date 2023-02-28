@@ -2,7 +2,7 @@
 d3.csv('./data/healthExpenditure2.csv', d3.autoType)
   .then((data) => {
     const margin = {
-      t: 40,
+      t: 20,
       r: 40,
       b: 80,
       l: 80,
@@ -119,7 +119,8 @@ d3.csv('./data/healthExpenditure2.csv', d3.autoType)
         // xAxis name
         svg
           .append('text')
-          .attr('transform', `translate(${width / 2}, ${height + margin.b - 25})`)
+          .attr('transform', `translate(${width / 2}, ${height + 40})`)
+          .attr('text-anchor', 'middle')
           .attr('class', 'axis-name')
           .text('PPS');
 

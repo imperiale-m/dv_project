@@ -581,6 +581,31 @@ h1,
   line-height: 1rem;
 }
 
+.tooltip {
+  position: absolute;
+  z-index: 50;
+  display: none;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0;
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .visible {
   visibility: visible;
 }
@@ -682,6 +707,11 @@ h1,
 
 .row-start-6 {
   grid-row-start: 6;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mx-\[30\%\] {
@@ -1023,36 +1053,9 @@ h1,
   transition-duration: 150ms;
 }
 
-/* Add some padding inside the card container */
-
-.container {
-  padding: 2px 16px;
-}
-
-.tooltip {
-  position: absolute;
-  border-radius: 0.5rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  opacity: 0;
-}
-
 .gridline {
   stroke: black;
   opacity: 0.1;
-}
-
-.flex-waffle {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  transition: all 3s ease-in-out;
 }
 
 .active {
@@ -1067,7 +1070,6 @@ h1,
   right: 0;
   height: -moz-fit-content;
   height: fit-content;
-  /*transition: all 3s;*/
 }
 
 .modal {
@@ -1079,36 +1081,7 @@ h1,
   bottom: 0;
   left: 0;
   right: 0;
-  /*transition: all 1s;*/
 }
-
-/* Chrome, Safari, Edge, Opera */
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-
-input[type='number'] {
-  -moz-appearance: textfield;
-}
-
-/*.card:hover {*/
-
-/*  transform: rotateY(180deg);*/
-
-/*  transform-style: preserve-3d;*/
-
-/*}*/
-
-/*.card-back {*/
-
-/*  transform: rotateY(180deg);*/
-
-/*}*/
 
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
