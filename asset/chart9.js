@@ -58,16 +58,17 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
     d3.select('#chart9Country').html(country);
     d3.select('#chart9Year').html(year);
 
-    const dataBySelectedYear = dataByYear.get(year) ?? 0;
+    const dataBySelectedYear = dataByYear.get(year) ?? [];
     // console.log(dataBySelectedYear);
 
-    if (dataBySelectedYear !== 0) {
+    const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
+
+    // console.log(country);
+
+    const dataBySelectedCountry = dataByGeo.get(country) ?? 0;
+
+    if (dataBySelectedCountry !== 0) {
       // group data by 'geo'
-      const dataByGeo = d3.group(dataBySelectedYear, (d) => d.geo);
-
-      // console.log(country);
-
-      const dataBySelectedCountry = dataByGeo.get(country) ?? 0;
 
       // console.log(dataByGeo);
       // console.log(dataBySelectedCountry.sort((a, b) => d3.descending(a.value, b.value)));
