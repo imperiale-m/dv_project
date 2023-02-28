@@ -33,7 +33,7 @@ function wrap(text, width2) {
 d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
   const margin = {
     t: 60,
-    r: 40,
+    r: 80,
     b: 40,
     l: 180,
   };
@@ -123,12 +123,12 @@ d3.csv('./data/death_causes.csv', d3.autoType).then((data) => {
         .selectAll('myRect')
         .data(top10)
         .join('text')
-        .attr('x', (d) => x(d.value) - 50)
+        .attr('x', (d) => x(d.value) + 10)
         .attr('y', (d) => y(d.icd10) + 22)
         .text((d) => d.value)
-        .attr('dominant-baseline', 'middle')
+        // .attr('dominant-baseline', 'middle')
         .attr('font-size', '14px')
-        .attr('fill', 'white');
+        .attr('fill', 'dimgray');
     } else {
       chart.selectAll('*').remove();
       chart

@@ -32,7 +32,7 @@ d3.csv('./data/healthExpenditure2.csv', d3.autoType)
       // console.log(test);
 
       if (test !== 0) {
-        const padding = 0.1; // 10% padding
+        const padding = 0.07; // 10% padding
         const [minX, maxX] = d3.extent(test, (d) => d.obs_value);
         const rangeX = maxX - minX;
 
