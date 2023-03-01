@@ -83,12 +83,12 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
       const mouseover = function () {
         tooltip.style('display', 'block');
         tooltip.style('opacity', 0.9);
-        d3.select(this).transition().style('fill', 'steelblue');
+        // d3.select(this).transition().style('fill', 'steelblue');
       };
 
       const mouseout = function () {
         tooltip.style('opacity', 0).style('display', 'none');
-        d3.select(this).transition().style('fill', 'gray');
+        // d3.select(this).transition().style('fill', 'gray');
       };
 
       const mousemove = function (event, d) {
@@ -103,6 +103,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
           .style('left', `${event.pageX + 20}px`);
       };
 
+      const selectedCountry = d3.select('#countryValue').text();
+
       const bubble = svg
         .append('g')
         .selectAll('dot')
@@ -111,8 +113,8 @@ d3.csv('data/eurostat_data_2.csv', d3.autoType)
         .attr('cx', (d) => xScale(d[params[x]]))
         .attr('cy', (d) => yScale(d[y]))
         .attr('r', (d) => zScale(d[z]))
-        .style('fill', 'gray')
-        .style('opacity', 0.8)
+        .style('fill', (d) => (d.country === selectedCountry ? 'steelblue' : 'gray'))
+        .style('opacity', (d) => (d.country === selectedCountry ? 1 : 0.8))
         .attr('stroke', 'black')
         .style('stroke-width', '1px')
         .on('mouseover', mouseover)
